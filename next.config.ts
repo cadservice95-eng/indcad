@@ -1,11 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Canonical URL format across the site has no trailing slash
-  // (e.g. /services/mechanical-drafting, not /services/mechanical-drafting/).
-  // This matches the default, kept explicit so internal links, canonical
-  // tags and the sitemap can't drift out of sync with it.
-  trailingSlash: false,
+  // Canonical URL format across the site has a trailing slash
+  // (e.g. /services/mechanical-drafting/, not /services/mechanical-drafting).
+  // Next.js applies this to next/link hrefs automatically and normalizes
+  // a request without the slash with a single built-in redirect (not a
+  // custom rule / chain) — canonical tags and the sitemap match it too.
+  trailingSlash: true,
 };
 
 export default nextConfig;

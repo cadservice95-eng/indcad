@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { SITE } from "./constants";
 
 export function absoluteUrl(path: string) {
-  const clean = path === "/" ? "" : `/${path.replace(/^\/+|\/+$/g, "")}`;
+  const trimmed = path.replace(/^\/+|\/+$/g, "");
+  const clean = trimmed === "" ? "/" : `/${trimmed}/`;
   return `${SITE.url}${clean}`;
 }
 

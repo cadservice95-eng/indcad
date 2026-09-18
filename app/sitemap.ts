@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/constants";
 import { services } from "@/data/services";
 import { industries } from "@/data/industries";
 import { locations } from "@/data/locations";
@@ -7,10 +6,7 @@ import { projects } from "@/data/projects";
 import { projectCategories } from "@/data/project-categories";
 import { software } from "@/data/software";
 import { articles } from "@/data/resources";
-
-function url(path: string): string {
-  return `${SITE.url}${path === "/" ? "" : path}`;
-}
+import { absoluteUrl as url } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
