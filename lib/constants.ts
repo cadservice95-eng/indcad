@@ -3,7 +3,9 @@ export const SITE = {
   legalName: "[COMPANY LEGAL NAME]",
   shortDescription:
     "CAD design, drafting, BIM and engineering support for Indian engineers, architects, builders, manufacturers and contractors.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.indcad.in",
+  // `||` (not `??`) so a blank-but-set env var on the host still falls
+  // back to a valid default instead of producing an empty string.
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.indcad.in",
   email: "[EMAIL]",
   phone: "[PHONE]",
   addressLocality: "[CITY]",
