@@ -2,25 +2,104 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f1720;
+}
+
+@theme {
+  /* Brand: deep navy (primary) */
+  --color-navy-950: #060a10;
+  --color-navy-900: #0b121c;
+  --color-navy-800: #121b28;
+  --color-navy-700: #1a2636;
+  --color-navy-600: #24354a;
+  --color-navy-500: #34495f;
+
+  /* Brand: engineering blue (secondary) */
+  --color-steel-700: #1a3f66;
+  --color-steel-600: #205181;
+  --color-steel-500: #2b699f;
+  --color-steel-400: #4a86bb;
+  --color-steel-300: #83aed3;
+  --color-steel-100: #dbe7f2;
+  --color-steel-50: #f0f5fa;
+
+  /* Brand: copper/warm accent */
+  --color-copper-700: #8a4520;
+  --color-copper-600: #a8531f;
+  --color-copper-500: #c16a2f;
+  --color-copper-400: #d68a51;
+  --color-copper-100: #f4e0cd;
+  --color-copper-50: #faf1e7;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-tech), ui-monospace, "SFMono-Regular", monospace;
+
+  --container-8xl: 90rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  * {
+    border-color: theme(--color-neutral-200);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: var(--color-copper-100);
+    color: var(--color-navy-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-copper-500);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Faint technical grid used on dark sections and hero panels */
+  .bg-blueprint-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-blueprint-grid-light {
+    background-image:
+      linear-gradient(to right, rgba(11, 18, 28, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11, 18, 28, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
 }

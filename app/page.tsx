@@ -1,69 +1,125 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { Hero } from "@/components/sections/Hero";
+import { TrustStrip } from "@/components/sections/TrustStrip";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { SoftwareSection } from "@/components/sections/SoftwareSection";
+import { CTA } from "@/components/sections/CTA";
+import { FAQ } from "@/components/FAQ";
+import { ServiceGrid } from "@/components/ServiceGrid";
+import { IndustryCard } from "@/components/IndustryCard";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
+import { industries } from "@/data/industries";
+import { projects } from "@/data/projects";
+import { buildMetadata } from "@/lib/seo";
+import { SITE } from "@/lib/constants";
 
-export default function Home() {
+const featuredIndustries = industries.filter((i) =>
+  ["construction", "manufacturing", "mining", "energy", "automotive", "defence"].includes(i.slug),
+);
+
+const featuredProjects = projects.slice(0, 3);
+
+const homeFaqs = [
+  {
+    question: "Do you work with clients India-wide, or only in one city?",
+    answer:
+      "We work with clients across India. Drafting and design work is delivered remotely from the drawings, models or reference material you provide, so location isn't a barrier.",
+  },
+  {
+    question: "What CAD and BIM software do you work in?",
+    answer:
+      "We work across the major CAD and BIM platforms used in Indian engineering, architecture and construction — see our software page for the full list, and let us know which platform your project needs.",
+  },
+  {
+    question: "How do you quote a project?",
+    answer:
+      "Send us your drawings, sketches, models or a description of what you need through our quote form. We review the scope and come back with a fixed price and turnaround before any work starts.",
+  },
+  {
+    question: "Can you take on overflow work from our in-house team?",
+    answer:
+      "Yes, a large part of our work is exactly this — flexible drafting and design capacity alongside an existing in-house team during busy periods or specific projects.",
+  },
+];
+
+const process = [
+  { title: "Send Your Project Brief", description: "Share drawings, sketches, a model or a description of what you need." },
+  { title: "Project Review", description: "We review scope, discipline and any reference material you've provided." },
+  { title: "Scope & Quote", description: "You receive a fixed price and turnaround before any work begins." },
+  { title: "Drafting / Design", description: "Work is carried out in your required CAD or BIM platform." },
+  { title: "Review & Delivery", description: "Files are delivered with revisions handled through markup rounds." },
+];
+
+export const metadata: Metadata = buildMetadata({
+  title: `${SITE.name} — CAD Design & Drafting Services India`,
+  description: SITE.shortDescription,
+  path: "/",
+});
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <Hero />
+      <TrustStrip />
+
+      <section className="border-t border-neutral-200 py-16 sm:py-20">
+        <Container>
+          <SectionHeading
+            eyebrow="What we do"
+            heading="CAD & Engineering Services"
+            description="Mechanical, structural, architectural, civil and electrical drafting, plus BIM, CAD conversion and engineering design — as one flexible capability."
+          />
+          <div className="mt-10">
+            <ServiceGrid />
+          </div>
+        </Container>
+      </section>
+
+      <WhyUs />
+
+      <section className="border-t border-neutral-200 py-16 sm:py-20">
+        <Container>
+          <SectionHeading eyebrow="Industries" heading="Industries We Support" />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredIndustries.map((industry) => (
+              <IndustryCard key={industry.slug} industry={industry} />
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button href="/industries" variant="ghost">
+              View all industries
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
+        <Container>
+          <SectionHeading eyebrow="Portfolio" heading="Project Examples" description="Illustrative project examples across our core disciplines. Marked placeholders will be replaced with verified project case studies as they become available." />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button href="/projects" variant="ghost">
+              View all projects
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      <SoftwareSection />
+
+      <ProcessSection steps={process} description="A consistent process from brief to delivery, whether the job is a single drawing or an ongoing capacity arrangement." />
+
+      <FAQ items={homeFaqs} />
+
+      <CTA />
+    </>
   );
 }
