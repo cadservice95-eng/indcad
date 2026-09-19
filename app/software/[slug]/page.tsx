@@ -7,6 +7,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckList } from "@/components/ui/CheckList";
+import { FAQ } from "@/components/FAQ";
 import { software, getSoftwareBySlug } from "@/data/software";
 import { getIndustryBySlug } from "@/data/industries";
 import { buildMetadata } from "@/lib/seo";
@@ -40,6 +41,16 @@ export default async function SoftwarePage({ params }: { params: Promise<{ slug:
       <PageHero eyebrow={item.category} heading={item.name} description={item.summary} />
 
       <section className="py-16 sm:py-20">
+        <Container className="max-w-3xl space-y-5">
+          {item.overview.map((paragraph, i) => (
+            <p key={i} className="text-base leading-relaxed text-neutral-700">
+              {paragraph}
+            </p>
+          ))}
+        </Container>
+      </section>
+
+      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
         <Container className="grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading eyebrow="Used for" heading="What It's Used For" />
@@ -75,6 +86,7 @@ export default async function SoftwarePage({ params }: { params: Promise<{ slug:
       </section>
 
       <RelatedServices slugs={item.relatedServices} />
+      <FAQ items={item.faqs} />
       <CTA
         heading={`Get a Quote for ${item.name} Work`}
         description="Tell us what you need and our team can review the project requirements."

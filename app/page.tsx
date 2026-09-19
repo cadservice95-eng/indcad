@@ -23,6 +23,16 @@ const featuredIndustries = industries.filter((i) =>
 
 const featuredProjects = projects.slice(0, 3);
 
+const homeOverview = [
+  "IndCAD provides CAD design, drafting, BIM and engineering support to engineers, architects, builders, manufacturers and contractors across India. Rather than being built around a single discipline, our capability spans mechanical, structural, architectural, civil and electrical drafting, alongside BIM modelling, CAD conversion and engineering design support — so a team with a mix of drawing needs across a project doesn't need to coordinate several separate specialist vendors for work that can be handled as one consistent capability.",
+  "This kind of flexible, cross-disciplinary drafting capacity tends to matter most for teams whose workload doesn't sit neatly within a single, predictable category — a manufacturing business that occasionally needs a structural mezzanine detailed alongside its usual mechanical part drawings, or a construction contractor whose civil site drawings need to be coordinated against an architectural set produced by a different consultant. Working across disciplines under one point of contact removes a layer of coordination overhead that otherwise falls back on the client to manage themselves.",
+  "Every engagement starts the same way regardless of discipline: a clear scope and fixed quote agreed before any drafting work begins, so there are no surprises partway through a project. We work in the CAD and BIM platforms already in use across Indian engineering and construction practice, and we're able to work from whatever reference material a project actually has available — clean CAD files, PDFs, scanned drawings, photographs of physical parts, or a written description of requirements where no drawing exists yet.",
+  "A meaningful share of the work we take on is overflow and flexible capacity for teams that already have their own in-house drafting resource but need extra hands during a busy period, or need a specific discipline they don't maintain in-house for an occasional project. This arrangement works well precisely because it doesn't require a client to restructure their own team — we slot into an existing workflow rather than asking a client's workflow to adapt to ours.",
+  "For projects that call for coordinated 3D modelling rather than 2D drawing production, our BIM capability covers architectural, structural and MEP modelling with clash detection and quantity extraction, built to whatever Level of Development a project stage actually requires rather than over-modelling ahead of when that detail is needed. For projects starting from an existing but undocumented design — a legacy part, an old scanned drawing set, a piece of imported equipment with no accompanying files — our CAD conversion and reverse engineering capability turns that physical or scanned reference into a genuinely usable, editable digital file.",
+  "Across every discipline, our approach stays the same: understand what the deliverable actually needs to support — fabrication, construction, regulatory submission, internal engineering reference — and produce drawings and models that are accurate, properly organised and genuinely fit for that specific purpose, rather than a generically competent drawing that happens to look right.",
+  "We also try to be realistic about what a drafting and design service can responsibly claim. We don't provide engineering certification or replace the sign-off of a licensed engineer or architect of record — our role is producing accurate, well-organised drawings and models to whatever standard your project's engineer or architect specifies, and being direct about the boundary between drafting support and professional engineering certification wherever that distinction actually matters for a specific project.",
+];
+
 const homeFaqs = [
   {
     question: "Do you work with clients India-wide, or only in one city?",
@@ -43,6 +53,56 @@ const homeFaqs = [
     question: "Can you take on overflow work from our in-house team?",
     answer:
       "Yes, a large part of our work is exactly this — flexible drafting and design capacity alongside an existing in-house team during busy periods or specific projects.",
+  },
+  {
+    question: "Do you work on a single drawing, or only larger projects?",
+    answer:
+      "Both. Some engagements are a single drawing or model; others are an ongoing arrangement spanning many sheets over months. Scope and pricing scale to whatever the actual project needs.",
+  },
+  {
+    question: "What if we don't have clean source files to start from?",
+    answer:
+      "That's a common starting point, not an obstacle — we regularly work from scanned drawings, PDFs, photographs of a physical part, or a written description of requirements where no formal drawing exists yet.",
+  },
+  {
+    question: "Can you match our existing drawing standards and templates?",
+    answer:
+      "Yes. Share your title block, layer standard or naming convention and we'll deliver drawings consistent with your existing drawing set, rather than introducing a mismatched format.",
+  },
+  {
+    question: "How are revisions handled once a drawing is delivered?",
+    answer:
+      "Revisions are handled through a clear markup and review round rather than open-ended back and forth — mark up exactly what needs to change, and we return an updated, correctly versioned drawing.",
+  },
+  {
+    question: "Is our design and drawing information kept confidential?",
+    answer:
+      "Yes. Drawings and design information shared with us are treated as confidential, and we're glad to work under your own confidentiality agreement where a project calls for one.",
+  },
+  {
+    question: "Do you provide ongoing support, or only one-off projects?",
+    answer:
+      "Both models are common. Some clients engage us for a single defined project; others maintain an ongoing arrangement where we function as flexible drafting capacity across multiple projects over time.",
+  },
+  {
+    question: "What industries do you typically work with?",
+    answer:
+      "Manufacturing, construction, mining, energy, automotive and defence-adjacent engineering are among the industries we regularly support — see our industries page for the full list and industry-specific detail.",
+  },
+  {
+    question: "How quickly can a project typically start?",
+    answer:
+      "Once scope and reference material are confirmed and a quote is agreed, most projects can begin promptly. Turnaround for the work itself depends on scope, complexity and current capacity.",
+  },
+  {
+    question: "Can we speak to someone before committing to a project?",
+    answer:
+      "Yes — for a larger or more complex enquiry, we're happy to have a call to work through scope before any quote is finalised.",
+  },
+  {
+    question: "Do you work with both individual clients and larger organisations?",
+    answer:
+      "Yes — from an individual engineer or architect needing a single drawing to a large manufacturing or construction business needing ongoing capacity across many projects.",
   },
 ];
 
@@ -65,6 +125,22 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustStrip />
+
+      <section className="border-t border-neutral-200 py-16 sm:py-20">
+        <Container className="max-w-3xl">
+          <SectionHeading
+            eyebrow="About IndCAD"
+            heading="CAD, Drafting and BIM Support for Indian Engineering & Construction Teams"
+          />
+          <div className="mt-8 space-y-5">
+            {homeOverview.map((paragraph, i) => (
+              <p key={i} className="text-base leading-relaxed text-neutral-700">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       <section className="border-t border-neutral-200 py-16 sm:py-20">
         <Container>

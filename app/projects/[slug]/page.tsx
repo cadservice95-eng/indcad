@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckList } from "@/components/ui/CheckList";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { FAQ } from "@/components/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { creativeWorkJsonLd } from "@/lib/jsonld";
 import { buildMetadata } from "@/lib/seo";
@@ -65,6 +66,15 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
         <Breadcrumbs items={[{ label: "Projects", href: "/projects" }, { label: category.name, href: `/projects/${category.slug}` }]} />
         <PageHero eyebrow="Project category" heading={`${category.name} Project Examples`} description={category.description} />
         <section className="py-16 sm:py-20">
+          <Container className="max-w-3xl space-y-5">
+            {category.intro.map((paragraph, i) => (
+              <p key={i} className="text-base leading-relaxed text-neutral-700">
+                {paragraph}
+              </p>
+            ))}
+          </Container>
+        </section>
+        <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
           <Container>
             {items.length > 0 ? (
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,6 +87,7 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
             )}
           </Container>
         </section>
+        <FAQ items={category.faqs} />
         <CTA variant="light" />
       </>
     );
@@ -149,7 +160,13 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
           <div className="space-y-8">
             <div>
               <SectionHeading eyebrow="Challenge" heading="Project Challenge" />
-              <p className="mt-4 text-sm leading-relaxed text-neutral-700">{project.challenge}</p>
+              <div className="mt-4 space-y-4">
+                {project.challenge.map((paragraph, i) => (
+                  <p key={i} className="text-sm leading-relaxed text-neutral-700">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
             <div>
               <SectionHeading eyebrow="Scope" heading="Scope of Work" />
@@ -159,7 +176,13 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
             </div>
             <div>
               <SectionHeading eyebrow="Process" heading="How It Was Delivered" />
-              <p className="mt-4 text-sm leading-relaxed text-neutral-700">{project.process}</p>
+              <div className="mt-4 space-y-4">
+                {project.process.map((paragraph, i) => (
+                  <p key={i} className="text-sm leading-relaxed text-neutral-700">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
           <div className="space-y-8">
@@ -170,14 +193,27 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
               </div>
             </div>
             <div>
+              <SectionHeading eyebrow="Considerations" heading="Design & Engineering Considerations" />
+              <div className="mt-4">
+                <CheckList items={project.considerations} columns={1} />
+              </div>
+            </div>
+            <div>
               <SectionHeading eyebrow="Outcome" heading="Outcome" />
-              <p className="mt-4 text-sm leading-relaxed text-neutral-700">{project.outcome}</p>
+              <div className="mt-4 space-y-4">
+                {project.outcome.map((paragraph, i) => (
+                  <p key={i} className="text-sm leading-relaxed text-neutral-700">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
       <RelatedServices slugs={project.relatedServices} />
+      <FAQ items={project.faqs} heading="Frequently Asked Questions About This Project" />
       <CTA
         heading="Start a Similar Project"
         description="Tell us what you need and our team can review the project requirements."

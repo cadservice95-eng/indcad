@@ -103,14 +103,16 @@ export interface Project {
   location?: string;
   isPlaceholder: boolean;
   summary: string;
-  challenge: string;
+  challenge: string[];
   scope: string[];
-  process: string;
+  process: string[];
   deliverables: string[];
   software: string[];
-  outcome: string;
+  outcome: string[];
+  considerations: string[];
   gallery: ProjectGalleryImage[];
   relatedServices: string[];
+  faqs: FAQItem[];
   seoTitle: string;
   seoDescription: string;
 }
@@ -120,8 +122,10 @@ export interface Software {
   name: string;
   category: string;
   summary: string;
+  overview: string[];
   usedFor: string[];
   deliverables: string[];
+  faqs: FAQItem[];
   relatedServices: string[];
   relatedIndustries: string[];
   seoTitle: string;
