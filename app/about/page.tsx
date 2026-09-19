@@ -91,62 +91,97 @@ export default function AboutPage() {
       />
 
       <section className="py-16 sm:py-20">
-        <Container className="max-w-3xl space-y-5">
-          <p className="text-base leading-relaxed text-neutral-700">
-            IndCAD is [COMPANY NAME], a CAD design, drafting, BIM and engineering documentation service working with
-            Indian engineers, architects, builders, manufacturers and contractors. [YEARS EXPERIENCE] years of
-            combined team experience across mechanical, structural, architectural, civil and electrical disciplines.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            We work as flexible, on-demand drafting and design capacity — engaged for a single drawing, a full
-            documentation package, or ongoing overflow support alongside an in-house engineering or design team.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            The reasoning behind how IndCAD is structured is straightforward: most engineering, manufacturing and
-            construction teams in India don't have a purely single-discipline drafting need. A manufacturing business
-            might need mechanical part drawings one month and a structural mezzanine detail the next; a construction
-            contractor might need civil site drawings coordinated against an architectural set produced by a separate
-            consultant. Building our capability around covering that realistic mix of disciplines under one point of
-            contact, rather than specialising narrowly in a single drawing type, reflects how drafting demand actually
-            shows up for most of the clients we work with.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            We deliberately don't present fabricated client logos, invented testimonials or unverifiable claims about
-            scale on this page. Where a specific figure — years of experience, team size, project count — belongs
-            here, it's marked as a placeholder until it can be confirmed and stated accurately, rather than filled
-            with a plausible-sounding but unverified number. We'd rather a prospective client trust the specific
-            claims we do make than pad this page with generic assurances that could describe any drafting business.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            Our working model is built around clear, upfront scoping. Before any drawing work begins, we confirm
-            exactly what's being delivered, in what format, to what standard, and on what timeline — and that scope is
-            reflected in a fixed quote rather than an open-ended hourly arrangement. This matters most for clients
-            engaging outsourced drafting support for the first time, since it removes the ambiguity that otherwise
-            makes a first outsourcing engagement feel riskier than it needs to.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            We also try to be honest about the limits of what a drafting service can responsibly claim. We don't
-            certify engineering compliance, sign off on structural adequacy, or replace the judgement of a licensed
-            engineer or architect of record — our role is to translate design intent into accurate, well-organised,
-            genuinely usable drawings and models, produced to whatever standard a project's engineer or architect
-            specifies. Where a claim about compliance or certification would need to come from a licensed professional
-            rather than a drafting service, we say so plainly rather than implying otherwise.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            Because our work spans several disciplines, we structure engagements around whoever on the team has the
-            right background for a specific piece of work, rather than routing every project through a single
-            generalist. A structural steel detailing project is handled by someone with structural detailing
-            background; a mechanical part conversion is handled by someone with mechanical drafting background. This
-            matters for quality in a way that's easy to overlook when comparing drafting services purely on price —
-            discipline-specific experience shows up directly in how practical and constructable a finished drawing
-            actually is.
-          </p>
-          <p className="text-base leading-relaxed text-neutral-700">
-            Ultimately, the goal behind IndCAD is simple: give Indian engineering, architecture, construction and
-            manufacturing teams a single, reliable place to send drafting and design work that needs to be accurate,
-            well-organised and delivered on a clear timeline, regardless of which specific discipline that work falls
-            under.
-          </p>
+        <Container className="max-w-3xl space-y-10">
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">Who We Are</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                IndCAD is [COMPANY NAME], a CAD design, drafting, BIM and engineering documentation service working with
+                Indian engineers, architects, builders, manufacturers and contractors. [YEARS EXPERIENCE] years of
+                combined team experience across mechanical, structural, architectural, civil and electrical disciplines.
+              </p>
+              <p className="text-base leading-relaxed text-neutral-700">
+                We work as flexible, on-demand drafting and design capacity — engaged for a single drawing, a full
+                documentation package, or ongoing overflow support alongside an in-house engineering or design team.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">Why We're Structured This Way</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                The reasoning behind how IndCAD is structured is straightforward: most engineering, manufacturing and
+                construction teams in India don't have a purely single-discipline drafting need. A manufacturing business
+                might need mechanical part drawings one month and a structural mezzanine detail the next; a construction
+                contractor might need civil site drawings coordinated against an architectural set produced by a separate
+                consultant. Building our capability around covering that realistic mix of disciplines under one point of
+                contact, rather than specialising narrowly in a single drawing type, reflects how drafting demand actually
+                shows up for most of the clients we work with.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">No Fabricated Claims</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                We deliberately don't present fabricated client logos, invented testimonials or unverifiable claims about
+                scale on this page. Where a specific figure — years of experience, team size, project count — belongs
+                here, it's marked as a placeholder until it can be confirmed and stated accurately, rather than filled
+                with a plausible-sounding but unverified number. We'd rather a prospective client trust the specific
+                claims we do make than pad this page with generic assurances that could describe any drafting business.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">Clear, Upfront Scoping</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                Our working model is built around clear, upfront scoping. Before any drawing work begins, we confirm
+                exactly what's being delivered, in what format, to what standard, and on what timeline — and that scope is
+                reflected in a fixed quote rather than an open-ended hourly arrangement. This matters most for clients
+                engaging outsourced drafting support for the first time, since it removes the ambiguity that otherwise
+                makes a first outsourcing engagement feel riskier than it needs to.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">Being Honest About What We Claim</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                We also try to be honest about the limits of what a drafting service can responsibly claim. We don't
+                certify engineering compliance, sign off on structural adequacy, or replace the judgement of a licensed
+                engineer or architect of record — our role is to translate design intent into accurate, well-organised,
+                genuinely usable drawings and models, produced to whatever standard a project's engineer or architect
+                specifies. Where a claim about compliance or certification would need to come from a licensed professional
+                rather than a drafting service, we say so plainly rather than implying otherwise.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">Discipline-Specific Assignment</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                Because our work spans several disciplines, we structure engagements around whoever on the team has the
+                right background for a specific piece of work, rather than routing every project through a single
+                generalist. A structural steel detailing project is handled by someone with structural detailing
+                background; a mechanical part conversion is handled by someone with mechanical drafting background. This
+                matters for quality in a way that's easy to overlook when comparing drafting services purely on price —
+                discipline-specific experience shows up directly in how practical and constructable a finished drawing
+                actually is.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-navy-900">Our Goal</h2>
+            <div className="mt-3 space-y-4">
+              <p className="text-base leading-relaxed text-neutral-700">
+                Ultimately, the goal behind IndCAD is simple: give Indian engineering, architecture, construction and
+                manufacturing teams a single, reliable place to send drafting and design work that needs to be accurate,
+                well-organised and delivered on a clear timeline, regardless of which specific discipline that work falls
+                under.
+              </p>
+            </div>
+          </div>
         </Container>
       </section>
 

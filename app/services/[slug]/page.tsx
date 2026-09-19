@@ -69,11 +69,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <p className="border-l-2 border-copper-500 pl-5 text-lg leading-relaxed text-neutral-700">
             {service.problemStatement}
           </p>
-          <div className="mt-8 space-y-5">
-            {service.overview.map((paragraph, i) => (
-              <p key={i} className="text-base leading-relaxed text-neutral-700">
-                {paragraph}
-              </p>
+          <div className="mt-8 space-y-10">
+            {service.overview.map((section, i) => (
+              <div key={i}>
+                {section.heading ? (
+                  <h2 className="text-xl font-semibold text-navy-900">{section.heading}</h2>
+                ) : null}
+                <div className={section.heading ? "mt-3 space-y-4" : "space-y-4"}>
+                  {section.paragraphs.map((paragraph, j) => (
+                    <p key={j} className="text-base leading-relaxed text-neutral-700">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </Container>

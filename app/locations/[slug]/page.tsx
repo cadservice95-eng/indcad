@@ -48,11 +48,20 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <PageHero eyebrow={`${location.state} · Remote service`} heading={location.heroHeading} description={location.heroDescription} />
 
       <section className="py-16 sm:py-20">
-        <Container className="max-w-3xl space-y-5">
-          {location.intro.map((paragraph, i) => (
-            <p key={i} className="text-base leading-relaxed text-neutral-700">
-              {paragraph}
-            </p>
+        <Container className="max-w-3xl space-y-10">
+          {location.intro.map((section, i) => (
+            <div key={i}>
+              {section.heading ? (
+                <h2 className="text-xl font-semibold text-navy-900">{section.heading}</h2>
+              ) : null}
+              <div className={section.heading ? "mt-3 space-y-4" : "space-y-4"}>
+                {section.paragraphs.map((paragraph, j) => (
+                  <p key={j} className="text-base leading-relaxed text-neutral-700">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           ))}
         </Container>
       </section>
@@ -60,11 +69,20 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
         <Container className="max-w-3xl">
           <SectionHeading eyebrow="Local context" heading={`${location.name}'s Project Landscape`} />
-          <div className="mt-6 space-y-4">
-            {location.localContext.map((paragraph, i) => (
-              <p key={i} className="text-sm leading-relaxed text-neutral-700">
-                {paragraph}
-              </p>
+          <div className="mt-6 space-y-8">
+            {location.localContext.map((section, i) => (
+              <div key={i}>
+                {section.heading ? (
+                  <h3 className="text-base font-semibold text-navy-900">{section.heading}</h3>
+                ) : null}
+                <div className={section.heading ? "mt-2 space-y-3" : "space-y-3"}>
+                  {section.paragraphs.map((paragraph, j) => (
+                    <p key={j} className="text-sm leading-relaxed text-neutral-700">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </Container>

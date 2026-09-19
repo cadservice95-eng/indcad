@@ -9,21 +9,61 @@ export const locations: Location[] = [
     heroDescription:
       "CAD drafting, BIM and engineering design support for Mumbai engineers, architects, builders and manufacturers.",
     intro: [
-      "Mumbai is India's financial and commercial capital, with a construction market weighted heavily toward high-rise residential and commercial redevelopment, alongside a significant industrial and manufacturing base across the wider Mumbai Metropolitan Region. The city's built environment is unusually dense and vertically constrained, which shapes almost every documentation decision on a Mumbai project in ways that a lower-density city simply doesn't have to consider.",
-      "We provide remote CAD drafting, BIM and engineering design support to Mumbai-based architectural practices, builders, manufacturers and engineering firms, working as flexible capacity alongside your existing team rather than as a separate, disconnected vendor.",
-      "Space constraint is the defining feature of Mumbai construction documentation. Redevelopment projects in particular have to work around existing structures, tight site boundaries and complex easement and rights-of-light considerations between neighbouring buildings, and drawing sets need to reflect these constraints accurately rather than treating the site as a blank canvas.",
-      "The city's redevelopment cycle — where an older, lower-rise building is demolished and replaced with a taller, higher-density structure under a negotiated arrangement between developer and existing occupants — creates a specific and recurring documentation challenge: existing conditions need to be captured precisely enough to support both the design and the underlying commercial agreement between parties, since disputes over what currently exists can derail a redevelopment project as easily as a design problem can.",
-      "Mumbai's status as a corporate and financial hub also means a meaningful share of construction activity is commercial office and mixed-use development, often delivered to tight, high-profile fit-out timelines for major corporate tenants, where documentation delay has direct, visible commercial consequences for the client commissioning the work.",
-      "The Mumbai Metropolitan Region extends well beyond the city's traditional island geography into Thane, Navi Mumbai and other satellite growth areas, and much of the region's newer industrial and residential development is happening in these areas — bringing a different, less space-constrained set of documentation considerations than the older city core.",
-      "Working remotely with Mumbai clients has become the practical norm rather than the exception across the design and construction sector generally, and our service is built around that expectation — supplying drawings, models and reference material digitally, with clear scoping upfront, rather than requiring the kind of in-person coordination that would once have been assumed necessary for a project of any real complexity.",
+      {
+        heading: "Mumbai's Dense, High-Rise Market",
+        paragraphs: [
+          "Mumbai is India's financial and commercial capital, with a construction market weighted heavily toward high-rise residential and commercial redevelopment, alongside a significant industrial and manufacturing base across the wider Mumbai Metropolitan Region. The city's built environment is unusually dense and vertically constrained, which shapes almost every documentation decision on a Mumbai project in ways that a lower-density city simply doesn't have to consider.",
+          "We provide remote CAD drafting, BIM and engineering design support to Mumbai-based architectural practices, builders, manufacturers and engineering firms, working as flexible capacity alongside your existing team rather than as a separate, disconnected vendor.",
+        ],
+      },
+      {
+        heading: "Space Constraints and the Redevelopment Cycle",
+        paragraphs: [
+          "Space constraint is the defining feature of Mumbai construction documentation. Redevelopment projects in particular have to work around existing structures, tight site boundaries and complex easement and rights-of-light considerations between neighbouring buildings, and drawing sets need to reflect these constraints accurately rather than treating the site as a blank canvas.",
+          "The city's redevelopment cycle — where an older, lower-rise building is demolished and replaced with a taller, higher-density structure under a negotiated arrangement between developer and existing occupants — creates a specific and recurring documentation challenge: existing conditions need to be captured precisely enough to support both the design and the underlying commercial agreement between parties, since disputes over what currently exists can derail a redevelopment project as easily as a design problem can.",
+        ],
+      },
+      {
+        heading: "Corporate Tenants and the Wider Metropolitan Region",
+        paragraphs: [
+          "Mumbai's status as a corporate and financial hub also means a meaningful share of construction activity is commercial office and mixed-use development, often delivered to tight, high-profile fit-out timelines for major corporate tenants, where documentation delay has direct, visible commercial consequences for the client commissioning the work.",
+          "The Mumbai Metropolitan Region extends well beyond the city's traditional island geography into Thane, Navi Mumbai and other satellite growth areas, and much of the region's newer industrial and residential development is happening in these areas — bringing a different, less space-constrained set of documentation considerations than the older city core.",
+        ],
+      },
+      {
+        heading: "Working Remotely as the Norm",
+        paragraphs: [
+          "Working remotely with Mumbai clients has become the practical norm rather than the exception across the design and construction sector generally, and our service is built around that expectation — supplying drawings, models and reference material digitally, with clear scoping upfront, rather than requiring the kind of in-person coordination that would once have been assumed necessary for a project of any real complexity.",
+        ],
+      },
     ],
     localContext: [
-      "High-rise residential and commercial redevelopment across the city drives consistent demand for coordinated architectural, structural and services BIM documentation, since a tall building genuinely cannot be built safely or efficiently without its disciplines being properly coordinated on screen before construction.",
-      "The wider Mumbai Metropolitan Region's manufacturing, oil & gas and port-related industrial base also generates ongoing mechanical and structural drafting work, much of it tied to established industrial estates that have grown and been modified incrementally over decades.",
-      "Redevelopment projects — replacing or substantially reconstructing existing buildings — carry a documentation challenge that greenfield projects don't: existing conditions have to be accurately captured and reconciled against the proposed design, and site constraints from neighbouring structures often shape the design as much as the brief itself.",
-      "Monsoon-driven construction scheduling is a practical reality that shapes how civil and structural documentation gets sequenced on many Mumbai projects, with a premium placed on getting critical drawings finalised ahead of the season rather than mid-way through it.",
-      "Port and industrial estate facilities across the Mumbai Metropolitan Region frequently carry drawing archives accumulated over many decades of operation, often across several changes of ownership, and reconciling this history into a reliable current-state record is a common and valuable precursor to any new industrial project in the region.",
-      "Commercial office fit-out work in Mumbai's business districts tends to run on compressed programmes tied to a tenant's own lease and occupation timeline, which places a premium on drafting turnaround that keeps pace with a fast-moving fit-out programme rather than becoming the schedule's limiting factor.",
+      {
+        heading: "BIM Demand from High-Rise Development",
+        paragraphs: [
+          "High-rise residential and commercial redevelopment across the city drives consistent demand for coordinated architectural, structural and services BIM documentation, since a tall building genuinely cannot be built safely or efficiently without its disciplines being properly coordinated on screen before construction.",
+        ],
+      },
+      {
+        heading: "Industrial Base and Redevelopment Challenges",
+        paragraphs: [
+          "The wider Mumbai Metropolitan Region's manufacturing, oil & gas and port-related industrial base also generates ongoing mechanical and structural drafting work, much of it tied to established industrial estates that have grown and been modified incrementally over decades.",
+          "Redevelopment projects — replacing or substantially reconstructing existing buildings — carry a documentation challenge that greenfield projects don't: existing conditions have to be accurately captured and reconciled against the proposed design, and site constraints from neighbouring structures often shape the design as much as the brief itself.",
+        ],
+      },
+      {
+        heading: "Monsoon Scheduling and Legacy Industrial Archives",
+        paragraphs: [
+          "Monsoon-driven construction scheduling is a practical reality that shapes how civil and structural documentation gets sequenced on many Mumbai projects, with a premium placed on getting critical drawings finalised ahead of the season rather than mid-way through it.",
+          "Port and industrial estate facilities across the Mumbai Metropolitan Region frequently carry drawing archives accumulated over many decades of operation, often across several changes of ownership, and reconciling this history into a reliable current-state record is a common and valuable precursor to any new industrial project in the region.",
+        ],
+      },
+      {
+        heading: "Fast-Turnaround Commercial Fit-Outs",
+        paragraphs: [
+          "Commercial office fit-out work in Mumbai's business districts tends to run on compressed programmes tied to a tenant's own lease and occupation timeline, which places a premium on drafting turnaround that keeps pace with a fast-moving fit-out programme rather than becoming the schedule's limiting factor.",
+        ],
+      },
     ],
     localProjectTypes: [
       "High-rise residential and commercial redevelopment documentation",
@@ -81,23 +121,63 @@ export const locations: Location[] = [
     heroDescription:
       "CAD drafting, BIM and engineering design support for Delhi NCR architects, engineers, developers and contractors.",
     intro: [
-      "The National Capital Region combines large-scale infrastructure and government projects with a fast-growing commercial and residential real estate market across Delhi, Gurugram, Noida and the surrounding industrial belt. Few Indian regions cover as wide a span of project types in one documentation practice — from national infrastructure to suburban residential towers to industrial estates on the region's periphery.",
-      "We provide remote CAD drafting, BIM and engineering design support to Delhi NCR-based practices, contractors and engineering teams, scaling drafting capacity to match project workload.",
-      "The scale of commercial development in Gurugram and Noida in particular has driven a strong shift toward BIM-coordinated delivery, since large mixed-use towers with multiple consultants genuinely need a coordinated model to catch clashes before they become expensive site problems.",
-      "NCR's growth has also been shaped heavily by planned satellite development — entire new commercial and residential districts built out over a relatively short period — which creates a documentation environment quite different from an older, more organically grown city core: greenfield master-planned sites with fewer existing-conditions surprises, but often larger, more complex individual buildings with correspondingly higher coordination demands.",
-      "Government and public sector construction activity across the capital region, spanning everything from metro infrastructure to institutional buildings, brings its own formal documentation and audit conventions that differ meaningfully from private commercial development, and getting this right from the outset avoids compliance issues that are difficult to unwind later in a project.",
-      "The region's industrial periphery, extending into Haryana and western Uttar Pradesh, supports a substantial manufacturing base that regularly needs mechanical and structural drafting support, often for facilities that have grown incrementally over years of expansion.",
-      "Given the sheer size and dispersion of the National Capital Region, remote delivery is a practical necessity as much as a convenience for most consultants and contractors working across it — a single project team might be coordinating simultaneously with sites in Gurugram, Noida and Delhi proper, and our workflow is built around that same distributed reality rather than assuming a single, centrally located point of contact.",
+      {
+        heading: "A Region Spanning Every Project Type",
+        paragraphs: [
+          "The National Capital Region combines large-scale infrastructure and government projects with a fast-growing commercial and residential real estate market across Delhi, Gurugram, Noida and the surrounding industrial belt. Few Indian regions cover as wide a span of project types in one documentation practice — from national infrastructure to suburban residential towers to industrial estates on the region's periphery.",
+          "We provide remote CAD drafting, BIM and engineering design support to Delhi NCR-based practices, contractors and engineering teams, scaling drafting capacity to match project workload.",
+        ],
+      },
+      {
+        heading: "BIM-Coordinated Delivery and Planned Satellite Growth",
+        paragraphs: [
+          "The scale of commercial development in Gurugram and Noida in particular has driven a strong shift toward BIM-coordinated delivery, since large mixed-use towers with multiple consultants genuinely need a coordinated model to catch clashes before they become expensive site problems.",
+          "NCR's growth has also been shaped heavily by planned satellite development — entire new commercial and residential districts built out over a relatively short period — which creates a documentation environment quite different from an older, more organically grown city core: greenfield master-planned sites with fewer existing-conditions surprises, but often larger, more complex individual buildings with correspondingly higher coordination demands.",
+        ],
+      },
+      {
+        heading: "Government Work and the Industrial Periphery",
+        paragraphs: [
+          "Government and public sector construction activity across the capital region, spanning everything from metro infrastructure to institutional buildings, brings its own formal documentation and audit conventions that differ meaningfully from private commercial development, and getting this right from the outset avoids compliance issues that are difficult to unwind later in a project.",
+          "The region's industrial periphery, extending into Haryana and western Uttar Pradesh, supports a substantial manufacturing base that regularly needs mechanical and structural drafting support, often for facilities that have grown incrementally over years of expansion.",
+        ],
+      },
+      {
+        heading: "Working Across a Dispersed Region",
+        paragraphs: [
+          "Given the sheer size and dispersion of the National Capital Region, remote delivery is a practical necessity as much as a convenience for most consultants and contractors working across it — a single project team might be coordinating simultaneously with sites in Gurugram, Noida and Delhi proper, and our workflow is built around that same distributed reality rather than assuming a single, centrally located point of contact.",
+        ],
+      },
     ],
     localContext: [
-      "Commercial and residential development across Gurugram and Noida drives consistent demand for coordinated BIM documentation and structural steel detailing, on projects that are frequently larger in scale and more multi-consultant than in many other Indian markets.",
-      "NCR's manufacturing belt and ongoing metro, road and public infrastructure investment also generate civil and structural documentation work tied to site development and approvals processes, much of it running to public-sector documentation standards.",
-      "Government and institutional projects across the region carry their own documentation conventions and approval processes, and drafting for this work benefits from close attention to the specific format and sign-off requirements of the relevant authority.",
-      "Given NCR's geographic spread across multiple states and municipal jurisdictions, drawing sets sometimes need to satisfy more than one certifying authority's conventions on a single project, and we account for this during scoping rather than assuming a single standard applies uniformly.",
-      "Master-planned commercial districts in Gurugram and Noida tend to produce a steady stream of large, individually complex buildings — corporate campuses, mixed-use towers, data centres — each requiring deep multi-disciplinary coordination, which is a different documentation rhythm to the smaller, more numerous projects typical of an older urban core.",
-      "The region's metro rail expansion and associated transit-oriented development has generated a specific category of documentation work at the interface between public transit infrastructure and adjacent private development, requiring careful coordination between two often separately-run project processes.",
-      "Warehousing and logistics development along NCR's expressway corridors has grown substantially alongside the region's role as a major consumption and distribution hub for northern India, and documentation for these facilities needs to reflect the heavy vehicle access, dock configuration and large-span structural requirements typical of modern logistics buildings, which differ meaningfully from a standard commercial or residential structural brief.",
-      "The sheer diversity of project types across NCR — from national government buildings to speculative commercial towers to industrial sheds — means a documentation team working across this region benefits from genuine cross-discipline flexibility rather than deep specialisation in just one building type, since a given week's work might reasonably span all three categories for different clients.",
+      {
+        heading: "Large-Scale, Multi-Consultant Development",
+        paragraphs: [
+          "Commercial and residential development across Gurugram and Noida drives consistent demand for coordinated BIM documentation and structural steel detailing, on projects that are frequently larger in scale and more multi-consultant than in many other Indian markets.",
+          "NCR's manufacturing belt and ongoing metro, road and public infrastructure investment also generate civil and structural documentation work tied to site development and approvals processes, much of it running to public-sector documentation standards.",
+        ],
+      },
+      {
+        heading: "Multiple Jurisdictions, Multiple Standards",
+        paragraphs: [
+          "Government and institutional projects across the region carry their own documentation conventions and approval processes, and drafting for this work benefits from close attention to the specific format and sign-off requirements of the relevant authority.",
+          "Given NCR's geographic spread across multiple states and municipal jurisdictions, drawing sets sometimes need to satisfy more than one certifying authority's conventions on a single project, and we account for this during scoping rather than assuming a single standard applies uniformly.",
+        ],
+      },
+      {
+        heading: "Master-Planned Districts and Transit-Oriented Development",
+        paragraphs: [
+          "Master-planned commercial districts in Gurugram and Noida tend to produce a steady stream of large, individually complex buildings — corporate campuses, mixed-use towers, data centres — each requiring deep multi-disciplinary coordination, which is a different documentation rhythm to the smaller, more numerous projects typical of an older urban core.",
+          "The region's metro rail expansion and associated transit-oriented development has generated a specific category of documentation work at the interface between public transit infrastructure and adjacent private development, requiring careful coordination between two often separately-run project processes.",
+        ],
+      },
+      {
+        heading: "Logistics Corridors and Cross-Discipline Flexibility",
+        paragraphs: [
+          "Warehousing and logistics development along NCR's expressway corridors has grown substantially alongside the region's role as a major consumption and distribution hub for northern India, and documentation for these facilities needs to reflect the heavy vehicle access, dock configuration and large-span structural requirements typical of modern logistics buildings, which differ meaningfully from a standard commercial or residential structural brief.",
+          "The sheer diversity of project types across NCR — from national government buildings to speculative commercial towers to industrial sheds — means a documentation team working across this region benefits from genuine cross-discipline flexibility rather than deep specialisation in just one building type, since a given week's work might reasonably span all three categories for different clients.",
+        ],
+      },
     ],
     localProjectTypes: [
       "Commercial and residential tower documentation",
@@ -156,24 +236,59 @@ export const locations: Location[] = [
     heroDescription:
       "Mechanical, structural and BIM drafting support for Bangalore's aerospace, manufacturing and construction sectors.",
     intro: [
-      "Bangalore is home to a significant aerospace and defence manufacturing base alongside a large technology-driven commercial construction market, spanning tech campuses, residential towers and precision manufacturing facilities. Few Indian cities combine this particular mix of precision engineering and large-scale commercial construction in one metro area.",
-      "We provide remote CAD drafting and engineering design support to Bangalore-based engineering firms, fabricators and construction teams.",
-      "The concentration of aerospace and precision manufacturing in and around the city generates sustained demand for accurate mechanical drafting work where dimensional accuracy and documentation traceability genuinely matter, not just as a formality but because the parts involved often go into safety-critical assemblies.",
-      "Bangalore's technology sector has driven an unusual commercial construction pattern — large, campus-style corporate developments built for a single major tenant or a small number of anchor tenants, often to a faster timeline than a comparable multi-tenant commercial building, and typically with more exacting internal fit-out and services coordination requirements than a standard speculative office building.",
-      "The city's traffic and geographic sprawl mean construction activity is spread across a wide metro area rather than concentrated in a single dense core, and this has produced a construction market with a broad mix of project types — from established inner-city redevelopment to newer development on the city's expanding periphery — each with somewhat different site and documentation considerations.",
-      "Karnataka's broader industrial policy focus on electronics and precision manufacturing has also encouraged a growing base of component suppliers around the city, many of whom are still building up formal drawing and documentation practices as they scale, which is a specific and recurring need this service is well positioned to support.",
-      "Bangalore's own culture of remote and distributed technical collaboration, shaped heavily by its dominant technology sector, means clients here are typically comfortable with a fully remote drafting relationship from the outset, expecting the same kind of clear scoping, asynchronous review and digital handover that characterises most other technical services they already work with.",
+      {
+        heading: "Precision Engineering Meets Commercial Construction",
+        paragraphs: [
+          "Bangalore is home to a significant aerospace and defence manufacturing base alongside a large technology-driven commercial construction market, spanning tech campuses, residential towers and precision manufacturing facilities. Few Indian cities combine this particular mix of precision engineering and large-scale commercial construction in one metro area.",
+          "We provide remote CAD drafting and engineering design support to Bangalore-based engineering firms, fabricators and construction teams.",
+          "The concentration of aerospace and precision manufacturing in and around the city generates sustained demand for accurate mechanical drafting work where dimensional accuracy and documentation traceability genuinely matter, not just as a formality but because the parts involved often go into safety-critical assemblies.",
+        ],
+      },
+      {
+        heading: "Tech Campuses and a Sprawling Metro Area",
+        paragraphs: [
+          "Bangalore's technology sector has driven an unusual commercial construction pattern — large, campus-style corporate developments built for a single major tenant or a small number of anchor tenants, often to a faster timeline than a comparable multi-tenant commercial building, and typically with more exacting internal fit-out and services coordination requirements than a standard speculative office building.",
+          "The city's traffic and geographic sprawl mean construction activity is spread across a wide metro area rather than concentrated in a single dense core, and this has produced a construction market with a broad mix of project types — from established inner-city redevelopment to newer development on the city's expanding periphery — each with somewhat different site and documentation considerations.",
+        ],
+      },
+      {
+        heading: "A Culture Built Around Remote Collaboration",
+        paragraphs: [
+          "Karnataka's broader industrial policy focus on electronics and precision manufacturing has also encouraged a growing base of component suppliers around the city, many of whom are still building up formal drawing and documentation practices as they scale, which is a specific and recurring need this service is well positioned to support.",
+          "Bangalore's own culture of remote and distributed technical collaboration, shaped heavily by its dominant technology sector, means clients here are typically comfortable with a fully remote drafting relationship from the outset, expecting the same kind of clear scoping, asynchronous review and digital handover that characterises most other technical services they already work with.",
+        ],
+      },
     ],
     localContext: [
-      "Aerospace and precision manufacturing in and around the city generate demand for accurate mechanical drafting, reverse engineering and fixture documentation, often for components with tight tolerance requirements tied to fit, balance or load path.",
-      "Bangalore's technology-driven commercial construction sector also supports ongoing architectural and structural BIM documentation work for campuses and residential towers, frequently built at a scale and pace that rewards a properly coordinated BIM workflow over independently-drafted 2D sets.",
-      "The city's rapid growth has also created a substantial base of mid-rise residential and mixed-use construction beyond the large tech campuses, generating steady architectural and structural documentation demand outside the headline commercial projects.",
-      "Legacy manufacturing facilities in the city's older industrial areas frequently need drawing conversion or reconciliation work before new design or requalification work can proceed, reflecting decades of incremental, often undocumented, equipment change.",
-      "Corporate campus developments for major technology tenants often carry unusually detailed internal fit-out and services coordination requirements compared to a standard commercial building, since these tenants frequently have specific, exacting requirements for data infrastructure, security zoning and internal amenity spaces.",
-      "The growth of electronics and precision component manufacturing around the city has created demand not just for drafting capacity itself, but for help establishing a workable drawing standard in the first place, particularly among newer or rapidly scaling suppliers.",
-      "Bangalore's role as a hub for both hardware startups and established precision manufacturers creates an unusually wide range of documentation maturity among clients — from a first-time hardware team needing help establishing basic drawing conventions through to an established aerospace supplier with a mature, audited quality system — and we adapt our approach to wherever a given client actually sits on that spectrum.",
-      "Water supply and drainage infrastructure constraints in parts of the city's rapidly developed outer areas have, in some cases, shaped how civil and structural documentation for new developments needs to account for site-specific stormwater and services connection realities that a more established, fully serviced inner-city site wouldn't necessarily present.",
-      "The scale of Bangalore's technology-driven construction pipeline also means the same coordination discipline that benefits a large corporate campus applies just as usefully to the many smaller commercial and residential projects happening around it, and we bring the same underlying rigour regardless of a project's individual size within the city's broader development picture.",
+      {
+        heading: "Aerospace Precision and Tech-Campus BIM",
+        paragraphs: [
+          "Aerospace and precision manufacturing in and around the city generate demand for accurate mechanical drafting, reverse engineering and fixture documentation, often for components with tight tolerance requirements tied to fit, balance or load path.",
+          "Bangalore's technology-driven commercial construction sector also supports ongoing architectural and structural BIM documentation work for campuses and residential towers, frequently built at a scale and pace that rewards a properly coordinated BIM workflow over independently-drafted 2D sets.",
+        ],
+      },
+      {
+        heading: "Residential Growth and Legacy Manufacturing",
+        paragraphs: [
+          "The city's rapid growth has also created a substantial base of mid-rise residential and mixed-use construction beyond the large tech campuses, generating steady architectural and structural documentation demand outside the headline commercial projects.",
+          "Legacy manufacturing facilities in the city's older industrial areas frequently need drawing conversion or reconciliation work before new design or requalification work can proceed, reflecting decades of incremental, often undocumented, equipment change.",
+        ],
+      },
+      {
+        heading: "Corporate Fit-Out and Scaling Suppliers",
+        paragraphs: [
+          "Corporate campus developments for major technology tenants often carry unusually detailed internal fit-out and services coordination requirements compared to a standard commercial building, since these tenants frequently have specific, exacting requirements for data infrastructure, security zoning and internal amenity spaces.",
+          "The growth of electronics and precision component manufacturing around the city has created demand not just for drafting capacity itself, but for help establishing a workable drawing standard in the first place, particularly among newer or rapidly scaling suppliers.",
+        ],
+      },
+      {
+        heading: "A Wide Spectrum of Documentation Maturity",
+        paragraphs: [
+          "Bangalore's role as a hub for both hardware startups and established precision manufacturers creates an unusually wide range of documentation maturity among clients — from a first-time hardware team needing help establishing basic drawing conventions through to an established aerospace supplier with a mature, audited quality system — and we adapt our approach to wherever a given client actually sits on that spectrum.",
+          "Water supply and drainage infrastructure constraints in parts of the city's rapidly developed outer areas have, in some cases, shaped how civil and structural documentation for new developments needs to account for site-specific stormwater and services connection realities that a more established, fully serviced inner-city site wouldn't necessarily present.",
+          "The scale of Bangalore's technology-driven construction pipeline also means the same coordination discipline that benefits a large corporate campus applies just as usefully to the many smaller commercial and residential projects happening around it, and we bring the same underlying rigour regardless of a project's individual size within the city's broader development picture.",
+        ],
+      },
     ],
     localProjectTypes: [
       "Aerospace and precision component drafting",
@@ -231,24 +346,59 @@ export const locations: Location[] = [
     heroDescription:
       "Mechanical and structural drafting support for Pune's automotive, manufacturing and construction sectors.",
     intro: [
-      "Pune is one of India's major automotive and auto-component manufacturing hubs, alongside a growing commercial and residential construction sector across the city and surrounding industrial belt. The concentration of vehicle and component manufacturers in and around the city has built up a deep base of precision mechanical drafting and tooling documentation expertise that shapes much of the demand we see from Pune clients.",
-      "We provide remote CAD drafting and engineering design support to Pune-based manufacturers, fabricators and construction teams.",
-      "Automotive component work in Pune spans everything from OEM-supplied parts with strict tolerance and documentation requirements through to aftermarket components reverse-engineered from physical samples, and the drafting standards expected differ meaningfully between the two.",
-      "Pune's manufacturing base extends beyond automotive into a broader engineering and industrial equipment sector, giving the city a somewhat more diversified mechanical drafting demand profile than a city dependent on a single dominant industry, and a correspondingly wider range of drawing standards and customer expectations to work across.",
-      "The city's growth as an IT and services hub alongside its established manufacturing base has driven substantial residential and commercial construction, often on the city's expanding periphery, generating architectural and structural documentation demand that runs alongside, rather than instead of, the city's core industrial drafting work.",
-      "Pune's industrial suburbs — including established manufacturing belts along the city's periphery — host component manufacturers who frequently supply multiple original equipment manufacturers simultaneously, which shapes a specific and recurring documentation need around managing several customer-specific drawing conventions for related part families.",
-      "As with our other Indian locations, all work for Pune-based clients is delivered remotely, and we've found this suits the region's manufacturing sector particularly well given how tightly scheduled most production and engineering teams already are — a clear digital brief and an agreed turnaround tends to fit into a busy manufacturing schedule more easily than coordinating an in-person meeting would.",
+      {
+        heading: "An Automotive and Auto-Component Manufacturing Hub",
+        paragraphs: [
+          "Pune is one of India's major automotive and auto-component manufacturing hubs, alongside a growing commercial and residential construction sector across the city and surrounding industrial belt. The concentration of vehicle and component manufacturers in and around the city has built up a deep base of precision mechanical drafting and tooling documentation expertise that shapes much of the demand we see from Pune clients.",
+          "We provide remote CAD drafting and engineering design support to Pune-based manufacturers, fabricators and construction teams.",
+        ],
+      },
+      {
+        heading: "OEM Parts, Aftermarket Work and a Diversified Base",
+        paragraphs: [
+          "Automotive component work in Pune spans everything from OEM-supplied parts with strict tolerance and documentation requirements through to aftermarket components reverse-engineered from physical samples, and the drafting standards expected differ meaningfully between the two.",
+          "Pune's manufacturing base extends beyond automotive into a broader engineering and industrial equipment sector, giving the city a somewhat more diversified mechanical drafting demand profile than a city dependent on a single dominant industry, and a correspondingly wider range of drawing standards and customer expectations to work across.",
+        ],
+      },
+      {
+        heading: "IT-Driven Construction and Remote Delivery",
+        paragraphs: [
+          "The city's growth as an IT and services hub alongside its established manufacturing base has driven substantial residential and commercial construction, often on the city's expanding periphery, generating architectural and structural documentation demand that runs alongside, rather than instead of, the city's core industrial drafting work.",
+          "Pune's industrial suburbs — including established manufacturing belts along the city's periphery — host component manufacturers who frequently supply multiple original equipment manufacturers simultaneously, which shapes a specific and recurring documentation need around managing several customer-specific drawing conventions for related part families.",
+          "As with our other Indian locations, all work for Pune-based clients is delivered remotely, and we've found this suits the region's manufacturing sector particularly well given how tightly scheduled most production and engineering teams already are — a clear digital brief and an agreed turnaround tends to fit into a busy manufacturing schedule more easily than coordinating an in-person meeting would.",
+        ],
+      },
     ],
     localContext: [
-      "Automotive and auto-component manufacturing across Pune and its industrial suburbs supports demand for precision mechanical drafting, reverse engineering and fixture documentation, much of it tied to production tooling that needs to hold accuracy across long manufacturing runs.",
-      "Pune's construction sector also generates ongoing architectural and structural drafting work across residential, commercial and industrial projects, growing alongside the city's expanding IT and services sector employment base.",
-      "The city's industrial estates have grown organically over several decades, meaning legacy drawing conversion and as-built reconciliation work is a common precursor to new design or equipment change projects for manufacturers operating from established facilities.",
-      "Component suppliers serving multiple OEM customers often need documentation produced to more than one customer's specific drawing standard on the same part family, and we scope this explicitly rather than assuming a single standard applies across all customer relationships.",
-      "The city's broader engineering and industrial equipment manufacturing base, beyond automotive specifically, brings a wider variety of mechanical drafting requirements than a single-industry manufacturing city, and we adapt our approach to the specific sector and customer expectations of each Pune client.",
-      "Residential and commercial construction on Pune's expanding periphery often involves greenfield sites with fewer existing-conditions complications than the older city core, though still requiring the same coordination discipline across architectural, structural and services documentation as any other construction project.",
-      "Pune's manufacturing base includes a meaningful concentration of precision engineering and forging operations feeding both automotive and general industrial customers, and mechanical drafting for this segment often involves working from supplied material specifications and process constraints that shape tolerancing decisions as much as the part's geometry itself.",
-      "The city's position as a preferred relocation destination for manufacturers expanding out of more space-constrained metro areas has also generated a steady stream of new-facility documentation work, often for clients establishing their first Pune operation and needing both facility design support and a fresh, well-structured drawing standard for the new site.",
-      "Pune's blend of established heavy manufacturing and a newer wave of IT-driven commercial growth means our work in the city genuinely spans both worlds — precision mechanical drafting for a component supplier one week, architectural documentation for a commercial tenancy fit-out the next — and we scope each engagement on its own terms rather than assuming a single dominant project type.",
+      {
+        heading: "Precision Drafting for Long Production Runs",
+        paragraphs: [
+          "Automotive and auto-component manufacturing across Pune and its industrial suburbs supports demand for precision mechanical drafting, reverse engineering and fixture documentation, much of it tied to production tooling that needs to hold accuracy across long manufacturing runs.",
+          "Pune's construction sector also generates ongoing architectural and structural drafting work across residential, commercial and industrial projects, growing alongside the city's expanding IT and services sector employment base.",
+        ],
+      },
+      {
+        heading: "Legacy Estates and Multi-Customer Standards",
+        paragraphs: [
+          "The city's industrial estates have grown organically over several decades, meaning legacy drawing conversion and as-built reconciliation work is a common precursor to new design or equipment change projects for manufacturers operating from established facilities.",
+          "Component suppliers serving multiple OEM customers often need documentation produced to more than one customer's specific drawing standard on the same part family, and we scope this explicitly rather than assuming a single standard applies across all customer relationships.",
+        ],
+      },
+      {
+        heading: "Beyond Automotive, and Greenfield Growth",
+        paragraphs: [
+          "The city's broader engineering and industrial equipment manufacturing base, beyond automotive specifically, brings a wider variety of mechanical drafting requirements than a single-industry manufacturing city, and we adapt our approach to the specific sector and customer expectations of each Pune client.",
+          "Residential and commercial construction on Pune's expanding periphery often involves greenfield sites with fewer existing-conditions complications than the older city core, though still requiring the same coordination discipline across architectural, structural and services documentation as any other construction project.",
+        ],
+      },
+      {
+        heading: "Forging, Relocation and a City That Spans Both Worlds",
+        paragraphs: [
+          "Pune's manufacturing base includes a meaningful concentration of precision engineering and forging operations feeding both automotive and general industrial customers, and mechanical drafting for this segment often involves working from supplied material specifications and process constraints that shape tolerancing decisions as much as the part's geometry itself.",
+          "The city's position as a preferred relocation destination for manufacturers expanding out of more space-constrained metro areas has also generated a steady stream of new-facility documentation work, often for clients establishing their first Pune operation and needing both facility design support and a fresh, well-structured drawing standard for the new site.",
+          "Pune's blend of established heavy manufacturing and a newer wave of IT-driven commercial growth means our work in the city genuinely spans both worlds — precision mechanical drafting for a component supplier one week, architectural documentation for a commercial tenancy fit-out the next — and we scope each engagement on its own terms rather than assuming a single dominant project type.",
+        ],
+      },
     ],
     localProjectTypes: [
       "Automotive component and fixture drafting",
@@ -306,24 +456,59 @@ export const locations: Location[] = [
     heroDescription:
       "Mechanical, structural and civil drafting support for Chennai's automotive, manufacturing and port-related industry.",
     intro: [
-      "Chennai is one of India's largest automotive manufacturing centres, with a substantial industrial estate footprint alongside port-related and electronics manufacturing, and a steady commercial and residential construction sector. The concentration of vehicle assembly and component manufacturing around the city has earned it a long-standing reputation as one of the country's principal automotive manufacturing hubs.",
-      "We provide remote CAD drafting and engineering design support to Chennai-based manufacturers, fabricators and construction teams.",
-      "Chennai's industrial estates (SIPCOT and similar zones) host a dense concentration of component manufacturers, many operating with multiple production lines that have been added and modified incrementally, which shapes how much of our mechanical drafting work here involves reconciling current-state equipment against original design documentation.",
-      "The city's role as a major port and logistics gateway for South India has also shaped its industrial geography — manufacturing and warehousing facilities cluster along transport corridors linking the port to inland industrial estates, and civil and structural documentation for these facilities needs to account for heavy vehicle access and freight logistics in ways a purely inland industrial facility wouldn't necessarily need to.",
-      "Chennai's automotive manufacturing base spans multiple original equipment manufacturers and a dense tier of component suppliers serving them, and this multi-OEM environment creates a recurring documentation challenge around managing several customer-specific drawing standards across related component families, similar in character to what we see in Pune but at a scale reflecting the city's particular concentration of vehicle assembly plants.",
-      "Growth in electronics manufacturing around the city, alongside the more established automotive base, has added a newer category of precision mechanical drafting demand, often from suppliers building up formal documentation practices as they scale into higher-value manufacturing.",
-      "Chennai's manufacturing sector runs on tight, schedule-driven production cycles typical of automotive supply chains, and our remote delivery model is built to fit into that rhythm — a clear brief and an agreed turnaround integrate more predictably into a production schedule than an engagement that depends on coordinating site visits around a busy plant's own operating calendar.",
+      {
+        heading: "One of India's Largest Automotive Manufacturing Centres",
+        paragraphs: [
+          "Chennai is one of India's largest automotive manufacturing centres, with a substantial industrial estate footprint alongside port-related and electronics manufacturing, and a steady commercial and residential construction sector. The concentration of vehicle assembly and component manufacturing around the city has earned it a long-standing reputation as one of the country's principal automotive manufacturing hubs.",
+          "We provide remote CAD drafting and engineering design support to Chennai-based manufacturers, fabricators and construction teams.",
+        ],
+      },
+      {
+        heading: "Industrial Estates and a Port-Driven Geography",
+        paragraphs: [
+          "Chennai's industrial estates (SIPCOT and similar zones) host a dense concentration of component manufacturers, many operating with multiple production lines that have been added and modified incrementally, which shapes how much of our mechanical drafting work here involves reconciling current-state equipment against original design documentation.",
+          "The city's role as a major port and logistics gateway for South India has also shaped its industrial geography — manufacturing and warehousing facilities cluster along transport corridors linking the port to inland industrial estates, and civil and structural documentation for these facilities needs to account for heavy vehicle access and freight logistics in ways a purely inland industrial facility wouldn't necessarily need to.",
+        ],
+      },
+      {
+        heading: "Multi-OEM Suppliers and Electronics Growth",
+        paragraphs: [
+          "Chennai's automotive manufacturing base spans multiple original equipment manufacturers and a dense tier of component suppliers serving them, and this multi-OEM environment creates a recurring documentation challenge around managing several customer-specific drawing standards across related component families, similar in character to what we see in Pune but at a scale reflecting the city's particular concentration of vehicle assembly plants.",
+          "Growth in electronics manufacturing around the city, alongside the more established automotive base, has added a newer category of precision mechanical drafting demand, often from suppliers building up formal documentation practices as they scale into higher-value manufacturing.",
+          "Chennai's manufacturing sector runs on tight, schedule-driven production cycles typical of automotive supply chains, and our remote delivery model is built to fit into that rhythm — a clear brief and an agreed turnaround integrate more predictably into a production schedule than an engagement that depends on coordinating site visits around a busy plant's own operating calendar.",
+        ],
+      },
     ],
     localContext: [
-      "Automotive and auto-component manufacturing across Chennai's industrial estates supports demand for mechanical drafting, fixture documentation and fabrication drawings, much of it feeding directly into high-volume vehicle and component assembly lines.",
-      "Port-related and electronics manufacturing, alongside ongoing commercial construction, also generate structural and civil drafting work, reflecting Chennai's role as a logistics and manufacturing gateway for South India.",
-      "Coastal and port-adjacent industrial sites bring specific civil and structural considerations around drainage, corrosion protection and access that differ from an inland industrial estate, and documentation for these sites reflects those conditions.",
-      "Electronics manufacturing growth in and around the city has added a newer layer of demand for precision mechanical drafting and fixture documentation alongside the more established automotive manufacturing base.",
-      "Freight and heavy vehicle logistics along the corridors connecting Chennai's port to its inland industrial estates shape civil and structural documentation for facilities along these routes, with access and pavement design needing to account for sustained heavy vehicle traffic.",
-      "The scale of Chennai's multi-OEM automotive supplier base means documentation work here frequently spans several concurrent customer relationships for the same manufacturer, each with its own drawing convention and revision process to be tracked and satisfied independently.",
-      "Chennai's long-standing role as a manufacturing gateway has also meant its industrial estates carry drawing archives spanning several decades of ownership and technology change, and a substantial share of mechanical drafting demand from established manufacturers involves reconciling this layered history into a single, trustworthy current-state record before new design work can proceed.",
-      "The city's commercial and residential construction sector, while smaller in scale than its manufacturing base, has grown steadily alongside Chennai's expanding IT and services employment, generating architectural and structural documentation demand that runs in parallel with, rather than at the expense of, the city's core industrial drafting work.",
-      "Chennai's dual identity as both a manufacturing powerhouse and a growing services economy means our client base in the city is genuinely varied, and we treat each engagement — whether it's a fixture drawing for an auto-component plant or a structural set for a commercial building — with the same underlying documentation discipline rather than a one-size-fits-all approach.",
+      {
+        heading: "Drafting for High-Volume Assembly Lines",
+        paragraphs: [
+          "Automotive and auto-component manufacturing across Chennai's industrial estates supports demand for mechanical drafting, fixture documentation and fabrication drawings, much of it feeding directly into high-volume vehicle and component assembly lines.",
+          "Port-related and electronics manufacturing, alongside ongoing commercial construction, also generate structural and civil drafting work, reflecting Chennai's role as a logistics and manufacturing gateway for South India.",
+        ],
+      },
+      {
+        heading: "Coastal Conditions and Electronics Demand",
+        paragraphs: [
+          "Coastal and port-adjacent industrial sites bring specific civil and structural considerations around drainage, corrosion protection and access that differ from an inland industrial estate, and documentation for these sites reflects those conditions.",
+          "Electronics manufacturing growth in and around the city has added a newer layer of demand for precision mechanical drafting and fixture documentation alongside the more established automotive manufacturing base.",
+        ],
+      },
+      {
+        heading: "Freight Corridors and Multi-Customer Standards",
+        paragraphs: [
+          "Freight and heavy vehicle logistics along the corridors connecting Chennai's port to its inland industrial estates shape civil and structural documentation for facilities along these routes, with access and pavement design needing to account for sustained heavy vehicle traffic.",
+          "The scale of Chennai's multi-OEM automotive supplier base means documentation work here frequently spans several concurrent customer relationships for the same manufacturer, each with its own drawing convention and revision process to be tracked and satisfied independently.",
+        ],
+      },
+      {
+        heading: "Decades-Deep Archives and a Dual Identity",
+        paragraphs: [
+          "Chennai's long-standing role as a manufacturing gateway has also meant its industrial estates carry drawing archives spanning several decades of ownership and technology change, and a substantial share of mechanical drafting demand from established manufacturers involves reconciling this layered history into a single, trustworthy current-state record before new design work can proceed.",
+          "The city's commercial and residential construction sector, while smaller in scale than its manufacturing base, has grown steadily alongside Chennai's expanding IT and services employment, generating architectural and structural documentation demand that runs in parallel with, rather than at the expense of, the city's core industrial drafting work.",
+          "Chennai's dual identity as both a manufacturing powerhouse and a growing services economy means our client base in the city is genuinely varied, and we treat each engagement — whether it's a fixture drawing for an auto-component plant or a structural set for a commercial building — with the same underlying documentation discipline rather than a one-size-fits-all approach.",
+        ],
+      },
     ],
     localProjectTypes: [
       "Automotive component and assembly drafting",
@@ -381,24 +566,59 @@ export const locations: Location[] = [
     heroDescription:
       "CAD drafting, BIM and engineering design support for Hyderabad's pharma, aerospace and construction sectors.",
     intro: [
-      "Hyderabad combines a major pharmaceutical and biotech manufacturing base with a growing aerospace and defence sector, alongside a fast-expanding commercial and residential construction market centred on the city's technology corridor. Few cities pair a heavy-process pharma manufacturing base with a precision aerospace sector quite the way Hyderabad does, and that mix shows up directly in the range of drafting work we see from the city.",
-      "We provide remote CAD drafting, BIM and engineering design support to Hyderabad-based manufacturers, engineering firms and construction teams.",
-      "Pharmaceutical and biotech facility documentation carries specific requirements around equipment layout, utility routing and cleanroom boundaries that a general industrial mechanical drafting brief wouldn't typically need to account for, and we draft this work with those process constraints specifically in mind.",
-      "The city's technology corridor — anchored around HITEC City and its surrounding development — has driven a construction pattern similar in some respects to Bangalore's, with large campus-style commercial developments serving major technology tenants alongside a substantial residential and mixed-use construction sector supporting the workforce these developments attract.",
-      "Hyderabad's pharmaceutical manufacturing base is among the largest in the country, spanning both bulk drug and formulation manufacturing, and facility documentation for this sector needs to satisfy the exacting layout, containment and utility coordination requirements typical of regulated pharmaceutical production.",
-      "Growth in the city's aerospace and defence manufacturing presence has added a category of precision component drafting demand that draws on many of the same disciplines applied in more established hubs like Bangalore, but from a base that is generally newer and still building up its documentation maturity.",
-      "Hyderabad's technology and pharma sectors are both accustomed to distributed, digitally-coordinated ways of working, and clients here typically find a remote drafting relationship a natural fit rather than an adjustment — sharing reference material digitally, agreeing scope in writing, and reviewing markups asynchronously rather than expecting an in-person process.",
+      {
+        heading: "Pharma, Aerospace and a Growing Tech Corridor",
+        paragraphs: [
+          "Hyderabad combines a major pharmaceutical and biotech manufacturing base with a growing aerospace and defence sector, alongside a fast-expanding commercial and residential construction market centred on the city's technology corridor. Few cities pair a heavy-process pharma manufacturing base with a precision aerospace sector quite the way Hyderabad does, and that mix shows up directly in the range of drafting work we see from the city.",
+          "We provide remote CAD drafting, BIM and engineering design support to Hyderabad-based manufacturers, engineering firms and construction teams.",
+        ],
+      },
+      {
+        heading: "Pharma Facility Requirements and Campus-Style Growth",
+        paragraphs: [
+          "Pharmaceutical and biotech facility documentation carries specific requirements around equipment layout, utility routing and cleanroom boundaries that a general industrial mechanical drafting brief wouldn't typically need to account for, and we draft this work with those process constraints specifically in mind.",
+          "The city's technology corridor — anchored around HITEC City and its surrounding development — has driven a construction pattern similar in some respects to Bangalore's, with large campus-style commercial developments serving major technology tenants alongside a substantial residential and mixed-use construction sector supporting the workforce these developments attract.",
+        ],
+      },
+      {
+        heading: "A Large Pharma Base and an Emerging Aerospace Sector",
+        paragraphs: [
+          "Hyderabad's pharmaceutical manufacturing base is among the largest in the country, spanning both bulk drug and formulation manufacturing, and facility documentation for this sector needs to satisfy the exacting layout, containment and utility coordination requirements typical of regulated pharmaceutical production.",
+          "Growth in the city's aerospace and defence manufacturing presence has added a category of precision component drafting demand that draws on many of the same disciplines applied in more established hubs like Bangalore, but from a base that is generally newer and still building up its documentation maturity.",
+          "Hyderabad's technology and pharma sectors are both accustomed to distributed, digitally-coordinated ways of working, and clients here typically find a remote drafting relationship a natural fit rather than an adjustment — sharing reference material digitally, agreeing scope in writing, and reviewing markups asynchronously rather than expecting an in-person process.",
+        ],
+      },
     ],
     localContext: [
-      "Pharmaceutical, biotech and aerospace manufacturing facilities generate demand for precise mechanical drafting, equipment documentation and reverse engineering, spanning both heavy-process plant layout and precision component work.",
-      "Rapid commercial and residential construction along Hyderabad's technology corridor also supports ongoing architectural and structural BIM documentation work, on a development pace that has made coordinated BIM delivery increasingly standard practice rather than an exception.",
-      "Pharma facility documentation in particular benefits from close coordination between mechanical, civil and utility disciplines, since process equipment layout, drainage and services routing in a regulated manufacturing environment are rarely independent decisions.",
-      "As the city's aerospace and defence manufacturing base has grown, demand has increased for precision mechanical drafting with the same tight tolerancing and traceability standards seen in more established aerospace hubs.",
-      "Bulk drug and formulation manufacturing facilities around the city frequently need mechanical and civil documentation coordinated tightly with process engineering requirements — equipment layout, containment boundaries and utility routing are rarely decisions that can be made by one discipline in isolation from the others.",
-      "The technology corridor's rapid, campus-style commercial growth has meant many projects need multi-disciplinary BIM coordination almost by default, given the scale and multi-consultant nature of a typical large corporate campus development in this part of the city.",
-      "Hyderabad's pharmaceutical manufacturing cluster spans both large, established manufacturers with mature documentation systems and a growing tier of smaller contract manufacturing and formulation businesses, and mechanical and facility drafting support needs to adapt to wherever a given client sits on that maturity spectrum rather than assuming a uniform level of existing documentation practice.",
-      "The city's aerospace and defence manufacturing growth has been supported by deliberate state industrial policy attention, and many of the precision component suppliers emerging from this push are still in the process of building out the formal drawing standards and traceability practices that more established aerospace hubs take for granted, which is a specific and recurring need this service is well positioned to support.",
-      "Hyderabad's combination of an established pharma base and a newer, rapidly growing aerospace and technology sector gives the city an unusually broad documentation profile for its size, and our work here reflects that breadth — from heavy-process facility layout through to precision component drafting — rather than specialising narrowly in just one of the city's several distinct industrial strengths.",
+      {
+        heading: "Precision Drafting Across Pharma and Aerospace",
+        paragraphs: [
+          "Pharmaceutical, biotech and aerospace manufacturing facilities generate demand for precise mechanical drafting, equipment documentation and reverse engineering, spanning both heavy-process plant layout and precision component work.",
+          "Rapid commercial and residential construction along Hyderabad's technology corridor also supports ongoing architectural and structural BIM documentation work, on a development pace that has made coordinated BIM delivery increasingly standard practice rather than an exception.",
+        ],
+      },
+      {
+        heading: "Multi-Disciplinary Coordination for Regulated Facilities",
+        paragraphs: [
+          "Pharma facility documentation in particular benefits from close coordination between mechanical, civil and utility disciplines, since process equipment layout, drainage and services routing in a regulated manufacturing environment are rarely independent decisions.",
+          "As the city's aerospace and defence manufacturing base has grown, demand has increased for precision mechanical drafting with the same tight tolerancing and traceability standards seen in more established aerospace hubs.",
+        ],
+      },
+      {
+        heading: "Bulk Drug Manufacturing and Campus-Scale BIM",
+        paragraphs: [
+          "Bulk drug and formulation manufacturing facilities around the city frequently need mechanical and civil documentation coordinated tightly with process engineering requirements — equipment layout, containment boundaries and utility routing are rarely decisions that can be made by one discipline in isolation from the others.",
+          "The technology corridor's rapid, campus-style commercial growth has meant many projects need multi-disciplinary BIM coordination almost by default, given the scale and multi-consultant nature of a typical large corporate campus development in this part of the city.",
+        ],
+      },
+      {
+        heading: "A Range of Documentation Maturity",
+        paragraphs: [
+          "Hyderabad's pharmaceutical manufacturing cluster spans both large, established manufacturers with mature documentation systems and a growing tier of smaller contract manufacturing and formulation businesses, and mechanical and facility drafting support needs to adapt to wherever a given client sits on that maturity spectrum rather than assuming a uniform level of existing documentation practice.",
+          "The city's aerospace and defence manufacturing growth has been supported by deliberate state industrial policy attention, and many of the precision component suppliers emerging from this push are still in the process of building out the formal drawing standards and traceability practices that more established aerospace hubs take for granted, which is a specific and recurring need this service is well positioned to support.",
+          "Hyderabad's combination of an established pharma base and a newer, rapidly growing aerospace and technology sector gives the city an unusually broad documentation profile for its size, and our work here reflects that breadth — from heavy-process facility layout through to precision component drafting — rather than specialising narrowly in just one of the city's several distinct industrial strengths.",
+        ],
+      },
     ],
     localProjectTypes: [
       "Pharma and biotech facility mechanical drafting",

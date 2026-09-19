@@ -8,19 +8,54 @@ export const software: Software[] = [
     summary:
       "Industry-standard 2D drafting and documentation software used across mechanical, structural, architectural, civil and electrical drafting.",
     overview: [
-      "AutoCAD remains the most widely used 2D drafting platform across Indian engineering, architecture and construction, largely because of how broadly it's supported across consultants, fabricators and government approval processes. Its longevity means most practices and workshops already have an established layer standard, title block and drawing convention built around it, which makes it a practical common ground when several parties need to exchange drawings.",
-      "We use AutoCAD primarily for 2D drawing production and documentation — general arrangement drawings, schematics, layout drawings and any deliverable where the priority is a clear, dimensioned 2D drawing rather than a coordinated 3D model. It's also the standard destination format for CAD conversion work, since DWG remains the most universally exchangeable native CAD format across Indian engineering practices.",
-      "Layer and drawing standardisation is a recurring reason clients bring AutoCAD work to us — a drawing register accumulated over years, across multiple drafters and sometimes multiple companies, tends to drift into inconsistent layer names, line weights and title block versions unless someone actively maintains the standard. We can both draft to an existing standard and help establish one where none exists yet.",
-      "Because AutoCAD files move between so many parties on a typical project, we pay particular attention to file hygiene — purging unused layers and blocks, keeping external references properly managed, and avoiding the kind of bloated, slow-opening file that becomes its own source of delay on a live project.",
-      "AutoCAD's block and attribute tools are a practical way to keep repeated elements — door and window symbols, structural connection details, standard equipment footprints — consistent across a drawing set, and we build block libraries deliberately for larger or ongoing projects rather than letting each drafter recreate similar geometry independently.",
-      "Sheet set management, layout and paper space configuration are handled with an eye to how the drawing set will actually be issued and printed, since a drawing that looks correct on screen but plots at the wrong scale or with overlapping title block elements is a surprisingly common and entirely avoidable quality failure.",
-      "For projects that move between AutoCAD and a BIM platform at different stages — perhaps starting as a 2D concept before moving into coordinated Revit documentation — we manage that transition deliberately, extracting what's genuinely reusable from the 2D work rather than starting the BIM model with no reference to the design work that preceded it.",
-      "Version compatibility is a practical, ongoing consideration given how many different AutoCAD releases remain in active use across Indian practices and fabricators — we confirm which version your team needs deliverables in in and save down where necessary, rather than assuming everyone is on the latest release.",
-      "Xref management on a multi-drawing project deserves more discipline than it usually gets — a project referencing several external files that get moved, renamed or independently edited without coordination is a common and entirely avoidable source of broken links and missing geometry, and we set up a clear referencing structure at project start rather than letting it develop ad hoc.",
-      "Dimensioning style and annotation scale consistency across a drawing set is a quieter but equally important quality marker — text that's readable at the intended plot scale, dimension styles that match your title block convention, and annotation that doesn't visually clutter the underlying geometry all contribute to a drawing set that reads clearly the first time, not just one that's technically complete.",
-      "For teams working across multiple simultaneous projects, we maintain separate, clearly organised project templates and standards rather than a single generic template stretched to fit every client's specific requirements, since a template that's genuinely tailored to a specific project's needs produces cleaner, faster drafting than a compromise template trying to serve everyone.",
-      "Plotting and PDF publishing consistency across a drawing set is a small detail that has an outsized effect on how professional a delivered package looks — consistent line weights, correctly rendered hatching, and a publish setup that produces identical output whoever on the team runs it, rather than depending on an individual's personal plot style settings.",
-      "For drawing sets that need to be issued to multiple parties with different format requirements — one consultant wanting native DWG, another wanting PDF, an authority wanting a specific paper size — we manage this from a single master drawing set rather than maintaining several parallel versions that risk drifting out of sync with each other.",
+      {
+        heading: "Why AutoCAD Remains the Common Ground",
+        paragraphs: [
+          "AutoCAD remains the most widely used 2D drafting platform across Indian engineering, architecture and construction, largely because of how broadly it's supported across consultants, fabricators and government approval processes. Its longevity means most practices and workshops already have an established layer standard, title block and drawing convention built around it, which makes it a practical common ground when several parties need to exchange drawings.",
+          "We use AutoCAD primarily for 2D drawing production and documentation — general arrangement drawings, schematics, layout drawings and any deliverable where the priority is a clear, dimensioned 2D drawing rather than a coordinated 3D model. It's also the standard destination format for CAD conversion work, since DWG remains the most universally exchangeable native CAD format across Indian engineering practices.",
+        ],
+      },
+      {
+        heading: "Standardising a Drawing Register",
+        paragraphs: [
+          "Layer and drawing standardisation is a recurring reason clients bring AutoCAD work to us — a drawing register accumulated over years, across multiple drafters and sometimes multiple companies, tends to drift into inconsistent layer names, line weights and title block versions unless someone actively maintains the standard. We can both draft to an existing standard and help establish one where none exists yet.",
+          "Because AutoCAD files move between so many parties on a typical project, we pay particular attention to file hygiene — purging unused layers and blocks, keeping external references properly managed, and avoiding the kind of bloated, slow-opening file that becomes its own source of delay on a live project.",
+        ],
+      },
+      {
+        heading: "Block Libraries and Sheet Set Management",
+        paragraphs: [
+          "AutoCAD's block and attribute tools are a practical way to keep repeated elements — door and window symbols, structural connection details, standard equipment footprints — consistent across a drawing set, and we build block libraries deliberately for larger or ongoing projects rather than letting each drafter recreate similar geometry independently.",
+          "Sheet set management, layout and paper space configuration are handled with an eye to how the drawing set will actually be issued and printed, since a drawing that looks correct on screen but plots at the wrong scale or with overlapping title block elements is a surprisingly common and entirely avoidable quality failure.",
+        ],
+      },
+      {
+        heading: "Moving Between AutoCAD and BIM",
+        paragraphs: [
+          "For projects that move between AutoCAD and a BIM platform at different stages — perhaps starting as a 2D concept before moving into coordinated Revit documentation — we manage that transition deliberately, extracting what's genuinely reusable from the 2D work rather than starting the BIM model with no reference to the design work that preceded it.",
+          "Version compatibility is a practical, ongoing consideration given how many different AutoCAD releases remain in active use across Indian practices and fabricators — we confirm which version your team needs deliverables in and save down where necessary, rather than assuming everyone is on the latest release.",
+        ],
+      },
+      {
+        heading: "Managing References on a Multi-Drawing Project",
+        paragraphs: [
+          "Xref management on a multi-drawing project deserves more discipline than it usually gets — a project referencing several external files that get moved, renamed or independently edited without coordination is a common and entirely avoidable source of broken links and missing geometry, and we set up a clear referencing structure at project start rather than letting it develop ad hoc.",
+          "Dimensioning style and annotation scale consistency across a drawing set is a quieter but equally important quality marker — text that's readable at the intended plot scale, dimension styles that match your title block convention, and annotation that doesn't visually clutter the underlying geometry all contribute to a drawing set that reads clearly the first time, not just one that's technically complete.",
+        ],
+      },
+      {
+        heading: "Templates for Multiple Simultaneous Projects",
+        paragraphs: [
+          "For teams working across multiple simultaneous projects, we maintain separate, clearly organised project templates and standards rather than a single generic template stretched to fit every client's specific requirements, since a template that's genuinely tailored to a specific project's needs produces cleaner, faster drafting than a compromise template trying to serve everyone.",
+          "Plotting and PDF publishing consistency across a drawing set is a small detail that has an outsized effect on how professional a delivered package looks — consistent line weights, correctly rendered hatching, and a publish setup that produces identical output whoever on the team runs it, rather than depending on an individual's personal plot style settings.",
+        ],
+      },
+      {
+        heading: "Issuing to Multiple Parties",
+        paragraphs: [
+          "For drawing sets that need to be issued to multiple parties with different format requirements — one consultant wanting native DWG, another wanting PDF, an authority wanting a specific paper size — we manage this from a single master drawing set rather than maintaining several parallel versions that risk drifting out of sync with each other.",
+        ],
+      },
     ],
     usedFor: [
       "2D drawing production and documentation",
@@ -68,20 +103,55 @@ export const software: Software[] = [
     summary:
       "Building Information Modelling software used for coordinated architectural, structural and MEP modelling and documentation.",
     overview: [
-      "Revit is the standard platform for coordinated Building Information Modelling in India's larger commercial, residential and institutional construction projects, where the value of a single, data-rich model shared across architectural, structural and MEP disciplines outweighs the additional set-up effort compared to independent 2D drafting.",
-      "We build and maintain Revit models to a project's agreed Level of Development, working within an existing BIM execution plan where one exists rather than imposing our own conventions on a project that already has an established standard. A Revit model is only as useful as its underlying discipline and coordination, and we treat model health — clean families, sensible worksets, accurate parameters — as being just as important as visual completeness.",
-      "Clash detection is where a lot of Revit's practical value gets realised on Indian construction projects, particularly on dense high-rise developments where structural, architectural and services elements genuinely compete for the same physical space. Federating discipline models and running clash detection before issue-for-construction catches problems on screen that would otherwise surface as expensive rework on site.",
-      "Custom family creation is a common need on projects using non-standard equipment, façade systems or fittings that don't come pre-built in Revit's standard libraries — we build these to schedule and tag correctly, not just to display correctly in a 3D view.",
-      "Worksharing and model division on larger projects is planned deliberately rather than left to grow organically — deciding upfront how a model splits across worksets or linked files, based on how the team actually collaborates, avoids the file-size and performance problems an unplanned division tends to create as a project grows.",
-      "Schedules and tags are treated as first-class modelling outputs in their own right, since a schedule that pulls the wrong parameter or a tag that displays inconsistent information across similar elements undermines confidence in the model's data even when the underlying geometry is completely correct.",
-      "Model handover at project close-out is worth planning for from the start, particularly where a facilities team will inherit the model for ongoing asset management — this audience needs different information (equipment data, warranty references, maintenance access notes) than a design or construction team needed during delivery, and scoping this early avoids a scramble to add it retroactively.",
-      "For teams new to Revit, getting the initial template, family library and naming convention right on the first project pays off across every subsequent one — we can help set this foundation up properly rather than letting a team back into these decisions informally over several projects.",
-      "Phasing and design options within Revit support the reality that a project's existing conditions, demolition scope and proposed design frequently need to be represented within the same model rather than as entirely separate files, and we set this structure up deliberately at the start of a renovation or retrofit project so it doesn't need to be retrofitted awkwardly later.",
-      "View and sheet organisation across a larger project benefits from a consistent, planned naming and numbering convention from the outset — a haphazardly organised sheet index becomes genuinely difficult to navigate once a project reaches dozens or hundreds of sheets, and this is a foundational decision worth getting right before documentation ramps up rather than reorganising mid-project.",
-      "Where a project's Revit model needs to support downstream energy analysis, quantity take-off, or another data-driven use beyond visual documentation, we confirm which specific parameters and data structures that downstream tool actually needs before modelling begins, since retrofitting the right data structure into an already-built model is considerably more work than building it in from the start.",
-      "Shared parameters and project standards deserve deliberate setup on any project involving more than one discipline modelling into the same environment, since a parameter defined slightly differently by two consultants working independently creates exactly the kind of inconsistency that undermines confidence in a supposedly coordinated model.",
-      "Rendering and visualisation directly from a Revit model, while not its primary purpose, offers a practical advantage over a separately built visualisation model — a render produced from the same model used for documentation stays honestly consistent with what's actually been designed, rather than risking the gap that can open up between an idealised presentation image and the underlying construction-ready design.",
-      "For projects involving structural or MEP consultants working in a different platform, IFC-based interoperability is managed carefully, checking that geometry and key parameters survive the exchange in both directions rather than assuming any two BIM platforms translate data cleanly between each other by default.",
+      {
+        heading: "The Standard Platform for Coordinated BIM",
+        paragraphs: [
+          "Revit is the standard platform for coordinated Building Information Modelling in India's larger commercial, residential and institutional construction projects, where the value of a single, data-rich model shared across architectural, structural and MEP disciplines outweighs the additional set-up effort compared to independent 2D drafting.",
+          "We build and maintain Revit models to a project's agreed Level of Development, working within an existing BIM execution plan where one exists rather than imposing our own conventions on a project that already has an established standard. A Revit model is only as useful as its underlying discipline and coordination, and we treat model health — clean families, sensible worksets, accurate parameters — as being just as important as visual completeness.",
+        ],
+      },
+      {
+        heading: "Clash Detection and Custom Families",
+        paragraphs: [
+          "Clash detection is where a lot of Revit's practical value gets realised on Indian construction projects, particularly on dense high-rise developments where structural, architectural and services elements genuinely compete for the same physical space. Federating discipline models and running clash detection before issue-for-construction catches problems on screen that would otherwise surface as expensive rework on site.",
+          "Custom family creation is a common need on projects using non-standard equipment, façade systems or fittings that don't come pre-built in Revit's standard libraries — we build these to schedule and tag correctly, not just to display correctly in a 3D view.",
+        ],
+      },
+      {
+        heading: "Worksharing and Reliable Schedules",
+        paragraphs: [
+          "Worksharing and model division on larger projects is planned deliberately rather than left to grow organically — deciding upfront how a model splits across worksets or linked files, based on how the team actually collaborates, avoids the file-size and performance problems an unplanned division tends to create as a project grows.",
+          "Schedules and tags are treated as first-class modelling outputs in their own right, since a schedule that pulls the wrong parameter or a tag that displays inconsistent information across similar elements undermines confidence in the model's data even when the underlying geometry is completely correct.",
+        ],
+      },
+      {
+        heading: "Planning for Handover and a Strong First Project",
+        paragraphs: [
+          "Model handover at project close-out is worth planning for from the start, particularly where a facilities team will inherit the model for ongoing asset management — this audience needs different information (equipment data, warranty references, maintenance access notes) than a design or construction team needed during delivery, and scoping this early avoids a scramble to add it retroactively.",
+          "For teams new to Revit, getting the initial template, family library and naming convention right on the first project pays off across every subsequent one — we can help set this foundation up properly rather than letting a team back into these decisions informally over several projects.",
+        ],
+      },
+      {
+        heading: "Phasing and Sheet Organisation",
+        paragraphs: [
+          "Phasing and design options within Revit support the reality that a project's existing conditions, demolition scope and proposed design frequently need to be represented within the same model rather than as entirely separate files, and we set this structure up deliberately at the start of a renovation or retrofit project so it doesn't need to be retrofitted awkwardly later.",
+          "View and sheet organisation across a larger project benefits from a consistent, planned naming and numbering convention from the outset — a haphazardly organised sheet index becomes genuinely difficult to navigate once a project reaches dozens or hundreds of sheets, and this is a foundational decision worth getting right before documentation ramps up rather than reorganising mid-project.",
+        ],
+      },
+      {
+        heading: "Downstream Data Needs and Shared Parameters",
+        paragraphs: [
+          "Where a project's Revit model needs to support downstream energy analysis, quantity take-off, or another data-driven use beyond visual documentation, we confirm which specific parameters and data structures that downstream tool actually needs before modelling begins, since retrofitting the right data structure into an already-built model is considerably more work than building it in from the start.",
+          "Shared parameters and project standards deserve deliberate setup on any project involving more than one discipline modelling into the same environment, since a parameter defined slightly differently by two consultants working independently creates exactly the kind of inconsistency that undermines confidence in a supposedly coordinated model.",
+        ],
+      },
+      {
+        heading: "Rendering and Cross-Platform Interoperability",
+        paragraphs: [
+          "Rendering and visualisation directly from a Revit model, while not its primary purpose, offers a practical advantage over a separately built visualisation model — a render produced from the same model used for documentation stays honestly consistent with what's actually been designed, rather than risking the gap that can open up between an idealised presentation image and the underlying construction-ready design.",
+          "For projects involving structural or MEP consultants working in a different platform, IFC-based interoperability is managed carefully, checking that geometry and key parameters survive the exchange in both directions rather than assuming any two BIM platforms translate data cleanly between each other by default.",
+        ],
+      },
     ],
     usedFor: [
       "Architectural, structural and MEP BIM modelling",
@@ -130,20 +200,55 @@ export const software: Software[] = [
     summary:
       "Parametric 3D mechanical CAD software used for part and assembly modelling, sheet metal design and manufacturing documentation.",
     overview: [
-      "SolidWorks is one of our primary platforms for mechanical parts and assemblies, particularly where a project needs genuinely parametric, feature-based modelling that stays predictable and editable as a design iterates. Its sheet metal and assembly tools in particular make it a strong fit for the fabrication and manufacturing documentation work that makes up a large share of what we produce for Indian manufacturers.",
-      "Sheet metal modelling in SolidWorks is where a lot of practical value sits for fabrication clients — the software's flat pattern and bend allowance tools, correctly configured to match your actual press brake and material, produce nesting-ready DXFs that go straight to the shop floor without a manual translation step.",
-      "For assemblies, we build mate and constraint logic deliberately rather than just enough to make the model look correct in a single configuration — an under-constrained assembly can move in ways that aren't obvious until a downstream simulation or physical build reveals the problem, and we design the model structure to avoid that.",
-      "SolidWorks' native drawing tools let us derive fully dimensioned 2D drawings, exploded views and BOMs directly from the same model used for 3D visualisation, which keeps documentation and geometry from drifting apart over the life of a project.",
-      "Configuration management within SolidWorks is a valuable but often under-used feature for manufacturers producing a family of related parts — a single well-structured master model with design table-driven configurations avoids the drift that inevitably creeps in when each variant is maintained as an independently copied file.",
-      "SolidWorks' simulation and analysis add-ons, where a client has access to them, integrate naturally with models we build, since geometry constructed with simulation in mind from the outset — clean, non-redundant features, appropriately simplified for meshing — saves considerable rework compared to preparing an existing model for analysis after the fact.",
-      "For teams managing a large library of legacy parts, SolidWorks' PDM and file management tools (where in use) benefit from disciplined file naming and revision practice from the point a part is first modelled, and we align our delivery structure with whatever data management system your team already has in place.",
-      "Weldment and structural member tools in SolidWorks are a practical fit for equipment design involving fabricated steel frames, letting us model and cut-list these members within the same environment as the mechanical equipment they support, rather than treating structural frame design as a disconnected exercise handled in a separate platform.",
-      "Surface modelling tools come into play for parts with complex, non-prismatic geometry that standard feature-based solid modelling handles poorly — a moulded enclosure or an ergonomically shaped handle, for instance — and we choose between surface and solid modelling techniques based on what the specific geometry actually requires rather than defaulting to one approach for every part.",
-      "Drawing template and BOM configuration set up early in a project pays off considerably over its life — a BOM structured to match your procurement team's actual needs, and a drawing template that matches your company's standard title block from the first sheet, avoids a painful retrofit exercise once dozens of drawings already exist in an inconsistent format.",
-      "Top-down assembly design, where a product's overall envelope or key interfaces are defined before individual components are modelled in detail, suits projects where the overall form needs to be locked in early while detail design continues in parallel — we choose between top-down and bottom-up modelling approaches based on which better fits a specific project's actual design sequence.",
-      "Tolerance stack-up analysis across an assembly's mating features is worth doing deliberately rather than assumed to work out, particularly for assemblies with several parts contributing to a single critical dimension chain — SolidWorks' dimensioning and measurement tools support this analysis directly against the model rather than requiring a separate manual calculation disconnected from the actual geometry.",
-      "Rendering and visualisation add-ins available within SolidWorks, where relevant to a client's needs, let us produce presentation-quality images directly from the same model used for engineering, which is a practical way to support a product pitch or marketing need without maintaining an entirely separate visualisation file.",
-      "For manufacturers working with overseas suppliers or partners, we pay particular attention to neutral format export quality — STEP and IGES files that translate cleanly into whatever CAD system the receiving party uses, since a poorly exported neutral file can silently lose feature information that only becomes apparent once the receiving party tries to actually use it.",
+      {
+        heading: "A Primary Platform for Parts and Assemblies",
+        paragraphs: [
+          "SolidWorks is one of our primary platforms for mechanical parts and assemblies, particularly where a project needs genuinely parametric, feature-based modelling that stays predictable and editable as a design iterates. Its sheet metal and assembly tools in particular make it a strong fit for the fabrication and manufacturing documentation work that makes up a large share of what we produce for Indian manufacturers.",
+          "Sheet metal modelling in SolidWorks is where a lot of practical value sits for fabrication clients — the software's flat pattern and bend allowance tools, correctly configured to match your actual press brake and material, produce nesting-ready DXFs that go straight to the shop floor without a manual translation step.",
+        ],
+      },
+      {
+        heading: "Assembly Logic and Native Drawing Tools",
+        paragraphs: [
+          "For assemblies, we build mate and constraint logic deliberately rather than just enough to make the model look correct in a single configuration — an under-constrained assembly can move in ways that aren't obvious until a downstream simulation or physical build reveals the problem, and we design the model structure to avoid that.",
+          "SolidWorks' native drawing tools let us derive fully dimensioned 2D drawings, exploded views and BOMs directly from the same model used for 3D visualisation, which keeps documentation and geometry from drifting apart over the life of a project.",
+        ],
+      },
+      {
+        heading: "Configuration Management and Simulation Readiness",
+        paragraphs: [
+          "Configuration management within SolidWorks is a valuable but often under-used feature for manufacturers producing a family of related parts — a single well-structured master model with design table-driven configurations avoids the drift that inevitably creeps in when each variant is maintained as an independently copied file.",
+          "SolidWorks' simulation and analysis add-ons, where a client has access to them, integrate naturally with models we build, since geometry constructed with simulation in mind from the outset — clean, non-redundant features, appropriately simplified for meshing — saves considerable rework compared to preparing an existing model for analysis after the fact.",
+        ],
+      },
+      {
+        heading: "PDM Practice and Weldment Modelling",
+        paragraphs: [
+          "For teams managing a large library of legacy parts, SolidWorks' PDM and file management tools (where in use) benefit from disciplined file naming and revision practice from the point a part is first modelled, and we align our delivery structure with whatever data management system your team already has in place.",
+          "Weldment and structural member tools in SolidWorks are a practical fit for equipment design involving fabricated steel frames, letting us model and cut-list these members within the same environment as the mechanical equipment they support, rather than treating structural frame design as a disconnected exercise handled in a separate platform.",
+        ],
+      },
+      {
+        heading: "Surface Modelling and Template Set-Up",
+        paragraphs: [
+          "Surface modelling tools come into play for parts with complex, non-prismatic geometry that standard feature-based solid modelling handles poorly — a moulded enclosure or an ergonomically shaped handle, for instance — and we choose between surface and solid modelling techniques based on what the specific geometry actually requires rather than defaulting to one approach for every part.",
+          "Drawing template and BOM configuration set up early in a project pays off considerably over its life — a BOM structured to match your procurement team's actual needs, and a drawing template that matches your company's standard title block from the first sheet, avoids a painful retrofit exercise once dozens of drawings already exist in an inconsistent format.",
+        ],
+      },
+      {
+        heading: "Top-Down Design and Tolerance Stack-Up",
+        paragraphs: [
+          "Top-down assembly design, where a product's overall envelope or key interfaces are defined before individual components are modelled in detail, suits projects where the overall form needs to be locked in early while detail design continues in parallel — we choose between top-down and bottom-up modelling approaches based on which better fits a specific project's actual design sequence.",
+          "Tolerance stack-up analysis across an assembly's mating features is worth doing deliberately rather than assumed to work out, particularly for assemblies with several parts contributing to a single critical dimension chain — SolidWorks' dimensioning and measurement tools support this analysis directly against the model rather than requiring a separate manual calculation disconnected from the actual geometry.",
+        ],
+      },
+      {
+        heading: "Rendering and Export Quality for Overseas Partners",
+        paragraphs: [
+          "Rendering and visualisation add-ins available within SolidWorks, where relevant to a client's needs, let us produce presentation-quality images directly from the same model used for engineering, which is a practical way to support a product pitch or marketing need without maintaining an entirely separate visualisation file.",
+          "For manufacturers working with overseas suppliers or partners, we pay particular attention to neutral format export quality — STEP and IGES files that translate cleanly into whatever CAD system the receiving party uses, since a poorly exported neutral file can silently lose feature information that only becomes apparent once the receiving party tries to actually use it.",
+        ],
+      },
     ],
     usedFor: [
       "Parametric part and assembly modelling",
@@ -193,20 +298,55 @@ export const software: Software[] = [
     summary:
       "Parametric 3D mechanical CAD software used for product design, assembly modelling and manufacturing documentation.",
     overview: [
-      "Autodesk Inventor is another of our core mechanical modelling platforms, offering the same broad category of parametric part and assembly modelling as SolidWorks, and we work in whichever platform matches your team's existing environment rather than pushing a preferred tool. For clients already standardised on the wider Autodesk ecosystem (AutoCAD, Navisworks, Civil 3D), Inventor often fits more naturally into an existing file and data management workflow.",
-      "Product design and development work in Inventor follows the same discipline we apply across mechanical modelling generally — clean, logical feature trees, sensible assembly constraint structure, and models built to be edited later, not just to look right in their current state.",
-      "Manufacturing drawing production from an Inventor model benefits from tight integration between the model and its derived 2D documentation, which helps keep drawings and BOMs synchronised as a design goes through revisions during development.",
-      "Sheet metal design in Inventor follows the same principle we apply in SolidWorks: bend and flat pattern parameters are set to match your actual fabrication process, not left as generic defaults that produce a flat pattern requiring manual correction on the shop floor.",
-      "Inventor's frame generator and weldment tools are a practical fit for equipment and machine design work involving structural steel frames as part of a broader mechanical assembly, letting us model and document these members alongside the equipment they support rather than treating structural frame design as an entirely separate exercise.",
-      "For manufacturers with an existing library of legacy Inventor files, we work within that library's established naming and iProperty conventions where they exist, since consistency with an established archive matters more for long-term usability than introducing a theoretically cleaner but disconnected new convention.",
-      "Where a project needs to move between Inventor and Autodesk's wider design and documentation tools — Vault for data management, Navisworks for broader coordination — we structure our modelling work to integrate cleanly with whichever of these tools your team already relies on.",
-      "iLogic and design automation tools within Inventor offer a practical way to speed up repetitive configuration work for manufacturers producing a family of related products, and where a client's product line genuinely benefits from this kind of automation, we build the underlying model structure to support it rather than treating each variant as an entirely manual modelling exercise.",
-      "Presentation and exploded view tools in Inventor are useful beyond just marketing purposes — a well-built exploded view with clear assembly sequencing can double as genuinely useful assembly instruction documentation for a production line, and we build these views with that dual purpose in mind where it's relevant to a project's actual deliverables.",
-      "Stress analysis add-ins available within Inventor, where a client has access to them, work most effectively against geometry prepared specifically for that purpose, and we discuss upfront whether a model needs to support this kind of analysis so it can be built appropriately rather than needing rework later.",
-      "Cable and harness design tools within Inventor, where a project involves electrical routing alongside mechanical structure, let us document wiring and cable paths within the same model as the surrounding mechanical assembly rather than treating electrical routing as a completely disconnected design exercise handled elsewhere.",
-      "Large assembly performance in Inventor, for full machine designs with hundreds of components, benefits from deliberate use of level-of-detail representations and simplified sub-assemblies, keeping the model responsive to work in without sacrificing the full detail needed for manufacturing documentation when it's actually required.",
-      "Model-based definition workflows, where a client's process supports working directly from an annotated 3D model rather than a traditional 2D drawing, are available within Inventor for teams ready to move in that direction, though we scope this carefully since it depends on downstream processes — inspection, procurement — being equipped to consume model-based data rather than a conventional drawing.",
-      "Reverse engineering into Inventor from a physical part or scan data follows the same measurement and validation discipline we apply across every reverse-engineering project, regardless of which specific CAD platform the resulting model is built in.",
+      {
+        heading: "A Natural Fit for the Autodesk Ecosystem",
+        paragraphs: [
+          "Autodesk Inventor is another of our core mechanical modelling platforms, offering the same broad category of parametric part and assembly modelling as SolidWorks, and we work in whichever platform matches your team's existing environment rather than pushing a preferred tool. For clients already standardised on the wider Autodesk ecosystem (AutoCAD, Navisworks, Civil 3D), Inventor often fits more naturally into an existing file and data management workflow.",
+          "Product design and development work in Inventor follows the same discipline we apply across mechanical modelling generally — clean, logical feature trees, sensible assembly constraint structure, and models built to be edited later, not just to look right in their current state.",
+        ],
+      },
+      {
+        heading: "Manufacturing Drawings and Sheet Metal Design",
+        paragraphs: [
+          "Manufacturing drawing production from an Inventor model benefits from tight integration between the model and its derived 2D documentation, which helps keep drawings and BOMs synchronised as a design goes through revisions during development.",
+          "Sheet metal design in Inventor follows the same principle we apply in SolidWorks: bend and flat pattern parameters are set to match your actual fabrication process, not left as generic defaults that produce a flat pattern requiring manual correction on the shop floor.",
+        ],
+      },
+      {
+        heading: "Frame Generator and Legacy File Conventions",
+        paragraphs: [
+          "Inventor's frame generator and weldment tools are a practical fit for equipment and machine design work involving structural steel frames as part of a broader mechanical assembly, letting us model and document these members alongside the equipment they support rather than treating structural frame design as an entirely separate exercise.",
+          "For manufacturers with an existing library of legacy Inventor files, we work within that library's established naming and iProperty conventions where they exist, since consistency with an established archive matters more for long-term usability than introducing a theoretically cleaner but disconnected new convention.",
+        ],
+      },
+      {
+        heading: "Vault Integration and iLogic Automation",
+        paragraphs: [
+          "Where a project needs to move between Inventor and Autodesk's wider design and documentation tools — Vault for data management, Navisworks for broader coordination — we structure our modelling work to integrate cleanly with whichever of these tools your team already relies on.",
+          "iLogic and design automation tools within Inventor offer a practical way to speed up repetitive configuration work for manufacturers producing a family of related products, and where a client's product line genuinely benefits from this kind of automation, we build the underlying model structure to support it rather than treating each variant as an entirely manual modelling exercise.",
+        ],
+      },
+      {
+        heading: "Exploded Views and Simulation Preparation",
+        paragraphs: [
+          "Presentation and exploded view tools in Inventor are useful beyond just marketing purposes — a well-built exploded view with clear assembly sequencing can double as genuinely useful assembly instruction documentation for a production line, and we build these views with that dual purpose in mind where it's relevant to a project's actual deliverables.",
+          "Stress analysis add-ins available within Inventor, where a client has access to them, work most effectively against geometry prepared specifically for that purpose, and we discuss upfront whether a model needs to support this kind of analysis so it can be built appropriately rather than needing rework later.",
+        ],
+      },
+      {
+        heading: "Cable Routing and Large Assembly Performance",
+        paragraphs: [
+          "Cable and harness design tools within Inventor, where a project involves electrical routing alongside mechanical structure, let us document wiring and cable paths within the same model as the surrounding mechanical assembly rather than treating electrical routing as a completely disconnected design exercise handled elsewhere.",
+          "Large assembly performance in Inventor, for full machine designs with hundreds of components, benefits from deliberate use of level-of-detail representations and simplified sub-assemblies, keeping the model responsive to work in without sacrificing the full detail needed for manufacturing documentation when it's actually required.",
+        ],
+      },
+      {
+        heading: "Model-Based Definition and Reverse Engineering",
+        paragraphs: [
+          "Model-based definition workflows, where a client's process supports working directly from an annotated 3D model rather than a traditional 2D drawing, are available within Inventor for teams ready to move in that direction, though we scope this carefully since it depends on downstream processes — inspection, procurement — being equipped to consume model-based data rather than a conventional drawing.",
+          "Reverse engineering into Inventor from a physical part or scan data follows the same measurement and validation discipline we apply across every reverse-engineering project, regardless of which specific CAD platform the resulting model is built in.",
+        ],
+      },
     ],
     usedFor: [
       "Parametric part and assembly modelling",
@@ -257,20 +397,55 @@ export const software: Software[] = [
     summary:
       "Structural detailing software used for structural steel and concrete shop drawings, erection drawings and structural BIM models.",
     overview: [
-      "Tekla Structures is our primary platform for structural steel detailing where a project genuinely benefits from a full structural BIM model — typically larger fabrication packages, or any project where structural steel needs to be coordinated against architectural and services models to catch clashes before fabrication.",
-      "Connection and bolt-level detailing is where Tekla's specific strengths matter most for fabrication clients — the software's ability to hold real, constructable connection geometry (not just schematic representation) means shop drawings generated from the model reflect what a workshop can actually build, including bolt clearances and cope details that a purely 2D detailing approach might miss.",
-      "Material take-offs and bolt lists generated directly from a Tekla model stay consistent with the drawings by construction, since both are derived from the same underlying structural geometry rather than compiled as separate, parallel exercises that can drift out of sync.",
-      "For projects requiring coordination with other disciplines, Tekla models export cleanly into Navisworks and similar federation tools, supporting clash detection against services and architectural models before steel is fabricated — a coordination step that prevents far more expensive on-site rework than it costs to run.",
-      "Tekla's numbering and phasing tools support the piece-mark discipline that makes a large fabrication job trackable on a real shop floor — a consistent, logical numbering scheme applied through the model, rather than assigned manually and inconsistently across a large drawing set, is one of the more practical benefits of detailing directly in Tekla rather than a purely 2D platform.",
-      "Where a project involves both structural steel and precast concrete, Tekla's capability to model and detail both within the same environment supports a level of interface coordination between the two trades that's difficult to replicate working from separate, disconnected drawing sets.",
-      "For fabricators running their own Tekla model as part of an ongoing capability build-up, we can work within their existing model templates, custom component libraries and numbering conventions rather than introducing our own, keeping the fabricator's growing model library internally consistent across projects.",
-      "Tekla's drawing view management, applied consistently across a large shop drawing set, keeps section and detail views correctly associated with their parent member as the design changes, avoiding the disconnect that can develop between a drawing view and its underlying model geometry when changes are made without regenerating dependent views.",
-      "Reinforced concrete detailing within Tekla, where a project's scope extends to concrete alongside structural steel, benefits from the same model-driven consistency between the 3D model and derived 2D bar bending schedules that we apply to structural steel take-offs, keeping reinforcement quantities aligned with what's actually detailed.",
-      "For larger structural packages split across several detailers working concurrently, Tekla's multi-user modelling environment supports genuine parallel work on the same federated model, and we set up model splitting and access permissions deliberately at project start so several people can detail different areas without overwriting each other's work.",
-      "Rebar and reinforcement detailing within Tekla, where a project's scope includes concrete alongside structural steel, benefits from the same parametric consistency applied to steel connections — bar shapes, laps and cover requirements are modelled to reflect real fabrication and placement constraints, not just theoretical reinforcement quantities.",
-      "Custom component development for a fabricator's specific standard connection details is a valuable investment for an ongoing client relationship, since a well-built parametric component speeds up detailing considerably on repeat work compared to manually rebuilding a similar connection from scratch on every project.",
-      "Fabrication drawing automation within Tekla, correctly configured against a project's drawing standard, reduces the manual drafting effort needed to produce individual piece drawings from the model, letting detailers focus their time on the connections and details that genuinely need engineering judgement rather than routine, repetitive drawing production.",
-      "For projects involving both new steel and an existing structure, we model the existing conditions within the same Tekla environment where site survey data supports it, keeping new and existing work coordinated within a single spatial reference rather than managed as separate, disconnected models.",
+      {
+        heading: "The Primary Platform for Full Structural BIM",
+        paragraphs: [
+          "Tekla Structures is our primary platform for structural steel detailing where a project genuinely benefits from a full structural BIM model — typically larger fabrication packages, or any project where structural steel needs to be coordinated against architectural and services models to catch clashes before fabrication.",
+          "Connection and bolt-level detailing is where Tekla's specific strengths matter most for fabrication clients — the software's ability to hold real, constructable connection geometry (not just schematic representation) means shop drawings generated from the model reflect what a workshop can actually build, including bolt clearances and cope details that a purely 2D detailing approach might miss.",
+        ],
+      },
+      {
+        heading: "Take-Offs and Multi-Discipline Coordination",
+        paragraphs: [
+          "Material take-offs and bolt lists generated directly from a Tekla model stay consistent with the drawings by construction, since both are derived from the same underlying structural geometry rather than compiled as separate, parallel exercises that can drift out of sync.",
+          "For projects requiring coordination with other disciplines, Tekla models export cleanly into Navisworks and similar federation tools, supporting clash detection against services and architectural models before steel is fabricated — a coordination step that prevents far more expensive on-site rework than it costs to run.",
+        ],
+      },
+      {
+        heading: "Piece-Mark Discipline and Precast Interfaces",
+        paragraphs: [
+          "Tekla's numbering and phasing tools support the piece-mark discipline that makes a large fabrication job trackable on a real shop floor — a consistent, logical numbering scheme applied through the model, rather than assigned manually and inconsistently across a large drawing set, is one of the more practical benefits of detailing directly in Tekla rather than a purely 2D platform.",
+          "Where a project involves both structural steel and precast concrete, Tekla's capability to model and detail both within the same environment supports a level of interface coordination between the two trades that's difficult to replicate working from separate, disconnected drawing sets.",
+        ],
+      },
+      {
+        heading: "Working Within a Fabricator's Existing Templates",
+        paragraphs: [
+          "For fabricators running their own Tekla model as part of an ongoing capability build-up, we can work within their existing model templates, custom component libraries and numbering conventions rather than introducing our own, keeping the fabricator's growing model library internally consistent across projects.",
+          "Tekla's drawing view management, applied consistently across a large shop drawing set, keeps section and detail views correctly associated with their parent member as the design changes, avoiding the disconnect that can develop between a drawing view and its underlying model geometry when changes are made without regenerating dependent views.",
+        ],
+      },
+      {
+        heading: "Reinforced Concrete and Parallel Detailing",
+        paragraphs: [
+          "Reinforced concrete detailing within Tekla, where a project's scope extends to concrete alongside structural steel, benefits from the same model-driven consistency between the 3D model and derived 2D bar bending schedules that we apply to structural steel take-offs, keeping reinforcement quantities aligned with what's actually detailed.",
+          "For larger structural packages split across several detailers working concurrently, Tekla's multi-user modelling environment supports genuine parallel work on the same federated model, and we set up model splitting and access permissions deliberately at project start so several people can detail different areas without overwriting each other's work.",
+        ],
+      },
+      {
+        heading: "Rebar Detailing and Custom Component Libraries",
+        paragraphs: [
+          "Rebar and reinforcement detailing within Tekla, where a project's scope includes concrete alongside structural steel, benefits from the same parametric consistency applied to steel connections — bar shapes, laps and cover requirements are modelled to reflect real fabrication and placement constraints, not just theoretical reinforcement quantities.",
+          "Custom component development for a fabricator's specific standard connection details is a valuable investment for an ongoing client relationship, since a well-built parametric component speeds up detailing considerably on repeat work compared to manually rebuilding a similar connection from scratch on every project.",
+        ],
+      },
+      {
+        heading: "Drawing Automation and Working Against Existing Structure",
+        paragraphs: [
+          "Fabrication drawing automation within Tekla, correctly configured against a project's drawing standard, reduces the manual drafting effort needed to produce individual piece drawings from the model, letting detailers focus their time on the connections and details that genuinely need engineering judgement rather than routine, repetitive drawing production.",
+          "For projects involving both new steel and an existing structure, we model the existing conditions within the same Tekla environment where site survey data supports it, keeping new and existing work coordinated within a single spatial reference rather than managed as separate, disconnected models.",
+        ],
+      },
     ],
     usedFor: [
       "Structural steel shop and erection drawings",
@@ -318,18 +493,48 @@ export const software: Software[] = [
     summary:
       "CAD platform commonly used in infrastructure and utilities projects, supported for drawing conversion and documentation.",
     overview: [
-      "MicroStation is common on infrastructure and utilities projects in India, particularly where a project connects into a network operator or authority's existing drawing archive built on Bentley's platform rather than Autodesk's. We support MicroStation primarily through conversion and drafting work that needs to interoperate with these DGN-based archives.",
-      "DGN file conversion is the most common request we see involving MicroStation — bringing a legacy infrastructure drawing into a format your team can work with, or converting your own drawings into DGN to hand over to an authority that standardises on it. This conversion work follows the same principle as our broader CAD conversion service: proper vector reconstruction, not a raster trace dressed up as a converted file.",
-      "Infrastructure and utilities documentation carries its own conventions around symbology, layering and coordinate referencing that differ from typical building-sector CAD standards, and we draft or convert to match whatever convention your specific network operator or authority expects.",
-      "Coordinate system and georeferencing accuracy deserves particular care in MicroStation-based infrastructure work, since these drawings often need to align precisely with a real-world survey grid across a large geographic area, and a small referencing error can compound significantly across a long linear asset like a road or pipeline corridor.",
-      "Where a project needs data to move between MicroStation and a more widely used platform like AutoCAD or Civil 3D — for instance, a private consultant working alongside a state authority that standardises on Bentley software — we manage that translation carefully, checking that layer structure and symbology survive the format conversion accurately rather than degrading into a generic, less meaningful representation.",
-      "Reference file structure in MicroStation, similar in principle to AutoCAD's xrefs, needs the same disciplined management on a multi-drawing infrastructure project — a large corridor or network drawing referencing many separate design files benefits considerably from a clear, deliberately planned referencing structure set up at project start rather than one that develops informally as files accumulate.",
-      "Cell libraries — MicroStation's equivalent of reusable blocks — are worth building deliberately for infrastructure symbology that repeats across many sheets of a large linear project, since a consistent, well-organised cell library saves considerable time compared to redrawing similar symbols on each new sheet or drawing set.",
-      "Level (layer) structure and symbology standards in MicroStation-based infrastructure work often follow a specific authority's mandated convention rather than a generic default, and we confirm and apply the exact level structure a given network operator or authority expects rather than assuming standard practice transfers directly from building-sector drafting conventions.",
-      "For projects that span both new design work and a large legacy DGN archive, we prioritise which drawings actually need active conversion or update against which can remain as reference-only archive material, since treating every legacy drawing as equally urgent tends to waste effort on material that's rarely actually referenced again.",
-      "Annotation and dimensioning conventions specific to infrastructure drafting — chainage referencing, offset dimensioning along a linear alignment — differ meaningfully from typical building-sector annotation practice, and we draft to these linear-project-specific conventions where that's what a network operator's drawing standard actually calls for.",
-      "Long-term drawing archive management for an operating network authority benefits from a consistent, disciplined approach to file naming and revision tracking maintained over years, not just at the point of an initial conversion project, and we're able to support this as an ongoing arrangement rather than only a one-off digitisation exercise.",
-      "Where a MicroStation-based infrastructure project needs 3D terrain or corridor modelling rather than purely 2D drafting, this is available within the Bentley environment, following the same dynamic-surface modelling principle we apply in Civil 3D for Autodesk-based projects, adapted to whichever platform a specific authority's workflow actually requires.",
+      {
+        heading: "Interoperating With Bentley-Based Archives",
+        paragraphs: [
+          "MicroStation is common on infrastructure and utilities projects in India, particularly where a project connects into a network operator or authority's existing drawing archive built on Bentley's platform rather than Autodesk's. We support MicroStation primarily through conversion and drafting work that needs to interoperate with these DGN-based archives.",
+          "DGN file conversion is the most common request we see involving MicroStation — bringing a legacy infrastructure drawing into a format your team can work with, or converting your own drawings into DGN to hand over to an authority that standardises on it. This conversion work follows the same principle as our broader CAD conversion service: proper vector reconstruction, not a raster trace dressed up as a converted file.",
+        ],
+      },
+      {
+        heading: "Infrastructure Conventions and Georeferencing",
+        paragraphs: [
+          "Infrastructure and utilities documentation carries its own conventions around symbology, layering and coordinate referencing that differ from typical building-sector CAD standards, and we draft or convert to match whatever convention your specific network operator or authority expects.",
+          "Coordinate system and georeferencing accuracy deserves particular care in MicroStation-based infrastructure work, since these drawings often need to align precisely with a real-world survey grid across a large geographic area, and a small referencing error can compound significantly across a long linear asset like a road or pipeline corridor.",
+        ],
+      },
+      {
+        heading: "Cross-Platform Translation and Reference Files",
+        paragraphs: [
+          "Where a project needs data to move between MicroStation and a more widely used platform like AutoCAD or Civil 3D — for instance, a private consultant working alongside a state authority that standardises on Bentley software — we manage that translation carefully, checking that layer structure and symbology survive the format conversion accurately rather than degrading into a generic, less meaningful representation.",
+          "Reference file structure in MicroStation, similar in principle to AutoCAD's xrefs, needs the same disciplined management on a multi-drawing infrastructure project — a large corridor or network drawing referencing many separate design files benefits considerably from a clear, deliberately planned referencing structure set up at project start rather than one that develops informally as files accumulate.",
+        ],
+      },
+      {
+        heading: "Cell Libraries and Authority-Mandated Levels",
+        paragraphs: [
+          "Cell libraries — MicroStation's equivalent of reusable blocks — are worth building deliberately for infrastructure symbology that repeats across many sheets of a large linear project, since a consistent, well-organised cell library saves considerable time compared to redrawing similar symbols on each new sheet or drawing set.",
+          "Level (layer) structure and symbology standards in MicroStation-based infrastructure work often follow a specific authority's mandated convention rather than a generic default, and we confirm and apply the exact level structure a given network operator or authority expects rather than assuming standard practice transfers directly from building-sector drafting conventions.",
+        ],
+      },
+      {
+        heading: "Prioritising a Legacy Archive and Linear Annotation",
+        paragraphs: [
+          "For projects that span both new design work and a large legacy DGN archive, we prioritise which drawings actually need active conversion or update against which can remain as reference-only archive material, since treating every legacy drawing as equally urgent tends to waste effort on material that's rarely actually referenced again.",
+          "Annotation and dimensioning conventions specific to infrastructure drafting — chainage referencing, offset dimensioning along a linear alignment — differ meaningfully from typical building-sector annotation practice, and we draft to these linear-project-specific conventions where that's what a network operator's drawing standard actually calls for.",
+        ],
+      },
+      {
+        heading: "Long-Term Archive Management and 3D Corridor Modelling",
+        paragraphs: [
+          "Long-term drawing archive management for an operating network authority benefits from a consistent, disciplined approach to file naming and revision tracking maintained over years, not just at the point of an initial conversion project, and we're able to support this as an ongoing arrangement rather than only a one-off digitisation exercise.",
+          "Where a MicroStation-based infrastructure project needs 3D terrain or corridor modelling rather than purely 2D drafting, this is available within the Bentley environment, following the same dynamic-surface modelling principle we apply in Civil 3D for Autodesk-based projects, adapted to whichever platform a specific authority's workflow actually requires.",
+        ],
+      },
     ],
     usedFor: [
       "DGN file conversion and drafting",
@@ -378,20 +583,55 @@ export const software: Software[] = [
     summary:
       "Civil engineering design software used for site, subdivision, road and stormwater design and construction documentation.",
     overview: [
-      "Civil 3D is our standard platform for land development and site infrastructure work, because it's purpose-built to handle the surface, corridor and pipe-network modelling that general CAD or BIM tools don't manage natively. A civil project's design genuinely depends on terrain, and Civil 3D's dynamic surface modelling means changes propagate correctly through grading, road and drainage design rather than needing to be manually re-coordinated across separate drawings.",
-      "We build the site surface model once from survey data and treat it as the single source that every downstream drawing — grading plans, road cross-sections, stormwater design — derives from, which is what keeps a civil drawing set internally consistent as a design develops through multiple revisions.",
-      "Road design work uses Civil 3D's corridor modelling to check horizontal and vertical alignment, cross-sections and superelevation for buildability against realistic construction tolerances, rather than treating road geometry as a purely theoretical exercise divorced from how it will actually be built.",
-      "Stormwater and drainage network modelling benefits particularly from Civil 3D's pipe network tools, which let us verify hydraulic performance and catchment behaviour directly against the design surface, catching conflicts between grading and drainage design before they reach construction documentation.",
-      "Civil 3D's data shortcut and reference file structure supports genuine multi-user collaboration on larger land development projects, letting several people work on different aspects of the same civil design — surfaces, corridors, pipe networks — simultaneously without constantly overwriting each other's work, provided this structure is set up deliberately at project start.",
-      "Quantity take-off directly from the Civil 3D model — earthworks volumes, pipe lengths, pavement areas — is a practical byproduct of building the model properly in the first place, and we structure our modelling work so these quantities can be extracted reliably rather than needing a separate manual measurement exercise.",
-      "For projects that need to hand data over to a construction surveyor for machine-guided earthworks, we export surface and alignment data in the specific format the surveyor's equipment requires, treating this handover as a deliverable in its own right rather than an afterthought once design drawings are complete.",
-      "Pipe network design in Civil 3D benefits from hydraulic property data being attached directly to the network model rather than tracked separately in a spreadsheet, since this keeps the drawing set, the hydraulic calculation basis and the physical network geometry all derived from a single consistent source as a design develops through revisions.",
-      "Corridor modelling for road design supports multiple design scenarios being explored and compared within the same project file, which is a practical way to evaluate alignment or cross-section alternatives before committing to a final design, rather than building each option as an entirely separate file that has to be manually reconciled against the others.",
-      "For subdivision projects with staged development, Civil 3D's parcel and staging tools let us represent a multi-stage lot release plan within a single coordinated model, keeping each stage's civil design consistent with the overall masterplan rather than treating each stage as an independent design exercise.",
-      "Pressure network design tools within Civil 3D support water supply infrastructure alongside the platform's more commonly used gravity drainage network capability, letting a single project model both network types consistently where a development needs both designed and documented together.",
-      "Assembly and subassembly-based corridor modelling lets us represent complex road cross-sections — varying lane widths, kerb profiles, verge treatments — parametrically along an alignment, so a cross-section change at one design stage propagates correctly along the whole corridor rather than needing manual updates at every station.",
-      "Label styles and annotation configured deliberately at project start keep plan and profile drawings readable and consistent across a large civil drawing set, since Civil 3D's dynamic labelling, if left at generic default settings, tends to produce cluttered or inconsistently formatted annotation that undermines an otherwise well-modelled design.",
-      "For projects requiring integration with a GIS system — common for utility and municipal infrastructure work — we manage the handover between Civil 3D's design environment and the receiving GIS platform carefully, since attribute data and geometry both need to translate correctly for the GIS system to actually be useful to whoever manages the resulting asset data long-term.",
+      {
+        heading: "The Standard Platform for Terrain-Dependent Design",
+        paragraphs: [
+          "Civil 3D is our standard platform for land development and site infrastructure work, because it's purpose-built to handle the surface, corridor and pipe-network modelling that general CAD or BIM tools don't manage natively. A civil project's design genuinely depends on terrain, and Civil 3D's dynamic surface modelling means changes propagate correctly through grading, road and drainage design rather than needing to be manually re-coordinated across separate drawings.",
+          "We build the site surface model once from survey data and treat it as the single source that every downstream drawing — grading plans, road cross-sections, stormwater design — derives from, which is what keeps a civil drawing set internally consistent as a design develops through multiple revisions.",
+        ],
+      },
+      {
+        heading: "Buildable Road Design and Stormwater Modelling",
+        paragraphs: [
+          "Road design work uses Civil 3D's corridor modelling to check horizontal and vertical alignment, cross-sections and superelevation for buildability against realistic construction tolerances, rather than treating road geometry as a purely theoretical exercise divorced from how it will actually be built.",
+          "Stormwater and drainage network modelling benefits particularly from Civil 3D's pipe network tools, which let us verify hydraulic performance and catchment behaviour directly against the design surface, catching conflicts between grading and drainage design before they reach construction documentation.",
+        ],
+      },
+      {
+        heading: "Multi-User Collaboration and Reliable Quantities",
+        paragraphs: [
+          "Civil 3D's data shortcut and reference file structure supports genuine multi-user collaboration on larger land development projects, letting several people work on different aspects of the same civil design — surfaces, corridors, pipe networks — simultaneously without constantly overwriting each other's work, provided this structure is set up deliberately at project start.",
+          "Quantity take-off directly from the Civil 3D model — earthworks volumes, pipe lengths, pavement areas — is a practical byproduct of building the model properly in the first place, and we structure our modelling work so these quantities can be extracted reliably rather than needing a separate manual measurement exercise.",
+        ],
+      },
+      {
+        heading: "Machine-Guidance Exports and Hydraulic Data",
+        paragraphs: [
+          "For projects that need to hand data over to a construction surveyor for machine-guided earthworks, we export surface and alignment data in the specific format the surveyor's equipment requires, treating this handover as a deliverable in its own right rather than an afterthought once design drawings are complete.",
+          "Pipe network design in Civil 3D benefits from hydraulic property data being attached directly to the network model rather than tracked separately in a spreadsheet, since this keeps the drawing set, the hydraulic calculation basis and the physical network geometry all derived from a single consistent source as a design develops through revisions.",
+        ],
+      },
+      {
+        heading: "Comparing Design Scenarios and Staged Subdivisions",
+        paragraphs: [
+          "Corridor modelling for road design supports multiple design scenarios being explored and compared within the same project file, which is a practical way to evaluate alignment or cross-section alternatives before committing to a final design, rather than building each option as an entirely separate file that has to be manually reconciled against the others.",
+          "For subdivision projects with staged development, Civil 3D's parcel and staging tools let us represent a multi-stage lot release plan within a single coordinated model, keeping each stage's civil design consistent with the overall masterplan rather than treating each stage as an independent design exercise.",
+        ],
+      },
+      {
+        heading: "Pressure Networks and Complex Road Cross-Sections",
+        paragraphs: [
+          "Pressure network design tools within Civil 3D support water supply infrastructure alongside the platform's more commonly used gravity drainage network capability, letting a single project model both network types consistently where a development needs both designed and documented together.",
+          "Assembly and subassembly-based corridor modelling lets us represent complex road cross-sections — varying lane widths, kerb profiles, verge treatments — parametrically along an alignment, so a cross-section change at one design stage propagates correctly along the whole corridor rather than needing manual updates at every station.",
+        ],
+      },
+      {
+        heading: "Readable Annotation and GIS Integration",
+        paragraphs: [
+          "Label styles and annotation configured deliberately at project start keep plan and profile drawings readable and consistent across a large civil drawing set, since Civil 3D's dynamic labelling, if left at generic default settings, tends to produce cluttered or inconsistently formatted annotation that undermines an otherwise well-modelled design.",
+          "For projects requiring integration with a GIS system — common for utility and municipal infrastructure work — we manage the handover between Civil 3D's design environment and the receiving GIS platform carefully, since attribute data and geometry both need to translate correctly for the GIS system to actually be useful to whoever manages the resulting asset data long-term.",
+        ],
+      },
     ],
     usedFor: [
       "Site and subdivision design",
@@ -439,19 +679,54 @@ export const software: Software[] = [
     summary:
       "Model review and coordination software used for federating multi-disciplinary BIM models and running clash detection.",
     overview: [
-      "Navisworks is the tool we rely on most for federating discipline models — Revit architectural, structural and MEP, Tekla structural steel, Civil 3D site models — into a single combined view for coordination review and clash detection, without needing every discipline to be modelled in the same native platform.",
-      "Clash detection reports generated through Navisworks are only as useful as how they're prioritised, and we structure reports so hard clashes that genuinely block construction are clearly separated from soft clearance issues that are easily resolved, rather than delivering an unsorted list that buries the problems that actually matter.",
-      "Construction sequencing review is another common use we put Navisworks to — linking a federated model to a construction programme lets a team visually check that the sequence of installation actually works before it's committed to, catching access and clearance problems that a static model review wouldn't necessarily reveal.",
-      "Navisworks' selection sets and search sets are a practical tool for organising a large federated model into meaningful, reusable groupings — by discipline, by level, by construction package — which makes repeated coordination reviews considerably faster than manually re-selecting the same elements each time.",
-      "For projects where several consultants are producing models on different update cycles, we manage federation timing deliberately, confirming which model version each discipline's latest issue represents before running a review, since a clash report generated against an outdated services model produces confidently wrong results.",
-      "Viewpoint and comment tools in Navisworks support a structured, trackable coordination conversation between disciplines — saved viewpoints tied to specific clash issues, with clear ownership and status, keep a coordination process organised in a way that email threads and static screenshots don't.",
-      "TimeLiner, Navisworks' construction sequencing tool, is a practical way to validate a proposed construction programme visually against the actual federated model, catching an installation sequence that looks fine on a Gantt chart but is physically impossible given real site access and clearance constraints — a mismatch that's considerably cheaper to catch in a model review than during actual construction.",
-      "Quantification tools within Navisworks support extracting rough quantities directly from a federated model for early cost estimation purposes, and while this isn't a substitute for a dedicated quantity surveying process, it's a genuinely useful sense-check against a separately prepared estimate, particularly at early design stages.",
-      "For projects with a large number of open coordination issues across multiple review cycles, we maintain a clear, dated record of what was raised, resolved and re-checked at each cycle, which becomes a valuable record if a coordination dispute or question arises later in the project.",
-      "Clearance and soft-clash checking — verifying adequate maintenance access or installation clearance around equipment, not just hard geometric intersection — is set up as a distinct rule category from hard clash detection, since these two categories of issue carry different urgency and are typically resolved by different people on a project team.",
-      "For projects using Navisworks primarily for coordination rather than fabrication, we still apply the same rigour to confirming model federation accuracy as we would for a fabrication-focused review, since a coordination decision based on a poorly federated model can be just as costly to unwind as a fabrication error, even without the immediate physical consequence.",
-      "Batch processing and automated report generation for recurring, scheduled coordination reviews reduces the manual overhead of producing a consistent report format at every review cycle, letting the design team focus their time on interpreting and resolving findings rather than reformatting the report itself each time.",
-      "Where a federated model needs to be shared with a client or authority who doesn't have Navisworks themselves, we export lightweight, published formats that preserve the coordination review's key findings in a format the recipient can actually open and review without needing the full authoring software.",
+      {
+        heading: "Federating Models From Multiple Native Platforms",
+        paragraphs: [
+          "Navisworks is the tool we rely on most for federating discipline models — Revit architectural, structural and MEP, Tekla structural steel, Civil 3D site models — into a single combined view for coordination review and clash detection, without needing every discipline to be modelled in the same native platform.",
+          "Clash detection reports generated through Navisworks are only as useful as how they're prioritised, and we structure reports so hard clashes that genuinely block construction are clearly separated from soft clearance issues that are easily resolved, rather than delivering an unsorted list that buries the problems that actually matter.",
+        ],
+      },
+      {
+        heading: "Construction Sequencing and Organising a Large Model",
+        paragraphs: [
+          "Construction sequencing review is another common use we put Navisworks to — linking a federated model to a construction programme lets a team visually check that the sequence of installation actually works before it's committed to, catching access and clearance problems that a static model review wouldn't necessarily reveal.",
+          "Navisworks' selection sets and search sets are a practical tool for organising a large federated model into meaningful, reusable groupings — by discipline, by level, by construction package — which makes repeated coordination reviews considerably faster than manually re-selecting the same elements each time.",
+        ],
+      },
+      {
+        heading: "Managing Federation Timing and Trackable Comments",
+        paragraphs: [
+          "For projects where several consultants are producing models on different update cycles, we manage federation timing deliberately, confirming which model version each discipline's latest issue represents before running a review, since a clash report generated against an outdated services model produces confidently wrong results.",
+          "Viewpoint and comment tools in Navisworks support a structured, trackable coordination conversation between disciplines — saved viewpoints tied to specific clash issues, with clear ownership and status, keep a coordination process organised in a way that email threads and static screenshots don't.",
+        ],
+      },
+      {
+        heading: "TimeLiner Validation and Early Quantity Checks",
+        paragraphs: [
+          "TimeLiner, Navisworks' construction sequencing tool, is a practical way to validate a proposed construction programme visually against the actual federated model, catching an installation sequence that looks fine on a Gantt chart but is physically impossible given real site access and clearance constraints — a mismatch that's considerably cheaper to catch in a model review than during actual construction.",
+          "Quantification tools within Navisworks support extracting rough quantities directly from a federated model for early cost estimation purposes, and while this isn't a substitute for a dedicated quantity surveying process, it's a genuinely useful sense-check against a separately prepared estimate, particularly at early design stages.",
+        ],
+      },
+      {
+        heading: "A Dated Record and Distinguishing Clash Severity",
+        paragraphs: [
+          "For projects with a large number of open coordination issues across multiple review cycles, we maintain a clear, dated record of what was raised, resolved and re-checked at each cycle, which becomes a valuable record if a coordination dispute or question arises later in the project.",
+          "Clearance and soft-clash checking — verifying adequate maintenance access or installation clearance around equipment, not just hard geometric intersection — is set up as a distinct rule category from hard clash detection, since these two categories of issue carry different urgency and are typically resolved by different people on a project team.",
+        ],
+      },
+      {
+        heading: "Federation Accuracy and Automated Reporting",
+        paragraphs: [
+          "For projects using Navisworks primarily for coordination rather than fabrication, we still apply the same rigour to confirming model federation accuracy as we would for a fabrication-focused review, since a coordination decision based on a poorly federated model can be just as costly to unwind as a fabrication error, even without the immediate physical consequence.",
+          "Batch processing and automated report generation for recurring, scheduled coordination reviews reduces the manual overhead of producing a consistent report format at every review cycle, letting the design team focus their time on interpreting and resolving findings rather than reformatting the report itself each time.",
+        ],
+      },
+      {
+        heading: "Sharing a Federated Model Beyond the Design Team",
+        paragraphs: [
+          "Where a federated model needs to be shared with a client or authority who doesn't have Navisworks themselves, we export lightweight, published formats that preserve the coordination review's key findings in a format the recipient can actually open and review without needing the full authoring software.",
+        ],
+      },
     ],
     usedFor: [
       "Federated model review",
@@ -498,19 +773,54 @@ export const software: Software[] = [
     summary:
       "Architectural BIM software used for building design documentation and 3D architectural modelling.",
     overview: [
-      "ArchiCAD is an alternative architectural BIM platform to Revit that some Indian practices standardise on, particularly those with an established workflow built around its specific tools for architectural documentation and 3D modelling. We support practices already working in ArchiCAD rather than requiring a migration to a different platform purely for our convenience.",
-      "Construction documentation produced in ArchiCAD follows the same coordination discipline we apply across every architectural project — floor plans, elevations, sections and schedules checked for consistency against each other, not just individually correct in isolation.",
-      "3D architectural visualisation direct from an ArchiCAD model is a natural fit for the platform, letting us produce presentation renders that stay consistent with the actual design documentation rather than a separately-built, potentially divergent visualisation model.",
-      "ArchiCAD's parametric object library and GDL-based custom object tools support building genuinely reusable, practice-specific components where a firm has recurring design elements across projects, and we build these deliberately for practices that want that consistency rather than recreating similar elements manually on each new project.",
-      "For practices that need to exchange models with structural or MEP consultants working in Revit, we manage IFC-based interoperability carefully, checking that geometry and key data survive the exchange rather than assuming the two platforms translate cleanly by default.",
-      "ArchiCAD's story and section tool structure supports a genuinely coordinated multi-level building model where plan, section and elevation views all update consistently from the same underlying 3D geometry, and we build models with this coordination discipline as a first priority rather than treating any single view as more authoritative than the others.",
-      "Schedule and quantity take-off tools within ArchiCAD, correctly configured against the model's element classifications, provide a reliable basis for door, window and finish schedules that stay synchronised with the actual design as it develops, rather than a schedule compiled once and manually maintained thereafter.",
-      "Layout book and publisher tools within ArchiCAD support a consistent, repeatable drawing issue process across a project's life, and we set up sheet organisation and issue automation deliberately at project start, keeping a large architectural drawing set navigable rather than allowing it to grow into an ad hoc collection of inconsistently organised sheets.",
-      "Collaboration through ArchiCAD's teamwork environment, where a practice uses it, supports multiple architects working within the same live model simultaneously, and we work within this structure directly rather than defaulting to a slower, file-based handoff workflow that doesn't take advantage of the platform's genuine collaborative capability.",
-      "Structural and MEP coordination from within ArchiCAD, whether through IFC exchange with a Revit-based consultant or direct collaboration with a structural engineer working in a compatible format, follows the same rigorous geometry and data verification we apply to any cross-platform BIM exchange, rather than assuming compatibility by default.",
-      "For heritage and character-sensitive renovation projects, ArchiCAD's existing-conditions modelling tools support capturing genuine as-built irregularity where it matters to a heritage assessment, while still producing a usable, coordinated model for the proposed design work — a balance we manage deliberately rather than defaulting to either extreme.",
-      "Energy and daylight analysis workflows, where a project needs this kind of performance data, benefit from the model being built with the relevant analysis tool's data requirements in mind from early in the design process, rather than retrofitting the necessary parameters into an already-developed model.",
-      "For practices working across multiple simultaneous projects, we maintain clearly organised, project-specific templates rather than a single generic ArchiCAD template stretched across every client's requirements, since a template genuinely tailored to a specific project's needs produces cleaner, more efficient modelling than a one-size-fits-all compromise.",
+      {
+        heading: "An Alternative Architectural BIM Platform",
+        paragraphs: [
+          "ArchiCAD is an alternative architectural BIM platform to Revit that some Indian practices standardise on, particularly those with an established workflow built around its specific tools for architectural documentation and 3D modelling. We support practices already working in ArchiCAD rather than requiring a migration to a different platform purely for our convenience.",
+          "Construction documentation produced in ArchiCAD follows the same coordination discipline we apply across every architectural project — floor plans, elevations, sections and schedules checked for consistency against each other, not just individually correct in isolation.",
+        ],
+      },
+      {
+        heading: "Visualisation and Reusable Practice Components",
+        paragraphs: [
+          "3D architectural visualisation direct from an ArchiCAD model is a natural fit for the platform, letting us produce presentation renders that stay consistent with the actual design documentation rather than a separately-built, potentially divergent visualisation model.",
+          "ArchiCAD's parametric object library and GDL-based custom object tools support building genuinely reusable, practice-specific components where a firm has recurring design elements across projects, and we build these deliberately for practices that want that consistency rather than recreating similar elements manually on each new project.",
+        ],
+      },
+      {
+        heading: "IFC Interoperability and Coordinated Views",
+        paragraphs: [
+          "For practices that need to exchange models with structural or MEP consultants working in Revit, we manage IFC-based interoperability carefully, checking that geometry and key data survive the exchange rather than assuming the two platforms translate cleanly by default.",
+          "ArchiCAD's story and section tool structure supports a genuinely coordinated multi-level building model where plan, section and elevation views all update consistently from the same underlying 3D geometry, and we build models with this coordination discipline as a first priority rather than treating any single view as more authoritative than the others.",
+        ],
+      },
+      {
+        heading: "Synchronised Schedules and Consistent Drawing Issue",
+        paragraphs: [
+          "Schedule and quantity take-off tools within ArchiCAD, correctly configured against the model's element classifications, provide a reliable basis for door, window and finish schedules that stay synchronised with the actual design as it develops, rather than a schedule compiled once and manually maintained thereafter.",
+          "Layout book and publisher tools within ArchiCAD support a consistent, repeatable drawing issue process across a project's life, and we set up sheet organisation and issue automation deliberately at project start, keeping a large architectural drawing set navigable rather than allowing it to grow into an ad hoc collection of inconsistently organised sheets.",
+        ],
+      },
+      {
+        heading: "Teamwork Collaboration and Structural Coordination",
+        paragraphs: [
+          "Collaboration through ArchiCAD's teamwork environment, where a practice uses it, supports multiple architects working within the same live model simultaneously, and we work within this structure directly rather than defaulting to a slower, file-based handoff workflow that doesn't take advantage of the platform's genuine collaborative capability.",
+          "Structural and MEP coordination from within ArchiCAD, whether through IFC exchange with a Revit-based consultant or direct collaboration with a structural engineer working in a compatible format, follows the same rigorous geometry and data verification we apply to any cross-platform BIM exchange, rather than assuming compatibility by default.",
+        ],
+      },
+      {
+        heading: "Heritage Fidelity and Performance Analysis",
+        paragraphs: [
+          "For heritage and character-sensitive renovation projects, ArchiCAD's existing-conditions modelling tools support capturing genuine as-built irregularity where it matters to a heritage assessment, while still producing a usable, coordinated model for the proposed design work — a balance we manage deliberately rather than defaulting to either extreme.",
+          "Energy and daylight analysis workflows, where a project needs this kind of performance data, benefit from the model being built with the relevant analysis tool's data requirements in mind from early in the design process, rather than retrofitting the necessary parameters into an already-developed model.",
+        ],
+      },
+      {
+        heading: "Project-Specific Templates for Multiple Projects",
+        paragraphs: [
+          "For practices working across multiple simultaneous projects, we maintain clearly organised, project-specific templates rather than a single generic ArchiCAD template stretched across every client's requirements, since a template genuinely tailored to a specific project's needs produces cleaner, more efficient modelling than a one-size-fits-all compromise.",
+        ],
+      },
     ],
     usedFor: [
       "Architectural BIM modelling",
@@ -562,19 +872,54 @@ export const software: Software[] = [
     summary:
       "Cloud-based 3D CAD platform used for product design, mechanical modelling and manufacturing documentation.",
     overview: [
-      "Fusion 360 is our platform of choice for product design and mechanical modelling work where cloud-based collaboration and integrated CAM workflows offer a practical advantage — particularly for smaller manufacturers and product development teams who benefit from its lower infrastructure overhead compared to traditional desktop-installed mechanical CAD.",
-      "Parametric modelling in Fusion 360 follows the same principles we apply across mechanical platforms generally — clean feature history, models built to be edited later rather than just to look correct now, and assemblies constrained deliberately rather than just enough to display correctly.",
-      "Manufacturing drawing production from a Fusion 360 model integrates naturally with the platform's CAM capabilities where a client's workflow extends from design directly into CNC programming, keeping the design and manufacturing preparation connected within a single environment.",
-      "Fusion 360's cloud-based version history and collaboration tools support a genuinely distributed design review process, letting a client's team comment directly on a model iteration without needing matching desktop software installed, which is a practical advantage for smaller teams or startups without an established CAD infrastructure.",
-      "For product development teams iterating quickly through multiple design concepts, Fusion 360's timeline-based feature history makes it straightforward to branch and compare design variations without maintaining several fully separate files, provided the underlying model structure is built with that iteration in mind from early in the process.",
-      "Generative design tools available within Fusion 360, where a client wants to explore this approach, work best against a clearly defined set of load cases, constraints and manufacturing method restrictions provided upfront — the quality of a generative design outcome depends heavily on how well these inputs are defined, and we work with your engineering team to establish them properly before running a generative study.",
-      "Fusion 360's integrated simulation tools support early-stage design validation without needing to export geometry to a separate analysis package, which is a practical advantage during rapid concept iteration, though we're clear with clients about the difference between an early indicative simulation and a fully validated engineering analysis suitable for final sign-off.",
-      "Sheet metal design within Fusion 360 follows the same production-ready discipline we apply across every mechanical platform — bend allowances calibrated against your actual press brake and material, producing flat patterns ready for nesting rather than requiring manual correction once they reach the shop floor.",
-      "Assembly modelling for products with a significant number of purchased or off-the-shelf components benefits from sourcing accurate supplier models where available, rather than modelling every fastener and hardware item from scratch, which keeps the overall assembly both accurate and efficient to build and maintain.",
-      "For teams new to parametric CAD generally, not just Fusion 360 specifically, we take extra care in early projects to establish a feature history and modelling approach that will genuinely support future design changes, since a model built without this discipline from the outset becomes progressively harder to edit as a design matures.",
-      "Fusion 360's browser-based and desktop access options both suit different working styles, and we structure deliverables to work smoothly regardless of which access mode a specific team member on your side prefers to use day to day.",
-      "For product teams evaluating whether Fusion 360 or a traditional desktop-installed platform better suits their workflow, we're happy to advise honestly based on your team's actual collaboration style and infrastructure, rather than defaulting to a recommendation that happens to suit our own preference.",
-      "Data management within Fusion 360's cloud-based project structure benefits from a clear folder and naming convention established early, since a cloud environment without this discipline can become just as disorganised as a poorly managed local file server, despite the platform's collaborative advantages.",
+      {
+        heading: "A Cloud-Based Platform for Product Design",
+        paragraphs: [
+          "Fusion 360 is our platform of choice for product design and mechanical modelling work where cloud-based collaboration and integrated CAM workflows offer a practical advantage — particularly for smaller manufacturers and product development teams who benefit from its lower infrastructure overhead compared to traditional desktop-installed mechanical CAD.",
+          "Parametric modelling in Fusion 360 follows the same principles we apply across mechanical platforms generally — clean feature history, models built to be edited later rather than just to look correct now, and assemblies constrained deliberately rather than just enough to display correctly.",
+        ],
+      },
+      {
+        heading: "CAM Integration and Distributed Design Review",
+        paragraphs: [
+          "Manufacturing drawing production from a Fusion 360 model integrates naturally with the platform's CAM capabilities where a client's workflow extends from design directly into CNC programming, keeping the design and manufacturing preparation connected within a single environment.",
+          "Fusion 360's cloud-based version history and collaboration tools support a genuinely distributed design review process, letting a client's team comment directly on a model iteration without needing matching desktop software installed, which is a practical advantage for smaller teams or startups without an established CAD infrastructure.",
+        ],
+      },
+      {
+        heading: "Rapid Iteration and Generative Design",
+        paragraphs: [
+          "For product development teams iterating quickly through multiple design concepts, Fusion 360's timeline-based feature history makes it straightforward to branch and compare design variations without maintaining several fully separate files, provided the underlying model structure is built with that iteration in mind from early in the process.",
+          "Generative design tools available within Fusion 360, where a client wants to explore this approach, work best against a clearly defined set of load cases, constraints and manufacturing method restrictions provided upfront — the quality of a generative design outcome depends heavily on how well these inputs are defined, and we work with your engineering team to establish them properly before running a generative study.",
+        ],
+      },
+      {
+        heading: "Early Simulation and Production-Ready Sheet Metal",
+        paragraphs: [
+          "Fusion 360's integrated simulation tools support early-stage design validation without needing to export geometry to a separate analysis package, which is a practical advantage during rapid concept iteration, though we're clear with clients about the difference between an early indicative simulation and a fully validated engineering analysis suitable for final sign-off.",
+          "Sheet metal design within Fusion 360 follows the same production-ready discipline we apply across every mechanical platform — bend allowances calibrated against your actual press brake and material, producing flat patterns ready for nesting rather than requiring manual correction once they reach the shop floor.",
+        ],
+      },
+      {
+        heading: "Supplier Components and Building Good Habits Early",
+        paragraphs: [
+          "Assembly modelling for products with a significant number of purchased or off-the-shelf components benefits from sourcing accurate supplier models where available, rather than modelling every fastener and hardware item from scratch, which keeps the overall assembly both accurate and efficient to build and maintain.",
+          "For teams new to parametric CAD generally, not just Fusion 360 specifically, we take extra care in early projects to establish a feature history and modelling approach that will genuinely support future design changes, since a model built without this discipline from the outset becomes progressively harder to edit as a design matures.",
+        ],
+      },
+      {
+        heading: "Choosing an Access Mode and the Right Platform",
+        paragraphs: [
+          "Fusion 360's browser-based and desktop access options both suit different working styles, and we structure deliverables to work smoothly regardless of which access mode a specific team member on your side prefers to use day to day.",
+          "For product teams evaluating whether Fusion 360 or a traditional desktop-installed platform better suits their workflow, we're happy to advise honestly based on your team's actual collaboration style and infrastructure, rather than defaulting to a recommendation that happens to suit our own preference.",
+        ],
+      },
+      {
+        heading: "Keeping a Cloud Project Organised",
+        paragraphs: [
+          "Data management within Fusion 360's cloud-based project structure benefits from a clear folder and naming convention established early, since a cloud environment without this discipline can become just as disorganised as a poorly managed local file server, despite the platform's collaborative advantages.",
+        ],
+      },
     ],
     usedFor: [
       "Product design and development",

@@ -3,6 +3,11 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface ContentSection {
+  heading?: string;
+  paragraphs: string[];
+}
+
 export interface ProcessStep {
   title: string;
   description: string;
@@ -26,7 +31,7 @@ export interface Service {
   heroHeading: string;
   heroDescription: string;
   problemStatement: string;
-  overview: string[];
+  overview: ContentSection[];
   deliverables: string[];
   applications: string[];
   process: ProcessStep[];
@@ -52,7 +57,7 @@ export interface Industry {
   name: string;
   heroHeading: string;
   heroDescription: string;
-  description: string[];
+  description: ContentSection[];
   useCases: string[];
   deliverables: string[];
   documentationRequirements: string[];
@@ -70,8 +75,8 @@ export interface Location {
   state: string;
   heroHeading: string;
   heroDescription: string;
-  intro: string[];
-  localContext: string[];
+  intro: ContentSection[];
+  localContext: ContentSection[];
   localProjectTypes: string[];
   services: string[];
   industries: string[];
@@ -122,7 +127,7 @@ export interface Software {
   name: string;
   category: string;
   summary: string;
-  overview: string[];
+  overview: ContentSection[];
   usedFor: string[];
   deliverables: string[];
   faqs: FAQItem[];

@@ -8,15 +8,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Drafting, BIM coordination and documentation support for builders, contractors and construction project teams.",
     description: [
-      "Construction projects run on documentation — architectural and structural drawing sets, coordinated services models, and shop drawings that fabricators and subcontractors actually build from. Delays or errors in that documentation flow directly into program and cost, and a single missing or wrong dimension can hold up a crew that's already on site and being paid by the hour.",
-      "We support builders, contractors and construction project teams with drafting and BIM capacity that scales with a project's stage — from early design documentation through to for-construction issue and as-built close-out. That scaling matters because construction documentation load is rarely even: it spikes hard around tender, again around issue-for-construction, and again at close-out, with quieter periods in between where a fixed in-house team sits underutilised.",
-      "A construction project typically involves several consultants working on the same building from different angles — architect, structural engineer, services consultants, and often a specialist steel or precast detailer — and the value of good documentation support is as much about keeping those parties coordinated as it is about producing any single drawing well. We treat coordination as a deliverable in its own right, not a byproduct of everyone doing their own job correctly in isolation.",
-      "Construction-phase drafting support also has to accommodate the reality that designs keep changing after they're issued — a substitution, a site condition nobody anticipated, a client-driven variation — and the documentation process needs to absorb those changes without losing track of what's actually current. Revision control that's sloppy on a construction project doesn't just cause confusion, it can lead to a crew building from an outdated drawing, which is expensive to unwind.",
-      "The construction sector in India spans a wide range of project types and delivery models — traditional design-bid-build, design-and-construct, and increasingly BIM-mandated public infrastructure work — and each carries slightly different documentation expectations. A design-and-construct contractor typically needs documentation that moves fast and absorbs design development changes gracefully, while a public infrastructure project often carries formal documentation standards and audit requirements that need to be followed precisely from the outset.",
-      "Subcontractor coordination is where a lot of construction documentation earns its keep in practice. A structural steel package, a precast concrete package and an MEP services package are frequently detailed by entirely separate specialist teams, and the head contractor's documentation needs to knit these packages together into a coherent whole — checking that a steel connection doesn't clash with a services routing, or that a precast panel's fixing points align with the structural frame it's landing on.",
-      "As-built documentation at project close-out deserves more attention than it often receives, because it's frequently the only record a facilities team will have of what was actually built once the construction team has moved on to the next project. An accurate as-built set, produced with the same discipline as the original construction documentation, is a genuine asset; a rushed, inaccurate one becomes a liability the first time a facilities manager relies on it during a fault-finding exercise.",
-      "Tender-stage documentation carries its own pressure, since the accuracy and completeness of a drawing set at this stage directly affects how confidently a builder or subcontractor can price the work. A tender package with gaps or ambiguities tends to produce inflated quotes as bidders price in contingency for the unknown, or worse, produces quotes that turn out to be based on different interpretations of the same incomplete information, which is a genuinely difficult problem to untangle after contracts are signed.",
-      "Multi-storey and high-density residential construction, a significant part of the urban construction pipeline, brings particular coordination intensity — services risers, structural transfer levels and repeated floor plates all need to align precisely across dozens of levels, and a coordination error that seems small on one floor can compound significantly once it's repeated across an entire tower.",
+      {
+        heading: "Why Documentation Matters on a Construction Site",
+        paragraphs: [
+          "Construction projects run on documentation — architectural and structural drawing sets, coordinated services models, and shop drawings that fabricators and subcontractors actually build from. Delays or errors in that documentation flow directly into program and cost, and a single missing or wrong dimension can hold up a crew that's already on site and being paid by the hour.",
+          "We support builders, contractors and construction project teams with drafting and BIM capacity that scales with a project's stage — from early design documentation through to for-construction issue and as-built close-out. That scaling matters because construction documentation load is rarely even: it spikes hard around tender, again around issue-for-construction, and again at close-out, with quieter periods in between where a fixed in-house team sits underutilised.",
+        ],
+      },
+      {
+        heading: "Coordinating Multiple Consultants and Absorbing Change",
+        paragraphs: [
+          "A construction project typically involves several consultants working on the same building from different angles — architect, structural engineer, services consultants, and often a specialist steel or precast detailer — and the value of good documentation support is as much about keeping those parties coordinated as it is about producing any single drawing well. We treat coordination as a deliverable in its own right, not a byproduct of everyone doing their own job correctly in isolation.",
+          "Construction-phase drafting support also has to accommodate the reality that designs keep changing after they're issued — a substitution, a site condition nobody anticipated, a client-driven variation — and the documentation process needs to absorb those changes without losing track of what's actually current. Revision control that's sloppy on a construction project doesn't just cause confusion, it can lead to a crew building from an outdated drawing, which is expensive to unwind.",
+        ],
+      },
+      {
+        heading: "Delivery Models and Subcontractor Coordination",
+        paragraphs: [
+          "The construction sector in India spans a wide range of project types and delivery models — traditional design-bid-build, design-and-construct, and increasingly BIM-mandated public infrastructure work — and each carries slightly different documentation expectations. A design-and-construct contractor typically needs documentation that moves fast and absorbs design development changes gracefully, while a public infrastructure project often carries formal documentation standards and audit requirements that need to be followed precisely from the outset.",
+          "Subcontractor coordination is where a lot of construction documentation earns its keep in practice. A structural steel package, a precast concrete package and an MEP services package are frequently detailed by entirely separate specialist teams, and the head contractor's documentation needs to knit these packages together into a coherent whole — checking that a steel connection doesn't clash with a services routing, or that a precast panel's fixing points align with the structural frame it's landing on.",
+        ],
+      },
+      {
+        heading: "As-Built Records and Tender-Stage Accuracy",
+        paragraphs: [
+          "As-built documentation at project close-out deserves more attention than it often receives, because it's frequently the only record a facilities team will have of what was actually built once the construction team has moved on to the next project. An accurate as-built set, produced with the same discipline as the original construction documentation, is a genuine asset; a rushed, inaccurate one becomes a liability the first time a facilities manager relies on it during a fault-finding exercise.",
+          "Tender-stage documentation carries its own pressure, since the accuracy and completeness of a drawing set at this stage directly affects how confidently a builder or subcontractor can price the work. A tender package with gaps or ambiguities tends to produce inflated quotes as bidders price in contingency for the unknown, or worse, produces quotes that turn out to be based on different interpretations of the same incomplete information, which is a genuinely difficult problem to untangle after contracts are signed.",
+        ],
+      },
+      {
+        heading: "Coordination on High-Density Residential Towers",
+        paragraphs: [
+          "Multi-storey and high-density residential construction, a significant part of the urban construction pipeline, brings particular coordination intensity — services risers, structural transfer levels and repeated floor plates all need to align precisely across dozens of levels, and a coordination error that seems small on one floor can compound significantly once it's repeated across an entire tower.",
+        ],
+      },
     ],
     useCases: [
       "Construction documentation sets for tender and build",
@@ -79,15 +104,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Mechanical drafting, 3D CAD modelling and manufacturing documentation for Indian manufacturers and fabricators.",
     description: [
-      "Manufacturing teams need documentation that a workshop floor can actually work from — accurate models, clear fabrication drawings and BOMs that match what's being built. That documentation load is uneven: it spikes with new product introductions, equipment changes and legacy part requalification, and dips in between, which makes it a poor fit for a fixed in-house headcount sized to the average rather than the peak.",
-      "We provide mechanical drafting and 3D CAD modelling capacity for manufacturers and fabricators, covering new design work, reverse engineering of existing parts, and manufacturing documentation for production.",
-      "A recurring theme in manufacturing documentation work is the gap between what a part was originally designed to be and what it has actually become after years of small, undocumented shop-floor changes. Reverse engineering and requalification work often has to reconcile this gap honestly rather than assume the original drawing (where one exists) is still accurate.",
-      "Sheet metal and fabrication drawing work carries its own manufacturing-specific requirements — bend allowances that match the shop's actual tooling, nesting-ready flat patterns, and BOMs that are structured the way a production planner actually needs them, not just the way a designer happened to build the model.",
-      "For manufacturers running a mix of legacy and current-generation equipment, documentation work often has to bridge multiple CAD platforms and drawing standards accumulated over years of different ownership, suppliers or engineering teams — we work with that reality rather than insisting on a single, idealised standard that doesn't match your actual shop floor.",
-      "India's manufacturing base spans a wide spectrum from large-scale process and automotive-adjacent plants through to small and mid-sized job shops producing custom fabricated equipment, and documentation needs differ meaningfully across that spectrum. A large plant often already has an established drawing standard and simply needs overflow capacity during a busy period, while a smaller job shop may be looking for help establishing a workable standard for the first time.",
-      "Manufacturing documentation is also where reverse engineering earns much of its practical value — a manufacturer inheriting a legacy machine, a discontinued supplier relationship, or an undocumented custom modification frequently needs an accurate model built from the physical part itself before any design change, spare part order, or requalification can proceed with confidence.",
-      "Contract manufacturers in particular depend on documentation that transfers cleanly between organisations — a drawing set that made perfect sense to the team that created it can be genuinely ambiguous to a second workshop picking up the job, especially where tribal knowledge about a specific process step was never written down. We draft with that second reader specifically in mind.",
-      "Quality and traceability requirements have grown more common across Indian manufacturing as supply chains mature and serve more demanding export and OEM markets, and documentation increasingly needs to support formal inspection and traceability processes rather than simply describing geometry — a shift that rewards manufacturers who invest in getting their drawing standard right early rather than retrofitting one under customer pressure later.",
+      {
+        heading: "Documentation That Matches Real Workshop Needs",
+        paragraphs: [
+          "Manufacturing teams need documentation that a workshop floor can actually work from — accurate models, clear fabrication drawings and BOMs that match what's being built. That documentation load is uneven: it spikes with new product introductions, equipment changes and legacy part requalification, and dips in between, which makes it a poor fit for a fixed in-house headcount sized to the average rather than the peak.",
+          "We provide mechanical drafting and 3D CAD modelling capacity for manufacturers and fabricators, covering new design work, reverse engineering of existing parts, and manufacturing documentation for production.",
+        ],
+      },
+      {
+        heading: "When a Part Isn't What the Drawing Says",
+        paragraphs: [
+          "A recurring theme in manufacturing documentation work is the gap between what a part was originally designed to be and what it has actually become after years of small, undocumented shop-floor changes. Reverse engineering and requalification work often has to reconcile this gap honestly rather than assume the original drawing (where one exists) is still accurate.",
+          "Sheet metal and fabrication drawing work carries its own manufacturing-specific requirements — bend allowances that match the shop's actual tooling, nesting-ready flat patterns, and BOMs that are structured the way a production planner actually needs them, not just the way a designer happened to build the model.",
+        ],
+      },
+      {
+        heading: "Bridging Legacy and Current-Generation Equipment",
+        paragraphs: [
+          "For manufacturers running a mix of legacy and current-generation equipment, documentation work often has to bridge multiple CAD platforms and drawing standards accumulated over years of different ownership, suppliers or engineering teams — we work with that reality rather than insisting on a single, idealised standard that doesn't match your actual shop floor.",
+          "India's manufacturing base spans a wide spectrum from large-scale process and automotive-adjacent plants through to small and mid-sized job shops producing custom fabricated equipment, and documentation needs differ meaningfully across that spectrum. A large plant often already has an established drawing standard and simply needs overflow capacity during a busy period, while a smaller job shop may be looking for help establishing a workable standard for the first time.",
+        ],
+      },
+      {
+        heading: "Reverse Engineering and Contract Manufacturing",
+        paragraphs: [
+          "Manufacturing documentation is also where reverse engineering earns much of its practical value — a manufacturer inheriting a legacy machine, a discontinued supplier relationship, or an undocumented custom modification frequently needs an accurate model built from the physical part itself before any design change, spare part order, or requalification can proceed with confidence.",
+          "Contract manufacturers in particular depend on documentation that transfers cleanly between organisations — a drawing set that made perfect sense to the team that created it can be genuinely ambiguous to a second workshop picking up the job, especially where tribal knowledge about a specific process step was never written down. We draft with that second reader specifically in mind.",
+        ],
+      },
+      {
+        heading: "Rising Quality and Traceability Requirements",
+        paragraphs: [
+          "Quality and traceability requirements have grown more common across Indian manufacturing as supply chains mature and serve more demanding export and OEM markets, and documentation increasingly needs to support formal inspection and traceability processes rather than simply describing geometry — a shift that rewards manufacturers who invest in getting their drawing standard right early rather than retrofitting one under customer pressure later.",
+        ],
+      },
     ],
     useCases: [
       "New product and equipment design documentation",
@@ -154,15 +204,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Structural, mechanical and civil drafting support for mining and mineral processing projects.",
     description: [
-      "Mining and mineral processing projects combine structural steelwork, mechanical equipment and civil infrastructure, often across remote sites and on fixed shutdown or commissioning windows. Documentation needs to be accurate the first time, because a detailing error discovered mid-shutdown can mean a plant stays offline far longer than planned, at a direct cost that dwarfs the cost of the drafting itself.",
-      "We provide structural, mechanical and civil drafting support for mining sector projects — from processing plant structures and equipment documentation through to site civil works.",
-      "Brownfield work dominates a large share of mining-sector drafting, because processing plants are rarely built once and left alone — they're modified, expanded and requalified repeatedly over decades of operation. That means a large part of the value in this work is reconciling what a plant's original drawings say against what's actually built and operating today, which frequently differ after years of incremental, undocumented site changes.",
-      "Structural documentation for platforms, walkways and access structures has to account for real operational constraints — maintenance access, equipment removal paths, and load cases from mobile plant that a purely theoretical structural model might not anticipate.",
-      "Remote site logistics shape how this work gets scoped: drawings need to be right before fabrication starts, because a wrong piece discovered on a remote site during a shutdown window can't simply be re-ordered and delivered next-day the way it might on a metro construction site.",
-      "India's mining and mineral processing sector spans coal, iron ore, bauxite and a range of other mineral commodities, each with somewhat different processing plant configurations, but sharing the same fundamental documentation challenges — brownfield reconciliation, remote logistics, and fixed shutdown windows that don't tolerate a late or wrong drawing.",
-      "Mechanical equipment documentation for fixed and mobile plant in a mining context also needs to account for a harsher operating environment than a typical factory — dust, vibration and abrasive material handling all shape maintenance access and component selection in ways that a general industrial equipment drawing wouldn't necessarily reflect.",
-      "Regulatory and safety documentation requirements around mining infrastructure add another layer that shapes how structural and civil drafting gets scoped — access, egress and fall-protection provisions on platforms and walkways aren't optional details to be added later, they're central to the structure's actual purpose and need to be built into the detailing from the earliest stage.",
-      "The remoteness of many Indian mining operations, particularly in the eastern mineral belt and parts of central India, means documentation support is frequently delivered entirely remotely, with site information supplied through photographs, survey data and existing drawings rather than a site visit — a workflow this service is built around rather than treating as an exception.",
+      {
+        heading: "Why Accuracy Matters on a Shutdown Window",
+        paragraphs: [
+          "Mining and mineral processing projects combine structural steelwork, mechanical equipment and civil infrastructure, often across remote sites and on fixed shutdown or commissioning windows. Documentation needs to be accurate the first time, because a detailing error discovered mid-shutdown can mean a plant stays offline far longer than planned, at a direct cost that dwarfs the cost of the drafting itself.",
+          "We provide structural, mechanical and civil drafting support for mining sector projects — from processing plant structures and equipment documentation through to site civil works.",
+        ],
+      },
+      {
+        heading: "Brownfield Reconciliation and Operational Constraints",
+        paragraphs: [
+          "Brownfield work dominates a large share of mining-sector drafting, because processing plants are rarely built once and left alone — they're modified, expanded and requalified repeatedly over decades of operation. That means a large part of the value in this work is reconciling what a plant's original drawings say against what's actually built and operating today, which frequently differ after years of incremental, undocumented site changes.",
+          "Structural documentation for platforms, walkways and access structures has to account for real operational constraints — maintenance access, equipment removal paths, and load cases from mobile plant that a purely theoretical structural model might not anticipate.",
+        ],
+      },
+      {
+        heading: "Remote Logistics Across India's Mining Sector",
+        paragraphs: [
+          "Remote site logistics shape how this work gets scoped: drawings need to be right before fabrication starts, because a wrong piece discovered on a remote site during a shutdown window can't simply be re-ordered and delivered next-day the way it might on a metro construction site.",
+          "India's mining and mineral processing sector spans coal, iron ore, bauxite and a range of other mineral commodities, each with somewhat different processing plant configurations, but sharing the same fundamental documentation challenges — brownfield reconciliation, remote logistics, and fixed shutdown windows that don't tolerate a late or wrong drawing.",
+        ],
+      },
+      {
+        heading: "Harsh Environments and Safety Documentation",
+        paragraphs: [
+          "Mechanical equipment documentation for fixed and mobile plant in a mining context also needs to account for a harsher operating environment than a typical factory — dust, vibration and abrasive material handling all shape maintenance access and component selection in ways that a general industrial equipment drawing wouldn't necessarily reflect.",
+          "Regulatory and safety documentation requirements around mining infrastructure add another layer that shapes how structural and civil drafting gets scoped — access, egress and fall-protection provisions on platforms and walkways aren't optional details to be added later, they're central to the structure's actual purpose and need to be built into the detailing from the earliest stage.",
+        ],
+      },
+      {
+        heading: "Working Remotely by Default",
+        paragraphs: [
+          "The remoteness of many Indian mining operations, particularly in the eastern mineral belt and parts of central India, means documentation support is frequently delivered entirely remotely, with site information supplied through photographs, survey data and existing drawings rather than a site visit — a workflow this service is built around rather than treating as an exception.",
+        ],
+      },
     ],
     useCases: [
       "Processing plant structural steel documentation",
@@ -230,15 +305,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Piping, mechanical and structural drafting support for oil and gas facilities and infrastructure.",
     description: [
-      "Oil and gas projects carry strict documentation and traceability requirements across piping, mechanical equipment and structural steelwork, often coordinated through a shared plant model that has to remain consistent across the life of a facility, sometimes across decades of operation and multiple rounds of expansion.",
-      "We provide drafting support across these disciplines, working within the drawing standards, revision control and documentation formats an operator or EPC project requires.",
-      "Piping documentation in particular depends on absolute consistency between the isometric drawings, the plant model and the line list — a mismatch between these three sources is a common and serious source of fabrication and commissioning error, and we treat cross-checking between them as a core part of the deliverable, not an optional extra.",
-      "Structural steel work in this sector is frequently governed by process safety and fire protection requirements that shape connection design and member spacing in ways a general commercial structure wouldn't need to consider, and detailing has to reflect that context accurately.",
-      "Legacy facility documentation is a recurring need, since older plants often have drawing archives spanning several different drafting standards and revision practices accumulated over the facility's operating life, and consolidating that into a single, trustworthy current-state record is a substantial but valuable undertaking.",
-      "India's oil and gas sector spans upstream exploration and production facilities, midstream pipeline infrastructure, and downstream refining and processing plants, each with its own typical documentation conventions and each frequently run by an EPC contractor whose specific drawing standard needs to be followed precisely rather than substituted with a generic approach.",
-      "Documentation traceability in this sector often has to satisfy not just the immediate design and construction team, but a much longer chain of future maintenance, inspection and regulatory review — which is a strong argument for building documentation right the first time rather than treating drafting as a purely transactional deliverable.",
-      "Piping and structural drafting for oil and gas facilities is also unusually sensitive to small dimensional errors, given how tightly equipment, piping and structural steel are packed together in a typical process unit — a clash discovered on site during construction is often far more disruptive to fix in this environment than in a more open commercial building, since access for rework is frequently limited by surrounding equipment already in place.",
-      "Facility expansion and modification projects, common as production requirements evolve over a plant's operating life, depend heavily on an accurate understanding of existing conditions before new design work can proceed safely — which is why reconciling as-built condition against the existing plant model or drawings is so often the necessary first step on this kind of project, not an optional add-on.",
+      {
+        heading: "Documentation Across a Facility's Operating Life",
+        paragraphs: [
+          "Oil and gas projects carry strict documentation and traceability requirements across piping, mechanical equipment and structural steelwork, often coordinated through a shared plant model that has to remain consistent across the life of a facility, sometimes across decades of operation and multiple rounds of expansion.",
+          "We provide drafting support across these disciplines, working within the drawing standards, revision control and documentation formats an operator or EPC project requires.",
+        ],
+      },
+      {
+        heading: "Isometric Consistency and Process Safety",
+        paragraphs: [
+          "Piping documentation in particular depends on absolute consistency between the isometric drawings, the plant model and the line list — a mismatch between these three sources is a common and serious source of fabrication and commissioning error, and we treat cross-checking between them as a core part of the deliverable, not an optional extra.",
+          "Structural steel work in this sector is frequently governed by process safety and fire protection requirements that shape connection design and member spacing in ways a general commercial structure wouldn't need to consider, and detailing has to reflect that context accurately.",
+        ],
+      },
+      {
+        heading: "Legacy Archives Across Upstream, Midstream and Downstream",
+        paragraphs: [
+          "Legacy facility documentation is a recurring need, since older plants often have drawing archives spanning several different drafting standards and revision practices accumulated over the facility's operating life, and consolidating that into a single, trustworthy current-state record is a substantial but valuable undertaking.",
+          "India's oil and gas sector spans upstream exploration and production facilities, midstream pipeline infrastructure, and downstream refining and processing plants, each with its own typical documentation conventions and each frequently run by an EPC contractor whose specific drawing standard needs to be followed precisely rather than substituted with a generic approach.",
+        ],
+      },
+      {
+        heading: "Traceability and Dimensional Sensitivity",
+        paragraphs: [
+          "Documentation traceability in this sector often has to satisfy not just the immediate design and construction team, but a much longer chain of future maintenance, inspection and regulatory review — which is a strong argument for building documentation right the first time rather than treating drafting as a purely transactional deliverable.",
+          "Piping and structural drafting for oil and gas facilities is also unusually sensitive to small dimensional errors, given how tightly equipment, piping and structural steel are packed together in a typical process unit — a clash discovered on site during construction is often far more disruptive to fix in this environment than in a more open commercial building, since access for rework is frequently limited by surrounding equipment already in place.",
+        ],
+      },
+      {
+        heading: "Facility Expansion and Modification",
+        paragraphs: [
+          "Facility expansion and modification projects, common as production requirements evolve over a plant's operating life, depend heavily on an accurate understanding of existing conditions before new design work can proceed safely — which is why reconciling as-built condition against the existing plant model or drawings is so often the necessary first step on this kind of project, not an optional add-on.",
+        ],
+      },
     ],
     useCases: [
       "Piping design and isometric documentation",
@@ -307,15 +407,40 @@ export const industries: Industry[] = [
     heroDescription:
       "3D CAD modelling and mechanical drafting for automotive component and equipment design.",
     description: [
-      "Automotive and aftermarket component work depends on accurate, manufacturable 3D models — parts that need to fit, tolerance correctly and be documented for a supply chain, not just look right in isolation. India's automotive manufacturing base spans OEM component supply, aftermarket parts and a substantial tooling and fixture ecosystem supporting both.",
-      "We provide 3D CAD modelling and mechanical drafting for automotive component design, tooling documentation and aftermarket part development.",
-      "Component work in this sector is unusually tolerance-sensitive — a bracket, mount or housing that mates against multiple other supplied parts needs dimensioning that reflects the real fit and function of the assembly, not just the geometry of the part viewed in isolation, since a tolerance stack-up error discovered at vehicle assembly is far more expensive to fix than one caught at the drawing stage.",
-      "Aftermarket reverse engineering carries its own specific challenge: the physical sample being measured is one instance of a part that was originally produced at scale, and it may carry manufacturing variation or wear that shouldn't be captured as if it were nominal design intent. We apply engineering judgement to separate the two.",
-      "Tooling and fixture documentation for automotive component production needs to account for high-volume, repeatable manufacturing processes, where a tooling detail that works for a one-off prototype often isn't robust enough for a production run measured in tens of thousands of cycles.",
-      "India's automotive manufacturing geography is concentrated in a small number of established hubs — around Chennai, Pune and parts of the northern industrial belt — each supporting a dense supplier ecosystem, and component documentation frequently needs to satisfy more than one OEM customer's specific drawing convention where a supplier serves multiple vehicle manufacturers.",
-      "Electric vehicle component development has added a newer category of automotive drafting demand — battery enclosure and mounting design, thermal management component documentation, and the sheet metal and structural work supporting these new systems, which draws on many of the same underlying mechanical drafting disciplines applied to a newer set of components.",
-      "Component suppliers under pressure to reduce cost per part often turn to design and drafting support specifically to review manufacturability — a bracket or housing redesigned with production tooling and material usage in mind can meaningfully reduce per-unit cost across a high-volume production run, and this kind of review tends to pay for itself many times over once a design change reaches volume production.",
-      "The automotive aftermarket segment, covering everything from performance components to replacement parts for older vehicle models no longer supported by the original manufacturer, depends heavily on accurate reverse engineering, since original design files are rarely available and a physical sample is often the only reliable reference for a replacement part.",
+      {
+        heading: "Manufacturable Models for a Real Supply Chain",
+        paragraphs: [
+          "Automotive and aftermarket component work depends on accurate, manufacturable 3D models — parts that need to fit, tolerance correctly and be documented for a supply chain, not just look right in isolation. India's automotive manufacturing base spans OEM component supply, aftermarket parts and a substantial tooling and fixture ecosystem supporting both.",
+          "We provide 3D CAD modelling and mechanical drafting for automotive component design, tooling documentation and aftermarket part development.",
+        ],
+      },
+      {
+        heading: "Tolerance Sensitivity and Aftermarket Reverse Engineering",
+        paragraphs: [
+          "Component work in this sector is unusually tolerance-sensitive — a bracket, mount or housing that mates against multiple other supplied parts needs dimensioning that reflects the real fit and function of the assembly, not just the geometry of the part viewed in isolation, since a tolerance stack-up error discovered at vehicle assembly is far more expensive to fix than one caught at the drawing stage.",
+          "Aftermarket reverse engineering carries its own specific challenge: the physical sample being measured is one instance of a part that was originally produced at scale, and it may carry manufacturing variation or wear that shouldn't be captured as if it were nominal design intent. We apply engineering judgement to separate the two.",
+        ],
+      },
+      {
+        heading: "Tooling for High-Volume Production",
+        paragraphs: [
+          "Tooling and fixture documentation for automotive component production needs to account for high-volume, repeatable manufacturing processes, where a tooling detail that works for a one-off prototype often isn't robust enough for a production run measured in tens of thousands of cycles.",
+          "India's automotive manufacturing geography is concentrated in a small number of established hubs — around Chennai, Pune and parts of the northern industrial belt — each supporting a dense supplier ecosystem, and component documentation frequently needs to satisfy more than one OEM customer's specific drawing convention where a supplier serves multiple vehicle manufacturers.",
+        ],
+      },
+      {
+        heading: "Electric Vehicle Components and Cost-Driven Redesign",
+        paragraphs: [
+          "Electric vehicle component development has added a newer category of automotive drafting demand — battery enclosure and mounting design, thermal management component documentation, and the sheet metal and structural work supporting these new systems, which draws on many of the same underlying mechanical drafting disciplines applied to a newer set of components.",
+          "Component suppliers under pressure to reduce cost per part often turn to design and drafting support specifically to review manufacturability — a bracket or housing redesigned with production tooling and material usage in mind can meaningfully reduce per-unit cost across a high-volume production run, and this kind of review tends to pay for itself many times over once a design change reaches volume production.",
+        ],
+      },
+      {
+        heading: "The Aftermarket Segment",
+        paragraphs: [
+          "The automotive aftermarket segment, covering everything from performance components to replacement parts for older vehicle models no longer supported by the original manufacturer, depends heavily on accurate reverse engineering, since original design files are rarely available and a physical sample is often the only reliable reference for a replacement part.",
+        ],
+      },
     ],
     useCases: [
       "Automotive component and bracket design",
@@ -385,15 +510,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Mechanical and structural drafting support for defence and defence-adjacent manufacturing projects.",
     description: [
-      "Defence and defence-adjacent manufacturing work often involves legacy equipment with limited or no digital documentation, alongside strict dimensional accuracy and documentation traceability requirements that reflect the long service life and sustainment focus typical of defence platforms.",
-      "We provide mechanical and structural drafting support for defence-sector manufacturing and sustainment work, including reverse engineering of legacy equipment and components.",
-      "Sustainment work is fundamentally different from new-product design: the goal is almost always to reproduce or repair an existing, qualified part exactly, not to improve on it, and documentation needs to reflect that discipline — capturing what a component actually is, including features that might look like design oversights but are in fact deliberate and load-bearing.",
-      "Traceability matters more in this sector than almost any other drafting context we work in — every dimension, tolerance and material call-out needs a clear basis, whether that's direct measurement, an original specification, or an engineering judgement clearly flagged as such, because defence sustainment documentation often needs to withstand scrutiny years after it was produced.",
-      "Where equipment predates any digital record, reverse engineering has to work from whatever physical evidence and institutional knowledge still exists — worn components, faded markings, and personnel who remember how something was originally supposed to function — and we document the confidence level behind each captured feature rather than presenting inferred information as if it were certain.",
-      "India's defence-adjacent manufacturing base has grown considerably alongside increased domestic production focus, spanning both established public sector manufacturing and a growing tier of private component and sub-assembly suppliers, many of whom face exactly the sustainment and legacy documentation challenges this service is built to address.",
-      "Handling and information security requirements are treated as a genuine constraint on how this work is scoped and delivered, not an inconvenience to be worked around — any project involving controlled or sensitive information is discussed upfront so appropriate handling arrangements are agreed before any material changes hands.",
-      "Legacy platform sustainment often spans equipment that has been in service for many years beyond its originally anticipated life, meaning obsolete materials, superseded manufacturing processes and components whose original supplier no longer exists are common realities rather than edge cases — reverse engineering and requalification work in this sector has to accommodate that reality rather than assume a clean, well-documented starting point.",
-      "Documentation produced for defence sustainment work frequently needs to remain usable and comprehensible for personnel who weren't involved in its creation and may be reviewing it years later during an audit, a design change, or a further sustainment cycle — which is a strong argument for clear, self-explanatory drawings over documentation that depends on institutional memory to interpret correctly.",
+      {
+        heading: "Legacy Equipment and Strict Traceability",
+        paragraphs: [
+          "Defence and defence-adjacent manufacturing work often involves legacy equipment with limited or no digital documentation, alongside strict dimensional accuracy and documentation traceability requirements that reflect the long service life and sustainment focus typical of defence platforms.",
+          "We provide mechanical and structural drafting support for defence-sector manufacturing and sustainment work, including reverse engineering of legacy equipment and components.",
+        ],
+      },
+      {
+        heading: "Reproducing, Not Improving On, a Qualified Part",
+        paragraphs: [
+          "Sustainment work is fundamentally different from new-product design: the goal is almost always to reproduce or repair an existing, qualified part exactly, not to improve on it, and documentation needs to reflect that discipline — capturing what a component actually is, including features that might look like design oversights but are in fact deliberate and load-bearing.",
+          "Traceability matters more in this sector than almost any other drafting context we work in — every dimension, tolerance and material call-out needs a clear basis, whether that's direct measurement, an original specification, or an engineering judgement clearly flagged as such, because defence sustainment documentation often needs to withstand scrutiny years after it was produced.",
+        ],
+      },
+      {
+        heading: "Reverse Engineering Without a Digital Record",
+        paragraphs: [
+          "Where equipment predates any digital record, reverse engineering has to work from whatever physical evidence and institutional knowledge still exists — worn components, faded markings, and personnel who remember how something was originally supposed to function — and we document the confidence level behind each captured feature rather than presenting inferred information as if it were certain.",
+          "India's defence-adjacent manufacturing base has grown considerably alongside increased domestic production focus, spanning both established public sector manufacturing and a growing tier of private component and sub-assembly suppliers, many of whom face exactly the sustainment and legacy documentation challenges this service is built to address.",
+        ],
+      },
+      {
+        heading: "Information Security and Obsolete Materials",
+        paragraphs: [
+          "Handling and information security requirements are treated as a genuine constraint on how this work is scoped and delivered, not an inconvenience to be worked around — any project involving controlled or sensitive information is discussed upfront so appropriate handling arrangements are agreed before any material changes hands.",
+          "Legacy platform sustainment often spans equipment that has been in service for many years beyond its originally anticipated life, meaning obsolete materials, superseded manufacturing processes and components whose original supplier no longer exists are common realities rather than edge cases — reverse engineering and requalification work in this sector has to accommodate that reality rather than assume a clean, well-documented starting point.",
+        ],
+      },
+      {
+        heading: "Documentation That Outlives Institutional Memory",
+        paragraphs: [
+          "Documentation produced for defence sustainment work frequently needs to remain usable and comprehensible for personnel who weren't involved in its creation and may be reviewing it years later during an audit, a design change, or a further sustainment cycle — which is a strong argument for clear, self-explanatory drawings over documentation that depends on institutional memory to interpret correctly.",
+        ],
+      },
     ],
     useCases: [
       "Reverse engineering of legacy defence equipment and components",
@@ -456,15 +606,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Precision 3D CAD modelling and mechanical drafting for aerospace component and tooling work.",
     description: [
-      "Aerospace component and tooling work demands precise, well-documented 3D models and drawings, with tolerancing and documentation that supports traceability through manufacturing and inspection. India's aerospace manufacturing base, concentrated around a small number of major hubs, spans both established manufacturers and a growing tier of precision component suppliers.",
-      "We provide 3D CAD modelling and mechanical drafting support for aerospace-sector component design, tooling and legacy part documentation.",
-      "Precision tolerancing in aerospace work is rarely uniform across a part — certain features carry tight functional tolerances tied directly to fit, balance or load path, while others are comparatively loose, and applying a single blanket tolerance across an entire drawing either over-constrains manufacturing unnecessarily or under-constrains a feature that actually matters. We tolerance features individually based on their actual function.",
-      "Fixture and tooling documentation for aerospace-grade machining has to account for repeatable location and clamping across a production run, since a fixture that performs well on a first article but drifts slightly by the hundredth part undermines the very precision the part specification demands.",
-      "Reverse engineering of legacy aerospace components is approached with particular caution around distinguishing original design intent from wear, prior repair, or manufacturing variation in the specific sample being measured, since a replacement part reproduced from the wrong baseline can introduce a functional problem that wasn't present in the original design.",
-      "Bangalore remains India's most established aerospace manufacturing hub, home to significant public-sector aircraft and precision manufacturing capability, alongside a growing base of private component suppliers feeding both domestic and export aerospace supply chains — and documentation demand from this sector reflects that same mix of established, high-precision manufacturers and newer entrant suppliers building up their own documentation practices.",
-      "Traceability documentation in aerospace work typically needs to satisfy formal quality system requirements, and a drawing that's dimensionally correct but poorly traceable — missing a clear basis for a critical tolerance, for instance — can create genuine quality assurance problems even when the part itself is manufactured correctly.",
-      "Growth in India's private aerospace component manufacturing sector has been driven substantially by export supply chain participation, and suppliers entering these export relationships for the first time often face a step change in documentation expectations compared to domestic-only work — international aerospace customers typically expect drawing and traceability practices that match global industry norms from the outset.",
-      "Precision component work in this sector also depends on close coordination between the drafting team and whoever is running inspection — a drawing that specifies a tolerance the available inspection equipment can't actually verify with confidence creates a gap between what's specified and what can be practically confirmed, and catching this mismatch during drafting is considerably cheaper than discovering it during inspection.",
+      {
+        heading: "Precision Documentation for a Concentrated Industry",
+        paragraphs: [
+          "Aerospace component and tooling work demands precise, well-documented 3D models and drawings, with tolerancing and documentation that supports traceability through manufacturing and inspection. India's aerospace manufacturing base, concentrated around a small number of major hubs, spans both established manufacturers and a growing tier of precision component suppliers.",
+          "We provide 3D CAD modelling and mechanical drafting support for aerospace-sector component design, tooling and legacy part documentation.",
+        ],
+      },
+      {
+        heading: "Feature-Specific Tolerancing and Repeatable Tooling",
+        paragraphs: [
+          "Precision tolerancing in aerospace work is rarely uniform across a part — certain features carry tight functional tolerances tied directly to fit, balance or load path, while others are comparatively loose, and applying a single blanket tolerance across an entire drawing either over-constrains manufacturing unnecessarily or under-constrains a feature that actually matters. We tolerance features individually based on their actual function.",
+          "Fixture and tooling documentation for aerospace-grade machining has to account for repeatable location and clamping across a production run, since a fixture that performs well on a first article but drifts slightly by the hundredth part undermines the very precision the part specification demands.",
+        ],
+      },
+      {
+        heading: "Reverse Engineering Legacy Aerospace Components",
+        paragraphs: [
+          "Reverse engineering of legacy aerospace components is approached with particular caution around distinguishing original design intent from wear, prior repair, or manufacturing variation in the specific sample being measured, since a replacement part reproduced from the wrong baseline can introduce a functional problem that wasn't present in the original design.",
+          "Bangalore remains India's most established aerospace manufacturing hub, home to significant public-sector aircraft and precision manufacturing capability, alongside a growing base of private component suppliers feeding both domestic and export aerospace supply chains — and documentation demand from this sector reflects that same mix of established, high-precision manufacturers and newer entrant suppliers building up their own documentation practices.",
+        ],
+      },
+      {
+        heading: "Traceability for Formal Quality Systems",
+        paragraphs: [
+          "Traceability documentation in aerospace work typically needs to satisfy formal quality system requirements, and a drawing that's dimensionally correct but poorly traceable — missing a clear basis for a critical tolerance, for instance — can create genuine quality assurance problems even when the part itself is manufactured correctly.",
+          "Growth in India's private aerospace component manufacturing sector has been driven substantially by export supply chain participation, and suppliers entering these export relationships for the first time often face a step change in documentation expectations compared to domestic-only work — international aerospace customers typically expect drawing and traceability practices that match global industry norms from the outset.",
+        ],
+      },
+      {
+        heading: "Coordinating Drafting with Inspection",
+        paragraphs: [
+          "Precision component work in this sector also depends on close coordination between the drafting team and whoever is running inspection — a drawing that specifies a tolerance the available inspection equipment can't actually verify with confidence creates a gap between what's specified and what can be practically confirmed, and catching this mismatch during drafting is considerably cheaper than discovering it during inspection.",
+        ],
+      },
     ],
     useCases: [
       "Aerospace component and bracket modelling",
@@ -530,15 +705,40 @@ export const industries: Industry[] = [
     heroDescription:
       "Structural, electrical and civil drafting support for energy infrastructure and facilities projects.",
     description: [
-      "Energy sector projects — from substations and switchyards to renewable energy infrastructure — combine structural, electrical and civil documentation, often across distributed sites that each need to be documented to a consistent standard despite being built at different times by different contractors.",
-      "We provide drafting support across these disciplines for energy infrastructure projects, including structural documentation, electrical schematics and civil site drawings.",
-      "Renewable energy site documentation — solar and wind installations in particular — has grown quickly as a project type, and carries its own specific coordination demands: civil grading and access design, structural foundation and mounting documentation, and electrical single-line diagrams for collection and interconnection all need to align against a single site layout that's often still being finalised as documentation work begins.",
-      "Substation and switchyard structural documentation is shaped heavily by electrical clearance requirements, meaning structural detailing has to be produced in close coordination with the electrical design rather than as an independent discipline — a structural member placed without reference to clearance requirements can force an expensive electrical redesign later.",
-      "As-built documentation is a particularly high-value deliverable in this sector, since energy infrastructure is typically operated and maintained for decades, and an accurate as-built record materially affects how efficiently future maintenance, augmentation or fault-finding work can be carried out.",
-      "India's rapid expansion of renewable generation capacity — particularly utility-scale solar and, increasingly, wind — has created sustained demand for civil, structural and electrical documentation across large, geographically distributed project portfolios, often requiring the same underlying documentation discipline to be repeated efficiently and consistently across many similar sites.",
-      "Grid interconnection and transmission infrastructure documentation carries its own specific standards, often set by the relevant transmission or distribution utility, and following these precisely matters more than it might on a purely private industrial project, since the resulting asset becomes part of a much larger shared network.",
-      "Utility-scale renewable projects are frequently developed and documented in phases as land parcels, grid connection approvals and financing come together at different times, and drafting support needs to accommodate a site layout that may still be evolving even as construction documentation for an earlier phase is already underway.",
-      "Energy infrastructure assets are typically owned and operated by an entity distinct from the contractor who built them, which makes handover documentation quality especially consequential — an asset owner operating a portfolio of solar or wind sites for the next twenty-plus years depends on the as-built and design documentation handed over at commissioning being genuinely reliable, not just formally complete.",
+      {
+        heading: "Structural, Electrical and Civil, Combined",
+        paragraphs: [
+          "Energy sector projects — from substations and switchyards to renewable energy infrastructure — combine structural, electrical and civil documentation, often across distributed sites that each need to be documented to a consistent standard despite being built at different times by different contractors.",
+          "We provide drafting support across these disciplines for energy infrastructure projects, including structural documentation, electrical schematics and civil site drawings.",
+        ],
+      },
+      {
+        heading: "Coordinating Renewable Site Documentation",
+        paragraphs: [
+          "Renewable energy site documentation — solar and wind installations in particular — has grown quickly as a project type, and carries its own specific coordination demands: civil grading and access design, structural foundation and mounting documentation, and electrical single-line diagrams for collection and interconnection all need to align against a single site layout that's often still being finalised as documentation work begins.",
+          "Substation and switchyard structural documentation is shaped heavily by electrical clearance requirements, meaning structural detailing has to be produced in close coordination with the electrical design rather than as an independent discipline — a structural member placed without reference to clearance requirements can force an expensive electrical redesign later.",
+        ],
+      },
+      {
+        heading: "As-Built Records for Decades-Long Assets",
+        paragraphs: [
+          "As-built documentation is a particularly high-value deliverable in this sector, since energy infrastructure is typically operated and maintained for decades, and an accurate as-built record materially affects how efficiently future maintenance, augmentation or fault-finding work can be carried out.",
+          "India's rapid expansion of renewable generation capacity — particularly utility-scale solar and, increasingly, wind — has created sustained demand for civil, structural and electrical documentation across large, geographically distributed project portfolios, often requiring the same underlying documentation discipline to be repeated efficiently and consistently across many similar sites.",
+        ],
+      },
+      {
+        heading: "Grid Standards and Phased Development",
+        paragraphs: [
+          "Grid interconnection and transmission infrastructure documentation carries its own specific standards, often set by the relevant transmission or distribution utility, and following these precisely matters more than it might on a purely private industrial project, since the resulting asset becomes part of a much larger shared network.",
+          "Utility-scale renewable projects are frequently developed and documented in phases as land parcels, grid connection approvals and financing come together at different times, and drafting support needs to accommodate a site layout that may still be evolving even as construction documentation for an earlier phase is already underway.",
+        ],
+      },
+      {
+        heading: "Why Handover Quality Matters So Much Here",
+        paragraphs: [
+          "Energy infrastructure assets are typically owned and operated by an entity distinct from the contractor who built them, which makes handover documentation quality especially consequential — an asset owner operating a portfolio of solar or wind sites for the next twenty-plus years depends on the as-built and design documentation handed over at commissioning being genuinely reliable, not just formally complete.",
+        ],
+      },
     ],
     useCases: [
       "Substation and switchyard structural documentation",

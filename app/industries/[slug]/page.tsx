@@ -51,11 +51,20 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
       <PageHero eyebrow="Industry" heading={industry.heroHeading} description={industry.heroDescription} />
 
       <section className="py-16 sm:py-20">
-        <Container className="max-w-3xl space-y-5">
-          {industry.description.map((paragraph, i) => (
-            <p key={i} className="text-base leading-relaxed text-neutral-700">
-              {paragraph}
-            </p>
+        <Container className="max-w-3xl space-y-10">
+          {industry.description.map((section, i) => (
+            <div key={i}>
+              {section.heading ? (
+                <h2 className="text-xl font-semibold text-navy-900">{section.heading}</h2>
+              ) : null}
+              <div className={section.heading ? "mt-3 space-y-4" : "space-y-4"}>
+                {section.paragraphs.map((paragraph, j) => (
+                  <p key={j} className="text-base leading-relaxed text-neutral-700">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           ))}
         </Container>
       </section>

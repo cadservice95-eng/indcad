@@ -66,11 +66,20 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
         <Breadcrumbs items={[{ label: "Projects", href: "/projects" }, { label: category.name, href: `/projects/${category.slug}` }]} />
         <PageHero eyebrow="Project category" heading={`${category.name} Project Examples`} description={category.description} />
         <section className="py-16 sm:py-20">
-          <Container className="max-w-3xl space-y-5">
-            {category.intro.map((paragraph, i) => (
-              <p key={i} className="text-base leading-relaxed text-neutral-700">
-                {paragraph}
-              </p>
+          <Container className="max-w-3xl space-y-10">
+            {category.intro.map((section, i) => (
+              <div key={i}>
+                {section.heading ? (
+                  <h2 className="text-xl font-semibold text-navy-900">{section.heading}</h2>
+                ) : null}
+                <div className={section.heading ? "mt-3 space-y-4" : "space-y-4"}>
+                  {section.paragraphs.map((paragraph, j) => (
+                    <p key={j} className="text-base leading-relaxed text-neutral-700">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
             ))}
           </Container>
         </section>

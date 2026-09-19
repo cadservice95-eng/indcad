@@ -24,13 +24,33 @@ const featuredIndustries = industries.filter((i) =>
 const featuredProjects = projects.slice(0, 3);
 
 const homeOverview = [
-  "IndCAD provides CAD design, drafting, BIM and engineering support to engineers, architects, builders, manufacturers and contractors across India. Rather than being built around a single discipline, our capability spans mechanical, structural, architectural, civil and electrical drafting, alongside BIM modelling, CAD conversion and engineering design support — so a team with a mix of drawing needs across a project doesn't need to coordinate several separate specialist vendors for work that can be handled as one consistent capability.",
-  "This kind of flexible, cross-disciplinary drafting capacity tends to matter most for teams whose workload doesn't sit neatly within a single, predictable category — a manufacturing business that occasionally needs a structural mezzanine detailed alongside its usual mechanical part drawings, or a construction contractor whose civil site drawings need to be coordinated against an architectural set produced by a different consultant. Working across disciplines under one point of contact removes a layer of coordination overhead that otherwise falls back on the client to manage themselves.",
-  "Every engagement starts the same way regardless of discipline: a clear scope and fixed quote agreed before any drafting work begins, so there are no surprises partway through a project. We work in the CAD and BIM platforms already in use across Indian engineering and construction practice, and we're able to work from whatever reference material a project actually has available — clean CAD files, PDFs, scanned drawings, photographs of physical parts, or a written description of requirements where no drawing exists yet.",
-  "A meaningful share of the work we take on is overflow and flexible capacity for teams that already have their own in-house drafting resource but need extra hands during a busy period, or need a specific discipline they don't maintain in-house for an occasional project. This arrangement works well precisely because it doesn't require a client to restructure their own team — we slot into an existing workflow rather than asking a client's workflow to adapt to ours.",
-  "For projects that call for coordinated 3D modelling rather than 2D drawing production, our BIM capability covers architectural, structural and MEP modelling with clash detection and quantity extraction, built to whatever Level of Development a project stage actually requires rather than over-modelling ahead of when that detail is needed. For projects starting from an existing but undocumented design — a legacy part, an old scanned drawing set, a piece of imported equipment with no accompanying files — our CAD conversion and reverse engineering capability turns that physical or scanned reference into a genuinely usable, editable digital file.",
-  "Across every discipline, our approach stays the same: understand what the deliverable actually needs to support — fabrication, construction, regulatory submission, internal engineering reference — and produce drawings and models that are accurate, properly organised and genuinely fit for that specific purpose, rather than a generically competent drawing that happens to look right.",
-  "We also try to be realistic about what a drafting and design service can responsibly claim. We don't provide engineering certification or replace the sign-off of a licensed engineer or architect of record — our role is producing accurate, well-organised drawings and models to whatever standard your project's engineer or architect specifies, and being direct about the boundary between drafting support and professional engineering certification wherever that distinction actually matters for a specific project.",
+  {
+    heading: "One Capability Across Every Discipline",
+    paragraphs: [
+      "IndCAD provides CAD design, drafting, BIM and engineering support to engineers, architects, builders, manufacturers and contractors across India. Rather than being built around a single discipline, our capability spans mechanical, structural, architectural, civil and electrical drafting, alongside BIM modelling, CAD conversion and engineering design support — so a team with a mix of drawing needs across a project doesn't need to coordinate several separate specialist vendors for work that can be handled as one consistent capability.",
+      "This kind of flexible, cross-disciplinary drafting capacity tends to matter most for teams whose workload doesn't sit neatly within a single, predictable category — a manufacturing business that occasionally needs a structural mezzanine detailed alongside its usual mechanical part drawings, or a construction contractor whose civil site drawings need to be coordinated against an architectural set produced by a different consultant. Working across disciplines under one point of contact removes a layer of coordination overhead that otherwise falls back on the client to manage themselves.",
+    ],
+  },
+  {
+    heading: "Fixed Scope, Flexible Overflow Capacity",
+    paragraphs: [
+      "Every engagement starts the same way regardless of discipline: a clear scope and fixed quote agreed before any drafting work begins, so there are no surprises partway through a project. We work in the CAD and BIM platforms already in use across Indian engineering and construction practice, and we're able to work from whatever reference material a project actually has available — clean CAD files, PDFs, scanned drawings, photographs of physical parts, or a written description of requirements where no drawing exists yet.",
+      "A meaningful share of the work we take on is overflow and flexible capacity for teams that already have their own in-house drafting resource but need extra hands during a busy period, or need a specific discipline they don't maintain in-house for an occasional project. This arrangement works well precisely because it doesn't require a client to restructure their own team — we slot into an existing workflow rather than asking a client's workflow to adapt to ours.",
+    ],
+  },
+  {
+    heading: "BIM, CAD Conversion and Reverse Engineering",
+    paragraphs: [
+      "For projects that call for coordinated 3D modelling rather than 2D drawing production, our BIM capability covers architectural, structural and MEP modelling with clash detection and quantity extraction, built to whatever Level of Development a project stage actually requires rather than over-modelling ahead of when that detail is needed. For projects starting from an existing but undocumented design — a legacy part, an old scanned drawing set, a piece of imported equipment with no accompanying files — our CAD conversion and reverse engineering capability turns that physical or scanned reference into a genuinely usable, editable digital file.",
+      "Across every discipline, our approach stays the same: understand what the deliverable actually needs to support — fabrication, construction, regulatory submission, internal engineering reference — and produce drawings and models that are accurate, properly organised and genuinely fit for that specific purpose, rather than a generically competent drawing that happens to look right.",
+    ],
+  },
+  {
+    heading: "Where Drafting Support Ends and Certification Begins",
+    paragraphs: [
+      "We also try to be realistic about what a drafting and design service can responsibly claim. We don't provide engineering certification or replace the sign-off of a licensed engineer or architect of record — our role is producing accurate, well-organised drawings and models to whatever standard your project's engineer or architect specifies, and being direct about the boundary between drafting support and professional engineering certification wherever that distinction actually matters for a specific project.",
+    ],
+  },
 ];
 
 const homeFaqs = [
@@ -132,11 +152,18 @@ export default function HomePage() {
             eyebrow="About IndCAD"
             heading="CAD, Drafting and BIM Support for Indian Engineering & Construction Teams"
           />
-          <div className="mt-8 space-y-5">
-            {homeOverview.map((paragraph, i) => (
-              <p key={i} className="text-base leading-relaxed text-neutral-700">
-                {paragraph}
-              </p>
+          <div className="mt-8 space-y-8">
+            {homeOverview.map((section, i) => (
+              <div key={i}>
+                <h3 className="text-base font-semibold text-navy-900">{section.heading}</h3>
+                <div className="mt-2 space-y-4">
+                  {section.paragraphs.map((paragraph, j) => (
+                    <p key={j} className="text-base leading-relaxed text-neutral-700">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </Container>

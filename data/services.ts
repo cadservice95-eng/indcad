@@ -16,14 +16,39 @@ export const services: Service[] = [
     problemStatement:
       "Manufacturing and engineering teams often need drafting capacity without carrying a full-time draftsperson on the payroll — a concept sketch that needs to become a manufacturable assembly, a legacy part with no digital model anywhere in the business, or a production run of fabrication drawings that needs to go out to the workshop floor this week. Internal engineers are usually better used on design decisions, tolerance stack-ups and supplier negotiations than on redlining GA drawings or rebuilding a BOM that changed for the fourth time this month. That mismatch between engineering time and drafting workload is exactly the gap this service is built to close.",
     overview: [
-      "Our mechanical drafting service covers the full path from a design intent or rough sketch through to production-ready documentation. That includes 2D mechanical drafting for parts and assemblies, 3D CAD modelling for design validation and downstream use, and the manufacturing paperwork — fabrication drawings, assembly drawings, BOMs and revision-controlled drawing sets — that a workshop or fabricator actually works from when they pick up a job.",
-      "We work from your existing standards and title blocks where they exist, or set up a clean, consistent drawing standard where they don't. Models and drawings are delivered in the native format your team uses, so they slot into your existing CAD environment rather than sitting outside it as an orphaned file nobody can edit six months later. That matters more than it sounds — a beautifully drafted part that arrives in a format your team can't open or maintain is not actually useful documentation, it's a liability disguised as a deliverable.",
-      "This service also covers reverse engineering: producing an accurate 3D model and drawing set from a physical part, a legacy 2D drawing, or a scanned reference, for design changes, spare parts, or requalifying an undocumented component. Reverse engineering work is judged differently to greenfield design — the goal isn't to redesign the part, it's to capture what actually exists, including the tolerances and fits that made the original assembly work, so a replacement or modified version behaves identically in service.",
-      "Sheet metal work is a large part of what comes through this service. Flat pattern development, bend allowance calculation and nesting-ready DXFs are only useful if they match how your press brake and material actually behave — a flat pattern that looks correct on screen but doesn't account for your shop's specific K-factor or tooling will cost you scrap and rework on the first run. We confirm these parameters with you (or use sensible defaults, clearly flagged, if they're not supplied) rather than guessing.",
-      "Assembly documentation is treated as its own discipline, not an afterthought bolted onto part drawings. A BOM that doesn't match the model, or an assembly drawing that doesn't call out the fasteners a purchasing team actually needs to order, causes far more delay on a real production line than a slightly-off dimension on a single part. We build BOMs directly from the model structure so they stay synchronised as a design evolves, rather than maintaining a parallel spreadsheet that quietly drifts out of date.",
-      "For teams running lean or contract manufacturing, we also handle the handover documentation a second supplier needs to pick up a part cold — clear revision history, material and finish call-outs, and drawings that don't assume tribal knowledge the original team had in their heads but never wrote down. That kind of documentation is what actually protects a design when the person who created it moves to a different project or a different company.",
-      "One of the more common quality failures we see in inherited drawing sets isn't a wrong dimension — it's an ambiguous one. A dimension with no clear datum reference, a note that says 'match existing' without specifying which existing, or a tolerance block that's technically present but doesn't actually reflect what the part needs to function, all create the same downstream problem: a fabricator has to guess, or call back to ask, and either outcome costs time. We draft with the fabricator's actual questions in mind, not just the geometric requirement.",
-      "Drawing checking on our end isn't a single pass at the end — dimensions are cross-checked against source material as modelling proceeds, so an error gets caught while it's cheap to fix rather than after an entire drawing set has been built around a wrong assumption. This matters most on larger assemblies, where a single incorrect reference dimension early in the process can propagate into a dozen dependent drawings if it isn't caught immediately.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "Our mechanical drafting service covers the full path from a design intent or rough sketch through to production-ready documentation. That includes 2D mechanical drafting for parts and assemblies, 3D CAD modelling for design validation and downstream use, and the manufacturing paperwork — fabrication drawings, assembly drawings, BOMs and revision-controlled drawing sets — that a workshop or fabricator actually works from when they pick up a job.",
+          "We work from your existing standards and title blocks where they exist, or set up a clean, consistent drawing standard where they don't. Models and drawings are delivered in the native format your team uses, so they slot into your existing CAD environment rather than sitting outside it as an orphaned file nobody can edit six months later. That matters more than it sounds — a beautifully drafted part that arrives in a format your team can't open or maintain is not actually useful documentation, it's a liability disguised as a deliverable.",
+        ],
+      },
+      {
+        heading: "Reverse Engineering and Sheet Metal Work",
+        paragraphs: [
+          "This service also covers reverse engineering: producing an accurate 3D model and drawing set from a physical part, a legacy 2D drawing, or a scanned reference, for design changes, spare parts, or requalifying an undocumented component. Reverse engineering work is judged differently to greenfield design — the goal isn't to redesign the part, it's to capture what actually exists, including the tolerances and fits that made the original assembly work, so a replacement or modified version behaves identically in service.",
+          "Sheet metal work is a large part of what comes through this service. Flat pattern development, bend allowance calculation and nesting-ready DXFs are only useful if they match how your press brake and material actually behave — a flat pattern that looks correct on screen but doesn't account for your shop's specific K-factor or tooling will cost you scrap and rework on the first run. We confirm these parameters with you (or use sensible defaults, clearly flagged, if they're not supplied) rather than guessing.",
+        ],
+      },
+      {
+        heading: "Assembly Documentation as Its Own Discipline",
+        paragraphs: [
+          "Assembly documentation is treated as its own discipline, not an afterthought bolted onto part drawings. A BOM that doesn't match the model, or an assembly drawing that doesn't call out the fasteners a purchasing team actually needs to order, causes far more delay on a real production line than a slightly-off dimension on a single part. We build BOMs directly from the model structure so they stay synchronised as a design evolves, rather than maintaining a parallel spreadsheet that quietly drifts out of date.",
+        ],
+      },
+      {
+        heading: "Handover Documentation and Avoiding Ambiguity",
+        paragraphs: [
+          "For teams running lean or contract manufacturing, we also handle the handover documentation a second supplier needs to pick up a part cold — clear revision history, material and finish call-outs, and drawings that don't assume tribal knowledge the original team had in their heads but never wrote down. That kind of documentation is what actually protects a design when the person who created it moves to a different project or a different company.",
+          "One of the more common quality failures we see in inherited drawing sets isn't a wrong dimension — it's an ambiguous one. A dimension with no clear datum reference, a note that says 'match existing' without specifying which existing, or a tolerance block that's technically present but doesn't actually reflect what the part needs to function, all create the same downstream problem: a fabricator has to guess, or call back to ask, and either outcome costs time. We draft with the fabricator's actual questions in mind, not just the geometric requirement.",
+        ],
+      },
+      {
+        heading: "How We Check Drawings",
+        paragraphs: [
+          "Drawing checking on our end isn't a single pass at the end — dimensions are cross-checked against source material as modelling proceeds, so an error gets caught while it's cheap to fix rather than after an entire drawing set has been built around a wrong assumption. This matters most on larger assemblies, where a single incorrect reference dimension early in the process can propagate into a dozen dependent drawings if it isn't caught immediately.",
+        ],
+      },
     ],
     deliverables: [
       "2D mechanical drawings (part and assembly)",
@@ -91,14 +116,34 @@ export const services: Service[] = [
     problemStatement:
       "A lot of engineering work now depends on having an accurate, editable 3D model — not just a 2D drawing — whether that's for design iteration, interference checking, FEA, marketing visuals, or feeding a fabrication shop's CNC and nesting software. Building and maintaining those models takes time that in-house engineers don't always have spare, especially mid-project when a design is still moving and every iteration needs to be re-modelled, re-checked and re-issued before the next decision can be made. A team that tries to absorb this modelling load internally on top of its regular design responsibilities often ends up doing both jobs poorly rather than either one well.",
     overview: [
-      "We build parametric 3D CAD models for individual parts, multi-part assemblies and full machines, in the CAD platform your team already standardises on. Models are built to be usable downstream — clean feature trees, sensible mating and assembly logic, and dimensions that update predictably when a design changes, rather than a model that looks right today but breaks the moment someone changes a single parameter.",
-      "This service supports both new design work (turning a concept or sketch into a modelled, dimensioned part) and documentation of existing equipment (modelling from physical parts, legacy 2D drawings or point-cloud scan data). The two use cases require slightly different mindsets: new design modelling is about capturing intent and leaving room for iteration, while documentation modelling is about capturing reality accurately, including the quirks and asymmetries a real, worn or hand-fabricated part actually has.",
-      "Models can be delivered in native format alongside neutral formats such as STEP and IGES for use in other software, and we can produce derived 2D drawings, exploded views and BOMs from the same model on request, so you're not paying twice for work that should come from a single source of truth.",
-      "Feature-tree structure is something we pay close attention to, because it's usually invisible until it becomes a problem. A model built with a logical, top-down feature history is easy for your team to pick up and modify later; a model built purely to look correct in a single configuration becomes a liability the first time a dimension needs to change. We build models the way we'd want to inherit them if the project passed to someone else.",
-      "For assemblies, we pay particular attention to mate and constraint logic — under-constrained assemblies can move in ways that aren't obvious until a downstream simulation or a physical build reveals the problem, and over-constrained assemblies fight themselves every time a dimension changes. Getting this right at the modelling stage saves significant rework later, particularly on larger assemblies with dozens or hundreds of components.",
-      "Where a model is being built to feed FEA, CFD or another simulation tool, we clean up geometry specifically for that purpose — removing cosmetic features that add mesh complexity without adding engineering value, and confirming with you which simplifications are acceptable for the analysis being run.",
-      "A model handed between people over the life of a project accumulates history — features added by one person, patched by another, adjusted under time pressure by a third. Left unmanaged, that history becomes a liability: a feature tree with unclear intent, redundant constraints, or workarounds nobody remembers the reason for. We treat model hygiene as an ongoing responsibility on longer engagements, not a one-time clean-up exercise, so a model handed off after several revisions is still something a new engineer could pick up and understand.",
-      "Configuration management deserves specific mention for teams developing a family of related products. A single master model with well-structured design tables or configuration parameters lets a team generate several product variants without maintaining separate files that inevitably drift apart over time — one variant getting a fix the others never receive, for example. Setting this structure up correctly at the start saves considerably more effort than retrofitting it after several variants already exist as independent, diverging files.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We build parametric 3D CAD models for individual parts, multi-part assemblies and full machines, in the CAD platform your team already standardises on. Models are built to be usable downstream — clean feature trees, sensible mating and assembly logic, and dimensions that update predictably when a design changes, rather than a model that looks right today but breaks the moment someone changes a single parameter.",
+          "This service supports both new design work (turning a concept or sketch into a modelled, dimensioned part) and documentation of existing equipment (modelling from physical parts, legacy 2D drawings or point-cloud scan data). The two use cases require slightly different mindsets: new design modelling is about capturing intent and leaving room for iteration, while documentation modelling is about capturing reality accurately, including the quirks and asymmetries a real, worn or hand-fabricated part actually has.",
+          "Models can be delivered in native format alongside neutral formats such as STEP and IGES for use in other software, and we can produce derived 2D drawings, exploded views and BOMs from the same model on request, so you're not paying twice for work that should come from a single source of truth.",
+        ],
+      },
+      {
+        heading: "Feature-Tree Structure and Assembly Logic",
+        paragraphs: [
+          "Feature-tree structure is something we pay close attention to, because it's usually invisible until it becomes a problem. A model built with a logical, top-down feature history is easy for your team to pick up and modify later; a model built purely to look correct in a single configuration becomes a liability the first time a dimension needs to change. We build models the way we'd want to inherit them if the project passed to someone else.",
+          "For assemblies, we pay particular attention to mate and constraint logic — under-constrained assemblies can move in ways that aren't obvious until a downstream simulation or a physical build reveals the problem, and over-constrained assemblies fight themselves every time a dimension changes. Getting this right at the modelling stage saves significant rework later, particularly on larger assemblies with dozens or hundreds of components.",
+        ],
+      },
+      {
+        heading: "Preparing Models for Simulation and Long-Term Use",
+        paragraphs: [
+          "Where a model is being built to feed FEA, CFD or another simulation tool, we clean up geometry specifically for that purpose — removing cosmetic features that add mesh complexity without adding engineering value, and confirming with you which simplifications are acceptable for the analysis being run.",
+          "A model handed between people over the life of a project accumulates history — features added by one person, patched by another, adjusted under time pressure by a third. Left unmanaged, that history becomes a liability: a feature tree with unclear intent, redundant constraints, or workarounds nobody remembers the reason for. We treat model hygiene as an ongoing responsibility on longer engagements, not a one-time clean-up exercise, so a model handed off after several revisions is still something a new engineer could pick up and understand.",
+        ],
+      },
+      {
+        heading: "Configuration Management for Product Families",
+        paragraphs: [
+          "Configuration management deserves specific mention for teams developing a family of related products. A single master model with well-structured design tables or configuration parameters lets a team generate several product variants without maintaining separate files that inevitably drift apart over time — one variant getting a fix the others never receive, for example. Setting this structure up correctly at the start saves considerably more effort than retrofitting it after several variants already exist as independent, diverging files.",
+        ],
+      },
     ],
     deliverables: [
       "Parametric part models",
@@ -172,14 +217,34 @@ export const services: Service[] = [
     problemStatement:
       "Fabricators and structural engineering firms regularly need detailing capacity that flexes with workload — a tender that needs shop drawings fast, an engineer's design that needs to become fabrication-ready documentation, or a project that has outgrown the in-house drafting team's bandwidth. Structural detailing sits in an unusual position: it has to be precise enough to satisfy an engineer's design intent, but practical enough that a fabrication shop can actually build from it without constant clarification calls back to the office. Getting that balance wrong in either direction — too theoretical or too loose — creates real cost, whether that's rework on the shop floor or a connection that technically satisfies the drawing but not the engineer's actual intent.",
     overview: [
-      "Our structural drafting service takes structural engineering design and produces the documentation a fabricator or builder works from — general arrangement drawings, connection details, and fully detailed shop and erection drawings for structural steel and, where scoped, concrete detailing.",
-      "We work from the structural engineer's design (drawings, model or calculations) and produce detailing that reflects real fabrication and erection practice — member sizes, connection types, bolt patterns and welds that a workshop can price and build from without rework. A drawing that is technically accurate but impractical to fabricate is not actually a useful drawing, and we treat constructability as part of the detailing brief, not an afterthought.",
-      "Where a project is being run in Revit or Tekla, we can produce or work within a structural BIM model, keeping detailing coordinated with architectural and services models and supporting clash detection before fabrication. This coordination step is where a lot of expensive on-site rework gets prevented — a beam that clashes with a duct is far cheaper to fix on screen than after the steel has been delivered to site.",
-      "Connection detailing deserves particular care because it's where the majority of fabrication queries originate. We detail connections to reflect the specified capacity and construction category from the engineer's design, and flag anywhere the practical fabrication approach might differ from a purely theoretical connection so it can be confirmed before steel is cut.",
-      "Material take-offs and bolt lists are produced directly from the detailed model or drawing set, not as a separate manual exercise, which keeps quantities consistent with what's actually shown on the drawings — a common and costly failure point when take-offs are done independently of the detailing itself.",
-      "For projects that move through multiple revisions as the design develops, we maintain a clear audit trail of what changed between issues, which matters enormously on structural work where a missed connection change can mean re-fabricating a piece that's already been cut and welded.",
-      "Structural drafting quality is also about anticipating where the drawing set will actually be read under pressure — a fabricator pricing a tender against a tight deadline, or a foreman on site during erection trying to resolve a query without stopping the crew. Drawings that are clear enough to be read quickly under those conditions, not just technically correct in isolation, are what actually keep a project moving.",
-      "We also pay attention to how a drawing set ages over the life of a project. A structural package issued for tender, then revised through design development, then reissued for construction, needs each stage's issue clearly distinguishable from the last — not just by a revision letter, but by a clear understanding of what actually changed and why, so nobody downstream has to reverse-engineer the difference between two drawing issues by comparing them line by line.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "Our structural drafting service takes structural engineering design and produces the documentation a fabricator or builder works from — general arrangement drawings, connection details, and fully detailed shop and erection drawings for structural steel and, where scoped, concrete detailing.",
+          "We work from the structural engineer's design (drawings, model or calculations) and produce detailing that reflects real fabrication and erection practice — member sizes, connection types, bolt patterns and welds that a workshop can price and build from without rework. A drawing that is technically accurate but impractical to fabricate is not actually a useful drawing, and we treat constructability as part of the detailing brief, not an afterthought.",
+        ],
+      },
+      {
+        heading: "BIM Coordination and Connection Detailing",
+        paragraphs: [
+          "Where a project is being run in Revit or Tekla, we can produce or work within a structural BIM model, keeping detailing coordinated with architectural and services models and supporting clash detection before fabrication. This coordination step is where a lot of expensive on-site rework gets prevented — a beam that clashes with a duct is far cheaper to fix on screen than after the steel has been delivered to site.",
+          "Connection detailing deserves particular care because it's where the majority of fabrication queries originate. We detail connections to reflect the specified capacity and construction category from the engineer's design, and flag anywhere the practical fabrication approach might differ from a purely theoretical connection so it can be confirmed before steel is cut.",
+        ],
+      },
+      {
+        heading: "Take-Offs, Revisions and Reading Under Pressure",
+        paragraphs: [
+          "Material take-offs and bolt lists are produced directly from the detailed model or drawing set, not as a separate manual exercise, which keeps quantities consistent with what's actually shown on the drawings — a common and costly failure point when take-offs are done independently of the detailing itself.",
+          "For projects that move through multiple revisions as the design develops, we maintain a clear audit trail of what changed between issues, which matters enormously on structural work where a missed connection change can mean re-fabricating a piece that's already been cut and welded.",
+          "Structural drafting quality is also about anticipating where the drawing set will actually be read under pressure — a fabricator pricing a tender against a tight deadline, or a foreman on site during erection trying to resolve a query without stopping the crew. Drawings that are clear enough to be read quickly under those conditions, not just technically correct in isolation, are what actually keep a project moving.",
+        ],
+      },
+      {
+        heading: "How a Drawing Set Ages Over a Project's Life",
+        paragraphs: [
+          "We also pay attention to how a drawing set ages over the life of a project. A structural package issued for tender, then revised through design development, then reissued for construction, needs each stage's issue clearly distinguishable from the last — not just by a revision letter, but by a clear understanding of what actually changed and why, so nobody downstream has to reverse-engineer the difference between two drawing issues by comparing them line by line.",
+        ],
+      },
     ],
     deliverables: [
       "Structural steel shop drawings",
@@ -256,13 +321,33 @@ export const services: Service[] = [
     problemStatement:
       "Steel fabricators win work on turnaround and accuracy. A detailing bottleneck — whether that's a busy in-house team or a tender deadline — directly slows down quoting and fabrication. Detailing errors are worse: a missed connection detail or bolt clash found on-site is expensive to fix, both in direct rework cost and in the knock-on delay to erection sequencing and crane bookings that a single wrong piece can cause. On a project running to a fixed crane hire date, a detailing error discovered mid-erection doesn't just cost the price of re-fabrication — it can cost an entire booked crane shift sitting idle.",
     overview: [
-      "Steel detailing turns an engineer's structural design into the piece-by-piece documentation a fabrication shop actually builds from: shop drawings for individual members, connection and bolt detail, and erection drawings that sequence how the structure goes together on site.",
-      "We detail from structural engineering drawings, calculations or a coordinated 3D model, and can work in Tekla Structures or AutoCAD depending on your workflow and whether the project needs a full structural BIM model for coordination with other disciplines. The choice of platform is rarely arbitrary — a project running clash detection against services and architectural models genuinely benefits from a Tekla model, while a smaller standalone steel package may not need that overhead.",
-      "Material take-offs and bolt lists are produced alongside the drawing set, giving fabrication and procurement teams consistent quantities to work from, rather than a separate estimate that has to be reconciled against the drawings later.",
-      "Piece marking is treated as a first-class part of the detailing output, not an administrative afterthought. A consistent, logical piece-mark system makes the difference between a workshop floor that can track hundreds of individual members through cutting, drilling and welding without confusion, and one where two similarly-marked pieces get swapped and only discovered during erection.",
-      "Erection sequencing is coordinated with the fabrication programme where that information is available — there's little point detailing a perfectly correct structure if the drawing set doesn't reflect the order pieces actually need to arrive on site and go up, particularly on projects with limited laydown area or a tight crane schedule.",
-      "Connection detailing on a steel package is where fabrication cost is often won or lost. Two connections that satisfy the same engineering capacity can carry very different fabrication costs depending on how many welds, cuts and copes they require — we flag options where a simpler, equally compliant connection detail could reduce fabrication time, rather than defaulting to whichever detail happens to be first to hand.",
-      "For fabricators working across multiple simultaneous jobs, keeping piece mark numbering consistent across projects — rather than reusing the same mark scheme in a way that could cause confusion between concurrent jobs on the same shop floor — is a small detail that avoids a surprisingly common and easily preventable mix-up.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "Steel detailing turns an engineer's structural design into the piece-by-piece documentation a fabrication shop actually builds from: shop drawings for individual members, connection and bolt detail, and erection drawings that sequence how the structure goes together on site.",
+          "We detail from structural engineering drawings, calculations or a coordinated 3D model, and can work in Tekla Structures or AutoCAD depending on your workflow and whether the project needs a full structural BIM model for coordination with other disciplines. The choice of platform is rarely arbitrary — a project running clash detection against services and architectural models genuinely benefits from a Tekla model, while a smaller standalone steel package may not need that overhead.",
+        ],
+      },
+      {
+        heading: "Take-Offs and Piece Marking",
+        paragraphs: [
+          "Material take-offs and bolt lists are produced alongside the drawing set, giving fabrication and procurement teams consistent quantities to work from, rather than a separate estimate that has to be reconciled against the drawings later.",
+          "Piece marking is treated as a first-class part of the detailing output, not an administrative afterthought. A consistent, logical piece-mark system makes the difference between a workshop floor that can track hundreds of individual members through cutting, drilling and welding without confusion, and one where two similarly-marked pieces get swapped and only discovered during erection.",
+        ],
+      },
+      {
+        heading: "Erection Sequencing and Connection Cost",
+        paragraphs: [
+          "Erection sequencing is coordinated with the fabrication programme where that information is available — there's little point detailing a perfectly correct structure if the drawing set doesn't reflect the order pieces actually need to arrive on site and go up, particularly on projects with limited laydown area or a tight crane schedule.",
+          "Connection detailing on a steel package is where fabrication cost is often won or lost. Two connections that satisfy the same engineering capacity can carry very different fabrication costs depending on how many welds, cuts and copes they require — we flag options where a simpler, equally compliant connection detail could reduce fabrication time, rather than defaulting to whichever detail happens to be first to hand.",
+        ],
+      },
+      {
+        heading: "Consistency Across Concurrent Jobs",
+        paragraphs: [
+          "For fabricators working across multiple simultaneous jobs, keeping piece mark numbering consistent across projects — rather than reusing the same mark scheme in a way that could cause confusion between concurrent jobs on the same shop floor — is a small detail that avoids a surprisingly common and easily preventable mix-up.",
+        ],
+      },
     ],
     deliverables: [
       "Shop drawings (individual member detail)",
@@ -338,14 +423,34 @@ export const services: Service[] = [
     problemStatement:
       "Architectural practices and building designers often need overflow drafting capacity — producing a full documentation set from design drawings, updating plans through an approval process, or getting joinery and interior detail drawn up without pulling design staff off higher-value work. The pressure is rarely constant: it spikes hard around submission deadlines and design development milestones, and a practice sized for its average workload is chronically under-resourced for its peak workload. That mismatch is exactly where flexible, on-demand drafting support earns its keep, rather than trying to permanently staff for a peak that only arrives a few times a year.",
     overview: [
-      "We produce 2D architectural drawing sets from concept and design development drawings through to construction documentation — floor plans, elevations, sections, details and schedules — drafted to a consistent, checkable standard.",
-      "This includes renovation and extension drawings, interior and joinery documentation, and retail fit-out drawings, along with 3D architectural modelling and rendering where a project needs visualisation alongside its documentation set.",
-      "Drawings are produced in your practice's template and layer standard where supplied, and we can work from hand sketches, marked-up plans, or an existing model that needs updating or documenting. A practice's drawing standard is often the accumulated result of years of client feedback and coordination lessons, and we treat it as something to be followed precisely rather than a starting point to improve on unasked.",
-      "Coordination across the drawing set is where a lot of documentation quality is actually won or lost — a floor plan that doesn't match the reflected ceiling plan, or a door schedule that's out of step with the plan callouts, creates exactly the kind of confusion that generates costly requests for information during construction. We check dimensional and schedule consistency across the full set, not just within individual sheets.",
-      "For renovation and extension work specifically, the existing-conditions plan is often the single most important sheet in the set, because every subsequent decision depends on it being accurate. Where survey information is incomplete or old, we flag the gaps rather than quietly filling them with assumptions that could mislead a builder on site.",
-      "Retail and commercial fit-out documentation carries its own pressures — short programmes, landlord base-building constraints, and joinery that has to be both buildable and true to the design intent. We draft joinery detail with enough dimensional information that a joinery workshop can quote and build from it directly, rather than a schematic-level drawing that still needs another round of detailing before it's usable.",
-      "A drawing set's usefulness during construction is often determined by decisions made much earlier, at documentation stage — whether a tricky junction got a proper large-scale detail rather than being left to a general section, whether schedules were actually cross-checked against the plan rather than compiled independently, and whether the drawing set anticipated the questions a builder would ask rather than only the questions an approval authority would ask. We draft with both audiences in mind from the start.",
-      "Approval authority requirements differ enough between jurisdictions that a documentation set produced for one area's standard notes and submission format doesn't necessarily transfer cleanly to another. Where you supply the specific authority's requirements, we match them precisely, since a resubmission caused by a formatting mismatch is a wholly avoidable delay to an approval timeline that's usually already tight.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We produce 2D architectural drawing sets from concept and design development drawings through to construction documentation — floor plans, elevations, sections, details and schedules — drafted to a consistent, checkable standard.",
+          "This includes renovation and extension drawings, interior and joinery documentation, and retail fit-out drawings, along with 3D architectural modelling and rendering where a project needs visualisation alongside its documentation set.",
+        ],
+      },
+      {
+        heading: "Working to Your Practice's Standard",
+        paragraphs: [
+          "Drawings are produced in your practice's template and layer standard where supplied, and we can work from hand sketches, marked-up plans, or an existing model that needs updating or documenting. A practice's drawing standard is often the accumulated result of years of client feedback and coordination lessons, and we treat it as something to be followed precisely rather than a starting point to improve on unasked.",
+          "Coordination across the drawing set is where a lot of documentation quality is actually won or lost — a floor plan that doesn't match the reflected ceiling plan, or a door schedule that's out of step with the plan callouts, creates exactly the kind of confusion that generates costly requests for information during construction. We check dimensional and schedule consistency across the full set, not just within individual sheets.",
+        ],
+      },
+      {
+        heading: "Renovation Work and Retail Fit-Outs",
+        paragraphs: [
+          "For renovation and extension work specifically, the existing-conditions plan is often the single most important sheet in the set, because every subsequent decision depends on it being accurate. Where survey information is incomplete or old, we flag the gaps rather than quietly filling them with assumptions that could mislead a builder on site.",
+          "Retail and commercial fit-out documentation carries its own pressures — short programmes, landlord base-building constraints, and joinery that has to be both buildable and true to the design intent. We draft joinery detail with enough dimensional information that a joinery workshop can quote and build from it directly, rather than a schematic-level drawing that still needs another round of detailing before it's usable.",
+        ],
+      },
+      {
+        heading: "Drafting for Both the Builder and the Authority",
+        paragraphs: [
+          "A drawing set's usefulness during construction is often determined by decisions made much earlier, at documentation stage — whether a tricky junction got a proper large-scale detail rather than being left to a general section, whether schedules were actually cross-checked against the plan rather than compiled independently, and whether the drawing set anticipated the questions a builder would ask rather than only the questions an approval authority would ask. We draft with both audiences in mind from the start.",
+          "Approval authority requirements differ enough between jurisdictions that a documentation set produced for one area's standard notes and submission format doesn't necessarily transfer cleanly to another. Where you supply the specific authority's requirements, we match them precisely, since a resubmission caused by a formatting mismatch is a wholly avoidable delay to an approval timeline that's usually already tight.",
+        ],
+      },
     ],
     deliverables: [
       "Floor plans (existing and proposed)",
@@ -423,13 +528,33 @@ export const services: Service[] = [
     problemStatement:
       "Design intent is easier to sell — to a client, a planning authority, or an investor — when it can be seen, not just read off a 2D plan. Building and rendering a clean 3D model in-house takes time that design teams often don't have during a live project, and the skill set for producing a genuinely persuasive render (lighting, materials, camera composition) is not always the same skill set as producing accurate construction documentation. Asking the same person to do both well, on a tight deadline, often means one of the two suffers.",
     overview: [
-      "We build 3D architectural models from your 2D drawings or existing BIM model and produce still renders, image sets or walkthrough animations for presentation, marketing or approval purposes.",
-      "Models can be built specifically for visualisation, or produced from a Revit/ArchiCAD model that's already part of the project's documentation, keeping the rendered output consistent with the actual design rather than a separate, prettier version that quietly diverges from what's actually being built.",
-      "Material and lighting choices are made to represent the design honestly rather than to flatter it beyond what the finished building will actually look like — a render that oversells a project can create client expectations that are difficult to meet later, which is a bad outcome for everyone involved.",
-      "For projects still in design development, we can produce multiple render options at relatively low cost by working from a single model and adjusting camera angle, time of day and material palette, which is a fast way to test how a design reads before finishes are locked in.",
-      "Walkthrough animations are scoped separately from stills because they carry a different production overhead — camera path planning, animation timing and render duration all scale differently to a single still image, and we agree this scope explicitly before starting so there's no surprise at delivery.",
-      "Camera composition for a presentation render benefits from the same judgement a photographer would apply to a real building — an angle chosen to genuinely represent how a space will be experienced, not one that exaggerates scale or hides a compromise in the design. We discuss intended camera views with you before committing render time to them, since a wasted render from a poorly chosen angle costs time neither of us wants to lose.",
-      "Where a render is being produced for a formal planning or approval submission, we pay close attention to whether the specific authority has any stated expectations around how a visualisation should represent context — surrounding buildings, streetscape, or shadow diagrams — since a render that looks impressive but omits information the assessor actually needs can slow down, rather than help, an approval.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We build 3D architectural models from your 2D drawings or existing BIM model and produce still renders, image sets or walkthrough animations for presentation, marketing or approval purposes.",
+          "Models can be built specifically for visualisation, or produced from a Revit/ArchiCAD model that's already part of the project's documentation, keeping the rendered output consistent with the actual design rather than a separate, prettier version that quietly diverges from what's actually being built.",
+        ],
+      },
+      {
+        heading: "Keeping Renders Honest",
+        paragraphs: [
+          "Material and lighting choices are made to represent the design honestly rather than to flatter it beyond what the finished building will actually look like — a render that oversells a project can create client expectations that are difficult to meet later, which is a bad outcome for everyone involved.",
+          "For projects still in design development, we can produce multiple render options at relatively low cost by working from a single model and adjusting camera angle, time of day and material palette, which is a fast way to test how a design reads before finishes are locked in.",
+        ],
+      },
+      {
+        heading: "Scoping Animations and Choosing Camera Angles",
+        paragraphs: [
+          "Walkthrough animations are scoped separately from stills because they carry a different production overhead — camera path planning, animation timing and render duration all scale differently to a single still image, and we agree this scope explicitly before starting so there's no surprise at delivery.",
+          "Camera composition for a presentation render benefits from the same judgement a photographer would apply to a real building — an angle chosen to genuinely represent how a space will be experienced, not one that exaggerates scale or hides a compromise in the design. We discuss intended camera views with you before committing render time to them, since a wasted render from a poorly chosen angle costs time neither of us wants to lose.",
+        ],
+      },
+      {
+        heading: "Renders for Formal Planning Submissions",
+        paragraphs: [
+          "Where a render is being produced for a formal planning or approval submission, we pay close attention to whether the specific authority has any stated expectations around how a visualisation should represent context — surrounding buildings, streetscape, or shadow diagrams — since a render that looks impressive but omits information the assessor actually needs can slow down, rather than help, an approval.",
+        ],
+      },
     ],
     deliverables: [
       "3D architectural models",
@@ -506,13 +631,33 @@ export const services: Service[] = [
     problemStatement:
       "Civil design teams and developers need consistent, checkable drawing sets across a project that often spans site planning, earthworks, stormwater and road design — usually against a tight approval or construction timeline, and usually with several stakeholders (the civil engineer, the certifying authority, the builder) all needing slightly different views of the same underlying design at different points in the project. A civil project rarely fails because any single drawing was wrong in isolation — it fails when the site plan, the grading plan and the drainage design quietly drift out of agreement with each other as the design develops.",
     overview: [
-      "We produce civil drafting and construction documentation for land development and site infrastructure projects — from site and subdivision plans through to stormwater and road design drawings, coordinated with the civil engineer's design.",
-      "Work is typically produced in Civil 3D, and can be delivered as 2D construction drawing sets, 3D civil models, or both depending on how the project is being delivered and what your certifying authority requires. Surface modelling in particular benefits from being done properly once and reused across every downstream drawing, rather than being recreated for each individual plan sheet.",
-      "Stormwater and drainage documentation is treated with particular care because it tends to be where design changes ripple furthest — a change to a catchment boundary or a pipe invert level can affect grading plans, road cross-sections and site plans all at once, and keeping these coordinated as the design develops is a large part of what makes civil drafting genuinely useful rather than just decorative.",
-      "Road design drawings are produced with attention to how they'll actually be built, not just how they look in plan — cross-sections, superelevation and vertical alignment are checked for buildability against typical construction plant and tolerances, not left purely as a theoretical geometric exercise.",
-      "For subdivision work, we coordinate lot layout, easements and services corridors so the final plan is internally consistent — a lot boundary that conflicts with a drainage easement, discovered late, can hold up an entire subdivision approval.",
-      "Civil documentation also has to survive contact with real survey data, which is rarely as clean as a concept design assumes. Where survey information reveals a discrepancy against the concept design — a level that doesn't match an assumed grade, or a boundary that sits slightly differently than expected — we flag it immediately rather than quietly adjusting the design to paper over the gap, since the engineer needs to know about that discrepancy to make an informed decision.",
-      "Construction-stage civil drawings are drafted with the contractor's sequencing in mind as much as the design's geometric correctness — a grading plan that's technically accurate but doesn't reflect a buildable staged sequence for earthworks and services installation creates exactly the kind of confusion that slows down a site team trying to plan its actual construction sequence.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We produce civil drafting and construction documentation for land development and site infrastructure projects — from site and subdivision plans through to stormwater and road design drawings, coordinated with the civil engineer's design.",
+          "Work is typically produced in Civil 3D, and can be delivered as 2D construction drawing sets, 3D civil models, or both depending on how the project is being delivered and what your certifying authority requires. Surface modelling in particular benefits from being done properly once and reused across every downstream drawing, rather than being recreated for each individual plan sheet.",
+        ],
+      },
+      {
+        heading: "Stormwater Coordination and Buildable Road Design",
+        paragraphs: [
+          "Stormwater and drainage documentation is treated with particular care because it tends to be where design changes ripple furthest — a change to a catchment boundary or a pipe invert level can affect grading plans, road cross-sections and site plans all at once, and keeping these coordinated as the design develops is a large part of what makes civil drafting genuinely useful rather than just decorative.",
+          "Road design drawings are produced with attention to how they'll actually be built, not just how they look in plan — cross-sections, superelevation and vertical alignment are checked for buildability against typical construction plant and tolerances, not left purely as a theoretical geometric exercise.",
+        ],
+      },
+      {
+        heading: "Subdivision Coordination and Real Survey Data",
+        paragraphs: [
+          "For subdivision work, we coordinate lot layout, easements and services corridors so the final plan is internally consistent — a lot boundary that conflicts with a drainage easement, discovered late, can hold up an entire subdivision approval.",
+          "Civil documentation also has to survive contact with real survey data, which is rarely as clean as a concept design assumes. Where survey information reveals a discrepancy against the concept design — a level that doesn't match an assumed grade, or a boundary that sits slightly differently than expected — we flag it immediately rather than quietly adjusting the design to paper over the gap, since the engineer needs to know about that discrepancy to make an informed decision.",
+        ],
+      },
+      {
+        heading: "Drafting for the Contractor's Actual Sequence",
+        paragraphs: [
+          "Construction-stage civil drawings are drafted with the contractor's sequencing in mind as much as the design's geometric correctness — a grading plan that's technically accurate but doesn't reflect a buildable staged sequence for earthworks and services installation creates exactly the kind of confusion that slows down a site team trying to plan its actual construction sequence.",
+        ],
+      },
     ],
     deliverables: [
       "Site plans and subdivision plans",
@@ -592,13 +737,33 @@ export const services: Service[] = [
     problemStatement:
       "Electrical contractors and panel builders often need drawing documentation produced or updated faster than in-house capacity allows — for a switchboard build, a control panel change, or as-built documentation that needs to match what was actually installed, usually against a commissioning date that doesn't move even when the drafting queue is backed up. A panel build waiting on a drawing is a workshop standing idle, which is a cost that compounds quickly on a tight programme.",
     overview: [
-      "We produce electrical design documentation including single-line diagrams, schematics, switchboard drawings and control panel layouts, drafted to a clear, consistent standard that a panel shop or site electrician can work from directly without needing to call back to the design office for clarification.",
-      "This includes documenting existing installations (as-builts) and coordinating electrical drawings within a broader BIM model where a project needs electrical services coordinated against structural and architectural design.",
-      "Cable and conductor schedules are cross-checked against the schematics they're derived from, since a mismatch here is one of the more common — and more disruptive — errors in electrical documentation, often only discovered when a cable arrives on site sized for the wrong load.",
-      "Switchboard and panel layout drawings are drafted with real component footprints and clearances in mind, not generic placeholder symbols, so the panel builder can use the drawing directly for layout rather than treating it as a rough schematic that still needs translating into a physical arrangement.",
-      "As-built documentation work starts from whatever site records, markups or photographs exist, and we're explicit about which parts of the as-built are confirmed against physical inspection versus inferred from incomplete records, so the client knows exactly how much to trust each part of the drawing set.",
-      "Electrical drawing sets are frequently the last documentation touched before a project closes out, and also the first thing referenced years later during a fault-finding exercise or a facility upgrade — that long, gap-filled second life is exactly why we treat clarity and honesty about confidence level as seriously as we treat technical correctness when producing this kind of documentation.",
-      "Component and cable schedules are structured so they remain useful as a live reference during commissioning, not just as a static record — clear cross-references between the schematic, the schedule and the physical labelling scheme mean a commissioning electrician can move between all three without translation effort.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We produce electrical design documentation including single-line diagrams, schematics, switchboard drawings and control panel layouts, drafted to a clear, consistent standard that a panel shop or site electrician can work from directly without needing to call back to the design office for clarification.",
+          "This includes documenting existing installations (as-builts) and coordinating electrical drawings within a broader BIM model where a project needs electrical services coordinated against structural and architectural design.",
+        ],
+      },
+      {
+        heading: "Schedule Accuracy and Practical Panel Layouts",
+        paragraphs: [
+          "Cable and conductor schedules are cross-checked against the schematics they're derived from, since a mismatch here is one of the more common — and more disruptive — errors in electrical documentation, often only discovered when a cable arrives on site sized for the wrong load.",
+          "Switchboard and panel layout drawings are drafted with real component footprints and clearances in mind, not generic placeholder symbols, so the panel builder can use the drawing directly for layout rather than treating it as a rough schematic that still needs translating into a physical arrangement.",
+        ],
+      },
+      {
+        heading: "As-Built Documentation and Its Long Second Life",
+        paragraphs: [
+          "As-built documentation work starts from whatever site records, markups or photographs exist, and we're explicit about which parts of the as-built are confirmed against physical inspection versus inferred from incomplete records, so the client knows exactly how much to trust each part of the drawing set.",
+          "Electrical drawing sets are frequently the last documentation touched before a project closes out, and also the first thing referenced years later during a fault-finding exercise or a facility upgrade — that long, gap-filled second life is exactly why we treat clarity and honesty about confidence level as seriously as we treat technical correctness when producing this kind of documentation.",
+        ],
+      },
+      {
+        heading: "Schedules as a Live Commissioning Reference",
+        paragraphs: [
+          "Component and cable schedules are structured so they remain useful as a live reference during commissioning, not just as a static record — clear cross-references between the schematic, the schedule and the physical labelling scheme mean a commissioning electrician can move between all three without translation effort.",
+        ],
+      },
     ],
     deliverables: [
       "Single-line diagrams",
@@ -680,13 +845,33 @@ export const services: Service[] = [
     problemStatement:
       "Running a project through BIM only pays off if the model is properly coordinated — architectural, structural and services models that actually align, clashes caught before they reach site, and a model built to the LOD the project actually needs at each stage. A BIM process that exists in name only, with each discipline modelling in isolation and coordination happening informally over email, delivers little of the benefit BIM is supposed to provide, while still carrying the full modelling overhead — arguably the worst of both worlds.",
     overview: [
-      "We provide BIM modelling and coordination across architectural, structural and MEP disciplines, primarily in Revit, including clash detection, Revit family creation and point cloud/scan-to-BIM conversion for existing buildings and structures.",
-      "Models are built to an agreed Level of Development (LOD) for the project stage — concept, design development or construction — so the model stays a useful coordination tool rather than an overbuilt one that wastes modelling effort on detail nobody needs yet, or an underbuilt one that can't actually support the coordination decisions the project needs to make.",
-      "Coordination work includes running clash detection across combined discipline models (typically in Navisworks) and issuing clash reports the design team can action before issue-for-construction. A clash report is only useful if it's prioritised sensibly — a hard clash between a structural beam and a duct matters far more than a soft clearance clash that's easily resolved on site, and we structure reports so the important issues aren't buried in noise.",
-      "Custom Revit family creation is a recurring need on projects using non-standard equipment or fittings, and we build families that behave correctly when scheduled and tagged, not just families that look right in a 3D view — a family that reports the wrong quantity or the wrong parameter in a schedule causes exactly the kind of downstream error BIM is meant to prevent.",
-      "For projects inheriting an existing, poorly structured model, we can assess and rebuild problem areas rather than starting over entirely, which is usually faster and cheaper than a full rebuild while still fixing the coordination issues that made the model unreliable in the first place.",
-      "BIM coordination is as much a communication process as a technical one — a clash report that lands in someone's inbox with no context or prioritisation tends to get triaged poorly or ignored under deadline pressure. We run coordination as a structured, recurring process rather than a single event, with clear ownership assigned to each open issue so nothing falls through the gap between disciplines.",
-      "Model handover at project close-out is worth planning for from the start, not treated as an afterthought once construction is finished. A facilities team inheriting a BIM model for ongoing asset management needs different information — accurate equipment data, warranty references, maintenance access notes — than a design or construction team needed during delivery, and we scope this handover requirement early if it's part of the project brief.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We provide BIM modelling and coordination across architectural, structural and MEP disciplines, primarily in Revit, including clash detection, Revit family creation and point cloud/scan-to-BIM conversion for existing buildings and structures.",
+          "Models are built to an agreed Level of Development (LOD) for the project stage — concept, design development or construction — so the model stays a useful coordination tool rather than an overbuilt one that wastes modelling effort on detail nobody needs yet, or an underbuilt one that can't actually support the coordination decisions the project needs to make.",
+        ],
+      },
+      {
+        heading: "Clash Detection and Custom Family Creation",
+        paragraphs: [
+          "Coordination work includes running clash detection across combined discipline models (typically in Navisworks) and issuing clash reports the design team can action before issue-for-construction. A clash report is only useful if it's prioritised sensibly — a hard clash between a structural beam and a duct matters far more than a soft clearance clash that's easily resolved on site, and we structure reports so the important issues aren't buried in noise.",
+          "Custom Revit family creation is a recurring need on projects using non-standard equipment or fittings, and we build families that behave correctly when scheduled and tagged, not just families that look right in a 3D view — a family that reports the wrong quantity or the wrong parameter in a schedule causes exactly the kind of downstream error BIM is meant to prevent.",
+        ],
+      },
+      {
+        heading: "Inherited Models and Coordination as a Process",
+        paragraphs: [
+          "For projects inheriting an existing, poorly structured model, we can assess and rebuild problem areas rather than starting over entirely, which is usually faster and cheaper than a full rebuild while still fixing the coordination issues that made the model unreliable in the first place.",
+          "BIM coordination is as much a communication process as a technical one — a clash report that lands in someone's inbox with no context or prioritisation tends to get triaged poorly or ignored under deadline pressure. We run coordination as a structured, recurring process rather than a single event, with clear ownership assigned to each open issue so nothing falls through the gap between disciplines.",
+        ],
+      },
+      {
+        heading: "Planning for Model Handover Early",
+        paragraphs: [
+          "Model handover at project close-out is worth planning for from the start, not treated as an afterthought once construction is finished. A facilities team inheriting a BIM model for ongoing asset management needs different information — accurate equipment data, warranty references, maintenance access notes — than a design or construction team needed during delivery, and we scope this handover requirement early if it's part of the project brief.",
+        ],
+      },
     ],
     deliverables: [
       "Architectural, structural and MEP BIM models",
@@ -758,13 +943,33 @@ export const services: Service[] = [
     problemStatement:
       "Revit modelling capacity is a common bottleneck on design and documentation timelines — whether that's building a model from scratch, updating one through design changes, or picking up modelling overflow during a busy documentation period. Because Revit models sit at the centre of a coordinated project, a modelling bottleneck in one discipline tends to stall progress for everyone else waiting on that model to be current, turning a single team's capacity problem into a whole-project scheduling problem.",
     overview: [
-      "We build and maintain Revit models across architectural, structural and MEP disciplines, working to your project's title block, naming conventions and BIM execution plan where one exists, rather than imposing our own conventions on a project that already has an established standard.",
-      "This covers new model creation, updating existing models through design revisions, and producing model-derived drawing sheets and schedules as part of a coordinated documentation set.",
-      "Where a project has a BIM execution plan, we treat it as the governing document for modelling decisions — naming, parameters, worksets and LOD targets are all followed as specified, since deviating from an agreed BEP creates exactly the kind of coordination friction BIM is meant to eliminate.",
-      "Model updates through ongoing design changes are handled with attention to what else in the federated model depends on the change — a wall move that affects a room schedule, or a level change that affects every floor plan referencing it, is tracked through rather than treated as an isolated edit.",
-      "For teams without an established Revit workflow yet, we can help set up a sensible template and family library as part of the first project, so subsequent projects start from a stronger foundation rather than repeating the same set-up decisions each time.",
-      "Worksharing and model division on larger projects is planned deliberately rather than left to grow organically — deciding upfront how a model splits across worksets or linked files, based on how the team actually collaborates, avoids the file-size and performance problems that an unplanned, ad hoc division tends to create as a project grows.",
-      "Schedules and tags are treated as first-class modelling outputs, not incidental byproducts — a schedule that's wired to pull the wrong parameter, or a tag that displays inconsistent information across similar elements, undermines confidence in the model's data even when the geometry itself is completely correct.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We build and maintain Revit models across architectural, structural and MEP disciplines, working to your project's title block, naming conventions and BIM execution plan where one exists, rather than imposing our own conventions on a project that already has an established standard.",
+          "This covers new model creation, updating existing models through design revisions, and producing model-derived drawing sheets and schedules as part of a coordinated documentation set.",
+        ],
+      },
+      {
+        heading: "Following an Established BIM Execution Plan",
+        paragraphs: [
+          "Where a project has a BIM execution plan, we treat it as the governing document for modelling decisions — naming, parameters, worksets and LOD targets are all followed as specified, since deviating from an agreed BEP creates exactly the kind of coordination friction BIM is meant to eliminate.",
+          "Model updates through ongoing design changes are handled with attention to what else in the federated model depends on the change — a wall move that affects a room schedule, or a level change that affects every floor plan referencing it, is tracked through rather than treated as an isolated edit.",
+        ],
+      },
+      {
+        heading: "Setting Up a Workflow for the First Time",
+        paragraphs: [
+          "For teams without an established Revit workflow yet, we can help set up a sensible template and family library as part of the first project, so subsequent projects start from a stronger foundation rather than repeating the same set-up decisions each time.",
+          "Worksharing and model division on larger projects is planned deliberately rather than left to grow organically — deciding upfront how a model splits across worksets or linked files, based on how the team actually collaborates, avoids the file-size and performance problems that an unplanned, ad hoc division tends to create as a project grows.",
+        ],
+      },
+      {
+        heading: "Schedules and Tags as First-Class Outputs",
+        paragraphs: [
+          "Schedules and tags are treated as first-class modelling outputs, not incidental byproducts — a schedule that's wired to pull the wrong parameter, or a tag that displays inconsistent information across similar elements, undermines confidence in the model's data even when the geometry itself is completely correct.",
+        ],
+      },
     ],
     deliverables: [
       "Architectural Revit models",
@@ -837,13 +1042,33 @@ export const services: Service[] = [
     problemStatement:
       "Renovation, retrofit and asset-documentation projects often start with a scanned building and no usable model — the scan data alone isn't something a design team can work in directly. A point cloud is an extremely accurate record of what exists, but it's also an enormous, undifferentiated dataset that has to be interpreted and turned into discrete, modelled building elements before anyone can actually design against it.",
     overview: [
-      "We convert point cloud and laser scan data into coordinated Revit models — architectural, structural and MEP as required — giving design teams a working BIM model of an existing building or structure to design from.",
-      "This is commonly used for renovation and retrofit projects, heritage documentation, and facilities teams that need an accurate as-built model of existing assets.",
-      "Modelling from scan data is a judgement exercise as much as a technical one — real buildings are rarely perfectly plumb, level or square, and we agree with you upfront how much of that as-built irregularity to capture versus how much to idealise for design purposes, since modelling every deviation exactly as scanned can make a model needlessly difficult to design against.",
-      "Scan registration and accuracy are checked before modelling starts, because a model built from poorly registered scan data will carry that error forward invisibly — it's much cheaper to catch a registration problem before modelling than to discover it later when a wall doesn't line up correctly between floors.",
-      "For heritage or architecturally significant buildings, we can model to a higher level of geometric fidelity where the project calls for it, capturing decorative or non-standard elements that a purely functional as-built model would typically simplify away.",
-      "Multi-storey buildings scanned in separate sessions carry a specific registration risk worth flagging: if each floor's scan was registered independently rather than tied back to a shared site-wide control, small misalignments between floors can go unnoticed until the model is assembled as a whole. We check for this specifically rather than assuming floor-to-floor consistency by default.",
-      "Where the point cloud is being used to inform structural assessment — checking for out-of-plumb columns or deflection in an existing structure, for instance — we work closely with the structural engineer to confirm which measurements from the scan they actually need extracted and to what precision, rather than delivering a generic model and leaving that extraction work for later.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We convert point cloud and laser scan data into coordinated Revit models — architectural, structural and MEP as required — giving design teams a working BIM model of an existing building or structure to design from.",
+          "This is commonly used for renovation and retrofit projects, heritage documentation, and facilities teams that need an accurate as-built model of existing assets.",
+        ],
+      },
+      {
+        heading: "How Much As-Built Irregularity to Capture",
+        paragraphs: [
+          "Modelling from scan data is a judgement exercise as much as a technical one — real buildings are rarely perfectly plumb, level or square, and we agree with you upfront how much of that as-built irregularity to capture versus how much to idealise for design purposes, since modelling every deviation exactly as scanned can make a model needlessly difficult to design against.",
+          "Scan registration and accuracy are checked before modelling starts, because a model built from poorly registered scan data will carry that error forward invisibly — it's much cheaper to catch a registration problem before modelling than to discover it later when a wall doesn't line up correctly between floors.",
+        ],
+      },
+      {
+        heading: "Heritage Fidelity and Multi-Storey Registration",
+        paragraphs: [
+          "For heritage or architecturally significant buildings, we can model to a higher level of geometric fidelity where the project calls for it, capturing decorative or non-standard elements that a purely functional as-built model would typically simplify away.",
+          "Multi-storey buildings scanned in separate sessions carry a specific registration risk worth flagging: if each floor's scan was registered independently rather than tied back to a shared site-wide control, small misalignments between floors can go unnoticed until the model is assembled as a whole. We check for this specifically rather than assuming floor-to-floor consistency by default.",
+        ],
+      },
+      {
+        heading: "Extracting Data for Structural Assessment",
+        paragraphs: [
+          "Where the point cloud is being used to inform structural assessment — checking for out-of-plumb columns or deflection in an existing structure, for instance — we work closely with the structural engineer to confirm which measurements from the scan they actually need extracted and to what precision, rather than delivering a generic model and leaving that extraction work for later.",
+        ],
+      },
     ],
     deliverables: [
       "Revit models built from point cloud/scan data",
@@ -918,14 +1143,34 @@ export const services: Service[] = [
     problemStatement:
       "Legacy drawings — old PDFs, scanned paper drawings, superseded file formats — are common on long-running projects, but they're not directly usable for design changes, quoting or documentation. Redrawing them manually eats time that's better spent on the current project, and the temptation to just trace over a raster image rather than properly reconstruct the drawing produces a file that looks right but is barely more usable than the original scan.",
     overview: [
-      "We convert PDF, scanned, DGN and other legacy drawing formats into clean, editable CAD files in the format your team works in — typically DWG, but also other CAD-native formats on request.",
-      "This includes 2D-to-3D conversion where a project needs a 3D model built from an existing 2D drawing set, and general CAD migration between platforms and formats.",
-      "Conversion isn't a raster trace — drawings are redrawn as proper vector CAD data with correct layers, line weights and text, so the result is genuinely usable for further design work, not just a picture that looks like a drawing. This distinction matters more than it sounds: a traced drawing can look identical to a properly reconstructed one at first glance, but falls apart the moment someone tries to actually edit it.",
-      "Text and dimensions are rebuilt as native, editable CAD entities rather than exploded geometry, so a dimension that needs to change because a design changed can actually be updated, rather than requiring the whole drawing to be redrawn again from scratch.",
-      "Where a source drawing is known to contain errors or out-of-date information, we flag this rather than silently correcting or silently preserving it — the client decides whether the conversion should faithfully reproduce the original or incorporate known corrections, and we document which approach was taken.",
-      "For larger drawing sets or full archive digitisation projects, we agree a consistent layer standard and naming convention upfront, so the converted archive is internally consistent rather than a collection of individually-converted files that each made slightly different formatting decisions.",
-      "A common but avoidable failure in conversion work is treating every source drawing in a batch as equally reliable. Older drawings in a long-running archive often include sheets that were never fully updated after a design change, or that contradict a newer sheet covering the same area — we flag these inconsistencies as they're found rather than silently picking one version to trust.",
-      "Where a converted archive will be actively used and maintained going forward, we think about long-term usability as part of the conversion itself — sensible file naming, a logical folder or sheet numbering structure, and layer conventions that will still make sense to someone opening the archive in several years, not just to whoever is using it immediately after delivery.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We convert PDF, scanned, DGN and other legacy drawing formats into clean, editable CAD files in the format your team works in — typically DWG, but also other CAD-native formats on request.",
+          "This includes 2D-to-3D conversion where a project needs a 3D model built from an existing 2D drawing set, and general CAD migration between platforms and formats.",
+        ],
+      },
+      {
+        heading: "A Proper Reconstruction, Not a Raster Trace",
+        paragraphs: [
+          "Conversion isn't a raster trace — drawings are redrawn as proper vector CAD data with correct layers, line weights and text, so the result is genuinely usable for further design work, not just a picture that looks like a drawing. This distinction matters more than it sounds: a traced drawing can look identical to a properly reconstructed one at first glance, but falls apart the moment someone tries to actually edit it.",
+          "Text and dimensions are rebuilt as native, editable CAD entities rather than exploded geometry, so a dimension that needs to change because a design changed can actually be updated, rather than requiring the whole drawing to be redrawn again from scratch.",
+        ],
+      },
+      {
+        heading: "Handling Errors and Inconsistencies Honestly",
+        paragraphs: [
+          "Where a source drawing is known to contain errors or out-of-date information, we flag this rather than silently correcting or silently preserving it — the client decides whether the conversion should faithfully reproduce the original or incorporate known corrections, and we document which approach was taken.",
+          "For larger drawing sets or full archive digitisation projects, we agree a consistent layer standard and naming convention upfront, so the converted archive is internally consistent rather than a collection of individually-converted files that each made slightly different formatting decisions.",
+          "A common but avoidable failure in conversion work is treating every source drawing in a batch as equally reliable. Older drawings in a long-running archive often include sheets that were never fully updated after a design change, or that contradict a newer sheet covering the same area — we flag these inconsistencies as they're found rather than silently picking one version to trust.",
+        ],
+      },
+      {
+        heading: "Building an Archive That Lasts",
+        paragraphs: [
+          "Where a converted archive will be actively used and maintained going forward, we think about long-term usability as part of the conversion itself — sensible file naming, a logical folder or sheet numbering structure, and layer conventions that will still make sense to someone opening the archive in several years, not just to whoever is using it immediately after delivery.",
+        ],
+      },
     ],
     deliverables: [
       "Editable DWG files from PDF or scanned drawings",
@@ -998,13 +1243,33 @@ export const services: Service[] = [
     problemStatement:
       "A PDF drawing is fine for reference, but it can't be edited, redlined in CAD, or used as the basis for a design change. Manually redrawing a PDF from scratch is a common but avoidable time sink for busy design teams, particularly when the PDF is the only surviving record of a drawing whose original CAD file has been lost over the years — a surprisingly common outcome after a company changes CAD systems, loses a hard drive, or simply doesn't archive files as carefully as everyone assumed at the time.",
     overview: [
-      "We convert PDF drawings — vector or scanned — into fully editable DWG files, redrawn with proper CAD layer structure, line weights and text rather than a raster trace.",
-      "This applies to architectural, structural, mechanical, civil and electrical drawings, and can be scoped for single drawings or larger drawing sets.",
-      "Vector PDFs (exported directly from CAD) generally convert with higher fidelity than scanned raster PDFs, since the underlying line and text data is often still recoverable rather than needing to be reconstructed from a bitmap image — we'll tell you upfront which category your source files fall into and what accuracy to expect as a result.",
-      "Dimension values are checked against the visible drawing during conversion, not just copied as text, since a PDF dimension can occasionally be out of date relative to the drawn geometry if the source drawing was edited without updating every dimension — we flag any such inconsistency we find rather than silently picking one value.",
-      "For drawing sets that need to match a specific office standard once converted, we apply that layer and naming convention as part of the conversion rather than delivering a generically-organised file that still needs reformatting afterward.",
-      "Text recognition on a scanned PDF is one of the trickier parts of the conversion process, since low scan quality or an unusual font can make certain characters genuinely ambiguous. Where a character or value can't be confirmed with confidence, we flag it explicitly on the converted drawing rather than guessing and presenting a guess as a fact.",
-      "For drawing sets converted in batches, we run a final internal consistency pass across the whole set — checking that a wall type, a hatch pattern or a symbol convention that appears on multiple sheets has been converted the same way each time, rather than allowing small inconsistencies to creep in between individually converted sheets.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We convert PDF drawings — vector or scanned — into fully editable DWG files, redrawn with proper CAD layer structure, line weights and text rather than a raster trace.",
+          "This applies to architectural, structural, mechanical, civil and electrical drawings, and can be scoped for single drawings or larger drawing sets.",
+        ],
+      },
+      {
+        heading: "Vector vs Scanned Source Quality",
+        paragraphs: [
+          "Vector PDFs (exported directly from CAD) generally convert with higher fidelity than scanned raster PDFs, since the underlying line and text data is often still recoverable rather than needing to be reconstructed from a bitmap image — we'll tell you upfront which category your source files fall into and what accuracy to expect as a result.",
+          "Dimension values are checked against the visible drawing during conversion, not just copied as text, since a PDF dimension can occasionally be out of date relative to the drawn geometry if the source drawing was edited without updating every dimension — we flag any such inconsistency we find rather than silently picking one value.",
+        ],
+      },
+      {
+        heading: "Matching Your Office Standard and Flagging Ambiguity",
+        paragraphs: [
+          "For drawing sets that need to match a specific office standard once converted, we apply that layer and naming convention as part of the conversion rather than delivering a generically-organised file that still needs reformatting afterward.",
+          "Text recognition on a scanned PDF is one of the trickier parts of the conversion process, since low scan quality or an unusual font can make certain characters genuinely ambiguous. Where a character or value can't be confirmed with confidence, we flag it explicitly on the converted drawing rather than guessing and presenting a guess as a fact.",
+        ],
+      },
+      {
+        heading: "Consistency Checks Across a Batch",
+        paragraphs: [
+          "For drawing sets converted in batches, we run a final internal consistency pass across the whole set — checking that a wall type, a hatch pattern or a symbol convention that appears on multiple sheets has been converted the same way each time, rather than allowing small inconsistencies to creep in between individually converted sheets.",
+        ],
+      },
     ],
     deliverables: [
       "Editable DWG files from PDF source drawings",
@@ -1077,14 +1342,34 @@ export const services: Service[] = [
     problemStatement:
       "Not every project starts with a finished design — some start with a problem to solve. Engineering and product teams often need extra design capacity to take an idea through concept development, detailed design and into documentation a manufacturer or builder can actually use, and that capacity is rarely needed at a constant, predictable rate that justifies a permanent hire. A design team stretched thin across too many concurrent concept efforts tends to produce shallow, under-explored options on all of them rather than a genuinely well-considered result on any single one.",
     overview: [
-      "We support engineering design work from concept through to detailed design and manufacturing documentation, working alongside your in-house engineers as extra capacity rather than a black-box outsourced team that disappears with the design rationale once the drawings are delivered.",
-      "This covers concept development and design options, detailed design and modelling, design optimisation and design-for-manufacturing review, and the engineering documentation needed to hand a design to production or construction.",
-      "Where a project needs it, this service connects directly into our drafting disciplines — mechanical, structural, civil and electrical — so a design can move from concept straight into fabrication-ready documentation without a handover gap between a design team and a drafting team who've never spoken to each other.",
-      "Concept development is treated as genuinely divergent work, not a formality on the way to a predetermined answer — we present real options with honest trade-offs (cost, manufacturability, lead time, performance) rather than a single favoured concept dressed up as a comparison.",
-      "Design-for-manufacturing review is one of the more valuable and under-used parts of this service: a design that's elegant on screen but expensive or awkward to actually produce is a common and avoidable source of cost overrun, and catching this at the design stage is far cheaper than catching it after tooling has been committed.",
-      "Documentation handover to production is treated as its own deliverable, not an afterthought — a design is only as good as a production team's ability to actually build it without constant clarification calls back to engineering, and we write documentation with that downstream audience specifically in mind.",
-      "Design rationale — why a particular concept was chosen over the alternatives, and what constraints shaped a specific detailed design decision — is documented alongside the drawings themselves wherever it's genuinely useful. This is easy to skip under deadline pressure, and it's exactly the kind of context that becomes expensive to reconstruct later when a design needs revisiting and the reasoning behind the original decisions has been lost.",
-      "Value engineering input, where it's part of the brief, is approached as a genuine design exercise rather than a cost-cutting checklist applied after the fact — the goal is to find where cost can be reduced without quietly degrading the aspects of the design that actually matter to its function, which requires understanding the design's priorities well enough to know which corners are safe to cut and which aren't.",
+      {
+        heading: "What This Service Covers",
+        paragraphs: [
+          "We support engineering design work from concept through to detailed design and manufacturing documentation, working alongside your in-house engineers as extra capacity rather than a black-box outsourced team that disappears with the design rationale once the drawings are delivered.",
+          "This covers concept development and design options, detailed design and modelling, design optimisation and design-for-manufacturing review, and the engineering documentation needed to hand a design to production or construction.",
+          "Where a project needs it, this service connects directly into our drafting disciplines — mechanical, structural, civil and electrical — so a design can move from concept straight into fabrication-ready documentation without a handover gap between a design team and a drafting team who've never spoken to each other.",
+        ],
+      },
+      {
+        heading: "Genuinely Divergent Concept Development",
+        paragraphs: [
+          "Concept development is treated as genuinely divergent work, not a formality on the way to a predetermined answer — we present real options with honest trade-offs (cost, manufacturability, lead time, performance) rather than a single favoured concept dressed up as a comparison.",
+          "Design-for-manufacturing review is one of the more valuable and under-used parts of this service: a design that's elegant on screen but expensive or awkward to actually produce is a common and avoidable source of cost overrun, and catching this at the design stage is far cheaper than catching it after tooling has been committed.",
+        ],
+      },
+      {
+        heading: "Documentation and Design Rationale",
+        paragraphs: [
+          "Documentation handover to production is treated as its own deliverable, not an afterthought — a design is only as good as a production team's ability to actually build it without constant clarification calls back to engineering, and we write documentation with that downstream audience specifically in mind.",
+          "Design rationale — why a particular concept was chosen over the alternatives, and what constraints shaped a specific detailed design decision — is documented alongside the drawings themselves wherever it's genuinely useful. This is easy to skip under deadline pressure, and it's exactly the kind of context that becomes expensive to reconstruct later when a design needs revisiting and the reasoning behind the original decisions has been lost.",
+        ],
+      },
+      {
+        heading: "Value Engineering Without Degrading What Matters",
+        paragraphs: [
+          "Value engineering input, where it's part of the brief, is approached as a genuine design exercise rather than a cost-cutting checklist applied after the fact — the goal is to find where cost can be reduced without quietly degrading the aspects of the design that actually matter to its function, which requires understanding the design's priorities well enough to know which corners are safe to cut and which aren't.",
+        ],
+      },
     ],
     deliverables: [
       "Concept design options and development",
