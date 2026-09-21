@@ -6,7 +6,7 @@ export const SITE = {
   // `||` (not `??`) so a blank-but-set env var on the host still falls
   // back to a valid default instead of producing an empty string.
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.rendercadhub.com",
-  email: "[EMAIL]",
+  email: "support@rendercadhub.com",
   phone: "[PHONE]",
   addressLocality: "[CITY]",
   addressRegion: "[STATE]",
