@@ -109,7 +109,7 @@ export const locations: Location[] = [
       { question: "Do you support Mumbai clients needing both architectural drafting and 3D rendering together?", answer: "Yes, scoping architectural documentation and presentation renders from the same underlying design is a common combined engagement for Mumbai residential and commercial projects." },
     ],
     relatedLocations: ["pune", "delhi-ncr"],
-    seoTitle: "CAD Drafting Services Mumbai | IndCAD",
+    seoTitle: "CAD Drafting Services Mumbai | Render CAD Hub",
     seoDescription:
       "CAD drafting, BIM and engineering design services for Mumbai architects, engineers, builders and manufacturers.",
   },
@@ -224,7 +224,7 @@ export const locations: Location[] = [
       { question: "Can you support a phased retail or mixed-use development across multiple NCR locations?", answer: "Yes, an ongoing arrangement covering several concurrent retail or mixed-use developments across different NCR locations for the same client is a common and efficient way this service is used." },
     ],
     relatedLocations: ["mumbai", "bangalore"],
-    seoTitle: "CAD Drafting Services Delhi NCR | IndCAD",
+    seoTitle: "CAD Drafting Services Delhi NCR | Render CAD Hub",
     seoDescription:
       "CAD drafting, BIM and engineering design services for Delhi NCR architects, engineers, developers and contractors.",
   },
@@ -334,7 +334,7 @@ export const locations: Location[] = [
       { question: "Can you help a Bangalore precision manufacturer with sheet metal enclosure design?", answer: "Yes, sheet metal design and flat pattern development for precision equipment enclosures, calibrated to your workshop's tooling, is a core part of our mechanical drafting service." },
     ],
     relatedLocations: ["chennai", "hyderabad"],
-    seoTitle: "CAD Drafting Services Bangalore | IndCAD",
+    seoTitle: "CAD Drafting Services Bangalore | Render CAD Hub",
     seoDescription:
       "Mechanical, structural and BIM drafting services for Bangalore's aerospace, manufacturing and construction sectors.",
   },
@@ -444,7 +444,7 @@ export const locations: Location[] = [
       { question: "Can you support a Pune manufacturer with an ongoing overflow drafting arrangement?", answer: "Yes, an ongoing arrangement providing flexible drafting capacity during busy periods, without a permanent headcount commitment, is a common and efficient way Pune manufacturers use this service." },
     ],
     relatedLocations: ["mumbai"],
-    seoTitle: "CAD Drafting Services Pune | IndCAD",
+    seoTitle: "CAD Drafting Services Pune | Render CAD Hub",
     seoDescription:
       "Mechanical and structural drafting services for Pune's automotive, manufacturing and construction sectors.",
   },
@@ -554,7 +554,7 @@ export const locations: Location[] = [
       { question: "Can you help a Chennai electronics manufacturer with fixture and tooling documentation?", answer: "Yes, fixture and tooling documentation for precision electronics assembly is available alongside our core automotive-sector mechanical drafting work." },
     ],
     relatedLocations: ["bangalore", "hyderabad"],
-    seoTitle: "CAD Drafting Services Chennai | IndCAD",
+    seoTitle: "CAD Drafting Services Chennai | Render CAD Hub",
     seoDescription:
       "Mechanical, structural and civil drafting services for Chennai's automotive, manufacturing and industrial sectors.",
   },
@@ -664,7 +664,7 @@ export const locations: Location[] = [
       { question: "Can you support a Hyderabad manufacturer transitioning between CAD platforms?", answer: "Yes, migrating a drawing and model archive between CAD platforms is a common transition project we support for Hyderabad-based manufacturers." },
     ],
     relatedLocations: ["bangalore", "chennai"],
-    seoTitle: "CAD Drafting Services Hyderabad | IndCAD",
+    seoTitle: "CAD Drafting Services Hyderabad | Render CAD Hub",
     seoDescription:
       "CAD drafting, BIM and engineering design services for Hyderabad's pharma, aerospace and construction sectors.",
   },

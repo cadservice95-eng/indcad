@@ -93,7 +93,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["mechanical-drafting", "structural-drafting", "architectural-drafting", "civil-drafting", "electrical-drafting", "cad-conversion", "pdf-to-cad"],
     relatedIndustries: ["manufacturing", "construction", "mining", "energy"],
-    seoTitle: "AutoCAD Drafting Services India | IndCAD",
+    seoTitle: "AutoCAD Drafting Services India | Render CAD Hub",
     seoDescription: "AutoCAD drafting services across mechanical, structural, architectural, civil and electrical disciplines for Indian projects.",
   },
   {
@@ -190,7 +190,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["bim-services", "revit-modelling", "scan-to-bim", "architectural-drafting", "3d-rendering"],
     relatedIndustries: ["construction", "manufacturing", "energy"],
-    seoTitle: "Revit Modelling Services India | IndCAD",
+    seoTitle: "Revit Modelling Services India | Render CAD Hub",
     seoDescription: "Revit BIM modelling and coordination services across architectural, structural and MEP disciplines for Indian projects.",
   },
   {
@@ -288,7 +288,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["3d-cad-modelling", "mechanical-drafting", "engineering-design"],
     relatedIndustries: ["manufacturing", "automotive", "defence", "aerospace"],
-    seoTitle: "SolidWorks Design & Drafting Services India | IndCAD",
+    seoTitle: "SolidWorks Design & Drafting Services India | Render CAD Hub",
     seoDescription: "SolidWorks 3D CAD modelling and drafting services for manufacturers, fabricators and product designers in India.",
   },
   {
@@ -387,7 +387,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["3d-cad-modelling", "mechanical-drafting", "engineering-design"],
     relatedIndustries: ["manufacturing", "automotive", "aerospace"],
-    seoTitle: "Autodesk Inventor Design & Drafting Services India | IndCAD",
+    seoTitle: "Autodesk Inventor Design & Drafting Services India | Render CAD Hub",
     seoDescription: "Inventor 3D CAD modelling and mechanical drafting services for Indian manufacturers and product design teams.",
   },
   {
@@ -483,7 +483,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["steel-detailing", "structural-drafting", "bim-services"],
     relatedIndustries: ["construction", "mining", "manufacturing"],
-    seoTitle: "Tekla Structural Detailing Services India | IndCAD",
+    seoTitle: "Tekla Structural Detailing Services India | Render CAD Hub",
     seoDescription: "Tekla Structures steel detailing and structural BIM services — shop drawings, erection drawings and material take-offs.",
   },
   {
@@ -573,7 +573,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["cad-conversion", "civil-drafting"],
     relatedIndustries: ["construction", "energy"],
-    seoTitle: "MicroStation Drafting & Conversion Services India | IndCAD",
+    seoTitle: "MicroStation Drafting & Conversion Services India | Render CAD Hub",
     seoDescription: "MicroStation drawing conversion and drafting support for infrastructure and utilities projects in India.",
   },
   {
@@ -669,7 +669,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["civil-drafting"],
     relatedIndustries: ["construction", "mining", "energy"],
-    seoTitle: "Civil 3D Drafting & Design Services India | IndCAD",
+    seoTitle: "Civil 3D Drafting & Design Services India | Render CAD Hub",
     seoDescription: "Civil 3D drafting and design services for land development, subdivision and site infrastructure projects in India.",
   },
   {
@@ -763,7 +763,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["bim-services", "revit-modelling", "scan-to-bim"],
     relatedIndustries: ["construction", "manufacturing", "energy"],
-    seoTitle: "Navisworks Clash Detection & Coordination Services India | IndCAD",
+    seoTitle: "Navisworks Clash Detection & Coordination Services India | Render CAD Hub",
     seoDescription: "Navisworks-based BIM coordination and clash detection services for multi-disciplinary construction projects.",
   },
   {
@@ -862,7 +862,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["architectural-drafting", "3d-rendering"],
     relatedIndustries: ["construction"],
-    seoTitle: "ArchiCAD Modelling & Drafting Services India | IndCAD",
+    seoTitle: "ArchiCAD Modelling & Drafting Services India | Render CAD Hub",
     seoDescription: "ArchiCAD architectural modelling and drafting services for Indian architectural practices and builders.",
   },
   {
@@ -958,7 +958,7 @@ export const software: Software[] = [
     ],
     relatedServices: ["3d-cad-modelling", "mechanical-drafting", "engineering-design"],
     relatedIndustries: ["manufacturing", "automotive", "aerospace"],
-    seoTitle: "Fusion 360 Design & Drafting Services India | IndCAD",
+    seoTitle: "Fusion 360 Design & Drafting Services India | Render CAD Hub",
     seoDescription: "Fusion 360 3D CAD modelling and drafting services for product design and manufacturing projects in India.",
   },
 ];

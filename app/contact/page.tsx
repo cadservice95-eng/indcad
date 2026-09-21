@@ -153,8 +153,8 @@ const contactFaqs = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us | IndCAD",
-  description: "Get in touch with IndCAD for CAD drafting, BIM and engineering design enquiries across India.",
+  title: "Contact Us | Render CAD Hub",
+  description: "Get in touch with Render CAD Hub for CAD drafting, BIM and engineering design enquiries across India.",
   path: "/contact",
 });
 

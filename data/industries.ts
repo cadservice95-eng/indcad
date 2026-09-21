@@ -93,7 +93,7 @@ export const industries: Industry[] = [
       { question: "Do you produce shop drawings for precast concrete elements?", answer: "Yes, precast panel and element shop drawings, coordinated against the structural design and the specific precaster's production requirements, are available where a project's structural scope includes precast concrete." },
       { question: "Can you support a construction project needing both 2D drawings and a coordinated BIM model?", answer: "Yes, we scope a mix of 2D and BIM deliverables to match what each part of your project actually needs, rather than defaulting entirely to one approach." },
     ],
-    seoTitle: "CAD & BIM Services for Construction | IndCAD",
+    seoTitle: "CAD & BIM Services for Construction | Render CAD Hub",
     seoDescription:
       "Drafting, BIM coordination and documentation support for builders, contractors and construction teams across India.",
   },
@@ -193,7 +193,7 @@ export const industries: Industry[] = [
       { question: "Can you support a manufacturer bidding on a new contract that requires supplier drawing samples?", answer: "Yes, preparing representative drawing samples to support a bid or supplier qualification submission is a quick, well-defined engagement we can turn around against a bid deadline." },
       { question: "Do you provide documentation for conveyor and automation retrofits on an existing line?", answer: "Yes, mechanical drafting for automation and conveyor retrofits, coordinated against the existing line's layout, is a common manufacturing modernisation request." },
     ],
-    seoTitle: "CAD & Drafting Services for Manufacturing | IndCAD",
+    seoTitle: "CAD & Drafting Services for Manufacturing | Render CAD Hub",
     seoDescription:
       "Mechanical drafting, 3D CAD modelling and manufacturing documentation services for Indian manufacturers and fabricators.",
   },
@@ -294,7 +294,7 @@ export const industries: Industry[] = [
       { question: "Do you draft fixed conveyor gantry and support structures?", answer: "Yes, structural detailing for conveyor gantries and their supporting structures is a common processing plant deliverable, coordinated against the conveyor design and route." },
       { question: "Can you support documentation for a mine site's water treatment infrastructure?", answer: "Yes, civil and structural documentation for water treatment infrastructure is available, following the specific engineering design applicable to your site." },
     ],
-    seoTitle: "CAD & Drafting Services for Mining | IndCAD",
+    seoTitle: "CAD & Drafting Services for Mining | Render CAD Hub",
     seoDescription:
       "Structural, mechanical and civil drafting support for mining and mineral processing projects across India.",
   },
@@ -396,7 +396,7 @@ export const industries: Industry[] = [
       { question: "Do you provide civil drafting for pipeline crossing and access road documentation?", answer: "Yes, civil documentation for pipeline crossings and associated access infrastructure is available, following the specific engineering design and any pipeline authority requirements." },
       { question: "Can you support a facility's documentation needs across its full operating life, not just construction?", answer: "Yes, an ongoing arrangement covering modification, expansion and as-built documentation across a facility's operating life is a common and valuable way this service is used by operators." },
     ],
-    seoTitle: "CAD & Drafting Services for Oil & Gas | IndCAD",
+    seoTitle: "CAD & Drafting Services for Oil & Gas | Render CAD Hub",
     seoDescription:
       "Piping, mechanical and structural drafting support for oil and gas facilities and infrastructure projects in India.",
   },
@@ -499,7 +499,7 @@ export const industries: Industry[] = [
       { question: "Do you provide 3D scanning-based reverse engineering for complex organic automotive surfaces?", answer: "Yes, where a component has complex, non-prismatic surfacing, scan-based reverse engineering is often more practical than manual measurement, and we can advise on the best approach for your specific part." },
       { question: "Can you support documentation for automotive components sold through both OEM and aftermarket channels?", answer: "Yes, documenting the same component to satisfy both an OEM supply agreement and separate aftermarket packaging or specification requirements is a common dual-channel automotive request." },
     ],
-    seoTitle: "CAD & Drafting Services for Automotive | IndCAD",
+    seoTitle: "CAD & Drafting Services for Automotive | Render CAD Hub",
     seoDescription:
       "3D CAD modelling and mechanical drafting services for automotive component design, tooling and aftermarket parts in India.",
   },
@@ -595,7 +595,7 @@ export const industries: Industry[] = [
       { question: "Do you provide reverse engineering support for defence equipment with mixed metric and imperial components?", answer: "Yes, legacy defence equipment sourced from multiple original countries of manufacture often mixes unit systems, and we capture and clearly document which system applies to each measured feature." },
       { question: "Can you support urgent, short-notice defence sustainment documentation requests?", answer: "Yes, we can discuss what's achievable on a short timeline and prioritise the most critical components first, while being upfront about what level of verification is realistically possible within that timeframe." },
     ],
-    seoTitle: "CAD & Drafting Services for Defence | IndCAD",
+    seoTitle: "CAD & Drafting Services for Defence | Render CAD Hub",
     seoDescription:
       "Mechanical and structural drafting support for defence and defence-adjacent manufacturing and sustainment projects.",
   },
@@ -694,7 +694,7 @@ export const industries: Industry[] = [
       { question: "Can you support documentation for aerospace interior or cabin component modifications?", answer: "Yes, mechanical drafting for cabin interior components and modifications is within scope alongside structural and precision component work." },
       { question: "Do you provide drawing sets suitable for export control review before international shipment?", answer: "We produce accurate technical documentation as scoped; classifying that documentation against export control requirements is a compliance function that sits with your organisation's regulatory team, and we're happy to support whatever review process that requires." },
     ],
-    seoTitle: "CAD & Drafting Services for Aerospace | IndCAD",
+    seoTitle: "CAD & Drafting Services for Aerospace | Render CAD Hub",
     seoDescription:
       "Precision 3D CAD modelling and mechanical drafting services for aerospace component and tooling projects in India.",
   },
@@ -795,7 +795,7 @@ export const industries: Industry[] = [
       { question: "Can you support a renewable energy developer across a portfolio spanning multiple states?", answer: "Yes, delivering consistent documentation across a multi-state project portfolio, each potentially subject to a different state utility's specific requirements, is something we scope explicitly for each site." },
       { question: "Do you provide documentation for site security and perimeter infrastructure at an energy facility?", answer: "Yes, civil and structural documentation for site security and perimeter infrastructure is available alongside core generation and substation documentation." },
     ],
-    seoTitle: "CAD & Drafting Services for Energy | IndCAD",
+    seoTitle: "CAD & Drafting Services for Energy | Render CAD Hub",
     seoDescription:
       "Structural, electrical and civil drafting support for energy infrastructure, substations and facilities projects in India.",
   },

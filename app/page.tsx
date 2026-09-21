@@ -27,7 +27,7 @@ const homeOverview = [
   {
     heading: "One Capability Across Every Discipline",
     paragraphs: [
-      "IndCAD provides CAD design, drafting, BIM and engineering support to engineers, architects, builders, manufacturers and contractors across India. Rather than being built around a single discipline, our capability spans mechanical, structural, architectural, civil and electrical drafting, alongside BIM modelling, CAD conversion and engineering design support — so a team with a mix of drawing needs across a project doesn't need to coordinate several separate specialist vendors for work that can be handled as one consistent capability.",
+      "Render CAD Hub provides CAD design, drafting, BIM and engineering support to engineers, architects, builders, manufacturers and contractors across India. Rather than being built around a single discipline, our capability spans mechanical, structural, architectural, civil and electrical drafting, alongside BIM modelling, CAD conversion and engineering design support — so a team with a mix of drawing needs across a project doesn't need to coordinate several separate specialist vendors for work that can be handled as one consistent capability.",
       "This kind of flexible, cross-disciplinary drafting capacity tends to matter most for teams whose workload doesn't sit neatly within a single, predictable category — a manufacturing business that occasionally needs a structural mezzanine detailed alongside its usual mechanical part drawings, or a construction contractor whose civil site drawings need to be coordinated against an architectural set produced by a different consultant. Working across disciplines under one point of contact removes a layer of coordination overhead that otherwise falls back on the client to manage themselves.",
     ],
   },
@@ -149,7 +149,7 @@ export default function HomePage() {
       <section className="border-t border-neutral-200 py-16 sm:py-20">
         <Container className="max-w-3xl">
           <SectionHeading
-            eyebrow="About IndCAD"
+            eyebrow="About Render CAD Hub"
             heading="CAD, Drafting and BIM Support for Indian Engineering & Construction Teams"
           />
           <div className="mt-8 space-y-8">

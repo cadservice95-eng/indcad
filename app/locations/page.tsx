@@ -9,7 +9,7 @@ import { SERVICE_AREAS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "CAD Drafting Services by Location | IndCAD",
+  title: "CAD Drafting Services by Location | Render CAD Hub",
   description:
     "CAD drafting, BIM and engineering design services delivered remotely to clients across Mumbai, Delhi NCR, Bangalore, Pune, Chennai, Hyderabad and India-wide.",
   path: "/locations",

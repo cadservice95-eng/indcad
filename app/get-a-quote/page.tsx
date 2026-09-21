@@ -150,7 +150,7 @@ const quoteFaqs = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "Get a Free Quote | IndCAD",
+  title: "Get a Free Quote | Render CAD Hub",
   description: "Request a CAD drafting, BIM or engineering design quote. Tell us what you need and our team will review the project requirements.",
   path: "/get-a-quote",
 });

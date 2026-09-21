@@ -120,7 +120,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["cad-conversion", "pdf-to-cad"],
-    seoTitle: "How to Prepare Drawings for CAD Conversion | IndCAD",
+    seoTitle: "How to Prepare Drawings for CAD Conversion | Render CAD Hub",
     seoDescription: "Practical guidance on preparing PDF, scanned and legacy drawings for CAD conversion, and what to check before accepting the converted file.",
   },
   {
@@ -245,7 +245,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["pdf-to-cad", "cad-conversion"],
-    seoTitle: "PDF to CAD: What to Check Before You Accept a Converted File | IndCAD",
+    seoTitle: "PDF to CAD: What to Check Before You Accept a Converted File | Render CAD Hub",
     seoDescription: "A practical checklist for verifying that a PDF-to-CAD conversion is genuinely editable and dimensionally accurate.",
   },
   {
@@ -365,7 +365,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["mechanical-drafting", "engineering-design"],
-    seoTitle: "When to Outsource Drafting vs Hire In-House | IndCAD",
+    seoTitle: "When to Outsource Drafting vs Hire In-House | Render CAD Hub",
     seoDescription: "A practical comparison of outsourced drafting support and in-house drafting teams, and when each model makes sense.",
   },
   {
@@ -495,7 +495,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["mechanical-drafting", "3d-cad-modelling"],
-    seoTitle: "Reverse Engineering a Legacy Part: A Practical Walkthrough | IndCAD",
+    seoTitle: "Reverse Engineering a Legacy Part: A Practical Walkthrough | Render CAD Hub",
     seoDescription: "A step-by-step look at how an undocumented legacy part is reverse-engineered into a usable 3D model and manufacturing drawing.",
   },
 
@@ -626,7 +626,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["bim-services", "revit-modelling"],
-    seoTitle: "A Practical Guide to Levels of Development (LOD) in BIM | IndCAD",
+    seoTitle: "A Practical Guide to Levels of Development (LOD) in BIM | Render CAD Hub",
     seoDescription: "What Level of Development (LOD) means at each BIM project stage, and why agreeing an LOD target upfront avoids coordination problems.",
   },
   {
@@ -764,7 +764,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["steel-detailing", "structural-drafting"],
-    seoTitle: "Understanding Structural Steel Shop Drawings | IndCAD",
+    seoTitle: "Understanding Structural Steel Shop Drawings | Render CAD Hub",
     seoDescription: "A guide to what structural steel shop drawings show, how they differ from design drawings, and what erection drawings cover.",
   },
   {
@@ -891,7 +891,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["civil-drafting", "bim-services", "architectural-drafting"],
-    seoTitle: "Choosing Between AutoCAD, Revit and Civil 3D | IndCAD",
+    seoTitle: "Choosing Between AutoCAD, Revit and Civil 3D | Render CAD Hub",
     seoDescription: "A practical guide to when a project calls for AutoCAD, Revit or Civil 3D, and why many projects use more than one.",
   },
 
@@ -1021,7 +1021,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["steel-detailing", "structural-drafting"],
-    seoTitle: "Indian Standards Relevant to Structural Steel Detailing | IndCAD",
+    seoTitle: "Indian Standards Relevant to Structural Steel Detailing | Render CAD Hub",
     seoDescription: "An overview of Indian Standards (IS codes) commonly referenced in structural steel design and detailing, for general orientation.",
   },
   {
@@ -1159,7 +1159,7 @@ export const articles: Article[] = [
       },
     ],
     relatedServices: ["mechanical-drafting", "structural-drafting", "architectural-drafting"],
-    seoTitle: "Drawing Standards and Title Block Conventions | IndCAD",
+    seoTitle: "Drawing Standards and Title Block Conventions | Render CAD Hub",
     seoDescription: "A general overview of common Indian drawing conventions for sheet sizing, title blocks and revision control.",
   },
 ];

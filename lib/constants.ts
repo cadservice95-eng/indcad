@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "IndCAD",
+  name: "Render CAD Hub",
   legalName: "[COMPANY LEGAL NAME]",
   shortDescription:
     "CAD design, drafting, BIM and engineering support for Indian engineers, architects, builders, manufacturers and contractors.",

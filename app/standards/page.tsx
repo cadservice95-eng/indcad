@@ -8,7 +8,7 @@ import { getArticlesByType } from "@/data/resources";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Drafting Standards | IndCAD",
+  title: "Drafting Standards | Render CAD Hub",
   description: "General reference articles on Indian Standards (IS codes) and drawing conventions relevant to structural, mechanical and architectural drafting.",
   path: "/standards",
 });

@@ -11,7 +11,7 @@ import { projectCategories } from "@/data/project-categories";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "CAD & Engineering Project Examples | IndCAD",
+  title: "CAD & Engineering Project Examples | Render CAD Hub",
   description:
     "Illustrative CAD, drafting, BIM and engineering design project examples across mechanical, structural, civil, architectural, electrical and BIM disciplines.",
   path: "/projects",

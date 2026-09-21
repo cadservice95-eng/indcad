@@ -8,7 +8,7 @@ import { getArticlesByType } from "@/data/resources";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog | IndCAD",
+  title: "Blog | Render CAD Hub",
   description: "Practical articles on CAD drafting, CAD conversion, BIM and project workflow for Indian engineering and construction teams.",
   path: "/blog",
 });

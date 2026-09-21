@@ -13,9 +13,9 @@ import { buildMetadata } from "@/lib/seo";
 
 const aboutFaqs = [
   {
-    question: "Is IndCAD a single freelancer or a team?",
+    question: "Is Render CAD Hub a single freelancer or a team?",
     answer:
-      "IndCAD operates as a team capability spanning multiple drafting and design disciplines, rather than a single individual — different disciplines are handled by whoever on the team has the right background for that specific work.",
+      "Render CAD Hub operates as a team capability spanning multiple drafting and design disciplines, rather than a single individual — different disciplines are handled by whoever on the team has the right background for that specific work.",
   },
   {
     question: "Do you work directly with our engineers, or only through a project manager?",
@@ -75,8 +75,8 @@ const aboutFaqs = [
 ];
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us | IndCAD",
-  description: "IndCAD provides CAD design, drafting, BIM and engineering design support to Indian engineers, architects, builders and manufacturers.",
+  title: "About Us | Render CAD Hub",
+  description: "Render CAD Hub provides CAD design, drafting, BIM and engineering design support to Indian engineers, architects, builders and manufacturers.",
   path: "/about",
 });
 
@@ -85,8 +85,8 @@ export default function AboutPage() {
     <>
       <Breadcrumbs items={[{ label: "About", href: "/about" }]} />
       <PageHero
-        eyebrow="About IndCAD"
-        heading="About IndCAD"
+        eyebrow="About Render CAD Hub"
+        heading="About Render CAD Hub"
         description="CAD design, drafting, BIM and engineering design support for Indian engineers, architects, builders, manufacturers and contractors."
       />
 
@@ -96,7 +96,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-semibold text-navy-900">Who We Are</h2>
             <div className="mt-3 space-y-4">
               <p className="text-base leading-relaxed text-neutral-700">
-                IndCAD is [COMPANY NAME], a CAD design, drafting, BIM and engineering documentation service working with
+                Render CAD Hub is [COMPANY NAME], a CAD design, drafting, BIM and engineering documentation service working with
                 Indian engineers, architects, builders, manufacturers and contractors. [YEARS EXPERIENCE] years of
                 combined team experience across mechanical, structural, architectural, civil and electrical disciplines.
               </p>
@@ -110,7 +110,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-semibold text-navy-900">Why We're Structured This Way</h2>
             <div className="mt-3 space-y-4">
               <p className="text-base leading-relaxed text-neutral-700">
-                The reasoning behind how IndCAD is structured is straightforward: most engineering, manufacturing and
+                The reasoning behind how Render CAD Hub is structured is straightforward: most engineering, manufacturing and
                 construction teams in India don't have a purely single-discipline drafting need. A manufacturing business
                 might need mechanical part drawings one month and a structural mezzanine detail the next; a construction
                 contractor might need civil site drawings coordinated against an architectural set produced by a separate
@@ -175,7 +175,7 @@ export default function AboutPage() {
             <h2 className="text-xl font-semibold text-navy-900">Our Goal</h2>
             <div className="mt-3 space-y-4">
               <p className="text-base leading-relaxed text-neutral-700">
-                Ultimately, the goal behind IndCAD is simple: give Indian engineering, architecture, construction and
+                Ultimately, the goal behind Render CAD Hub is simple: give Indian engineering, architecture, construction and
                 manufacturing teams a single, reliable place to send drafting and design work that needs to be accurate,
                 well-organised and delivered on a clear timeline, regardless of which specific discipline that work falls
                 under.
@@ -244,7 +244,7 @@ export default function AboutPage() {
             A drafting service that only handles one discipline forces a client with a mixed drawing need to manage
             several vendors and coordinate between them directly — reconciling different drawing standards, different
             turnaround expectations, and different points of contact for what is, from the client's side, a single
-            project. We built IndCAD to remove that coordination burden rather than add to it, by covering the realistic
+            project. We built Render CAD Hub to remove that coordination burden rather than add to it, by covering the realistic
             range of disciplines an Indian engineering, construction or manufacturing team is likely to need across
             its actual project mix.
           </p>

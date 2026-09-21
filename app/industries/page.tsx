@@ -8,7 +8,7 @@ import { industries } from "@/data/industries";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Industries We Support | IndCAD",
+  title: "Industries We Support | Render CAD Hub",
   description:
     "CAD, drafting and engineering design support for construction, manufacturing, mining, oil & gas, automotive, defence, aerospace and energy sector projects across India.",
   path: "/industries",

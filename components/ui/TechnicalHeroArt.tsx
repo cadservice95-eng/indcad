@@ -65,7 +65,7 @@ export function TechnicalHeroArt({ className }: { className?: string }) {
         <line x1="660" y1="560" x2="660" y2="620" />
       </g>
       <g fill="#83aed3" fontFamily="ui-monospace, monospace" fontSize="11">
-        <text x="24" y="595">DRG NO. IC-4471-B</text>
+        <text x="24" y="595">DRG NO. RC-4471-B</text>
         <text x="580" y="583">SCALE</text>
         <text x="580" y="602">1:5</text>
         <text x="676" y="583">REV</text>

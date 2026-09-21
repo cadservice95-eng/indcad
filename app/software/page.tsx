@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 export const metadata: Metadata = buildMetadata({
-  title: "CAD & BIM Software We Work In | IndCAD",
+  title: "CAD & BIM Software We Work In | Render CAD Hub",
   description:
     "AutoCAD, Revit, SolidWorks, Inventor, Tekla, MicroStation, Civil 3D, Navisworks, ArchiCAD and Fusion 360 — the CAD and BIM platforms we deliver work in.",
   path: "/software",

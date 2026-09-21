@@ -10,7 +10,7 @@ import { getServiceBySlug } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "CAD & Engineering Services India | IndCAD",
+  title: "CAD & Engineering Services India | Render CAD Hub",
   description:
     "Mechanical, structural, architectural, civil and electrical drafting, plus BIM, CAD conversion and engineering design services across India.",
   path: "/services",

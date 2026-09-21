@@ -8,7 +8,7 @@ import { getArticlesByType } from "@/data/resources";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Guides | IndCAD",
+  title: "Guides | Render CAD Hub",
   description: "In-depth guides on BIM Levels of Development, structural steel shop drawings and choosing the right CAD or BIM platform.",
   path: "/guides",
 });

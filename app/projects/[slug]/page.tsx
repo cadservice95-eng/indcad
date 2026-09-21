@@ -37,7 +37,7 @@ export async function generateMetadata({
   const category = getProjectCategory(slug);
   if (category) {
     return buildMetadata({
-      title: `${category.name} Project Examples | IndCAD`,
+      title: `${category.name} Project Examples | Render CAD Hub`,
       description: category.description,
       path: `/projects/${category.slug}`,
     });

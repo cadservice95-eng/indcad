@@ -101,7 +101,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["3d-cad-modelling", "structural-drafting", "engineering-design", "cad-conversion"],
     relatedProjectCategories: ["mechanical"],
-    seoTitle: "Mechanical Drafting Services India | IndCAD",
+    seoTitle: "Mechanical Drafting Services India | Render CAD Hub",
     seoDescription:
       "Mechanical drafting services for Indian manufacturers and fabricators — 2D drafting, 3D CAD modelling, fabrication drawings, BOMs and reverse engineering.",
   },
@@ -198,7 +198,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["mechanical-drafting", "engineering-design", "cad-conversion"],
     relatedProjectCategories: ["mechanical"],
-    seoTitle: "3D CAD Modelling Services India | IndCAD",
+    seoTitle: "3D CAD Modelling Services India | Render CAD Hub",
     seoDescription:
       "Parametric 3D CAD modelling services — parts, assemblies and product development models built in SolidWorks, Inventor and Fusion 360.",
   },
@@ -306,7 +306,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["steel-detailing", "bim-services", "cad-conversion", "engineering-design"],
     relatedProjectCategories: ["structural"],
-    seoTitle: "Structural Drafting Services India | IndCAD",
+    seoTitle: "Structural Drafting Services India | Render CAD Hub",
     seoDescription:
       "Structural drafting and steel detailing services — shop drawings, erection drawings, connection documentation and structural BIM for Indian fabricators and builders.",
   },
@@ -404,7 +404,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["structural-drafting", "bim-services", "engineering-design"],
     relatedProjectCategories: ["structural"],
-    seoTitle: "Structural Steel Detailing Services India | IndCAD",
+    seoTitle: "Structural Steel Detailing Services India | Render CAD Hub",
     seoDescription:
       "Structural steel detailing — shop drawings, erection drawings, connection detail and material take-offs for Indian fabricators, in Tekla or AutoCAD.",
   },
@@ -513,7 +513,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["3d-rendering", "bim-services", "cad-conversion"],
     relatedProjectCategories: ["architectural"],
-    seoTitle: "Architectural Drafting Services India | IndCAD",
+    seoTitle: "Architectural Drafting Services India | Render CAD Hub",
     seoDescription:
       "Architectural drafting services — floor plans, construction documentation, renovation drawings and 3D architectural modelling for Indian practices and builders.",
   },
@@ -612,7 +612,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["architectural-drafting", "bim-services"],
     relatedProjectCategories: ["architectural"],
-    seoTitle: "3D Rendering & Architectural Visualisation India | IndCAD",
+    seoTitle: "3D Rendering & Architectural Visualisation India | Render CAD Hub",
     seoDescription:
       "3D architectural rendering and walkthrough services — visualisation built from your design drawings or BIM model for presentation and approvals.",
   },
@@ -718,7 +718,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["structural-drafting", "engineering-design", "cad-conversion"],
     relatedProjectCategories: ["civil"],
-    seoTitle: "Civil Drafting Services India | IndCAD",
+    seoTitle: "Civil Drafting Services India | Render CAD Hub",
     seoDescription:
       "Civil drafting and construction documentation — site plans, subdivision design, stormwater and road design drawings for Indian land development projects.",
   },
@@ -826,7 +826,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["bim-services", "cad-conversion", "engineering-design"],
     relatedProjectCategories: ["electrical"],
-    seoTitle: "Electrical Drafting Services India | IndCAD",
+    seoTitle: "Electrical Drafting Services India | Render CAD Hub",
     seoDescription:
       "Electrical drafting services — schematics, single-line diagrams, switchboard and control panel drawings for Indian contractors and panel builders.",
   },
@@ -928,7 +928,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["revit-modelling", "scan-to-bim", "structural-drafting"],
     relatedProjectCategories: ["bim"],
-    seoTitle: "BIM Modelling & Coordination Services India | IndCAD",
+    seoTitle: "BIM Modelling & Coordination Services India | Render CAD Hub",
     seoDescription:
       "BIM modelling and coordination services — Revit modelling, clash detection and scan-to-BIM for Indian design and construction teams.",
   },
@@ -1027,7 +1027,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["bim-services", "scan-to-bim", "architectural-drafting"],
     relatedProjectCategories: ["bim"],
-    seoTitle: "Revit Modelling Services India | IndCAD",
+    seoTitle: "Revit Modelling Services India | Render CAD Hub",
     seoDescription:
       "Revit modelling services across architectural, structural and MEP disciplines, built to your project's Level of Development and BIM execution plan.",
   },
@@ -1124,7 +1124,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["revit-modelling", "bim-services", "cad-conversion"],
     relatedProjectCategories: ["bim"],
-    seoTitle: "Scan to BIM Services India | IndCAD",
+    seoTitle: "Scan to BIM Services India | Render CAD Hub",
     seoDescription:
       "Scan to BIM services — converting point cloud and laser scan data into accurate, working Revit models for renovation, retrofit and asset documentation.",
   },
@@ -1228,7 +1228,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["pdf-to-cad", "scan-to-bim", "mechanical-drafting"],
     relatedProjectCategories: ["mechanical", "structural", "civil"],
-    seoTitle: "CAD Conversion Services India | IndCAD",
+    seoTitle: "CAD Conversion Services India | Render CAD Hub",
     seoDescription:
       "CAD conversion services — PDF to CAD, DGN conversion, 2D to 3D conversion and legacy drawing digitisation into editable, native CAD files.",
   },
@@ -1323,7 +1323,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["cad-conversion", "scan-to-bim", "mechanical-drafting"],
     relatedProjectCategories: ["mechanical", "structural", "civil"],
-    seoTitle: "PDF to CAD Conversion Services India | IndCAD",
+    seoTitle: "PDF to CAD Conversion Services India | Render CAD Hub",
     seoDescription:
       "PDF to CAD conversion — turning PDF drawings into fully editable, layered DWG files for Indian engineering, architectural and construction teams.",
   },
@@ -1422,7 +1422,7 @@ export const services: Service[] = [
     ],
     relatedServices: ["mechanical-drafting", "3d-cad-modelling", "structural-drafting"],
     relatedProjectCategories: ["mechanical", "structural"],
-    seoTitle: "Engineering Design Services India | IndCAD",
+    seoTitle: "Engineering Design Services India | Render CAD Hub",
     seoDescription:
       "Engineering design services — concept development, detailed design, design optimisation and engineering documentation for Indian manufacturers and industrial teams.",
   },

@@ -12,10 +12,10 @@ export function Logo({ dark = false, className }: { dark?: boolean; className?: 
       )}
     >
       <span className="flex h-8 w-8 items-center justify-center border border-copper-500 font-mono text-sm text-copper-500">
-        ic
+        rc
       </span>
       <span>
-        Ind<span className="text-copper-500">CAD</span>
+        Render <span className="text-copper-500">CAD</span> Hub
       </span>
     </Link>
   );

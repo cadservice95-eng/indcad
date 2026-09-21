@@ -6,8 +6,8 @@ import { SITE } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms & Conditions | IndCAD",
-  description: "Terms and conditions for IndCAD.",
+  title: "Terms & Conditions | Render CAD Hub",
+  description: "Terms and conditions for Render CAD Hub.",
   path: "/terms-and-conditions",
   noIndex: true,
 });

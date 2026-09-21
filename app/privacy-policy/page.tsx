@@ -6,8 +6,8 @@ import { SITE } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy Policy | IndCAD",
-  description: "Privacy policy for IndCAD.",
+  title: "Privacy Policy | Render CAD Hub",
+  description: "Privacy policy for Render CAD Hub.",
   path: "/privacy-policy",
   noIndex: true,
 });

@@ -86,7 +86,7 @@ export const projects: Project[] = [
       { question: "Could this enclosure design be scaled up for a larger equipment variant later?", answer: "Yes, provided the underlying model uses parametric relationships rather than fixed dimensions, scaling to a larger variant is a comparatively straightforward follow-on request." },
       { question: "How do you handle a client request for a design change after the flat patterns are finalised?", answer: "We assess the change against what's already been procured or cut, and scope the rework needed — sometimes it's a simple model update, sometimes it affects material already ordered, and we're upfront about which situation applies before proceeding." },
     ],
-    seoTitle: "Sheet Metal Enclosure Fabrication Drawings — Project Example | IndCAD",
+    seoTitle: "Sheet Metal Enclosure Fabrication Drawings — Project Example | Render CAD Hub",
     seoDescription: "Example mechanical drafting project: fabrication drawings and flat patterns for a sheet metal equipment enclosure.",
   },
   {
@@ -166,7 +166,7 @@ export const projects: Project[] = [
       { question: "Is the traceability note a standard deliverable, or something added for defence-sector work specifically?", answer: "It's offered on any reverse-engineering project where traceability matters to the client, though it's particularly standard practice for defence and other sectors with formal sustainment audit requirements." },
       { question: "What happens if two measurements of the same worn feature give slightly different results?", answer: "We take multiple measurements and use engineering judgement — informed by symmetry and comparable unworn features — to arrive at the most defensible value, documenting the basis for that decision." },
     ],
-    seoTitle: "Legacy Machine Part Reverse Engineering — Project Example | IndCAD",
+    seoTitle: "Legacy Machine Part Reverse Engineering — Project Example | Render CAD Hub",
     seoDescription: "Example reverse engineering project: 3D model and manufacturing drawing produced from an undocumented legacy part.",
   },
   {
@@ -246,7 +246,7 @@ export const projects: Project[] = [
       { question: "What's typically included in a pre-issue drawing review with the fabricator?", answer: "A structured walkthrough of the shop and erection drawing set, checking piece marks, connection details and sequencing against the fabricator's own practical experience before drawings are locked in for cutting." },
       { question: "Can erection drawings account for a specific crane's lifting capacity?", answer: "Yes, where the specific crane and its capacity are known, erection sequencing and piece grouping can be planned with that capacity in mind." },
     ],
-    seoTitle: "Warehouse Structural Steel Shop Drawings — Project Example | IndCAD",
+    seoTitle: "Warehouse Structural Steel Shop Drawings — Project Example | Render CAD Hub",
     seoDescription: "Example structural detailing project: shop and erection drawings for a structural steel warehouse frame.",
   },
   {
@@ -324,7 +324,7 @@ export const projects: Project[] = [
       { question: "Do you provide photographic documentation as part of a site verification visit?", answer: "Yes, photographs are a standard part of the verification record, supporting the measurements taken and giving the design team visual context for each connection point." },
       { question: "Can staged delivery plans be adjusted if the shutdown schedule changes?", answer: "Yes, we can revise delivery groupings if the shutdown programme shifts, provided this is communicated with enough lead time for the fabrication shop to adjust its own schedule." },
     ],
-    seoTitle: "Processing Plant Platform Structural Detailing — Project Example | IndCAD",
+    seoTitle: "Processing Plant Platform Structural Detailing — Project Example | Render CAD Hub",
     seoDescription: "Example structural drafting project: platform and walkway detailing for a mineral processing plant upgrade.",
   },
   {
@@ -403,7 +403,7 @@ export const projects: Project[] = [
       { question: "Can documentation for a staged subdivision be updated if a later stage's design changes?", answer: "Yes, later stages can be revised without needing to reissue documentation for stages already approved and under construction, provided the overall masterplan intent remains consistent." },
       { question: "What's included in a council submission formatting review?", answer: "Checking sheet size, title block content, standard notes and any specific submission checklist items against the certifying council's current requirements before the package is submitted." },
     ],
-    seoTitle: "Residential Subdivision Civil Documentation — Project Example | IndCAD",
+    seoTitle: "Residential Subdivision Civil Documentation — Project Example | Render CAD Hub",
     seoDescription: "Example civil drafting project: road, stormwater and site documentation for a residential subdivision.",
   },
   {
@@ -482,7 +482,7 @@ export const projects: Project[] = [
       { question: "What happens if additional survey data becomes available partway through a project?", answer: "The surface model is updated and design elements checked against the improved data, with any resulting changes flagged clearly against the previous design basis." },
       { question: "Do you provide erosion and sediment control planning for a new access road?", answer: "Yes, this is a standard part of civil construction documentation for a new road, coordinated against the site's grading and drainage design." },
     ],
-    seoTitle: "Site Access Road & Drainage Design — Project Example | IndCAD",
+    seoTitle: "Site Access Road & Drainage Design — Project Example | Render CAD Hub",
     seoDescription: "Example civil engineering project: access road and drainage design documentation for an energy infrastructure site.",
   },
   {
@@ -560,7 +560,7 @@ export const projects: Project[] = [
       { question: "How do you segment drawings to distinguish core scope from optional inclusions?", answer: "Through clear annotation and, where useful, colour-coding or a simple legend on the drawings themselves, making it straightforward for a builder to identify and price each portion separately." },
       { question: "Do you provide a materials and finishes schedule alongside renovation drawings?", answer: "Yes, a finishes schedule is a standard part of a construction documentation set for a renovation or extension project." },
     ],
-    seoTitle: "Residential Renovation Construction Drawings — Project Example | IndCAD",
+    seoTitle: "Residential Renovation Construction Drawings — Project Example | Render CAD Hub",
     seoDescription: "Example architectural drafting project: renovation and extension construction documentation.",
   },
   {
@@ -638,7 +638,7 @@ export const projects: Project[] = [
       { question: "Can render production genuinely start before a design is fully finalised?", answer: "Yes, provided it works from confirmed milestones as they're locked in rather than the full, final design — this requires close coordination but is a practical way to meet a tight combined programme." },
       { question: "How adaptable can a joinery module realistically be made for a future, different-shaped tenancy?", answer: "This depends on the specific module — some standardise well across different footprints, others are inherently tied to a specific tenancy shape, and we're honest about which category each falls into during the adaptability review." },
     ],
-    seoTitle: "Retail Fit-Out Documentation & 3D Render — Project Example | IndCAD",
+    seoTitle: "Retail Fit-Out Documentation & 3D Render — Project Example | Render CAD Hub",
     seoDescription: "Example architectural project: retail fit-out drawing set and 3D visualisation package.",
   },
   {
@@ -717,7 +717,7 @@ export const projects: Project[] = [
       { question: "Do you provide panel layout drawings showing internal wiring duct routing?", answer: "Yes, where this level of detail is useful to the panel builder, internal wiring duct and cable routing can be shown on the layout drawing." },
       { question: "How do you handle a component substitution that affects multiple sheets in the drawing set?", answer: "The drawing structure is set up so a substitution updates centrally and propagates through affected schematics and schedules, rather than requiring each sheet to be checked and updated manually." },
     ],
-    seoTitle: "Switchboard & Control Panel Drawings — Project Example | IndCAD",
+    seoTitle: "Switchboard & Control Panel Drawings — Project Example | Render CAD Hub",
     seoDescription: "Example electrical drafting project: switchboard layout and control panel schematic drawing package.",
   },
   {
@@ -795,7 +795,7 @@ export const projects: Project[] = [
       { question: "Can an as-built package be produced from site photographs alone, without a site visit?", answer: "It's possible for straightforward installations, but a site visit is strongly preferred wherever field variations are suspected, since photographs alone often can't confirm what's actually behind a wall or inside a conduit." },
       { question: "Do you provide a plain-language summary of an as-built package for a non-technical facilities manager?", answer: "Yes, a short summary highlighting key findings and confidence levels can be prepared alongside the technical drawing set for a non-technical audience." },
     ],
-    seoTitle: "As-Built Electrical Documentation — Project Example | IndCAD",
+    seoTitle: "As-Built Electrical Documentation — Project Example | Render CAD Hub",
     seoDescription: "Example electrical drafting project: as-built schematic and layout documentation for project close-out.",
   },
   {
@@ -873,7 +873,7 @@ export const projects: Project[] = [
       { question: "How often should a federated model be re-run through clash detection during a project?", answer: "This depends on how frequently discipline models are being updated, and is agreed with the project team upfront rather than left unscheduled." },
       { question: "Can BIM coordination catch clashes involving temporary works, not just permanent structure?", answer: "Yes, where temporary works like shoring or propping are modelled and included in the federation, they can be checked for clashes the same way permanent elements are." },
     ],
-    seoTitle: "Multi-Discipline BIM Clash Detection — Project Example | IndCAD",
+    seoTitle: "Multi-Discipline BIM Clash Detection — Project Example | Render CAD Hub",
     seoDescription: "Example BIM coordination project: federated model review and clash detection across architectural, structural and MEP disciplines.",
   },
   {
@@ -951,7 +951,7 @@ export const projects: Project[] = [
       { question: "Can occupied-area scanning be scheduled around a building's operating hours?", answer: "Yes, we work with the client to schedule scanning around operational constraints, and note where this affected capture thoroughness in specific areas." },
       { question: "Do you provide a written comparison between a scan-to-BIM model and the original building's known drawings, if any exist?", answer: "Yes, where any partial original drawings survive, we can produce a comparison highlighting where as-built conditions have diverged from them." },
     ],
-    seoTitle: "Point Cloud to BIM Existing Building — Project Example | IndCAD",
+    seoTitle: "Point Cloud to BIM Existing Building — Project Example | Render CAD Hub",
     seoDescription: "Example scan-to-BIM project: converting point cloud scan data of an existing building into a working Revit model.",
   },
 ];
