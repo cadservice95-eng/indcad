@@ -1,6 +1,4 @@
 import type { NextConfig } from "next";
-import { services } from "./data/services";
-import { projects } from "./data/projects";
 
 const adminHeaders = [
   { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
@@ -31,25 +29,6 @@ const nextConfig: NextConfig = {
       { source: "/admin", headers: adminHeaders },
       { source: "/admin/:path*", headers: adminHeaders },
       { source: "/api/admin/:path*", headers: adminHeaders },
-    ];
-  },
-
-  // Services and projects moved from flat (/services/x/) to nested
-  // (/services/category/x/) URLs to match the category structure the data
-  // already has. Permanent redirects so any link already shared (or already
-  // crawled) still resolves, even though the site isn't in Search Console yet.
-  async redirects() {
-    return [
-      ...services.map((service) => ({
-        source: `/services/${service.slug}/`,
-        destination: `/services/${service.category}/${service.slug}/`,
-        permanent: true,
-      })),
-      ...projects.map((project) => ({
-        source: `/projects/${project.slug}/`,
-        destination: `/projects/${project.discipline}/${project.slug}/`,
-        permanent: true,
-      })),
     ];
   },
 };
