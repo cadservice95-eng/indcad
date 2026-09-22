@@ -174,8 +174,8 @@ export default function ContactPage() {
           <ContactForm />
           <aside className="space-y-6">
             <ContactDetail icon={Mail} label="Email" value={SITE.email} />
-            <ContactDetail icon={Phone} label="Phone" value={SITE.phone} />
-            <ContactDetail icon={Clock} label="Business hours" value={SITE.hours} />
+            {SITE.phone ? <ContactDetail icon={Phone} label="Phone" value={SITE.phone} /> : null}
+            {SITE.hours ? <ContactDetail icon={Clock} label="Business hours" value={SITE.hours} /> : null}
             <ContactDetail icon={MapPin} label="Service areas" value={SERVICE_AREAS.join(", ")} />
             <div className="border-t border-neutral-200 pt-6">
               <Button href="/get-a-quote" className="w-full">

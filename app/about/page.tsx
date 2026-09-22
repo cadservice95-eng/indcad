@@ -96,9 +96,9 @@ export default function AboutPage() {
             <h2 className="text-xl font-semibold text-navy-900">Who We Are</h2>
             <div className="mt-3 space-y-4">
               <p className="text-base leading-relaxed text-neutral-700">
-                Render CAD Hub is [COMPANY NAME], a CAD design, drafting, BIM and engineering documentation service working with
-                Indian engineers, architects, builders, manufacturers and contractors. [YEARS EXPERIENCE] years of
-                combined team experience across mechanical, structural, architectural, civil and electrical disciplines.
+                Render CAD Hub is a CAD design, drafting, BIM and engineering documentation service working with
+                Indian engineers, architects, builders, manufacturers and contractors, drawing on combined team
+                experience across mechanical, structural, architectural, civil and electrical disciplines.
               </p>
               <p className="text-base leading-relaxed text-neutral-700">
                 We work as flexible, on-demand drafting and design capacity — engaged for a single drawing, a full
@@ -318,23 +318,6 @@ export default function AboutPage() {
             All work is delivered remotely from the drawings, models or reference material you provide, so we work
             with clients across every Indian state and union territory without requiring a site visit.
           </p>
-        </Container>
-      </section>
-
-      <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
-        <Container>
-          <SectionHeading eyebrow="Team" heading="Our Team" />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {["[TEAM MEMBER NAME]", "[TEAM MEMBER NAME]", "[TEAM MEMBER NAME]"].map((placeholder, i) => (
-              <div key={i} className="border border-dashed border-neutral-300 bg-white p-6 text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center border border-neutral-300 bg-neutral-50 font-mono text-xs text-neutral-400">
-                  Photo
-                </div>
-                <p className="mt-4 text-sm font-semibold text-navy-900">{placeholder}</p>
-                <p className="mt-1 text-xs text-neutral-500">[ROLE / TITLE]</p>
-              </div>
-            ))}
-          </div>
         </Container>
       </section>
 

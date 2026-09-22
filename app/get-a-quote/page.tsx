@@ -184,9 +184,9 @@ export default function GetAQuotePage() {
               <p className="mt-3 text-sm leading-relaxed text-neutral-600">{SERVICE_AREAS.join(", ")}.</p>
             </div>
             <div className="border border-neutral-200 p-6">
-              <h2 className="text-sm font-semibold text-navy-900">Prefer email or phone?</h2>
+              <h2 className="text-sm font-semibold text-navy-900">{SITE.phone ? "Prefer email or phone?" : "Prefer email?"}</h2>
               <p className="mt-3 text-sm text-neutral-600">Email: {SITE.email}</p>
-              <p className="mt-1 text-sm text-neutral-600">Phone: {SITE.phone}</p>
+              {SITE.phone ? <p className="mt-1 text-sm text-neutral-600">Phone: {SITE.phone}</p> : null}
             </div>
           </aside>
         </Container>

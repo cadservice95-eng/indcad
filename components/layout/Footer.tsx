@@ -78,20 +78,24 @@ export function Footer() {
               <p className="text-sm text-neutral-200">{SITE.email}</p>
             </div>
           </div>
-          <div className="flex items-start gap-3">
-            <Phone className="mt-0.5 h-4 w-4 shrink-0 text-copper-500" aria-hidden />
-            <div>
-              <p className="text-xs uppercase tracking-wide text-neutral-500">Phone</p>
-              <p className="text-sm text-neutral-200">{SITE.phone}</p>
+          {SITE.phone ? (
+            <div className="flex items-start gap-3">
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-copper-500" aria-hidden />
+              <div>
+                <p className="text-xs uppercase tracking-wide text-neutral-500">Phone</p>
+                <p className="text-sm text-neutral-200">{SITE.phone}</p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <Clock className="mt-0.5 h-4 w-4 shrink-0 text-copper-500" aria-hidden />
-            <div>
-              <p className="text-xs uppercase tracking-wide text-neutral-500">Business hours</p>
-              <p className="text-sm text-neutral-200">{SITE.hours}</p>
+          ) : null}
+          {SITE.hours ? (
+            <div className="flex items-start gap-3">
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-copper-500" aria-hidden />
+              <div>
+                <p className="text-xs uppercase tracking-wide text-neutral-500">Business hours</p>
+                <p className="text-sm text-neutral-200">{SITE.hours}</p>
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
 
         <div className="mt-8 flex flex-col gap-4 border-t border-navy-800 pt-8 sm:flex-row sm:items-center sm:justify-between">
@@ -108,7 +112,14 @@ export function Footer() {
       <div className="border-t border-navy-800">
         <Container className="flex flex-col gap-3 py-6 text-xs text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {SITE.legalName}. Trading as {SITE.name}. GSTIN {SITE.gstin}.
+            © {new Date().getFullYear()} {SITE.legalName ? (
+              <>
+                {SITE.legalName}. Trading as {SITE.name}
+                {SITE.gstin ? <>. GSTIN {SITE.gstin}</> : null}.
+              </>
+            ) : (
+              <>{SITE.name}. All rights reserved.</>
+            )}
           </p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-neutral-300">
