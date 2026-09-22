@@ -46,3 +46,6 @@ next-env.d.ts
 
 # local Claude Code state
 /.claude/
+
+# MCP server config — contains the Supabase access token
+/.mcp.json
