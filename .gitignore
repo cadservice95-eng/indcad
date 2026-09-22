@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local runtime data (embedded dev database, uploaded files)
+/.data/
+
+# local Claude Code state
+/.claude/
