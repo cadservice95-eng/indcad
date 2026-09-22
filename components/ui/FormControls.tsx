@@ -1,7 +1,11 @@
 import { cn } from "@/lib/utils";
 
+// text-base (16px) below sm: iOS Safari auto-zooms the whole page on focus
+// for any input under 16px, which is exactly what "not mobile responsive"
+// looks like to a visitor filling in the form. Back to the tighter text-sm
+// from sm: up, where that zoom no longer happens.
 const fieldBase =
-  "w-full border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-neutral-400 transition-colors focus:border-copper-500 focus:outline-none focus:ring-1 focus:ring-copper-500";
+  "w-full border border-neutral-300 bg-white px-3.5 py-2.5 text-base sm:text-sm text-navy-900 placeholder:text-neutral-400 transition-colors focus:border-copper-500 focus:outline-none focus:ring-1 focus:ring-copper-500";
 
 export function Field({
   label,

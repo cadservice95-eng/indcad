@@ -131,8 +131,9 @@ export function Pagination({ page, pages, total, pageSize, basePath, params }: {
   );
 }
 
+// text-base below sm: prevents iOS Safari's auto-zoom-on-focus on any input under 16px.
 export const inputClass =
-  "w-full border border-neutral-300 bg-white px-3 py-2 text-sm text-navy-900 placeholder:text-neutral-400 focus:border-copper-500 focus:outline-none focus:ring-1 focus:ring-copper-500 disabled:bg-neutral-50 disabled:text-neutral-500";
+  "w-full border border-neutral-300 bg-white px-3 py-2 text-base sm:text-sm text-navy-900 placeholder:text-neutral-400 focus:border-copper-500 focus:outline-none focus:ring-1 focus:ring-copper-500 disabled:bg-neutral-50 disabled:text-neutral-500";
 
 export const btn = {
   primary: "inline-flex items-center justify-center gap-2 whitespace-nowrap bg-copper-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-copper-600 disabled:pointer-events-none disabled:opacity-50",
