@@ -54,6 +54,13 @@ async function connect(): Promise<Connection> {
   const { drizzle } = (await import(adapterName)) as typeof import("drizzle-orm/pglite");
   const { migrate } = (await import(migratorName)) as typeof import("drizzle-orm/pglite/migrator");
 
+  // PGlite's Node filesystem bundle does a plain (non-recursive) mkdir, so a
+  // fresh checkout without a .data/ directory yet fails with ENOENT.
+  if (env.embeddedDbDir !== "memory://") {
+    const { mkdir } = await import("node:fs/promises");
+    await mkdir(env.embeddedDbDir, { recursive: true });
+  }
+
   const client = new PGlite(env.embeddedDbDir);
   await client.waitReady;
   const db = drizzle(client, { schema });

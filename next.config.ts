@@ -18,7 +18,11 @@ const nextConfig: NextConfig = {
 
   // Server-only libraries that must be loaded by Node at runtime rather than
   // bundled (native sockets, large parsers, or the embedded dev database).
-  serverExternalPackages: ["pg", "nodemailer", "imapflow", "mailparser", "sanitize-html", "@electric-sql/pglite"],
+  // sanitize-html is deliberately NOT here: its nested htmlparser2 dependency
+  // ships as ESM-only, which crashes a raw runtime require() on Vercel
+  // (ERR_REQUIRE_ESM). Bundling it normally lets Next.js handle the ESM/CJS
+  // interop at build time instead.
+  serverExternalPackages: ["pg", "nodemailer", "imapflow", "mailparser", "@electric-sql/pglite"],
 
   async headers() {
     return [
