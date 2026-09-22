@@ -5,7 +5,7 @@ import type { Project } from "@/lib/types";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href={`/projects/${project.slug}`} className="group flex flex-col border border-neutral-200 bg-white">
+    <Link href={`/projects/${project.discipline}/${project.slug}`} className="group flex flex-col border border-neutral-200 bg-white">
       <ImagePlaceholder alt={project.gallery[0]?.alt ?? project.title} />
       <div className="flex flex-1 flex-col p-6">
         {project.isPlaceholder ? (

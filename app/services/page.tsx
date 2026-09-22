@@ -32,7 +32,11 @@ export default function ServicesIndexPage() {
             {serviceCategories.map((category) => (
               <div key={category.slug} className="border border-neutral-200 bg-white p-6">
                 <CategoryIcon name={category.icon} className="h-6 w-6 text-copper-500" />
-                <h2 className="mt-4 text-lg font-semibold text-navy-900">{category.name}</h2>
+                <h2 className="mt-4 text-lg font-semibold text-navy-900">
+                  <Link href={`/services/${category.slug}`} className="hover:text-copper-600">
+                    {category.name}
+                  </Link>
+                </h2>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-600">{category.shortDescription}</p>
                 <ul className="mt-4 space-y-2 border-t border-neutral-100 pt-4">
                   {category.services.map((service) => {
@@ -40,7 +44,7 @@ export default function ServicesIndexPage() {
                     return (
                       <li key={service.slug}>
                         <Link
-                          href={`/services/${service.slug}`}
+                          href={`/services/${category.slug}/${service.slug}`}
                           className="text-sm font-medium text-navy-800 hover:text-copper-600"
                         >
                           {service.name}

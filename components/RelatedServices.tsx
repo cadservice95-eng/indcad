@@ -16,7 +16,7 @@ export function RelatedServices({ slugs }: { slugs: string[] }) {
           {services.map((service) => (
             <Link
               key={service.slug}
-              href={`/services/${service.slug}`}
+              href={`/services/${service.category}/${service.slug}`}
               className="group flex items-center justify-between gap-3 border border-neutral-200 bg-white p-5 transition-colors hover:border-copper-400"
             >
               <div>

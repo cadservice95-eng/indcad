@@ -11,7 +11,7 @@ export function ServiceGrid() {
         return (
           <ServiceCard
             key={category.slug}
-            href={`/services/${flagship.slug}`}
+            href={`/services/${category.slug}/${flagship.slug}`}
             icon={category.icon}
             name={category.name}
             description={category.shortDescription}

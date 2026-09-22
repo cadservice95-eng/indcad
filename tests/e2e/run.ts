@@ -124,6 +124,24 @@ async function main() {
   server = spawn(process.execPath, [nextBin, "start", "-p", String(port), "-H", "127.0.0.1"], {
     env: {
       ...process.env,
+      // Next.js loads .env.local for every `next start`, and a var already
+      // present in process.env (even "") wins over the file — so real
+      // secrets a developer has in .env.local for their own local work
+      // (a live DATABASE_URL, IMAP creds, ...) must be explicitly blanked
+      // here. Without this the suite would run destructive checks
+      // (rate-limit floods, XSS/SQLi probes, spam form bursts, trashing
+      // enquiries by id) against a REAL database instead of the throwaway
+      // embedded one below. Do not remove this block.
+      DATABASE_URL: "",
+      DATABASE_SSL: "",
+      AUTO_MIGRATE: "",
+      IMAP_HOST: "",
+      IMAP_PORT: "",
+      IMAP_SECURE: "",
+      IMAP_USER: "",
+      IMAP_PASSWORD: "",
+      STORAGE_DRIVER: "",
+      TRUSTPILOT_BCC_EMAIL: "",
       NODE_ENV: "production",
       ALLOW_EMBEDDED_DB: "true",
       PGLITE_DIR: "memory://",
@@ -148,6 +166,16 @@ async function main() {
 
   await waitFor(() => /Ready|started server/i.test(serverLog), 60_000);
   console.log(`Server ready at ${base} (SMTP sink on ${sink.port})`);
+
+  // Hard safety gate: this suite does destructive things (floods rate limits,
+  // trashes/deletes enquiries by id, sends real emails). Refuse to run a
+  // single check unless the server logged that it's on the disposable
+  // embedded database — never a real one, no matter what leaked in.
+  await http("/api/admin/auth/login/", { json: { email: "startup-check@example.com", password: "irrelevant-startup-check" }, auth: false });
+  await waitFor(() => /db\.embedded_in_use/.test(serverLog), 10_000).catch(() => {
+    throw new Error("REFUSING TO RUN: the test server did not report using the embedded database. It may be pointed at a real one — aborting before running any destructive checks.");
+  });
+  console.log("Confirmed: server is using the disposable embedded database.");
 
   let enquiryId = "";
   let reference = "";
@@ -330,7 +358,7 @@ async function main() {
   group("Quote and contact forms");
   await check("a valid quote request is stored and returns a reference number", async () => {
     sink.messages.length = 0;
-    const form = quoteForm({ name: "Priya Nair", email: "priya.nair@example.com", company: "Nair Engineering", phone: "+91 98765 43210", projectType: "New design / new build", deadline: "2026-12-01", notes: "Urgent if possible", utm_source: "google", utm_medium: "cpc", utm_campaign: "spring-drafting", landing_page: "/services/mechanical-drafting/", referrer: "https://www.google.com/" }, [{ name: "pump-housing.pdf", data: pdf, type: "application/pdf" }]);
+    const form = quoteForm({ name: "Priya Nair", email: "priya.nair@example.com", company: "Nair Engineering", phone: "+91 98765 43210", projectType: "New design / new build", deadline: "2026-12-01", notes: "Urgent if possible", utm_source: "google", utm_medium: "cpc", utm_campaign: "spring-drafting", landing_page: "/services/mechanical/mechanical-drafting/", referrer: "https://www.google.com/" }, [{ name: "pump-housing.pdf", data: pdf, type: "application/pdf" }]);
     const r = await http("/api/forms/quote/", { form });
     assert.equal(r.status, 200, r.text);
     assert.equal(r.json?.ok, true);
@@ -490,7 +518,7 @@ async function main() {
     assert.equal(r.status, 200);
     const d = r.json as { enquiry: { referenceNumber: string; utmCampaign: string; landingPage: string; status: string }; messages: unknown[]; attachments: { id: string }[]; activity: { action: string }[] };
     assert.equal(d.enquiry.utmCampaign, "spring-drafting");
-    assert.equal(d.enquiry.landingPage, "/services/mechanical-drafting/");
+    assert.equal(d.enquiry.landingPage, "/services/mechanical/mechanical-drafting/");
     assert.equal(d.messages.length, 1);
     assert.equal(d.attachments.length, 1);
     attachmentId = d.attachments[0].id;

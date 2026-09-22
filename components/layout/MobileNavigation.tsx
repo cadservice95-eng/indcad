@@ -73,11 +73,13 @@ export function MobileNavigation() {
                   <div className="space-y-4 pb-2 pl-1">
                     {serviceCategories.map((category) => (
                       <div key={category.slug}>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">{category.name}</p>
+                        <Link href={`/services/${category.slug}`} onClick={close} className="text-xs font-semibold uppercase tracking-wide text-neutral-400 hover:text-copper-600">
+                          {category.name}
+                        </Link>
                         <ul className="mt-1.5 space-y-1.5">
                           {category.services.map((service) => (
                             <li key={service.slug}>
-                              <Link href={`/services/${service.slug}`} onClick={close} className="block py-1 text-sm text-neutral-700">
+                              <Link href={`/services/${category.slug}/${service.slug}`} onClick={close} className="block py-1 text-sm text-neutral-700">
                                 {service.name}
                               </Link>
                             </li>

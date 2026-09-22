@@ -9,7 +9,7 @@ import { industries } from "@/data/industries";
 import { locations } from "@/data/locations";
 import { projectCategories } from "@/data/project-categories";
 
-const flagshipServices = serviceCategories.map((c) => c.services[0]);
+const flagshipServices = serviceCategories.map((c) => ({ ...c.services[0], categorySlug: c.slug }));
 
 export function Footer() {
   return (
@@ -22,7 +22,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
           <FooterColumn title="Services">
             {flagshipServices.map((s) => (
-              <FooterLink key={s.slug} href={`/services/${s.slug}`}>
+              <FooterLink key={s.slug} href={`/services/${s.categorySlug}/${s.slug}`}>
                 {s.name}
               </FooterLink>
             ))}

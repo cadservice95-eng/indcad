@@ -133,15 +133,15 @@ function MegaMenuServices({ onNavigate }: { onNavigate: () => void }) {
       <Container className="grid grid-cols-2 gap-x-8 gap-y-6 py-8 md:grid-cols-4">
         {serviceCategories.map((category) => (
           <div key={category.slug}>
-            <div className="flex items-center gap-2 text-navy-900">
+            <Link href={`/services/${category.slug}`} onClick={onNavigate} className="flex items-center gap-2 text-navy-900 hover:text-copper-600">
               <CategoryIcon name={category.icon} className="h-4 w-4 text-copper-500" />
               <span className="text-sm font-semibold">{category.name}</span>
-            </div>
+            </Link>
             <ul className="mt-3 space-y-2">
               {category.services.map((service) => (
                 <li key={service.slug}>
                   <Link
-                    href={`/services/${service.slug}`}
+                    href={`/services/${category.slug}/${service.slug}`}
                     onClick={onNavigate}
                     className="text-sm text-neutral-600 transition-colors hover:text-copper-600"
                   >

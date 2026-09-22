@@ -19,29 +19,28 @@ import { getIndustryBySlug } from "@/data/industries";
 import { getSoftwareBySlug } from "@/data/software";
 import { serviceCategories } from "@/data/service-categories";
 
+type Params = { category: string; service: string };
+
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return services.map((service) => ({ category: service.category, service: service.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { category, service: slug } = await params;
   const service = getServiceBySlug(slug);
-  if (!service) return {};
+  if (!service || service.category !== category) return {};
   return buildMetadata({
     title: service.seoTitle,
     description: service.seoDescription,
-    path: `/services/${service.slug}`,
+    path: `/services/${service.category}/${service.slug}`,
   });
 }
 
-export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function ServicePage({ params }: { params: Promise<Params> }) {
+  const { category: categorySlug, service: slug } = await params;
   const service = getServiceBySlug(slug);
-  if (!service) notFound();
+  // The category segment is part of the canonical URL — a mismatched one 404s rather than silently serving the page twice.
+  if (!service || service.category !== categorySlug) notFound();
 
   const category = serviceCategories.find((c) => c.slug === service.category);
   const industries = service.industries.map(getIndustryBySlug).filter((i): i is NonNullable<typeof i> => Boolean(i));
@@ -53,13 +52,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         data={serviceJsonLd({
           name: service.name,
           description: service.shortDescription,
-          path: `/services/${service.slug}`,
+          path: `/services/${service.category}/${service.slug}`,
         })}
       />
       <Breadcrumbs
         items={[
           { label: "Services", href: "/services" },
-          { label: service.name, href: `/services/${service.slug}` },
+          { label: category?.name ?? service.category, href: `/services/${service.category}` },
+          { label: service.name, href: `/services/${service.category}/${service.slug}` },
         ]}
       />
       <PageHero eyebrow={category?.name ?? "Services"} heading={service.heroHeading} description={service.heroDescription} />

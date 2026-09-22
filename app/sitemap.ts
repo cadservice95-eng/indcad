@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
+import { serviceCategories } from "@/data/service-categories";
 import { industries } from "@/data/industries";
 import { locations } from "@/data/locations";
 import { projects } from "@/data/projects";
@@ -31,8 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "/" ? 1 : 0.7,
   }));
 
+  for (const category of serviceCategories) {
+    entries.push({ url: url(`/services/${category.slug}`), changeFrequency: "monthly", priority: 0.7 });
+  }
   for (const service of services) {
-    entries.push({ url: url(`/services/${service.slug}`), changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ url: url(`/services/${service.category}/${service.slug}`), changeFrequency: "monthly", priority: 0.8 });
   }
   for (const industry of industries) {
     entries.push({ url: url(`/industries/${industry.slug}`), changeFrequency: "monthly", priority: 0.7 });
@@ -44,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: url(`/projects/${category.slug}`), changeFrequency: "monthly", priority: 0.5 });
   }
   for (const project of projects) {
-    entries.push({ url: url(`/projects/${project.slug}`), changeFrequency: "yearly", priority: 0.5 });
+    entries.push({ url: url(`/projects/${project.discipline}/${project.slug}`), changeFrequency: "yearly", priority: 0.5 });
   }
   for (const item of software) {
     entries.push({ url: url(`/software/${item.slug}`), changeFrequency: "monthly", priority: 0.6 });

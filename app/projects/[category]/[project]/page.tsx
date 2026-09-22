@@ -5,7 +5,6 @@ import { PageHero } from "@/components/PageHero";
 import { PlaceholderBanner } from "@/components/PlaceholderBanner";
 import { RelatedServices } from "@/components/RelatedServices";
 import { CTA } from "@/components/sections/CTA";
-import { ProjectCard } from "@/components/ProjectCard";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckList } from "@/components/ui/CheckList";
@@ -14,96 +13,34 @@ import { FAQ } from "@/components/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { creativeWorkJsonLd } from "@/lib/jsonld";
 import { buildMetadata } from "@/lib/seo";
-import { projects, getProjectBySlug, getProjectsByDiscipline } from "@/data/projects";
-import { projectCategories, getProjectCategory } from "@/data/project-categories";
+import { projects, getProjectBySlug } from "@/data/projects";
+import { getProjectCategory } from "@/data/project-categories";
 import { getIndustryBySlug } from "@/data/industries";
 import { getSoftwareBySlug } from "@/data/software";
 import { getLocationBySlug } from "@/data/locations";
 
+type Params = { category: string; project: string };
+
 export function generateStaticParams() {
-  return [
-    ...projectCategories.map((category) => ({ slug: category.slug })),
-    ...projects.map((project) => ({ slug: project.slug })),
-  ];
+  return projects.map((project) => ({ category: project.discipline, project: project.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-
-  const category = getProjectCategory(slug);
-  if (category) {
-    return buildMetadata({
-      title: `${category.name} Project Examples | Render CAD Hub`,
-      description: category.description,
-      path: `/projects/${category.slug}`,
-    });
-  }
-
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { category, project: slug } = await params;
   const project = getProjectBySlug(slug);
-  if (project) {
-    return buildMetadata({
-      title: project.seoTitle,
-      description: project.seoDescription,
-      path: `/projects/${project.slug}`,
-    });
-  }
-
-  return {};
+  if (!project || project.discipline !== category) return {};
+  return buildMetadata({
+    title: project.seoTitle,
+    description: project.seoDescription,
+    path: `/projects/${project.discipline}/${project.slug}`,
+  });
 }
 
-export default async function ProjectOrCategoryPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-
-  const category = getProjectCategory(slug);
-  if (category) {
-    const items = getProjectsByDiscipline(category.slug);
-    return (
-      <>
-        <Breadcrumbs items={[{ label: "Projects", href: "/projects" }, { label: category.name, href: `/projects/${category.slug}` }]} />
-        <PageHero eyebrow="Project category" heading={`${category.name} Project Examples`} description={category.description} />
-        <section className="py-16 sm:py-20">
-          <Container className="max-w-3xl space-y-10">
-            {category.intro.map((section, i) => (
-              <div key={i}>
-                {section.heading ? (
-                  <h2 className="text-xl font-semibold text-navy-900">{section.heading}</h2>
-                ) : null}
-                <div className={section.heading ? "mt-3 space-y-4" : "space-y-4"}>
-                  {section.paragraphs.map((paragraph, j) => (
-                    <p key={j} className="text-base leading-relaxed text-neutral-700">
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </Container>
-        </section>
-        <section className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20">
-          <Container>
-            {items.length > 0 ? (
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {items.map((project) => (
-                  <ProjectCard key={project.slug} project={project} />
-                ))}
-              </div>
-            ) : (
-              <p className="text-sm text-neutral-600">More {category.name.toLowerCase()} project examples are on the way.</p>
-            )}
-          </Container>
-        </section>
-        <FAQ items={category.faqs} />
-        <CTA variant="light" />
-      </>
-    );
-  }
-
+export default async function ProjectPage({ params }: { params: Promise<Params> }) {
+  const { category, project: slug } = await params;
   const project = getProjectBySlug(slug);
-  if (!project) notFound();
+  // The category segment is part of the canonical URL — a mismatched one 404s rather than silently serving the page twice.
+  if (!project || project.discipline !== category) notFound();
 
   const categoryInfo = getProjectCategory(project.discipline);
   const industry = getIndustryBySlug(project.industry);
@@ -116,14 +53,14 @@ export default async function ProjectOrCategoryPage({ params }: { params: Promis
         data={creativeWorkJsonLd({
           title: project.title,
           description: project.summary,
-          path: `/projects/${project.slug}`,
+          path: `/projects/${project.discipline}/${project.slug}`,
         })}
       />
       <Breadcrumbs
         items={[
           { label: "Projects", href: "/projects" },
           { label: categoryInfo?.name ?? project.discipline, href: `/projects/${project.discipline}` },
-          { label: project.title, href: `/projects/${project.slug}` },
+          { label: project.title, href: `/projects/${project.discipline}/${project.slug}` },
         ]}
       />
       <PageHero eyebrow={`${categoryInfo?.name ?? project.discipline} project`} heading={project.title} description={project.summary} />
