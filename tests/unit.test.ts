@@ -182,3 +182,13 @@ describe("inbound email helpers", () => {
     assert.equal(stripQuotedText("> only quoted"), "> only quoted");
   });
 });
+
+describe("review request template", () => {
+  it("fills the review link and reference number", async () => {
+    const { fillTemplate } = await import("../lib/server/email/templates");
+    const { SITE } = await import("../lib/constants");
+    const filled = fillTemplate("<p>Hi {{name}}</p><p><a href=\"{{review_url}}\">Leave a review</a></p>", { name: "Priya", review_url: SITE.trustpilotReviewUrl }, "html");
+    assert.ok(filled.includes(SITE.trustpilotReviewUrl));
+    assert.ok(filled.includes("Priya"));
+  });
+});

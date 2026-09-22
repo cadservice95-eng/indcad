@@ -425,3 +425,31 @@ describe("rate limiting", () => {
     assert.equal(results.filter((r) => r.allowed).length, 10);
   });
 });
+
+describe("review requests", () => {
+  it("sends a review-request email and BCCs the Trustpilot alias when configured", async () => {
+    process.env.TRUSTPILOT_BCC_EMAIL = "rendercadhub.com+test123@invite.trustpilot.com";
+    const created = await m.create.createEnquiry(input({ email: "reviewer@example.com", name: "Reviewer Person" }));
+    sink.messages.length = 0;
+    const { sendReviewRequest } = await import("../lib/server/enquiries/reply");
+    const result = await sendReviewRequest(created.id);
+    assert.equal(result.status, "SENT");
+    const mail = sink.messages.at(-1)!;
+    assert.match(String(mail.parsed.subject), /How did we do/);
+    assert.ok(String(mail.parsed.html).includes("trustpilot.com/review/rendercadhub.com"));
+    assert.ok(mail.envelopeTo.includes("reviewer@example.com"));
+    assert.ok(mail.envelopeTo.includes("rendercadhub.com+test123@invite.trustpilot.com"), mail.envelopeTo.join(","));
+    delete process.env.TRUSTPILOT_BCC_EMAIL;
+  });
+
+  it("omits the BCC entirely when no Trustpilot alias is configured", async () => {
+    delete process.env.TRUSTPILOT_BCC_EMAIL;
+    const created = await m.create.createEnquiry(input({ email: "reviewer2@example.com" }));
+    sink.messages.length = 0;
+    const { sendReviewRequest } = await import("../lib/server/enquiries/reply");
+    const result = await sendReviewRequest(created.id);
+    assert.equal(result.status, "SENT");
+    const mail = sink.messages.at(-1)!;
+    assert.deepEqual(mail.envelopeTo, ["reviewer2@example.com"]);
+  });
+});

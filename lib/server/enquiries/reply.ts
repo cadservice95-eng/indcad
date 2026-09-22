@@ -1,6 +1,7 @@
 import { and, asc, eq } from "drizzle-orm";
 import { SITE } from "@/lib/constants";
 import { attachments, emailDrafts, getDb, messages } from "../db";
+import { env } from "../env";
 import { emailLayout, htmlToText, isEmptyHtml, sanitizeEmailHtml, singleLine } from "../email/html";
 import { deliverEmail, makeMessageId, queueEmail, type DeliveryResult } from "../email/send";
 import { fillTemplate, getTemplate, type TemplateKey } from "../email/templates";
@@ -16,6 +17,8 @@ export type ReplyInput = {
   enquiryId: string;
   to: string;
   cc?: string | null;
+  /** Not exposed in the reply composer UI — used internally (e.g. the Trustpilot invite alias). */
+  bcc?: string | null;
   subject: string;
   bodyHtml: string;
   statusAfter?: string;
@@ -102,6 +105,7 @@ export async function sendAdminReply(input: ReplyInput): Promise<DeliveryResult 
       {
         to: input.to,
         cc: input.cc,
+        bcc: input.bcc,
         subject,
         html: wrapped,
         text: bodyText,
@@ -148,6 +152,7 @@ export async function renderReplyTemplate(enquiryId: string, key: TemplateKey) {
     support_email: config.businessEmail,
     site_name: SITE.name,
     project_description: enquiry.projectDescription,
+    review_url: SITE.trustpilotReviewUrl,
   };
   return {
     subject: subjectWithReference(fillTemplate(template.subject, vars, "text"), enquiry.referenceNumber),
@@ -166,6 +171,26 @@ export async function sendFollowUp(enquiryId: string, overrides?: { bodyHtml?: s
     bodyHtml: overrides?.bodyHtml ?? rendered.bodyHtml,
     files: [],
     template: "quote_follow_up",
+  });
+}
+
+/**
+ * Sends a review-request email to the customer. Manual only — the admin
+ * decides when a project is far enough along to ask, never automatic.
+ * BCCs the Trustpilot invite alias (Settings → General) when configured, so
+ * Trustpilot's own automatic invite also fires for the same address.
+ */
+export async function sendReviewRequest(enquiryId: string) {
+  const enquiry = await requireEnquiry(enquiryId);
+  const rendered = await renderReplyTemplate(enquiryId, "review_request");
+  return sendAdminReply({
+    enquiryId,
+    to: enquiry.email,
+    subject: rendered.subject,
+    bodyHtml: rendered.bodyHtml,
+    files: [],
+    template: "review_request",
+    bcc: env.trustpilotBccEmail || null,
   });
 }
 

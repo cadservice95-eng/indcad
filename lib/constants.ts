@@ -13,6 +13,8 @@ export const SITE = {
   addressCountry: "IN",
   gstin: "[GSTIN]",
   hours: "[BUSINESS HOURS]",
+  // Public review page — not a secret, safe to hardcode like the other site facts above.
+  trustpilotReviewUrl: "https://www.trustpilot.com/review/rendercadhub.com",
 } as const;
 
 export const SERVICE_AREAS = [

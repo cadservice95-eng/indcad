@@ -10,6 +10,7 @@ export const TEMPLATE_KEYS = [
   "project_clarification",
   "general_response",
   "password_reset",
+  "review_request",
 ] as const;
 export type TemplateKey = (typeof TEMPLATE_KEYS)[number];
 
@@ -111,6 +112,20 @@ export const DEFAULT_TEMPLATES: Record<TemplateKey, TemplateDefinition> = {
       "<p>We received a request to reset the password for your {{site_name}} admin account. Use the button below to choose a new password. The link expires in 60 minutes and can be used once.</p>" +
       "<p>If you did not request this, you can ignore this email — your password will not change.</p>",
     variables: ["name", "site_name", "reset_link"],
+  },
+  review_request: {
+    key: "review_request",
+    label: "Request a review",
+    description: "Sent to a customer once their project is complete, asking for a Trustpilot review. Sent manually from the enquiry page — never automatically.",
+    automatic: false,
+    subject: "How did we do? — {{reference_number}}",
+    bodyHtml:
+      "<p>Hi {{name}},</p>" +
+      "<p>Thank you for choosing {{site_name}} for your {{service}} project ({{reference_number}}). We hope you're happy with the result.</p>" +
+      "<p>If you have a minute, we'd really appreciate a quick review — it helps other engineers and businesses find us:</p>" +
+      '<p><a href="{{review_url}}">Leave us a review on Trustpilot</a></p>' +
+      "<p>Kind regards,<br>{{site_name}}<br>{{support_email}}</p>",
+    variables: ["name", "reference_number", "service", "site_name", "support_email", "review_url"],
   },
 };
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Archive, ArrowLeft, EyeOff, RotateCcw, Trash2 } from "lucide-react";
+import { Archive, ArrowLeft, EyeOff, RotateCcw, Star, Trash2 } from "lucide-react";
 import { PRIORITY_LABELS, STATUS_LABELS } from "@/lib/enquiry-meta";
 import { cn } from "@/lib/utils";
 import { api } from "../api";
@@ -63,6 +63,17 @@ export function EnquiryWorkspace(props: Props) {
     if (!result.ok) return toast.error(result.error);
     toast.success("Moved to trash.");
     router.push("/admin/enquiries/");
+    router.refresh();
+  }
+
+  async function requestReview() {
+    if (!(await confirm({ title: "Send a review request?", message: `Emails ${enquiry.name} at ${enquiry.email} asking for a Trustpilot review. Send this once the project is actually complete.`, confirmLabel: "Send request" }))) return;
+    setBusy(true);
+    const result = await api<{ delivery: string; deliveryError: string | null }>(`/api/admin/enquiries/${enquiry.id}/review-request/`, { method: "POST", json: {} });
+    setBusy(false);
+    if (!result.ok) return toast.error(result.error);
+    if (result.data.delivery === "SENT") toast.success("Review request sent.");
+    else toast.error(`Saved to the conversation, but the email failed${result.data.deliveryError ? `: ${result.data.deliveryError}` : "."}`);
     router.refresh();
   }
 
@@ -146,6 +157,9 @@ export function EnquiryWorkspace(props: Props) {
             </label>
             {!trashed ? (
               <div className="flex gap-2">
+                <button type="button" disabled={busy} className={btn.outline} onClick={requestReview} title="Email the customer asking for a Trustpilot review">
+                  <Star className="h-4 w-4" aria-hidden /> Request review
+                </button>
                 <button type="button" disabled={busy} className={btn.outline} onClick={() => post("read/", { read: false }, "Marked as unread.").then((ok) => ok && router.push("/admin/enquiries/"))} title="Mark as unread and go back to the list">
                   <EyeOff className="h-4 w-4" aria-hidden /> Unread
                 </button>

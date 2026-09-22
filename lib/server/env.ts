@@ -91,6 +91,12 @@ export const env = {
     return str("SMTP_FROM_NAME");
   },
 
+  // Review requests — BCC address for Trustpilot's automatic invite-by-email
+  // feature. Optional: the "Request a review" button is hidden without it.
+  get trustpilotBccEmail() {
+    return str("TRUSTPILOT_BCC_EMAIL");
+  },
+
   // Inbound email
   get inboundSecret() {
     return str("INBOUND_EMAIL_SECRET");
