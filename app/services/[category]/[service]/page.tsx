@@ -24,6 +24,7 @@ import { CivilDraftingPage } from "@/components/civil/CivilDraftingPage";
 import { StructuralDraftingPage } from "@/components/structural/StructuralDraftingPage";
 import { SteelDetailingPage } from "@/components/steel/SteelDetailingPage";
 import { ElecDraftingPage } from "@/components/electrical/ElecDraftingPage";
+import { PdfPage } from "@/components/pdfcad/PdfPage";
 import { ConvPage } from "@/components/cadconv/ConvPage";
 import { ScanPage } from "@/components/scan/ScanPage";
 import { RevitPage } from "@/components/revit/RevitPage";
@@ -77,6 +78,16 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       ]}
     />
   );
+
+  if (service.slug === "pdf-to-cad") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <PdfPage service={service} />
+      </>
+    );
+  }
 
   if (service.slug === "cad-conversion") {
     return (
