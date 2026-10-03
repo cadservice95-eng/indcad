@@ -24,6 +24,7 @@ import { CivilDraftingPage } from "@/components/civil/CivilDraftingPage";
 import { StructuralDraftingPage } from "@/components/structural/StructuralDraftingPage";
 import { SteelDetailingPage } from "@/components/steel/SteelDetailingPage";
 import { ElecDraftingPage } from "@/components/electrical/ElecDraftingPage";
+import { ConvPage } from "@/components/cadconv/ConvPage";
 import { ScanPage } from "@/components/scan/ScanPage";
 import { RevitPage } from "@/components/revit/RevitPage";
 import { BimPage } from "@/components/bim/BimPage";
@@ -76,6 +77,16 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       ]}
     />
   );
+
+  if (service.slug === "cad-conversion") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <ConvPage service={service} />
+      </>
+    );
+  }
 
   if (service.slug === "scan-to-bim") {
     return (
