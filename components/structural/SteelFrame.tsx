@@ -33,6 +33,15 @@ export function SteelFrame({
   cy = 270,
   showInfoCard = false,
   viewBox = "0 0 640 560",
+  explode = 0,
+  liftId,
+  marks,
+  visibleIds,
+  onHover,
+  onPick,
+  selectedId,
+  infoStyle = "member",
+  erectionOverlay = false,
 }: {
   className?: string;
   animate?: boolean;
@@ -45,13 +54,41 @@ export function SteelFrame({
   cy?: number;
   showInfoCard?: boolean;
   viewBox?: string;
+  /** 0–1: push members outward from the frame centre (exploded view) */
+  explode?: number;
+  /** member that is lifted out of the structure */
+  liftId?: string | null;
+  /** member ids that get a piece-mark tag */
+  marks?: string[];
+  /** when set, only these members are drawn solid; others are faint ghosts */
+  visibleIds?: string[];
+  onHover?: (id: string | null) => void;
+  onPick?: (id: string) => void;
+  selectedId?: string | null;
+  infoStyle?: "member" | "piece";
+  erectionOverlay?: boolean;
 }) {
   const [active, setActive] = useState<string | null>(null);
   const ox = cx - ((XS[2] - YS[1]) / 2) * 0.866 * s;
   const p = makeIso(ox, cy, s);
   const rev = revision ?? 99;
   const changed = revision !== undefined ? REVISIONS[revision].changed : [];
-  const hl = new Set([...(highlightIds ?? []), ...(active ? [active] : [])]);
+  const hl = new Set([...(highlightIds ?? []), ...(active ? [active] : []), ...(selectedId ? [selectedId] : [])]);
+  const centre = p(8, 3, 4);
+  const offset = (m: Member): [number, number] => {
+    const a = p(...m.a);
+    const b = p(...m.b);
+    const mx = (a[0] + b[0]) / 2;
+    const my = (a[1] + b[1]) / 2;
+    let dx = (mx - centre[0]) * explode * 0.55;
+    let dy = (my - centre[1]) * explode * 0.55;
+    if (liftId && m.id === liftId) {
+      dx += 70;
+      dy -= 62;
+    }
+    return [Math.round(dx), Math.round(dy)];
+  };
+  const isMarked = (id: string) => marks?.includes(id) ?? false;
 
   const all = revision === undefined;
   const visible = (m: Member) => all || (m.since <= rev && (m.until === undefined || rev < m.until));
@@ -125,17 +162,21 @@ export function SteelFrame({
           const isHl = hl.has(m.id);
           const isChanged = changed.includes(m.id);
           const color = gh ? "#f87171" : isChanged || isHl ? "#d68a51" : "#7dd3fc";
-          const op = gh ? 0.55 : hasAny && !isHl ? 0.35 : 1;
+          const faint = visibleIds ? !visibleIds.includes(m.id) : false;
+          const dimmed = liftId ? m.id !== liftId : false;
+          const op = gh ? 0.55 : faint ? 0.13 : dimmed && !isHl ? 0.3 : hasAny && !isHl ? 0.35 : 1;
+          const [ox2, oy2] = offset(m);
           const A = p(...m.a);
           const B = p(...m.b);
           const dPath = seg(A, B);
           return (
             <g
               key={m.id}
-              onMouseEnter={interactive ? () => setActive(m.id) : undefined}
-              onMouseLeave={interactive ? () => setActive(null) : undefined}
-              onClick={interactive ? () => setActive((a) => (a === m.id ? null : m.id)) : undefined}
+              onMouseEnter={interactive ? () => { setActive(m.id); onHover?.(m.id); } : undefined}
+              onMouseLeave={interactive ? () => { setActive(null); onHover?.(null); } : undefined}
+              onClick={interactive ? () => { setActive((a) => (a === m.id ? null : m.id)); onPick?.(m.id); } : undefined}
               className={interactive ? "cursor-pointer" : ""}
+              style={{ transform: `translate(${ox2}px, ${oy2}px)`, transition: "transform 0.9s cubic-bezier(0.22,1,0.36,1)" }}
             >
               {interactive ? <path d={dPath} stroke="transparent" strokeWidth="14" /> : null}
               <path
@@ -153,6 +194,38 @@ export function SteelFrame({
           );
         })}
       </g>
+
+      {/* piece-mark tags */}
+      {marks && marks.length ? (
+        <g>
+          {members.filter((m) => isMarked(m.id) && visible(m)).map((m) => {
+            const a = p(...m.a);
+            const b = p(...m.b);
+            const [ox2, oy2] = offset(m);
+            const x = (a[0] + b[0]) / 2 + ox2;
+            const y = (a[1] + b[1]) / 2 + oy2;
+            const isHl = hl.has(m.id);
+            return (
+              <g key={m.id} style={{ transition: "transform 0.9s cubic-bezier(0.22,1,0.36,1)" }} transform={`translate(${x} ${y})`}>
+                <rect x="-19" y="-18" width="38" height="16" className="fill-ink-950" stroke={isHl ? "#d68a51" : "#7dd3fc"} strokeWidth={isHl ? 1.4 : 0.8} />
+                <text y="-6.5" textAnchor="middle" fill={isHl ? "#d68a51" : "#7dd3fc"} fontFamily="var(--font-mono)" fontSize="9">{m.id}</text>
+              </g>
+            );
+          })}
+        </g>
+      ) : null}
+
+      {/* erection zone + crane window (conceptual) */}
+      {erectionOverlay ? (
+        <g className="max-sm:hidden">
+          <path d={seg(p(-3, -3, 0), p(19, -3, 0), p(19, 9, 0), p(-3, 9, 0), p(-3, -3, 0))} stroke="#34d399" strokeWidth="1" strokeDasharray="6 4" opacity="0.8" />
+          <text x={p(-3, 9, 0)[0] - 4} y={p(-3, 9, 0)[1] + 18} fill="#34d399" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">ERECTION ZONE</text>
+          <path d={`M${p(-8, 3, 0)[0]} ${p(-8, 3, 0)[1]}L${p(0, -3, 0)[0]} ${p(0, -3, 0)[1]}M${p(-8, 3, 0)[0]} ${p(-8, 3, 0)[1]}L${p(0, 9, 0)[0]} ${p(0, 9, 0)[1]}`} stroke="#d68a51" strokeWidth="1" strokeDasharray="3 3" />
+          <text x={p(-8, 3, 0)[0] - 90} y={p(-8, 3, 0)[1] + 4} fill="#d68a51" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">CRANE WINDOW</text>
+          <path d={`M${p(24, 3, 0)[0]} ${p(24, 3, 0)[1]}L${p(19.5, 3, 0)[0]} ${p(19.5, 3, 0)[1]}`} stroke="#7dd3fc" strokeWidth="1.4" />
+          <text x={p(24, 3, 0)[0] - 10} y={p(24, 3, 0)[1] + 16} fill="#7dd3fc" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">MEMBER DELIVERY →</text>
+        </g>
+      ) : null}
 
       {/* connection nodes + bolts */}
       {detail >= 1 ? (
@@ -210,9 +283,9 @@ export function SteelFrame({
       {showInfoCard ? (
         <g className="max-sm:hidden" transform="translate(402 54)">
           <rect width="214" height="74" className="fill-ink-950/90" stroke="#7dd3fc" strokeOpacity={infoText ? 0.8 : 0.3} />
-          <text x="12" y="22" fill={infoText ? "#e2e8f0" : "#64748b"} fontFamily="var(--font-mono)" fontSize="11" letterSpacing="1">{infoText ? infoText.title : "HOVER A MEMBER"}</text>
-          <text x="12" y="42" fill="#94a3b8" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">{infoText ? `SECTION: ${infoText.section}` : "to read its details"}</text>
-          <text x="12" y="60" fill="#d68a51" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">{infoText ? "STATUS: DETAILING" : "ILLUSTRATIVE"}</text>
+          <text x="12" y="22" fill={infoText ? "#e2e8f0" : "#64748b"} fontFamily="var(--font-mono)" fontSize="11" letterSpacing="1">{infoText ? (infoStyle === "piece" ? `PIECE MARK ${activeMember?.id}` : infoText.title) : "HOVER A MEMBER"}</text>
+          <text x="12" y="42" fill="#94a3b8" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">{infoText ? (infoStyle === "piece" ? `CATEGORY: ${activeMember?.kind === "col" ? "COLUMN" : activeMember?.kind === "beam" ? "PRIMARY BEAM" : "BRACING"}` : `SECTION: ${infoText.section}`) : "to read its details"}</text>
+          <text x="12" y="60" fill="#d68a51" fontFamily="var(--font-mono)" fontSize="9.5" letterSpacing="1">{infoText ? (infoStyle === "piece" ? "STATUS: DETAILED" : "STATUS: DETAILING") : "ILLUSTRATIVE"}</text>
         </g>
       ) : null}
     </svg>

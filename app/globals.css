@@ -257,3 +257,21 @@ body {
   .duct { animation: none; }
   [data-in="true"] .duct { animation: rch-duct 7s ease-in-out forwards; animation-delay: var(--d, 0ms); }
 }
+
+/* Steel detailing page: travelling member and a simulated cursor over a drawing sheet */
+@keyframes rch-travel {
+  0%, 8% { transform: translate(0, 0); }
+  70%, 100% { transform: translate(var(--tx, 0px), var(--ty, 0px)); }
+}
+@keyframes rch-cursor {
+  0% { transform: translate(60px, 70px); }
+  25% { transform: translate(400px, 110px); }
+  50% { transform: translate(520px, 250px); }
+  75% { transform: translate(220px, 300px); }
+  100% { transform: translate(60px, 70px); }
+}
+@media (scripting: enabled) {
+  .travel { animation: none; }
+  [data-in="true"] .travel { animation: rch-travel 4.5s ease-in-out forwards; animation-delay: var(--d, 0ms); }
+}
+.cursor-sim { animation: rch-cursor 14s ease-in-out infinite; }

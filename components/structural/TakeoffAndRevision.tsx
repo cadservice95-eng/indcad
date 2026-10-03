@@ -21,7 +21,7 @@ export function TakeoffLinked({ className }: { className?: string }) {
       </ol>
       <div className="grid gap-4 lg:grid-cols-[1.1fr_1fr]">
         <div className="border border-steel-300/25 bg-ink-950 p-2">
-          <SteelFrame highlightIds={ids} detail={1} className="h-auto w-full" viewBox="40 60 600 440" />
+          <SteelFrame highlightIds={ids} interactive onHover={(id) => setRow(id ? SCHEDULE.findIndex((r) => r.ids.includes(id)) : null)} detail={1} className="h-auto w-full" viewBox="40 60 600 440" />
         </div>
         <div className="space-y-4">
           <div className="border border-steel-300/20 bg-ink-900/70">

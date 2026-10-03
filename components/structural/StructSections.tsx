@@ -278,12 +278,12 @@ const sceneFor: Record<string, React.ReactNode> = {
 };
 const sceneLabel: Record<string, string> = { construction: "Multi-storey frame", mining: "Industrial platform", manufacturing: "Factory structure", energy: "Industrial steel framework" };
 
-export function StructIndustries({ service }: { service: Service }) {
+export function StructIndustries({ service, heading = "Structural Documentation Across Multiple Industries" }: { service: Service; heading?: string }) {
   const items = service.industries.map(getIndustryBySlug).filter((i): i is NonNullable<typeof i> => Boolean(i));
   return (
     <LightSection id="industries" tint>
       <Reveal>
-        <SectionHeading eyebrow="Industries" heading="Structural Documentation Across Multiple Industries" />
+        <SectionHeading eyebrow="Industries" heading={heading} />
       </Reveal>
       <InView as="ul" className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
         {items.map((ind, i) => (
@@ -312,13 +312,13 @@ const projectArt: Record<string, React.ReactNode> = {
   "processing-plant-platform-structural-detailing": <PlatformStructure ox={90} oy={64} s={9} />,
 };
 
-export function StructProjects() {
+export function StructProjects({ heading = "Related Structural Projects" }: { heading?: string }) {
   const items = projects.filter((p) => p.discipline === "structural");
   if (items.length === 0) return null;
   return (
     <DarkSection id="projects" tone="900">
       <Reveal className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-        <SectionHeading tone="dark" eyebrow="Portfolio" heading="Related Structural Projects" description="Illustrative examples, marked as such. They will give way to verified case studies as client work is cleared for publication." />
+        <SectionHeading tone="dark" eyebrow="Portfolio" heading={heading} description="Illustrative examples, marked as such. They will give way to verified case studies as client work is cleared for publication." />
         <Link href="/projects/structural" className="text-sm font-semibold text-white underline-offset-4 transition-colors hover:text-copper-400 hover:underline">All structural projects →</Link>
       </Reveal>
       <InView as="ul" className="mt-12 grid gap-5 md:grid-cols-2">
