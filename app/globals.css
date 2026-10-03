@@ -288,3 +288,14 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .au-jit-a, .au-jit-b, .au-jit-c { animation: none; }
 }
+
+/* Mining page: subtle equipment vibration */
+@keyframes mn-vib {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(0.6px, -0.4px); }
+  75% { transform: translate(-0.6px, 0.4px); }
+}
+.mn-vib { animation: mn-vib 0.18s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .mn-vib { animation: none; }
+}
