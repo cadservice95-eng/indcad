@@ -24,6 +24,7 @@ import { CivilDraftingPage } from "@/components/civil/CivilDraftingPage";
 import { StructuralDraftingPage } from "@/components/structural/StructuralDraftingPage";
 import { SteelDetailingPage } from "@/components/steel/SteelDetailingPage";
 import { ElecDraftingPage } from "@/components/electrical/ElecDraftingPage";
+import { RevitPage } from "@/components/revit/RevitPage";
 import { BimPage } from "@/components/bim/BimPage";
 import { RenderPage } from "@/components/render/RenderPage";
 import { ArchDraftingPage } from "@/components/arch/ArchDraftingPage";
@@ -74,6 +75,16 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       ]}
     />
   );
+
+  if (service.slug === "revit-modelling") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <RevitPage service={service} />
+      </>
+    );
+  }
 
   if (service.slug === "bim-services") {
     return (
