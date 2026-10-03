@@ -20,6 +20,7 @@ import { DefencePage } from "@/components/defence/DefencePage";
 import { MiningPage } from "@/components/mining/MiningPage";
 import { AerospacePage } from "@/components/aerospace/AerospacePage";
 import { OilGasPage } from "@/components/oilgas/OilGasPage";
+import { EnergyPage } from "@/components/energy/EnergyPage";
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
@@ -57,6 +58,20 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           ]}
         />
         <ConstructionPage industry={industry} />
+      </>
+    );
+  }
+
+  if (industry.slug === "energy") {
+    return (
+      <>
+        <Breadcrumbs
+          items={[
+            { label: "Industries", href: "/industries" },
+            { label: industry.name, href: `/industries/${industry.slug}` },
+          ]}
+        />
+        <EnergyPage industry={industry} />
       </>
     );
   }
