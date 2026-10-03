@@ -42,8 +42,9 @@ const colsPos = [0, 120, 240, 360].flatMap((x) => [0, 120, 240].map((y) => [x, y
 const levels = [1, 2, 3] as const;
 
 export function BimModel({
-  layers = ALL_LAYERS, faint, clash = "off", focus = null, pin = null, level = null, mess = 0, className, title, labels = true, onIssue,
+  layers = ALL_LAYERS, faint, clash = "off", focus = null, pin = null, level = null, mess = 0, className, title, labels = true, onIssue, steel, precast, shift = 0,
 }: {
+  steel?: boolean; precast?: boolean; shift?: number;
   layers?: Layers; faint?: boolean; clash?: "off" | "open" | "resolved"; focus?: string | null; pin?: [number, number, number] | null; level?: number | null; mess?: 0 | 1 | 2 | 3;
   className?: string; title: string; labels?: boolean; onIssue?: (id: string) => void;
 }) {
@@ -78,9 +79,18 @@ export function BimModel({
           <path key={`e${l}${a}`} d={loop(P(X, a, LV[l - 1] + 24), P(X, b, LV[l - 1] + 24), P(X, b, LV[l - 1] + 54), P(X, a, LV[l - 1] + 54))} fill="#93C5FD" fillOpacity="0.18" stroke={COL.arch} strokeWidth="0.8" />
         )))}
         <path d={loop(P(150, Y, 0), P(180, Y, 0), P(180, Y, 46), P(150, Y, 46))} stroke={COL.arch} strokeWidth="0.8" />
-        {bx("part", 117, 6, 0, 123, Y - 6, 64, { stroke: COL.arch, fill: "#fff", fo: 0.08 })}
+        {bx("part", 117 + shift * 24, 6, 0, 123 + shift * 24, Y - 6, 64, { stroke: COL.arch, fill: "#fff", fo: 0.08 })}
         {[0, 1, 2].map((i) => <path key={i} d={seg(P(0, Y, 70 * i + 64), P(X, Y, 70 * i + 64))} stroke={COL.arch} strokeOpacity="0.35" strokeWidth="0.6" />)}
       </g>
+
+      {steel ? (
+        <g stroke="#FBBF24" strokeWidth="1.3">
+          {[[0, 120], [240, 360]].map(([a, b], i) => <path key={i} d={seg(P(a, Y, 0), P(b, Y, 140)) + seg(P(a, Y, 140), P(b, Y, 0))} />)}
+          {[0, 120, 240, 360].flatMap((x) => [70, 140].map((z) => <rect key={`${x}${z}`} x={P(x, Y, z)[0] - 4} y={P(x, Y, z)[1] - 4} width="8" height="8" fill="#FBBF24" fillOpacity="0.35" />))}
+        </g>
+      ) : null}
+      {precast ? <g stroke="#C4B5FD" strokeWidth="1" fill="#C4B5FD" fillOpacity="0.14">{[0, 80, 160].flatMap((y) => [0, 70, 140].map((z) => <path key={`${y}${z}`} d={loop(P(X, y + 2, z + 2), P(X, y + 78, z + 2), P(X, y + 78, z + 68), P(X, y + 2, z + 68))} />))}</g> : null}
+      {shift > 0 ? <g fontSize="9" style={mono}><text x={P(150 + shift * 24, Y + 8, 70)[0]} y={P(150 + shift * 24, Y + 8, 70)[1]} fill="#FDBA74">FIELD CHANGE</text></g> : null}
 
       {/* plumbing */}
       <g style={g("plumb")} stroke={COL.plumb} strokeWidth="1.6">
