@@ -24,6 +24,7 @@ import { CivilDraftingPage } from "@/components/civil/CivilDraftingPage";
 import { StructuralDraftingPage } from "@/components/structural/StructuralDraftingPage";
 import { SteelDetailingPage } from "@/components/steel/SteelDetailingPage";
 import { ElecDraftingPage } from "@/components/electrical/ElecDraftingPage";
+import { RenderPage } from "@/components/render/RenderPage";
 import { ArchDraftingPage } from "@/components/arch/ArchDraftingPage";
 
 type Params = { category: string; service: string };
@@ -72,6 +73,16 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       ]}
     />
   );
+
+  if (service.slug === "3d-rendering") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <RenderPage service={service} />
+      </>
+    );
+  }
 
   if (service.slug === "architectural-drafting") {
     return (
