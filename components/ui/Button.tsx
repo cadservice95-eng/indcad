@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type ButtonVariant = "primary" | "secondary" | "outline-light" | "ghost";
 type ButtonSize = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors duration-150 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+  "group inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors duration-150 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<ButtonVariant, string> = {
   primary: "bg-copper-500 text-white hover:bg-copper-600 focus-visible:outline-copper-600",
@@ -28,6 +29,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   onClick?: () => void;
   disabled?: boolean;
+  arrow?: boolean;
 }
 
 export function Button({
@@ -39,20 +41,27 @@ export function Button({
   type = "button",
   onClick,
   disabled,
+  arrow,
 }: ButtonProps) {
   const classes = cn(base, variants[variant], sizes[size], className);
+  const content = (
+    <>
+      {children}
+      {arrow ? <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden /> : null}
+    </>
+  );
 
   if (href) {
     return (
       <Link href={href} className={classes}>
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
     <button type={type} onClick={onClick} disabled={disabled} className={classes}>
-      {children}
+      {content}
     </button>
   );
 }

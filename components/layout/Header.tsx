@@ -21,6 +21,7 @@ const resourceLinks = [
   { name: "Blog", href: "/blog" },
   { name: "Guides", href: "/guides" },
   { name: "Standards", href: "/standards" },
+  { name: "Software", href: "/software" },
 ];
 
 type NavKey = "services" | "industries" | "projects" | "locations" | "resources";
@@ -62,11 +63,11 @@ export function Header() {
     <header
       ref={headerRef}
       className={cn(
-        "sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur transition-shadow",
-        scrolled ? "border-neutral-200 shadow-sm" : "border-transparent",
+        "sticky top-0 z-50 w-full border-b backdrop-blur-md transition-[background-color,box-shadow,border-color] duration-200",
+        scrolled ? "border-neutral-200 bg-white/95 shadow-sm" : "border-transparent bg-white/80",
       )}
     >
-      <Container className={cn("flex items-center justify-between transition-[padding] duration-150", scrolled ? "py-3" : "py-5")}>
+      <Container className={cn("flex items-center justify-between transition-[padding] duration-200", scrolled ? "py-2.5" : "py-4")}>
         <Logo />
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
@@ -74,18 +75,18 @@ export function Header() {
           <NavMenuButton label="Industries" active={openMenu === "industries"} onClick={() => toggle("industries")} />
           <NavMenuButton label="Projects" active={openMenu === "projects"} onClick={() => toggle("projects")} />
           <NavMenuButton label="Locations" active={openMenu === "locations"} onClick={() => toggle("locations")} />
-          <Link href="/software" className="px-3 py-2 text-sm font-medium text-navy-800 transition-colors hover:text-copper-600">
-            Software
-          </Link>
           <NavMenuButton label="Resources" active={openMenu === "resources"} onClick={() => toggle("resources")} />
           <Link href="/about" className="px-3 py-2 text-sm font-medium text-navy-800 transition-colors hover:text-copper-600">
             About
           </Link>
+          <Link href="/contact" className="px-3 py-2 text-sm font-medium text-navy-800 transition-colors hover:text-copper-600">
+            Contact
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href="/get-a-quote" size="md" className="hidden sm:inline-flex">
-            Get a Free Quote
+          <Button href="/get-a-quote" size="md" arrow className="hidden sm:inline-flex">
+            Request a Quote
           </Button>
           <MobileNavigation />
         </div>
@@ -127,31 +128,58 @@ function NavMenuButton({ label, active, onClick }: { label: string; active: bool
   );
 }
 
+const draftingSlugs = ["mechanical", "structural", "architectural", "civil", "electrical"];
+const bimSlugs = ["bim"];
+const engineeringSlugs = ["cad-conversion", "engineering-design"];
+
 function MegaMenuServices({ onNavigate }: { onNavigate: () => void }) {
-  return (
-    <div className="absolute inset-x-0 top-full border-b border-neutral-200 bg-white shadow-lg">
-      <Container className="grid grid-cols-2 gap-x-8 gap-y-6 py-8 md:grid-cols-4">
-        {serviceCategories.map((category) => (
-          <div key={category.slug}>
-            <Link href={`/services/${category.slug}`} onClick={onNavigate} className="flex items-center gap-2 text-navy-900 hover:text-copper-600">
-              <CategoryIcon name={category.icon} className="h-4 w-4 text-copper-500" />
-              <span className="text-sm font-semibold">{category.name}</span>
+  const pick = (slugs: string[]) => serviceCategories.filter((c) => slugs.includes(c.slug));
+
+  const renderCategory = (category: (typeof serviceCategories)[number]) => (
+    <div key={category.slug}>
+      <Link
+        href={`/services/${category.slug}`}
+        onClick={onNavigate}
+        className="flex items-center gap-2 text-navy-900 transition-colors hover:text-copper-600"
+      >
+        <CategoryIcon name={category.icon} className="h-4 w-4 text-copper-500" />
+        <span className="text-sm font-semibold">{category.name}</span>
+      </Link>
+      <ul className="mt-2.5 space-y-1.5 border-l border-neutral-200 pl-3">
+        {category.services.map((service) => (
+          <li key={service.slug}>
+            <Link
+              href={`/services/${category.slug}/${service.slug}`}
+              onClick={onNavigate}
+              className="text-sm text-neutral-600 transition-colors hover:text-copper-600"
+            >
+              {service.name}
             </Link>
-            <ul className="mt-3 space-y-2">
-              {category.services.map((service) => (
-                <li key={service.slug}>
-                  <Link
-                    href={`/services/${category.slug}/${service.slug}`}
-                    onClick={onNavigate}
-                    className="text-sm text-neutral-600 transition-colors hover:text-copper-600"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </li>
         ))}
+      </ul>
+    </div>
+  );
+
+  const groupTitle = "font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-500";
+
+  return (
+    <div className="absolute inset-x-0 top-full animate-[menu-in_0.18s_ease-out] border-b border-neutral-200 bg-white shadow-lg">
+      <Container className="grid gap-x-12 gap-y-8 py-8 lg:grid-cols-[1.35fr_1fr]">
+        <div>
+          <p className={groupTitle}>CAD Drafting</p>
+          <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-6 xl:grid-cols-3">{pick(draftingSlugs).map(renderCategory)}</div>
+        </div>
+        <div className="grid gap-y-8 border-l border-neutral-200 pl-12">
+          <div>
+            <p className={groupTitle}>BIM</p>
+            <div className="mt-4 grid gap-6">{pick(bimSlugs).map(renderCategory)}</div>
+          </div>
+          <div>
+            <p className={groupTitle}>Engineering</p>
+            <div className="mt-4 grid grid-cols-2 gap-6">{pick(engineeringSlugs).map(renderCategory)}</div>
+          </div>
+        </div>
       </Container>
       <div className="border-t border-neutral-100 bg-neutral-50 py-3">
         <Container>
@@ -176,7 +204,7 @@ function SimpleDropdown({
   onNavigate: () => void;
 }) {
   return (
-    <div className="absolute inset-x-0 top-full border-b border-neutral-200 bg-white shadow-lg">
+    <div className="absolute inset-x-0 top-full animate-[menu-in_0.18s_ease-out] border-b border-neutral-200 bg-white shadow-lg">
       <Container className="grid grid-cols-2 gap-x-8 gap-y-2 py-6 sm:grid-cols-3 md:grid-cols-4">
         {items.map((item) => (
           <Link

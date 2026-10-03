@@ -75,6 +75,8 @@ body {
     *,
     *::before,
     *::after {
+      animation-delay: 0s !important;
+      transition-delay: 0s !important;
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -102,4 +104,115 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* ───────── Homepage motion system ─────────
+   Reveal + SVG "drafting" animations are driven by [data-in="true"], set by
+   <InView>. Hidden start states only apply when scripting is enabled, so the
+   content stays fully visible without JS (and for crawlers). */
+@theme {
+  --color-sky-400: #38bdf8;
+  --color-sky-300: #7dd3fc;
+  --color-ink-950: #0b1220;
+  --color-ink-900: #101a2e;
+}
+
+@keyframes rch-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes rch-fade {
+  to { opacity: 1; }
+}
+@keyframes rch-fadeout {
+  to { opacity: 0; }
+}
+@keyframes rch-pass {
+  0% { opacity: 0; }
+  12%, 88% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes rch-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes rch-pulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(2.4); }
+}
+@keyframes rch-flow {
+  to { stroke-dashoffset: -24; }
+}
+@keyframes rch-scan {
+  0%, 100% { transform: translateY(0); opacity: 0; }
+  10%, 90% { opacity: 0.5; }
+  50% { transform: translateY(var(--scan, 240px)); opacity: 0.5; }
+}
+
+@layer utilities {
+  .rch-spin-slow { transform-origin: center; transform-box: fill-box; animation: rch-spin 60s linear infinite; }
+  .rch-spin-rev { transform-origin: center; transform-box: fill-box; animation: rch-spin 90s linear infinite reverse; }
+  .rch-pulse { transform-origin: center; transform-box: fill-box; animation: rch-pulse 2.8s ease-in-out infinite; animation-delay: var(--d, 0ms); }
+  .rch-flow { stroke-dasharray: 4 8; animation: rch-flow 1.6s linear infinite; }
+  .rch-scan { animation: rch-scan 7s ease-in-out infinite; }
+  .rch-float { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+  .rch-float:hover { transform: translateY(-4px); }
+}
+
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--d, 0ms);
+  }
+  [data-in="true"] .reveal,
+  .reveal[data-in="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* SVG strokes drawn on, as if plotted. Shapes use pathLength="1". */
+  .draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+  [data-in="true"] .draw {
+    animation: rch-draw var(--t, 1.6s) cubic-bezier(0.45, 0, 0.2, 1) forwards;
+    animation-delay: var(--d, 0ms);
+  }
+  .fade-out {
+    opacity: 1;
+  }
+  [data-in="true"] .fade-out {
+    animation: rch-fadeout 0.8s ease forwards;
+    animation-delay: var(--d, 0ms);
+  }
+  .fade-pass {
+    opacity: 0;
+  }
+  [data-in="true"] .fade-pass {
+    animation: rch-pass var(--life, 3s) ease forwards;
+    animation-delay: var(--d, 0ms);
+  }
+  .fade-in {
+    opacity: 0;
+  }
+  [data-in="true"] .fade-in {
+    animation: rch-fade 0.8s ease forwards;
+    animation-delay: var(--d, 0ms);
+  }
+}
+
+/* Hover motion for SVG icons inside a .group card */
+.ico-spin { transform-origin: center; transform-box: fill-box; transition: transform 0.9s ease; }
+.group:hover .ico-spin { transform: rotate(90deg); }
+.ico-shift { transition: transform 0.4s ease; }
+.group:hover .ico-shift { transform: translateX(3px); }
+.ico-lift { transition: transform 0.4s ease; }
+.group:hover .ico-lift { transform: translateY(-2px); }
+.art-zoom { transform-origin: center; transition: transform 0.6s ease; }
+.group:hover .art-zoom { transform: scale(1.03); }
+
+@keyframes menu-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
 }

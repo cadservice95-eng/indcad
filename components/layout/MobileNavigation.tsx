@@ -129,14 +129,18 @@ export function MobileNavigation() {
                   <LinkList items={resourceLinks} onNavigate={close} viewAllHref="/resources" viewAllLabel="Resource hub" />
                 </AccordionSection>
 
-                <Link href="/about" onClick={close} className="block py-4 text-base font-medium text-navy-900">
+                <Link href="/about" onClick={close} className="block border-b border-neutral-100 py-4 text-base font-medium text-navy-900">
                   About
+                </Link>
+
+                <Link href="/contact" onClick={close} className="block py-4 text-base font-medium text-navy-900">
+                  Contact
                 </Link>
               </nav>
 
               <div className="border-t border-neutral-200 p-5">
                 <Button href="/get-a-quote" size="lg" className="w-full" onClick={close}>
-                  Get a Free Quote
+                  Request a Quote
                 </Button>
               </div>
             </div>,

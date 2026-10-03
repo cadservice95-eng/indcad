@@ -64,7 +64,7 @@ export function Footer() {
           <FooterColumn title="Company">
             <FooterLink href="/about">About</FooterLink>
             <FooterLink href="/contact">Contact</FooterLink>
-            <FooterLink href="/get-a-quote">Get a Free Quote</FooterLink>
+            <FooterLink href="/get-a-quote">Request a Quote</FooterLink>
             <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
             <FooterLink href="/terms-and-conditions">Terms &amp; Conditions</FooterLink>
           </FooterColumn>
@@ -104,7 +104,7 @@ export function Footer() {
             <p className="mt-1 text-sm text-neutral-300">{SERVICE_AREAS.join(" · ")}</p>
           </div>
           <Button href="/get-a-quote" variant="primary">
-            Get a Free Quote
+            Request a Quote
           </Button>
         </div>
       </Container>
@@ -128,6 +128,9 @@ export function Footer() {
             <Link href="/terms-and-conditions" className="hover:text-neutral-300">
               Terms &amp; Conditions
             </Link>
+            <a href="/sitemap.xml" className="hover:text-neutral-300">
+              Sitemap
+            </a>
           </div>
         </Container>
       </div>

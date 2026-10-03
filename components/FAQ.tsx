@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Plus } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,6 +11,7 @@ import type { FAQItem } from "@/lib/types";
 
 export function FAQ({ items, heading = "Frequently Asked Questions" }: { items: FAQItem[]; heading?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const uid = useId();
 
   if (items.length === 0) return null;
 
@@ -22,21 +23,39 @@ export function FAQ({ items, heading = "Frequently Asked Questions" }: { items: 
         <dl className="mt-8 divide-y divide-neutral-200 border-y border-neutral-200">
           {items.map((item, index) => {
             const isOpen = openIndex === index;
+            const panelId = `${uid}-panel-${index}`;
+            const buttonId = `${uid}-button-${index}`;
             return (
               <div key={item.question}>
                 <dt>
                   <button
+                    id={buttonId}
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 py-5 text-left text-sm font-medium text-navy-900"
+                    aria-controls={panelId}
+                    className={cn(
+                      "flex w-full items-center justify-between gap-4 py-5 text-left text-sm font-medium transition-colors hover:text-copper-600",
+                      isOpen ? "text-copper-600" : "text-navy-900",
+                    )}
                   >
                     {item.question}
-                    <Plus className={cn("h-4 w-4 shrink-0 text-copper-500 transition-transform", isOpen && "rotate-45")} aria-hidden />
+                    <Plus className={cn("h-4 w-4 shrink-0 text-copper-500 transition-transform duration-300", isOpen && "rotate-45")} aria-hidden />
                   </button>
                 </dt>
-                <dd className={cn("overflow-hidden text-sm leading-relaxed text-neutral-600 transition-all", isOpen ? "max-h-64 pb-5" : "max-h-0")}>
-                  {item.answer}
+                <dd
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  inert={!isOpen}
+                  className={cn(
+                    "grid transition-[grid-template-rows,opacity] duration-300 ease-out",
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <p className="pb-5 pr-8 text-sm leading-relaxed text-neutral-600">{item.answer}</p>
+                  </div>
                 </dd>
               </div>
             );
