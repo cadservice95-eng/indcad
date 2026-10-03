@@ -275,3 +275,16 @@ body {
   [data-in="true"] .travel { animation: rch-travel 4.5s ease-in-out forwards; animation-delay: var(--d, 0ms); }
 }
 .cursor-sim { animation: rch-cursor 14s ease-in-out infinite; }
+
+/* Automotive page: symbolic part variation in the tolerance stack-up */
+@keyframes au-jit {
+  0%, 100% { transform: translateX(0); }
+  33% { transform: translateX(var(--j, 3px)); }
+  66% { transform: translateX(calc(var(--j, 3px) * -1)); }
+}
+.au-jit-a { --j: 3px; animation: au-jit 1.8s ease-in-out infinite; }
+.au-jit-b { --j: -4px; animation: au-jit 2.2s ease-in-out infinite; }
+.au-jit-c { --j: 5px; animation: au-jit 1.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .au-jit-a, .au-jit-b, .au-jit-c { animation: none; }
+}

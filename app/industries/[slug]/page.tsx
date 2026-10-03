@@ -15,6 +15,7 @@ import { getSoftwareBySlug } from "@/data/software";
 import { buildMetadata } from "@/lib/seo";
 import { ConstructionPage } from "@/components/construction/ConstructionPage";
 import { ManufacturingPage } from "@/components/manufacturing/ManufacturingPage";
+import { AutomotivePage } from "@/components/automotive/AutomotivePage";
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
@@ -52,6 +53,20 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           ]}
         />
         <ConstructionPage industry={industry} />
+      </>
+    );
+  }
+
+  if (industry.slug === "automotive") {
+    return (
+      <>
+        <Breadcrumbs
+          items={[
+            { label: "Industries", href: "/industries" },
+            { label: industry.name, href: `/industries/${industry.slug}` },
+          ]}
+        />
+        <AutomotivePage industry={industry} />
       </>
     );
   }
