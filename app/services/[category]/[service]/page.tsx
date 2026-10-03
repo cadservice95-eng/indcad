@@ -23,6 +23,7 @@ import { Cad3DPage } from "@/components/cad3d/Cad3DPage";
 import { CivilDraftingPage } from "@/components/civil/CivilDraftingPage";
 import { StructuralDraftingPage } from "@/components/structural/StructuralDraftingPage";
 import { SteelDetailingPage } from "@/components/steel/SteelDetailingPage";
+import { ElecDraftingPage } from "@/components/electrical/ElecDraftingPage";
 
 type Params = { category: string; service: string };
 
@@ -70,6 +71,16 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       ]}
     />
   );
+
+  if (service.slug === "electrical-drafting") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <ElecDraftingPage service={service} />
+      </>
+    );
+  }
 
   if (service.slug === "steel-detailing") {
     return (
