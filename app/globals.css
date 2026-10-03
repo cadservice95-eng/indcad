@@ -224,3 +224,19 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .par-a, .par-b, .par-c { transform: none; }
 }
+
+/* 3D CAD page: collision / mate demos (translation vectors passed as custom properties) */
+@keyframes rch-collide {
+  0%, 30% { transform: translate(0, 0); }
+  48%, 66% { transform: translate(var(--cx), var(--cy)); }
+  86%, 100% { transform: translate(var(--rx), var(--ry)); }
+}
+@keyframes rch-mate {
+  0%, 12% { transform: translate(0, 0); }
+  62%, 100% { transform: translate(var(--mx), var(--my)); }
+}
+@media (scripting: enabled) {
+  .collide { animation: none; }
+  [data-in="true"] .collide { animation: rch-collide 7s ease-in-out forwards; animation-delay: var(--d, 0ms); }
+  [data-in="true"] .mate { animation: rch-mate 3.2s cubic-bezier(0.45, 0, 0.2, 1) forwards; animation-delay: var(--d, 0ms); }
+}

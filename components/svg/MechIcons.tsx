@@ -136,6 +136,41 @@ const icons = {
       <circle cx="42" cy="8" r="2" fill="currentColor" stroke="none" className="ico-lift" />
     </>
   ),
+  dfm: (
+    <>
+      <path d="M8 10h32v28H8z" />
+      <path d="M8 24h32M24 10v28" opacity="0.4" />
+      <path d="M14 32l6-6 5 4 9-11" className="ico-shift" />
+    </>
+  ),
+  fea: (
+    <>
+      <path d="M8 36V12l16-6 16 6v24l-16 6z" />
+      <path d="M8 24h32M24 6v36M16 9v30M32 9v30" opacity="0.5" />
+      <circle cx="24" cy="24" r="4" className="ico-spin" />
+    </>
+  ),
+  viz: (
+    <>
+      <path d="M4 24c6-10 14-14 20-14s14 4 20 14c-6 10-14 14-20 14S10 34 4 24z" />
+      <circle cx="24" cy="24" r="6" className="ico-spin" />
+      <circle cx="24" cy="24" r="1.8" fill="currentColor" stroke="none" />
+    </>
+  ),
+  family: (
+    <>
+      <path d="M6 32l8-4 8 4-8 4zM26 32l8-4 8 4-8 4z" />
+      <path d="M16 20l8-4 8 4-8 4z" className="ico-lift" />
+      <path d="M24 24v4M16 28l4-4M32 28l-4-4" opacity="0.5" />
+    </>
+  ),
+  interference: (
+    <>
+      <path d="M6 14h22v22H6z" />
+      <path d="M20 10h22v22H20z" className="ico-shift" />
+      <path d="M20 14h8v18h-8z" fill="currentColor" fillOpacity="0.25" stroke="none" />
+    </>
+  ),
   // deliverable groups
   drawings: (
     <>

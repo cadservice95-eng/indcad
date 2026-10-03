@@ -19,6 +19,7 @@ import { getIndustryBySlug } from "@/data/industries";
 import { getSoftwareBySlug } from "@/data/software";
 import { serviceCategories } from "@/data/service-categories";
 import { MechanicalDraftingPage } from "@/components/mechanical/MechanicalDraftingPage";
+import { Cad3DPage } from "@/components/cad3d/Cad3DPage";
 
 type Params = { category: string; service: string };
 
@@ -66,6 +67,16 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
       ]}
     />
   );
+
+  if (service.slug === "3d-cad-modelling") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <Cad3DPage service={service} />
+      </>
+    );
+  }
 
   // Bespoke visual layout for the flagship mechanical page; content still comes from the service data.
   if (service.slug === "mechanical-drafting") {
