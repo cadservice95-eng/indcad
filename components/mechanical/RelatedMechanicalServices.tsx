@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { Service } from "@/lib/types";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/InView";
@@ -18,13 +17,13 @@ const iconFor: Record<string, ServiceIconName> = {
   "engineering-design": "engineering",
 };
 
-export function RelatedMechanicalServices({ service }: { service: Service }) {
-  const items = service.relatedServices.map(getServiceBySlug).filter((s): s is NonNullable<typeof s> => Boolean(s));
+export function RelatedMechanicalServices({ slugs, heading = "Explore Related Services" }: { slugs: string[]; heading?: string }) {
+  const items = slugs.map(getServiceBySlug).filter((s): s is NonNullable<typeof s> => Boolean(s));
   return (
     <section id="related" className="border-t border-neutral-200 py-20 sm:py-28">
       <Container>
         <Reveal>
-          <SectionHeading eyebrow="Related" heading="Explore Related Services" />
+          <SectionHeading eyebrow="Related" heading={heading} />
         </Reveal>
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((s, i) => (

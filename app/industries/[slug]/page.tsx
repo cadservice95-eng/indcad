@@ -13,6 +13,7 @@ import { CheckList } from "@/components/ui/CheckList";
 import { industries, getIndustryBySlug } from "@/data/industries";
 import { getSoftwareBySlug } from "@/data/software";
 import { buildMetadata } from "@/lib/seo";
+import { ManufacturingPage } from "@/components/manufacturing/ManufacturingPage";
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));
@@ -39,6 +40,21 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   if (!industry) notFound();
 
   const softwareUsed = industry.software.map(getSoftwareBySlug).filter((s): s is NonNullable<typeof s> => Boolean(s));
+
+  // Bespoke visual layout for manufacturing; content still comes from the industry data.
+  if (industry.slug === "manufacturing") {
+    return (
+      <>
+        <Breadcrumbs
+          items={[
+            { label: "Industries", href: "/industries" },
+            { label: industry.name, href: `/industries/${industry.slug}` },
+          ]}
+        />
+        <ManufacturingPage industry={industry} />
+      </>
+    );
+  }
 
   return (
     <>

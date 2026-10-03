@@ -41,7 +41,7 @@ export function MechanicalDraftingPage({ service }: { service: Service }) {
       <MechanicalSoftware service={service} />
       <MechanicalIndustries service={service} />
       <MechanicalProjects />
-      <RelatedMechanicalServices service={service} />
+      <RelatedMechanicalServices slugs={service.relatedServices} />
       <MechanicalFAQ service={service} />
       <MechanicalCTA />
     </>

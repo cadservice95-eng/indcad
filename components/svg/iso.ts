@@ -47,3 +47,23 @@ export function cylinder(p: IsoFn, cx: number, cy: number, z0: number, z1: numbe
     ellipse(p, cx, cy, z1, r, s)
   );
 }
+
+/** Visible outline of an axis-aligned box (top face, near vertical edges, near base edges). */
+export function boxPath(p: IsoFn, x0: number, y0: number, z0: number, x1: number, y1: number, z1: number) {
+  return [
+    loop(p(x0, y0, z1), p(x1, y0, z1), p(x1, y1, z1), p(x0, y1, z1)),
+    seg(p(x0, y1, z0), p(x1, y1, z0), p(x1, y0, z0)),
+    seg(p(x0, y1, z0), p(x0, y1, z1)),
+    seg(p(x1, y1, z0), p(x1, y1, z1)),
+    seg(p(x1, y0, z0), p(x1, y0, z1)),
+  ].join("");
+}
+
+/** The three visible faces of a box as closed polygons: [left(front), right, top]. */
+export function boxFaces(p: IsoFn, x0: number, y0: number, z0: number, x1: number, y1: number, z1: number) {
+  return [
+    loop(p(x0, y1, z0), p(x1, y1, z0), p(x1, y1, z1), p(x0, y1, z1)),
+    loop(p(x1, y1, z0), p(x1, y0, z0), p(x1, y0, z1), p(x1, y1, z1)),
+    loop(p(x0, y0, z1), p(x1, y0, z1), p(x1, y1, z1), p(x0, y1, z1)),
+  ] as const;
+}

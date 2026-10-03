@@ -7,7 +7,7 @@ import { IndustryArt } from "@/components/svg/IndustryArt";
 import { TechnicalGrid } from "@/components/svg/TechnicalGrid";
 import { projects } from "@/data/projects";
 
-export function MechanicalProjects() {
+export function MechanicalProjects({ heading = "Related Mechanical Projects" }: { heading?: string }) {
   const items = projects.filter((p) => p.discipline === "mechanical");
   if (items.length === 0) return null;
   return (
@@ -17,7 +17,7 @@ export function MechanicalProjects() {
           <SectionHeading
             tone="dark"
             eyebrow="Portfolio"
-            heading="Related Mechanical Projects"
+            heading={heading}
             description="Illustrative examples of mechanical work. They are marked as examples and will give way to verified case studies as client work is cleared for publication."
           />
           <Link href="/projects/mechanical" className="text-sm font-semibold text-white underline-offset-4 transition-colors hover:text-copper-400 hover:underline">
