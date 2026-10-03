@@ -135,6 +135,27 @@ const arts = {
       <path d="M196 52L170 70" stroke="#c16a2f" strokeWidth="1" />
     </>
   ),
+  aerospace: (
+    <>
+      <path d="M10 75Q30 68 60 68H190Q225 70 232 75Q225 80 190 82H60Q30 82 10 75Z" />
+      <path d="M110 68L82 28H102L152 68M110 82L82 122H102L152 82" className="ico-lift" />
+      <path d="M34 70L20 54H30L48 68M34 80L20 96H30L48 82" />
+      <path d="M180 75h30" opacity="0.5" />
+      <path d="M10 140H230" stroke="#c16a2f" strokeWidth="1" opacity="0.7" />
+    </>
+  ),
+  defence: (
+    <>
+      <path d="M120 135V68" />
+      <path d="M82 52Q120 100 158 52" className="ico-lift" />
+      <path d="M82 52L158 52" opacity="0.5" />
+      <path d="M120 78V40" strokeDasharray="3 3" />
+      <circle cx="120" cy="36" r="4" />
+      <path d="M90 135V118H150V135" />
+      <path d="M176 44Q196 58 176 72M190 34Q220 58 190 82" opacity="0.7" />
+      <path d="M0 135H240" opacity="0.4" />
+    </>
+  ),
   industrial: (
     <>
       <path d="M30 50V108M90 50V108" />

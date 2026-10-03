@@ -18,6 +18,7 @@ import { services, getServiceBySlug } from "@/data/services";
 import { getIndustryBySlug } from "@/data/industries";
 import { getSoftwareBySlug } from "@/data/software";
 import { serviceCategories } from "@/data/service-categories";
+import { MechanicalDraftingPage } from "@/components/mechanical/MechanicalDraftingPage";
 
 type Params = { category: string; service: string };
 
@@ -46,6 +47,36 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
   const industries = service.industries.map(getIndustryBySlug).filter((i): i is NonNullable<typeof i> => Boolean(i));
   const softwareUsed = service.software.map(getSoftwareBySlug).filter((s): s is NonNullable<typeof s> => Boolean(s));
 
+
+  const jsonLd = (
+    <JsonLd
+      data={serviceJsonLd({
+        name: service.name,
+        description: service.shortDescription,
+        path: `/services/${service.category}/${service.slug}`,
+      })}
+    />
+  );
+  const crumbs = (
+    <Breadcrumbs
+      items={[
+        { label: "Services", href: "/services" },
+        { label: category?.name ?? service.category, href: `/services/${service.category}` },
+        { label: service.name, href: `/services/${service.category}/${service.slug}` },
+      ]}
+    />
+  );
+
+  // Bespoke visual layout for the flagship mechanical page; content still comes from the service data.
+  if (service.slug === "mechanical-drafting") {
+    return (
+      <>
+        {jsonLd}
+        {crumbs}
+        <MechanicalDraftingPage service={service} />
+      </>
+    );
+  }
   return (
     <>
       <JsonLd
