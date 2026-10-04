@@ -262,7 +262,7 @@ export function AutoCadPage({ item }: { item: Software }) {
       </Sec>
 
       <Sec id="bim" dark>
-        <Head dark eyebrow="AutoCAD & BIM" heading="AutoCAD and BIM Workflows"><p>{bim[0]}</p><p>AutoCAD itself isn&apos;t a BIM platform, and 2D linework doesn&apos;t convert automatically into intelligent model elements — the drawings serve as reference while the model is built. See {<Link href="/services/bim/revit-modelling" className="text-white underline underline-offset-4 hover:text-yellow-300">Revit modelling</Link>} and {<Link href="/software/revit" className="text-white underline underline-offset-4 hover:text-yellow-300">Revit</Link>}.</p></Head>
+        <Head dark eyebrow="AutoCAD & BIM" heading="AutoCAD and BIM Workflows"><p>{bim[0]}</p><p>AutoCAD itself isn&apos;t a BIM platform, and 2D linework doesn&apos;t convert automatically into intelligent model elements — the drawings serve as reference while the model is built. See {<Link href="/software/revit" className="text-white underline underline-offset-4 hover:text-yellow-300">Revit BIM modelling and coordination</Link>} and our {<Link href="/services/bim/revit-modelling" className="text-white underline underline-offset-4 hover:text-yellow-300">Revit modelling service</Link>}.</p></Head>
         <div className="mt-10"><Fig><BimVisual /></Fig></div>
         <Reveal className="mt-6"><div className="border border-slate-700 bg-slate-900/60 px-5 py-4"><h3 className="text-sm font-semibold text-white">Version compatibility</h3><p className="mt-1 text-sm leading-relaxed text-slate-300">{bim[1]}</p></div></Reveal>
       </Sec>

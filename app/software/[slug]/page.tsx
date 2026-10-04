@@ -13,6 +13,7 @@ import { getIndustryBySlug } from "@/data/industries";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { AutoCadPage } from "@/components/software-autocad/AutoCadPage";
+import { RevitPage } from "@/components/software-revit/RevitPage";
 
 export function generateStaticParams() {
   return software.map((item) => ({ slug: item.slug }));
@@ -33,6 +34,15 @@ export default async function SoftwarePage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const item = getSoftwareBySlug(slug);
   if (!item) notFound();
+
+  if (item.slug === "revit") {
+    return (
+      <>
+        <Breadcrumbs items={[{ label: "Software", href: "/software" }, { label: item.name, href: `/software/${item.slug}` }]} />
+        <RevitPage item={item} />
+      </>
+    );
+  }
 
   // Bespoke AutoCAD page; copy still comes from the software data.
   if (item.slug === "autocad") {
