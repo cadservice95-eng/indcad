@@ -12,6 +12,7 @@ import { software, getSoftwareBySlug } from "@/data/software";
 import { getIndustryBySlug } from "@/data/industries";
 import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
+import { AutoCadPage } from "@/components/software-autocad/AutoCadPage";
 
 export function generateStaticParams() {
   return software.map((item) => ({ slug: item.slug }));
@@ -32,6 +33,16 @@ export default async function SoftwarePage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const item = getSoftwareBySlug(slug);
   if (!item) notFound();
+
+  // Bespoke AutoCAD page; copy still comes from the software data.
+  if (item.slug === "autocad") {
+    return (
+      <>
+        <Breadcrumbs items={[{ label: "Software", href: "/software" }, { label: item.name, href: `/software/${item.slug}` }]} />
+        <AutoCadPage item={item} />
+      </>
+    );
+  }
 
   const relatedIndustries = item.relatedIndustries.map(getIndustryBySlug).filter((i): i is NonNullable<typeof i> => Boolean(i));
 
