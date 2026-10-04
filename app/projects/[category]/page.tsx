@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { buildMetadata } from "@/lib/seo";
 import { getProjectsByDiscipline } from "@/data/projects";
 import { projectCategories, getProjectCategory } from "@/data/project-categories";
+import { MechProjectsPage } from "@/components/projects-mech/MechProjectsPage";
 
 export function generateStaticParams() {
   return projectCategories.map((category) => ({ category: category.slug }));
@@ -31,6 +32,16 @@ export default async function ProjectCategoryPage({ params }: { params: Promise<
   if (!category) notFound();
 
   const items = getProjectsByDiscipline(category.slug);
+
+  // Bespoke portfolio hub for mechanical; copy still comes from the category data.
+  if (category.slug === "mechanical") {
+    return (
+      <>
+        <Breadcrumbs items={[{ label: "Projects", href: "/projects" }, { label: category.name, href: `/projects/${category.slug}` }]} />
+        <MechProjectsPage category={category} projects={items} />
+      </>
+    );
+  }
 
   return (
     <>
