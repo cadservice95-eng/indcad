@@ -15,7 +15,7 @@ export function MechCaseStudy({ project, visual }: { project: Project; visual: R
   const bullets = t === 1 || t === 3 || t === 4;
   const id = `cs-${project.slug}`;
   return (
-    <article className="grid overflow-hidden border border-slate-300 bg-white lg:grid-cols-[0.9fr_1.1fr]">
+    <article className="grid overflow-hidden border border-slate-300 bg-white [&>*]:min-w-0 lg:grid-cols-[0.9fr_1.1fr]">
       <div className="relative flex items-center border-b border-slate-200 bg-[#0F172A] lg:border-b-0 lg:border-r">
         {visual}
         {project.isPlaceholder ? <span className="absolute left-3 top-3 border border-amber-400 bg-amber-50 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-amber-800">Illustrative example</span> : null}
